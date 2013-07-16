@@ -42,6 +42,14 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
+        test "org.gebish:geb-spock:0.9.0"
+        test "org.gebish:geb-junit4:0.9.0"
+        test "org.seleniumhq.selenium:selenium-support:2.33.0" 
+        test "org.seleniumhq.selenium:selenium-firefox-driver:2.33.0"
+        test("org.seleniumhq.selenium:selenium-htmlunit-driver:2.33.0") {
+          exclude 'xml-apis'
+        }
+        test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
     }
 
     plugins {
@@ -55,9 +63,12 @@ grails.project.dependency.resolution = {
         //runtime ":yui-minify-resources:0.1.5"
 
         build ":tomcat:$grailsVersion"
-
         runtime ":database-migration:1.3.2"
-
         compile ':cache:1.0.1'
+
+        test(":spock:0.7"){
+          exclude "spock-grails-support"
+        }
+        test ":geb:0.9.0"
     }
 }
