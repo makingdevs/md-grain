@@ -2,7 +2,7 @@ package com.makingdevs
 
 import geb.spock.GebReportingSpec
 import spock.lang.*
-import pages.*
+import com.makingdevs.pages.*
 
 class SignUpUserSpec extends GebReportingSpec {
 
@@ -10,6 +10,6 @@ class SignUpUserSpec extends GebReportingSpec {
     when:
       to SignUpPage
     then:
-      assert title.text == "Welcome to MakingDevs"
+      assert title == ". : MakingDevs - SignUp : ."
   }
 }
