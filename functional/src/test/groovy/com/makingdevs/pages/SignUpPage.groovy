@@ -5,6 +5,6 @@ import geb.Page
 class SignUpPage extends Page {
   static url = "signUp"
   static at = {
-    title =~ /. : MakingDevs - SignUp :./
+    $("h1").text() == 'Welcome to MakingDevs'
   }
 }

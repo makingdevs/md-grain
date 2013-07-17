@@ -10,6 +10,7 @@ class SignUpUserSpec extends GebReportingSpec {
     when:
       to SignUpPage
     then:
+      at SignUpPage
       assert title == ". : MakingDevs - SignUp : ."
   }
 }
