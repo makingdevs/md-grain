@@ -50,6 +50,8 @@ grails.project.dependency.resolution = {
           exclude 'xml-apis'
         }
         test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
+        test 'org.spockframework:spock-core:0.7-groovy-2.0'
+                    
     }
 
     plugins {
