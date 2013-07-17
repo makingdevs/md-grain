@@ -2,3 +2,5 @@
 target/
 .project
 *.swp
+functional/.gradle/
+functional/build/
