@@ -40,15 +40,6 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // runtime 'mysql:mysql-connector-java:5.1.22'
-        def gebVersion = "0.9.0"
-        def seleniumVersion = "2.33.0"
-        test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") {
-          exclude "xml-apis"
-        }
-        test("org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion")
-        test("org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion")
-        test "org.gebish:geb-spock:$gebVersion"
-        test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
     }
 
     plugins {
@@ -64,10 +55,5 @@ grails.project.dependency.resolution = {
         build ":tomcat:$grailsVersion"
         runtime ":database-migration:1.3.2"
         compile ':cache:1.0.1'
-
-        test ":geb:0.9.0"
-        test(":spock:0.7"){
-          exclude "spock-grails-support"
-        }
     }
 }
