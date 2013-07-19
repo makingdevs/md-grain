@@ -4,3 +4,4 @@ target/
 *.swp
 functional/.gradle/
 functional/build/
+functional/.gradletasknamecache

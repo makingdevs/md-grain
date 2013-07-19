@@ -7,4 +7,8 @@ class SignUpPage extends Page {
   static at = {
     $("h1").text() == 'Welcome to MakingDevs'
   }
+  static content = {
+    signupForm { $('form') }
+    course { signupForm.courses }
+  }
 }
