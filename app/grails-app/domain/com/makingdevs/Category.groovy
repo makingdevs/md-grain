@@ -4,7 +4,7 @@ class Category {
 
   String name
 
-  static hasMany = { courses:Course }
+  static hasMany = [ courses:Course ]
 
   static constraints = {
   }
