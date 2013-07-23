@@ -1,5 +1,8 @@
 package com.makingdevs
 
+import groovy.transform.ToString
+
+@ToString
 class Course {
 
   String name
