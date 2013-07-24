@@ -9,7 +9,7 @@
   <title>Theme Venera Homepage</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <link href="assets/css/theme_venera_blue.css" media="all" rel="stylesheet" type="text/css" />
+  <r:require module="venera"/>
   <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
   <g:layoutTitle/>
   <r:layoutResources/>
@@ -790,18 +790,6 @@
               </div>
             </footer>
 
-            <script src="assets/js/jquery-1.10.1.min.js" type="text/javascript"></script>
-            <script src="assets/js/bootstrap.js" type="text/javascript"></script>
-            <script src="assets/js/prettify.js" type="text/javascript"></script>
-            <script src="assets/js/lightbox.js" type="text/javascript"></script>
-            <script src="assets/js/main.js" type="text/javascript"></script>
-            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-            <script>
-                var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-                s.parentNode.insertBefore(g,s)}(document,'script'));
-            </script>
 <r:layoutResources/>
             </body>
           </html>
