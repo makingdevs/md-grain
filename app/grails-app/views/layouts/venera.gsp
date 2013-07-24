@@ -11,6 +11,8 @@
   <meta name="viewport" content="width=device-width">
   <link href="assets/css/theme_venera_blue.css" media="all" rel="stylesheet" type="text/css" />
   <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
+  <g:layoutTitle/>
+  <r:layoutResources/>
 </head>
 <body>
         <!--[if lt IE 7]>
@@ -800,5 +802,6 @@
                 g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
                 s.parentNode.insertBefore(g,s)}(document,'script'));
             </script>
+<r:layoutResources/>
             </body>
           </html>
