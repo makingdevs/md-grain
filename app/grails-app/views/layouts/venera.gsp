@@ -88,68 +88,6 @@
               </li>
             </ul>
           </div>
-          <div class='span4'>
-            <h5 class='footer-header'>Recent Posts</h5>
-            <ul class='footer-list'>
-              <li>
-                <a>Vestibulum auctor dapibus</a>
-              </li>
-              <li>
-                <a>Aliquam tincidunt mauris</a>
-              </li>
-              <li>
-                <a>Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a>Consectetur adipisicing elit</a>
-              </li>
-            </ul>
-          </div>
-          <div class='span4'>
-            <h5 class='footer-header'>Photostream</h5>
-            <ul class='footer-img-list thumbnails'>
-              <li class='span1'>
-                <a class='thumbnail'>
-                  <img alt="8b9890" src="assets/images/test-square.png" />
-                </a>
-              </li>
-              <li class='span1'>
-                <a class='thumbnail'>
-                  <img alt="8b9890" src="assets/images/test-square.png" />
-                </a>
-              </li>
-              <li class='span1'>
-                <a class='thumbnail'>
-                  <img alt="8b9890" src="assets/images/test-square.png" />
-                </a>
-              </li>
-              <li class='span1'>
-                <a class='thumbnail'>
-                  <img alt="8b9890" src="assets/images/test-square.png" />
-                </a>
-              </li>
-              <li class='span1'>
-                <a class='thumbnail'>
-                  <img alt="8b9890" src="assets/images/test-square.png" />
-                </a>
-              </li>
-              <li class='span1'>
-                <a class='thumbnail'>
-                  <img alt="8b9890" src="assets/images/test-square.png" />
-                </a>
-              </li>
-              <li class='span1'>
-                <a class='thumbnail'>
-                  <img alt="8b9890" src="assets/images/test-square.png" />
-                </a>
-              </li>
-              <li class='span1'>
-                <a class='thumbnail'>
-                  <img alt="8b9890" src="assets/images/test-square.png" />
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -157,26 +95,7 @@
       <div class='container'>
         <div class='row'>
           <div class='span6'>
-            <div class='copyright'>Copyright &copy; 2012 Tamerlan Soziev. All rights reserved.</div>
-          </div>
-          <div class='span6'>
-            <ul class='footer-links'>
-              <li>
-                <a>Some</a>
-              </li>
-              <li>
-                <a>Footer</a>
-              </li>
-              <li>
-                <a>Policy</a>
-              </li>
-              <li>
-                <a>Terms Of Use</a>
-              </li>
-              <li>
-                <a>Links</a>
-              </li>
-            </ul>
+            <div class='copyright'>Copyright &copy; 2013 MakingDevs SC. All rights reserved.</div>
           </div>
         </div>
       </div>
