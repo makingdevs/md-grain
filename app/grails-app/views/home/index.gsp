@@ -90,15 +90,15 @@
         <g:each in="${categories}" var="category">
           <div class='span3'>
             <div class='white-card'>
-              <div class="img-w hover-fader">
+              <!--div class="img-w hover-fader">
                 <a href="assets/images/test-square.png" data-rel="lightbox[gallery]"><img alt="Photo-card" src="assets/images/test-square.png">
                   <span class="hover-fade">
                     <i class="icon-zoom-in"></i>
                   </span>
                 </a>
-              </div>
+              </div-->
               <h5>${category.name}</h5>
-              <p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.</p>
+              <p>${category.description}</p>
             </div>
           </div>
         </g:each>

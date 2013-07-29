@@ -5,11 +5,11 @@ class BootStrap {
 
   def init = { servletContext ->
    if(!Category.count()) {
-     def category1 = new Category(name:"Experto en Springframework").save(flush:true)
-     def category2 = new Category(name:"Técnicas y métodos ágiles").save(flush:true)
-     def category3 = new Category(name:"El ecosistema Groovy").save(flush:true)
-     def category4 = new Category(name:"Desarrollo web con Javascript").save(flush:true)
-     def category5 = new Category(name:"Desarrollo con Scala").save(flush:true)
+     def category1 = new Category(name:"Experto en Springframework",description:"Encuentra todos los elementos necesarios para crear aplicaciones robustas y bien diseñadas en la plataforma Java usando la suite de herramientas de Springframework; aprende desde lo esencial hasta los subproyectos de Spring que te permitirán resolver prácticamente cualquier necesidad de negocio.").save(flush:true)
+     def category2 = new Category(name:"Técnicas y métodos ágiles",description:"Aplica métodos que te permitan crear mejor software y funcionalidades que den satisfacción y valor a los usuarios. Crea elementos de comunicación y adquiere el conocimiento para ser disciplinado mientras desarrollas y a la vez transmites tus ideas.").save(flush:true)
+     def category3 = new Category(name:"El ecosistema Groovy",description:"Diviertete usando un lenguaje dinñamico en la JVM, se más productivo y abre nuevos panoramas tecnológicos, aprovecha el conocimiento que tienes sobre la plataforma Java y se más expresivo en el código que desarrollas.").save(flush:true)
+     def category4 = new Category(name:"Desarrollo web con Javascript",description:"Crea mejores experiencias de usuario, aprende a usar Javascript para muchas otras cosas más de las que pensabas. Usa herramientas que te faciliten crear interacciones útiles y mejoren la experiencia con la que los usuarios usan tus aplicaciones.").save(flush:true)
+     def category5 = new Category(name:"Desarrollo con Scala",description:"Conoce otros paradigmas y combinalos, usa el poder de la JVM aplicando elementos de programación funcional, crea aplicaciones que sean escalables de forma natural.").save(flush:true)
 
      def course1 = new Course(name:'Diseño de aplicaciones con Springframework', overview:'overview',audience:'audience',prerequisites:'prerequisites',goal:'goal',courseKey:'SPRING-ESSENTIALS').save(flush:true) 
      def course2 = new Course(name:'Acceso a datos con Springframework', overview:'overview',audience:'audience',prerequisites:'prerequisites',goal:'goal',courseKey:'SPRING-DATA_ACCESS').save(flush:true) 
