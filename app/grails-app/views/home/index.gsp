@@ -109,7 +109,7 @@
     <div class='container'>
       <div class='row'>
         <div class='span6'>
-          <h3 class='section-header'>Client Testimonials</h3>
+          <h3 class='section-header'>Nuestra filosofía</h3>
           <div class='testimonials'>
             <div class='testimonials-users row hidden-phone'>
               <div class='span1'>
@@ -117,86 +117,14 @@
                   <span class='testimonials-user'><img alt="Avatar-1" src="assets/images/test-user.png" /></span>
                 </a>
               </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial2'>
-                  <span class='testimonials-user'><img alt="Avatar-2" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial3'>
-                  <span class='testimonials-user'><img alt="Avatar-4" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial4'>
-                  <span class='testimonials-user'><img alt="Avatar-1" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial5'>
-                  <span class='testimonials-user'><img alt="Avatar-2" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial6'>
-                  <span class='testimonials-user'><img alt="Avatar-4" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
             </div>
             <div class='testimonials-speeches'>
               <div class="testimonials-speech active" id="testimonial1">
                 <p>
-                  <strong>Homer Simpson is amazing.</strong>
-                  I've worked with Homer on couple of projects and i really like how lazy he is. Sleeps a lot, does not compain much, a perfect employee.
+                  <strong>Desarrolladores satisfechos y motivados crean mejor software.</strong>
+                  Creo que los más importante para un desarrollador deberían ser sus intereses personales, y dándole la oportunidad de atenderlos puede estar mejor enfocado para contribuir en cualquier forma con la solución de un problema, ya sea parcial o total.
                 </p>
-                <div class="speech-by">
-                  Mr. Burns, Springfield Nuclear Power Plant
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial2'>
-                <p>
-                  <strong>Nulla gravida tellus id fermentum.</strong>
-                  Phasellus aliquet lobortis dolor, vel aliquam tortor porta vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.
-                </p>
-                <div class='speech-by'>
-                  John Doe, Dundler Mufflin
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial3'>
-                <p>
-                  <strong>Aliquam at sodales arcu.</strong>
-                  Nulla gravida, tellus id fermentum tempus, urna elit tempus justo, a tincidunt dui lacus nec est. Maecenas ligula ipsum, suscipit quis posuere id, porttitor vitae odio. Phasellus cursus mauris nec felis sollicitudin ac semper quam hendrerit. Morbi sagittis lobortis libero id imperdiet.
-                </p>
-                <div class='speech-by'>
-                  John Doe, Dundler Mufflin
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial4'>
-                <p>
-                  <strong>Aenean purus ipsum convallis.</strong>
-                  Quisque eu est ipsum. Aliquam at sodales arcu. Cras justo velit, pretium quis luctus a, posuere vitae justo. Proin porttitor ultricies justo at semper. Curabitur leo tortor, placerat ut placerat vel, tristique et ipsum. Maecenas at tellus leo, vitae pellentesque velit. Mauris ac augue magna. Vestibulum et magna at urna venenatis vehicula.
-                </p>
-                <div class='speech-by'>
-                  John Doe, Solomon Inc
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial5'>
-                <p>
-                  <strong>Maecenas id rutrum enim.</strong>
-                  Pellentesque fringilla fringilla molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </p>
-                <div class='speech-by'>
-                  John Doe, ThemeForest
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial6'>
-                <p>
-                  <strong>Pellentesque habitant morbi tristique</strong>
-                  Aenean venenatis nisi sit amet massa congue commodo. Aenean purus ipsum, convallis quis rhoncus ut, ullamcorper eget metus.
-                </p>
-                <div class='speech-by'>
-                  John Doe, Dundler Mufflin
-                </div>
+                <div class="speech-by">José Juan R. Zuñiga, Desarrollador</div>
               </div>
             </div>
           </div>
