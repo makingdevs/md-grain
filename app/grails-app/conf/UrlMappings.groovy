@@ -7,6 +7,10 @@ class UrlMappings {
 			}
 		}
 
+		"/api/categories"(controller:"category",parseRequest:true){
+      action = [GET:"apiShow"]
+		}
+
 		"/"(view:"/index")
 		"500"(view:'/error')
 	}
