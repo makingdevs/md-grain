@@ -6,12 +6,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Theme Venera Homepage</title>
+  <title>. : MakingDevs - <g:layoutTitle default="Welcome"/> : .</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <r:require module="venera"/>
   <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
-  <g:layoutTitle/>
+  <g:layoutHead/>
   <r:layoutResources/>
 </head>
 <body>
