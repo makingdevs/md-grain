@@ -12,13 +12,13 @@
           <h2 class='slider-sub-header'>Impulsamos la carrera de los desarrolladores de software.</h2>
           <div class='slider-browsers-w clearfix'>
             <div class='slider-browser slider-browser-left hidden-phone' data-position-bottom='-8%'>
-              <img alt="Browser-window-1" src="assets/images/browser-window.png" />
+              <r:img alt="Browser-window-1" uri="/assets/images/browser-window.png" />
             </div>
             <div class='slider-browser slider-browser-center' data-position-bottom='-9%'>
-              <img alt="Browser-window-2" src="assets/images/browser-window.png" />
+              <r:img alt="Browser-window-2" uri="/assets/images/browser-window.png" />
             </div>
             <div class='slider-browser slider-browser-right hidden-phone' data-position-bottom='-8%'>
-              <img alt="Browser-window-3" src="assets/images/browser-window.png" />
+              <r:img alt="Browser-window-3" uri="/assets/images/browser-window.png" />
             </div>
           </div>
         </div>
@@ -30,17 +30,17 @@
           <div class='row zoomed-browsers-w'>
             <div class='span4'>
               <div class='zoomed-browser'>
-                <img alt="Browser-window-1" src="assets/images/browser-window.png" />
+                <r:img alt="Browser-window-1" uri="/assets/images/browser-window.png" />
               </div>
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <img alt="Browser-window-2" src="assets/images/browser-window.png" />
+                <r:img alt="Browser-window-2" uri="/assets/images/browser-window.png" />
               </div>
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <img alt="Browser-window-3" src="assets/images/browser-window.png" />
+                <r:img alt="Browser-window-3" uri="/assets/images/browser-window.png" />
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@
             <div class='testimonials-users row hidden-phone'>
               <div class='span1'>
                 <a class='testimonials-user-w active' data-toggle='testimonial' href='#testimonial1'>
-                  <span class='testimonials-user'><img alt="Avatar-1" src="assets/images/test-user.png" /></span>
+                  <span class='testimonials-user'><r:img alt="Avatar-1" uri="/assets/images/test-user.png" /></span>
                 </a>
               </div>
             </div>
@@ -181,32 +181,32 @@
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-1" src="assets/images/test-square.png" />
+            <r:img alt="Client-1" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-2" src="assets/images/test-square.png" />
+            <r:img alt="Client-2" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-3" src="assets/images/test-square.png" />
+            <r:img alt="Client-3" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-4" src="assets/images/test-square.png" />
+            <r:img alt="Client-4" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-5" src="assets/images/test-square.png" />
+            <r:img alt="Client-5" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-6" src="assets/images/test-square.png" />
+            <r:img alt="Client-6" uri="/assets/images/test-square.png" />
           </div>
         </div>
       </div>
