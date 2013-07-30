@@ -9,7 +9,7 @@
       <div class="row">
         <div class="span9">
           <div class="white-card extra-padding">
-            <form>
+            <g:form action="register">
               <fieldset>
                 <div class="row-fluid">
                   <div class="span12">
@@ -27,13 +27,13 @@
                   <div class="span4">
                     <div class="control-group">
                       <label>Nombre(s)</label>
-                      <input class="span4" placeholder="Tu(s) nombre(s)..." type="text">
+                      <input name="name" class="span4" placeholder="Tu(s) nombre(s)..." type="text">
                     </div>
                   </div>
                   <div class="span4">
                     <div class="control-group">
                       <label>Apellidos</label>
-                      <input class="span4" placeholder="Tus apellidos..." type="text">
+                      <input name="lastName" class="span4" placeholder="Tus apellidos..." type="text">
                     </div>
                   </div>
                 </div>
@@ -44,7 +44,7 @@
                       <div class="controls">
                         <div class="input-prepend">
                           <span class="add-on"><i class="icon-envelope"></i></span>
-                          <input class="span4" placeholder="mail@mail.com" type="text">
+                          <input name="username" class="span4" placeholder="mail@mail.com" type="text">
                         </div>
                       </div>
                     </div>
@@ -59,7 +59,7 @@
                       <div class="controls">
                         <div class="input-prepend">
                           <span class="add-on"><i class="icon-lock"></i></span>
-                          <input class="span3" placeholder="Tu contraseña..." type="text">
+                          <input name="password" class="span3" placeholder="Tu contraseña..." type="password">
                         </div>
                       </div>
                     </div>
@@ -70,7 +70,7 @@
                       <div class="controls">
                         <div class="input-prepend">
                           <span class="add-on"><i class="icon-lock"></i></span>
-                          <input class="span3" placeholder="Confirmar contraseña..." type="text">
+                          <input name="confirmPassword" class="span3" placeholder="Confirmar contraseña..." type="password">
                         </div>
                       </div>
                     </div>
@@ -84,7 +84,7 @@
                   </div>
                 </div>
               </fieldset>
-            </form>
+            </g:form>
           </div>
         </div>
         <div class="span3">
