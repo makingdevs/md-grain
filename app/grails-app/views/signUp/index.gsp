@@ -27,13 +27,13 @@
                   <div class="span4">
                     <div class="control-group">
                       <label>Nombre(s)</label>
-                      <input name="name" class="span4" placeholder="Tu(s) nombre(s)..." type="text" value="${user?.name}">
+                      <input name="name" class="span4" placeholder="Tu(s) nombre(s)..." type="text" value="${user?.profile?.name}">
                     </div>
                   </div>
                   <div class="span4">
                     <div class="control-group">
                       <label>Apellidos</label>
-                      <input name="lastName" class="span4" placeholder="Tus apellidos..." type="text" value="${user?.lastName}">
+                      <input name="lastName" class="span4" placeholder="Tus apellidos..." type="text" value="${user?.profile?.lastName}">
                     </div>
                   </div>
                 </div>
