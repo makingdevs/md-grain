@@ -1,5 +1,8 @@
 package com.makingdevs
 
+import groovy.transform.ToString;
+
+@ToString(includeNames=true)
 class User {
 
 	transient springSecurityService

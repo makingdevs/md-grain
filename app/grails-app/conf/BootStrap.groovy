@@ -1,6 +1,6 @@
 import com.makingdevs.Course
 import com.makingdevs.Category
-package com.makingdevs.Role
+import com.makingdevs.Role
 
 class BootStrap {
 
