@@ -3,9 +3,14 @@ package com.makingdevs
 class SignUpService {
 
   def registerUserWithUserCommand(UserCommand userCommand) {
-    log.debug userCommand
     User user = new User(userCommand.properties)
     user.enabled =  true
-    log.debug user
+    if(user.validate()){
+      user.save()
+      Role roleStudent = Role.findByAuthority("ROLE_STUDENT")
+      UserRole.create(user,roleStudent)
+      // Create profile
+    }
+    user
   }
 }

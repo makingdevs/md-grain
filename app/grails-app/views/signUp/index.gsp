@@ -27,13 +27,13 @@
                   <div class="span4">
                     <div class="control-group">
                       <label>Nombre(s)</label>
-                      <input name="name" class="span4" placeholder="Tu(s) nombre(s)..." type="text">
+                      <input name="name" class="span4" placeholder="Tu(s) nombre(s)..." type="text" value="${user?.name}">
                     </div>
                   </div>
                   <div class="span4">
                     <div class="control-group">
                       <label>Apellidos</label>
-                      <input name="lastName" class="span4" placeholder="Tus apellidos..." type="text">
+                      <input name="lastName" class="span4" placeholder="Tus apellidos..." type="text" value="${user?.lastName}">
                     </div>
                   </div>
                 </div>
@@ -44,7 +44,7 @@
                       <div class="controls">
                         <div class="input-prepend">
                           <span class="add-on"><i class="icon-envelope"></i></span>
-                          <input name="username" class="span4" placeholder="mail@mail.com" type="text">
+                          <input name="username" class="span4" placeholder="mail@mail.com" type="text" value="${user?.username}">
                         </div>
                       </div>
                     </div>

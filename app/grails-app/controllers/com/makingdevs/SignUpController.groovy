@@ -9,8 +9,13 @@ class SignUpController {
 
   def index() { }
   def register(UserCommand userCommand) {
-    signUpService.registerUserWithUserCommand(userCommand)
-    render view:"index"
+    User user = signUpService.registerUserWithUserCommand(userCommand)
+    if(user.hasErrors()){
+      log.debug user.errors
+      render view:"index",model:[user:user]
+    }
+    else
+      redirect controller:"home"
   }
 }
 
