@@ -62,6 +62,8 @@
     </div>
   </header>
 
+  <g:render template="/common/messages" />
+        
   <g:layoutBody/>
 
   <footer>
