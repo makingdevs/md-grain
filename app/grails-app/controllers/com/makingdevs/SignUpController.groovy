@@ -11,7 +11,6 @@ class SignUpController {
   def register(UserCommand userCommand) {
     User user = signUpService.registerUserWithUserCommand(userCommand)
     if(user.hasErrors()){
-      log.debug user.errors
       render view:"index",model:[user:user]
     }
     else

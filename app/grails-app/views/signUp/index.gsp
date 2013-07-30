@@ -14,6 +14,15 @@
                 <div class="row-fluid">
                   <div class="span12">
                     <h1 class="form-header">Crea una cuenta</h1>
+                    <g:if test="${user?.errors}">
+                    <div class="alert alert-error">
+                      <ul>
+                        <g:eachError bean="${user}" var="err">
+                          <li><g:message error="${err}" /></li>
+                        </g:eachError>
+                      </ul>
+                    </div>
+                    </g:if>
                   </div>
                 </div>
                 <div class="row-fluid">
