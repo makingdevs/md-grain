@@ -20,8 +20,14 @@ class SignUpController {
       render view:"index",model:[user:userCommand]
     }
     else{
+      if(User.countByUsername(userCommand.username)){
+        userCommand.errors.rejectValue('username','user.username.unique')
+        render view:"index",model:[user:userCommand]
+        return     
+      }
       User user = signUpService.registerUserWithUserCommand(userCommand)
-      redirect controller:"home"
+      springSecurityService.reauthenticate user.username
+      redirect uri: SpringSecurityUtils.securityConfig.successHandler.defaultTargetUrl
     }
   }
 }
@@ -37,8 +43,10 @@ class UserCommand {
   static constraints = {
     name blank:false
     lastName blank:false
-    username blank: false, unique: true, email:true
+    username email:true, blank: false, unique: true
     password blank: false
-    confirmPassword blank:false
+    confirmPassword blank:false, validator: { val, obj ->
+      if(obj.password != val) return 'userCommand.confirmPassword.validator'
+    }
   }
 }

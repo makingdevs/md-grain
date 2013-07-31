@@ -34,13 +34,13 @@
                 </div>
                 <div class="row">
                   <div class="span4">
-                    <div class="control-group">
+                    <div class="control-group ${hasErrors(bean:user,field:'name','error')}">
                       <label>Nombre(s)</label>
                       <input name="name" class="span4" placeholder="Tu(s) nombre(s)..." type="text" value="${user?.name}">
                     </div>
                   </div>
                   <div class="span4">
-                    <div class="control-group">
+                    <div class="control-group ${hasErrors(bean:user,field:'lastName','error')}">
                       <label>Apellidos</label>
                       <input name="lastName" class="span4" placeholder="Tus apellidos..." type="text" value="${user?.lastName}">
                     </div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="row">
                   <div class="span4">
-                    <div class="control-group">
+                    <div class="control-group ${hasErrors(bean:user,field:'username','error')}">
                       <label>Correo electrónico</label>
                       <div class="controls">
                         <div class="input-prepend">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="row">
                   <div class="span4">
-                    <div class="control-group">
+                    <div class="control-group ${hasErrors(bean:user,field:'password','error')}">
                       <label>Contraseña</label>
                       <div class="controls">
                         <div class="input-prepend">
@@ -74,7 +74,7 @@
                     </div>
                   </div>
                   <div class="span4">
-                    <div class="control-group">
+                    <div class="control-group ${hasErrors(bean:user,field:'confirmPassword','error')}">
                       <label>Confirmación de contraseña</label>
                       <div class="controls">
                         <div class="input-prepend">
