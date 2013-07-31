@@ -114,7 +114,10 @@ log4j = {
       'org.grails.plugin.resource',
       'grails.app.taglib.org.grails.plugin',
       'grails.plugin.cache',
-      'grails.plugin.webxml'
+      'grails.plugin.webxml',
+      'rhino',
+      'org.lesscss',
+      'grails.app.resourceMappers'
 
   error 'net.sf.ehcache', 'net.sf.ehcache.hibernate', 'org.hibernate'
 
