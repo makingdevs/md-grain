@@ -16,7 +16,7 @@ class User {
 	Profile profile
 
 	static constraints = {
-		username blank: false, unique: true
+		username blank: false, unique: true, email:true
 		password blank: false
 	}
 

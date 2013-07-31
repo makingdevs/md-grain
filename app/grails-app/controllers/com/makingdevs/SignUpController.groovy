@@ -16,12 +16,13 @@ class SignUpController {
     }
   }
   def register(UserCommand userCommand) {
-    User user = signUpService.registerUserWithUserCommand(userCommand)
-    if(user.hasErrors()){
-      render view:"index",model:[user:user]
+    if(userCommand.hasErrors()){
+      render view:"index",model:[user:userCommand]
     }
-    else
+    else{
+      User user = signUpService.registerUserWithUserCommand(userCommand)
       redirect controller:"home"
+    }
   }
 }
 
@@ -34,5 +35,10 @@ class UserCommand {
   String confirmPassword
 
   static constraints = {
+    name blank:false
+    lastName blank:false
+    username blank: false, unique: true, email:true
+    password blank: false
+    confirmPassword blank:false
   }
 }
