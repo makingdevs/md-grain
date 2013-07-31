@@ -2,5 +2,11 @@ package com.makingdevs
 
 class HomeController {
 
-  def index() { }
+  def springSecurityService
+
+  def index() {
+    log.debug springSecurityService.currentUser
+    def categories = Category.list([max:4])
+    [categories:categories]
+  }
 }

@@ -6,12 +6,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Theme Venera Homepage</title>
+  <title>. : MakingDevs - <g:layoutTitle default="Welcome"/> : .</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <r:require module="venera"/>
   <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
-  <g:layoutTitle/>
+  <g:layoutHead/>
   <r:layoutResources/>
 </head>
 <body>
@@ -38,23 +38,13 @@
               </li>
             </ul>
             <div class='top-account-control visible-desktop'>
-              <a href="features/pricing_tables.html" class="top-create-account">Crear cuenta</a>
-              <a href="#" class="top-sign-in">Ingresa</a>
-              <div class='login-box'>
-                <a class='close login-box-close' href='#'>&times;</a>
-                <h4 class='login-box-head'>Login Form</h4>
-                <div class='control-group'>
-                  <label>Username</label>
-                  <input class='span2' placeholder='Input username...' type='text'>
-                </div>
-                <div class='control-group'>
-                  <label>Password</label>
-                  <input class='span2' placeholder='Input password...' type='text'>
-                </div>
-                <div class='login-actions'>
-                  <button class='btn btn-primary'>Log Me In</button>
-                </div>
-              </div>
+              <sec:ifNotLoggedIn>
+                <g:link controller="signUp" class="top-create-account">Crear cuenta</g:link>
+                <g:loginForm/>
+              </sec:ifNotLoggedIn>
+              <sec:ifLoggedIn>
+                <sec:loggedInUserInfo field="username"/>
+              </sec:ifLoggedIn>
             </div>
           </div>
         </div>
@@ -62,6 +52,8 @@
     </div>
   </header>
 
+  <g:render template="/common/messages" />
+        
   <g:layoutBody/>
 
   <footer>

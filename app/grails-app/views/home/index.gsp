@@ -12,13 +12,13 @@
           <h2 class='slider-sub-header'>Impulsamos la carrera de los desarrolladores de software.</h2>
           <div class='slider-browsers-w clearfix'>
             <div class='slider-browser slider-browser-left hidden-phone' data-position-bottom='-8%'>
-              <img alt="Browser-window-1" src="assets/images/browser-window.png" />
+              <r:img alt="Browser-window-1" uri="/assets/images/browser-window.png" />
             </div>
             <div class='slider-browser slider-browser-center' data-position-bottom='-9%'>
-              <img alt="Browser-window-2" src="assets/images/browser-window.png" />
+              <r:img alt="Browser-window-2" uri="/assets/images/browser-window.png" />
             </div>
             <div class='slider-browser slider-browser-right hidden-phone' data-position-bottom='-8%'>
-              <img alt="Browser-window-3" src="assets/images/browser-window.png" />
+              <r:img alt="Browser-window-3" uri="/assets/images/browser-window.png" />
             </div>
           </div>
         </div>
@@ -30,17 +30,17 @@
           <div class='row zoomed-browsers-w'>
             <div class='span4'>
               <div class='zoomed-browser'>
-                <img alt="Browser-window-1" src="assets/images/browser-window.png" />
+                <r:img alt="Browser-window-1" uri="/assets/images/browser-window.png" />
               </div>
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <img alt="Browser-window-2" src="assets/images/browser-window.png" />
+                <r:img alt="Browser-window-2" uri="/assets/images/browser-window.png" />
               </div>
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <img alt="Browser-window-3" src="assets/images/browser-window.png" />
+                <r:img alt="Browser-window-3" uri="/assets/images/browser-window.png" />
               </div>
             </div>
           </div>
@@ -87,58 +87,21 @@
         <div class='span12'>
           <h3 class='section-header'>Nuestra oferta</h3>
         </div>
-        <div class='span3'>
-          <div class='white-card'>
-            <div class="img-w hover-fader">
-              <a href="assets/images/test-square.png" data-rel="lightbox[gallery]"><img alt="Photo-card" src="assets/images/test-square.png">
-                <span class="hover-fade">
-                  <i class="icon-zoom-in"></i>
-                </span>
-              </a>
+        <g:each in="${categories}" var="category">
+          <div class='span3'>
+            <div class='white-card'>
+              <!--div class="img-w hover-fader">
+                <a href="assets/images/test-square.png" data-rel="lightbox[gallery]"><img alt="Photo-card" src="assets/images/test-square.png">
+                  <span class="hover-fade">
+                    <i class="icon-zoom-in"></i>
+                  </span>
+                </a>
+              </div-->
+              <h5>${category.name}</h5>
+              <p>${category.description}</p>
             </div>
-            <h5>Donec et egestas elit.</h5>
-            <p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.</p>
           </div>
-        </div>
-        <div class='span3'>
-          <div class='white-card'>
-            <div class="img-w hover-fader">
-              <a href="assets/images/test-square.png" data-rel="lightbox[gallery]"><img alt="Photo-card" src="assets/images/test-square.png">
-                <span class="hover-fade">
-                  <i class="icon-zoom-in"></i>
-                </span>
-              </a>
-            </div>
-            <h5>Donec et egestas elit.</h5>
-            <p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.</p>
-          </div>
-        </div>
-        <div class='span3'>
-          <div class='white-card'>
-            <div class="img-w hover-fader">
-              <a href="assets/images/test-square.png" data-rel="lightbox[gallery]"><img alt="Photo-card" src="assets/images/test-square.png">
-                <span class="hover-fade">
-                  <i class="icon-zoom-in"></i>
-                </span>
-              </a>
-            </div>
-            <h5>Donec et egestas elit.</h5>
-            <p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.</p>
-          </div>
-        </div>
-        <div class='span3'>
-          <div class='white-card'>
-            <div class="img-w hover-fader">
-              <a href="assets/images/test-square.png" data-rel="lightbox[gallery]"><img alt="Photo-card" src="assets/images/test-square.png">
-                <span class="hover-fade">
-                  <i class="icon-zoom-in"></i>
-                </span>
-              </a>
-            </div>
-            <h5>Donec et egestas elit.</h5>
-            <p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.</p>
-          </div>
-        </div>
+        </g:each>
       </div>
     </div>
   </section>
@@ -146,94 +109,22 @@
     <div class='container'>
       <div class='row'>
         <div class='span6'>
-          <h3 class='section-header'>Client Testimonials</h3>
+          <h3 class='section-header'>Nuestra filosofía</h3>
           <div class='testimonials'>
             <div class='testimonials-users row hidden-phone'>
               <div class='span1'>
                 <a class='testimonials-user-w active' data-toggle='testimonial' href='#testimonial1'>
-                  <span class='testimonials-user'><img alt="Avatar-1" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial2'>
-                  <span class='testimonials-user'><img alt="Avatar-2" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial3'>
-                  <span class='testimonials-user'><img alt="Avatar-4" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial4'>
-                  <span class='testimonials-user'><img alt="Avatar-1" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial5'>
-                  <span class='testimonials-user'><img alt="Avatar-2" src="assets/images/test-user.png" /></span>
-                </a>
-              </div>
-              <div class='span1'>
-                <a class='testimonials-user-w' data-toggle='testimonial' href='#testimonial6'>
-                  <span class='testimonials-user'><img alt="Avatar-4" src="assets/images/test-user.png" /></span>
+                  <span class='testimonials-user'><r:img alt="Avatar-1" uri="/assets/images/test-user.png" /></span>
                 </a>
               </div>
             </div>
             <div class='testimonials-speeches'>
               <div class="testimonials-speech active" id="testimonial1">
                 <p>
-                  <strong>Homer Simpson is amazing.</strong>
-                  I've worked with Homer on couple of projects and i really like how lazy he is. Sleeps a lot, does not compain much, a perfect employee.
+                  <strong>Desarrolladores satisfechos y motivados crean mejor software.</strong>
+                  Creo que los más importante para un desarrollador deberían ser sus intereses personales, y dándole la oportunidad de atenderlos puede estar mejor enfocado para contribuir en cualquier forma con la solución de un problema, ya sea parcial o total.
                 </p>
-                <div class="speech-by">
-                  Mr. Burns, Springfield Nuclear Power Plant
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial2'>
-                <p>
-                  <strong>Nulla gravida tellus id fermentum.</strong>
-                  Phasellus aliquet lobortis dolor, vel aliquam tortor porta vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.
-                </p>
-                <div class='speech-by'>
-                  John Doe, Dundler Mufflin
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial3'>
-                <p>
-                  <strong>Aliquam at sodales arcu.</strong>
-                  Nulla gravida, tellus id fermentum tempus, urna elit tempus justo, a tincidunt dui lacus nec est. Maecenas ligula ipsum, suscipit quis posuere id, porttitor vitae odio. Phasellus cursus mauris nec felis sollicitudin ac semper quam hendrerit. Morbi sagittis lobortis libero id imperdiet.
-                </p>
-                <div class='speech-by'>
-                  John Doe, Dundler Mufflin
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial4'>
-                <p>
-                  <strong>Aenean purus ipsum convallis.</strong>
-                  Quisque eu est ipsum. Aliquam at sodales arcu. Cras justo velit, pretium quis luctus a, posuere vitae justo. Proin porttitor ultricies justo at semper. Curabitur leo tortor, placerat ut placerat vel, tristique et ipsum. Maecenas at tellus leo, vitae pellentesque velit. Mauris ac augue magna. Vestibulum et magna at urna venenatis vehicula.
-                </p>
-                <div class='speech-by'>
-                  John Doe, Solomon Inc
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial5'>
-                <p>
-                  <strong>Maecenas id rutrum enim.</strong>
-                  Pellentesque fringilla fringilla molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </p>
-                <div class='speech-by'>
-                  John Doe, ThemeForest
-                </div>
-              </div>
-              <div class='testimonials-speech' id='testimonial6'>
-                <p>
-                  <strong>Pellentesque habitant morbi tristique</strong>
-                  Aenean venenatis nisi sit amet massa congue commodo. Aenean purus ipsum, convallis quis rhoncus ut, ullamcorper eget metus.
-                </p>
-                <div class='speech-by'>
-                  John Doe, Dundler Mufflin
-                </div>
+                <div class="speech-by">José Juan R. Zuñiga, Desarrollador</div>
               </div>
             </div>
           </div>
@@ -290,32 +181,32 @@
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-1" src="assets/images/test-square.png" />
+            <r:img alt="Client-1" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-2" src="assets/images/test-square.png" />
+            <r:img alt="Client-2" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-3" src="assets/images/test-square.png" />
+            <r:img alt="Client-3" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-4" src="assets/images/test-square.png" />
+            <r:img alt="Client-4" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-5" src="assets/images/test-square.png" />
+            <r:img alt="Client-5" uri="/assets/images/test-square.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <img alt="Client-6" src="assets/images/test-square.png" />
+            <r:img alt="Client-6" uri="/assets/images/test-square.png" />
           </div>
         </div>
       </div>

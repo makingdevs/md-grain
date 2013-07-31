@@ -114,7 +114,10 @@ log4j = {
       'org.grails.plugin.resource',
       'grails.app.taglib.org.grails.plugin',
       'grails.plugin.cache',
-      'grails.plugin.webxml'
+      'grails.plugin.webxml',
+      'rhino',
+      'org.lesscss',
+      'grails.app.resourceMappers'
 
   error 'net.sf.ehcache', 'net.sf.ehcache.hibernate', 'org.hibernate'
 
@@ -132,3 +135,10 @@ log4j = {
   }
 
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.makingdevs.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.makingdevs.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.makingdevs.Role'
+grails.plugins.springsecurity.requestMap.className = 'com.makingdevs.Requestmap'
+grails.plugins.springsecurity.securityConfigType = 'Requestmap'
