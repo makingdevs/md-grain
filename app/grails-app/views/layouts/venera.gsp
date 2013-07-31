@@ -39,36 +39,11 @@
             </ul>
             <div class='top-account-control visible-desktop'>
               <sec:ifNotLoggedIn>
-              <g:link controller="signUp" class="top-create-account">Crear cuenta</g:link>
-              <a href="#" class="top-sign-in">Ingresa</a>
-              <div class='login-box'>
-                <a class='close login-box-close' href='#'>&times;</a>
-                <h4 class='login-box-head'>Accede a tu cuenta</h4>
-                <form action='${postUrl}' method='POST' id='loginForm' autocomplete='off'>
-                  <div class='control-group'>
-                    <label>Correo</label>
-                    <input type='text' class='span3' name='j_username' id='username' placeholder='me@me.com'/>
-                  </div>
-                  <div class='control-group'>
-                    <label>Contraseña</label>
-                    <input type='password' class='span3' name='j_password' id='password' placeholder='Contraseña...'/>
-                  </div>
-                  <div class='control-group'>
-                    <div class="controls">
-                      <label class="checkbox">
-                        <input type='checkbox' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if> />
-                        Recordarme
-                      </label>  
-                    </div>
-                  </div>
-                  <div class='login-actions'>
-                    <input type='submit' id="submit" class='btn btn-primary' value='Entrar'/>
-                  </div>
-                </form>
-              </div>
+                <g:link controller="signUp" class="top-create-account">Crear cuenta</g:link>
+                <g:loginForm/>
               </sec:ifNotLoggedIn>
               <sec:ifLoggedIn>
-                Hola mundo
+                <sec:loggedInUserInfo field="username"/>
               </sec:ifLoggedIn>
             </div>
           </div>
