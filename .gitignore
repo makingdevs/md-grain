@@ -5,3 +5,4 @@ target/
 functional/.gradle/
 functional/build/
 functional/.gradletasknamecache
+logs/

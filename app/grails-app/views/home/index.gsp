@@ -12,13 +12,13 @@
           <h2 class='slider-sub-header'>Impulsamos la carrera de los desarrolladores de software.</h2>
           <div class='slider-browsers-w clearfix'>
             <div class='slider-browser slider-browser-left hidden-phone' data-position-bottom='-8%'>
-              <r:img alt="Browser-window-1" uri="/assets/images/browser-window.png" />
+              <r:img alt="Browser-window-1" uri="/assets/images/window-1.png" />
             </div>
             <div class='slider-browser slider-browser-center' data-position-bottom='-9%'>
-              <r:img alt="Browser-window-2" uri="/assets/images/browser-window.png" />
+              <r:img alt="Browser-window-2" uri="/assets/images/window-2.png" />
             </div>
             <div class='slider-browser slider-browser-right hidden-phone' data-position-bottom='-8%'>
-              <r:img alt="Browser-window-3" uri="/assets/images/browser-window.png" />
+              <r:img alt="Browser-window-3" uri="/assets/images/window-3.png" />
             </div>
           </div>
         </div>
@@ -30,17 +30,17 @@
           <div class='row zoomed-browsers-w'>
             <div class='span4'>
               <div class='zoomed-browser'>
-                <r:img alt="Browser-window-1" uri="/assets/images/browser-window.png" />
+                <r:img alt="Browser-window-1" uri="/assets/images/window-1.png" />
               </div>
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <r:img alt="Browser-window-2" uri="/assets/images/browser-window.png" />
+                <r:img alt="Browser-window-2" uri="/assets/images/window-2.png" />
               </div>
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <r:img alt="Browser-window-3" uri="/assets/images/browser-window.png" />
+                <r:img alt="Browser-window-3" uri="/assets/images/window-3.png" />
               </div>
             </div>
           </div>
@@ -181,32 +181,32 @@
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <r:img alt="Client-1" uri="/assets/images/test-square.png" />
+            <r:img alt="Client-1" uri="/assets/images/artesanos.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <r:img alt="Client-2" uri="/assets/images/test-square.png" />
+            <r:img alt="Client-2" uri="/assets/images/escala.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <r:img alt="Client-3" uri="/assets/images/test-square.png" />
+            <r:img alt="Client-3" uri="/assets/images/grails.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <r:img alt="Client-4" uri="/assets/images/test-square.png" />
+            <r:img alt="Client-4" uri="/assets/images/recursivo.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <r:img alt="Client-5" uri="/assets/images/test-square.png" />
+            <r:img alt="Client-5" uri="/assets/images/spring.png" />
           </div>
         </div>
         <div class='span2'>
           <div class='white-card'>
-            <r:img alt="Client-6" uri="/assets/images/test-square.png" />
+            <r:img alt="Client-6" uri="/assets/images/vivecodigo.png" />
           </div>
         </div>
       </div>
