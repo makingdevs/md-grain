@@ -15,7 +15,7 @@
               <r:img alt="Browser-window-1" uri="/assets/images/window-1.png" />
             </div>
             <div class='slider-browser slider-browser-center' data-position-bottom='-9%'>
-              <r:img alt="Browser-window-2" uri="/assets/images/window-2.png" />
+              <r:img alt="Browser-window-2" uri="/assets/images/makingdevs_1.png" />
             </div>
             <div class='slider-browser slider-browser-right hidden-phone' data-position-bottom='-8%'>
               <r:img alt="Browser-window-3" uri="/assets/images/window-3.png" />
@@ -35,7 +35,7 @@
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <r:img alt="Browser-window-2" uri="/assets/images/window-2.png" />
+                <r:img alt="Browser-window-2" uri="/assets/images/makingdevs_1.png" />
               </div>
             </div>
             <div class='span4'>
