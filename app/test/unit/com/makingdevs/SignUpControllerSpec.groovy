@@ -16,5 +16,11 @@ class SignUpControllerSpec extends Specification {
 	}
 
 	void "test something"() {
+    given:
+      def s = 10
+    when:
+      def x = s * 10
+    then:
+      x == 100
 	}
 }
