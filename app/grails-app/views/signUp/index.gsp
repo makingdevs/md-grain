@@ -88,7 +88,7 @@
                 <div class="row-fluid">
                   <div class="span12">
                     <div class="form-actions no-margin-bottom">
-                      <button class="btn btn-primary btn-large" name="button" type="submit">Complete Registration</button>
+                      <button class="btn btn-primary btn-large" name="button" type="submit">Completar el registro</button>
                     </div>
                   </div>
                 </div>

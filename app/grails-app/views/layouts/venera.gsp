@@ -27,14 +27,14 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </a>
-          <a href="index.html" class="brand">MakingDevs</a>
+          <g:link controller="home" class="brand">makingdevs</g:link>
           <div class='nav-collapse subnav-collapse collapse pull-right' id='top-navigation'>
             <ul class='nav'>
               <li class='active'>
                 <g:link controller="home">Home</g:link>
               </li>
               <li class=''>
-                <a href="contact.html">Contact</a>
+                <g:link controller="home" action="contact">Contacto</g:link>
               </li>
             </ul>
             <div class='top-account-control visible-desktop'>
@@ -72,7 +72,7 @@
               </li>
               <li>
                 <strong>Teléfono:</strong>
-                (551) 850-3073
+                6363 - 8147
               </li>
               <li>
                 <strong>Correo:</strong>

@@ -11,7 +11,7 @@ class UrlMappings {
       action = [GET:"apiShow"]
 		}
 
-		"/"(view:"/index")
+		"/"(controller:"home")
 		"500"(view:'/error')
 	}
 }
