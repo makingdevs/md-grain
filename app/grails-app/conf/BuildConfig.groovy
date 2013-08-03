@@ -39,7 +39,7 @@ grails.project.dependency.resolution = {
   }
 
   dependencies {
-    // runtime 'mysql:mysql-connector-java:5.1.22'
+    runtime 'mysql:mysql-connector-java:5.1.22'
     test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
   }
 
@@ -52,6 +52,7 @@ grails.project.dependency.resolution = {
       test(":spock:0.7") {
         exclude "spock-grails-support"
       }
+      compile ":google-analytics-tracker:0.1"
       // Uncomment these (or add new ones) to enable additional resources capabilities
       //runtime ":zipped-resources:1.0"
       //runtime ":cached-resources:1.0"
