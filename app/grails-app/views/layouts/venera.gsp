@@ -6,6 +6,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Impulsamos la carrera de los desarrolladores de software a través de Técnicas, métodos. metodologías y tecnología" />
+  <meta name="keywords" content="agile,groovy,grails,spring,jquery,desarrollo de software,entrenamiento,cursos" />
   <title>. : MakingDevs - <g:layoutTitle default="Welcome"/> : .</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
@@ -94,6 +97,6 @@
     </div>
   </footer>
 
-<r:layoutResources/>
-            </body>
-          </html>
+  <r:layoutResources/>
+  </body>
+</html>
