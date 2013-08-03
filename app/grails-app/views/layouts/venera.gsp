@@ -98,5 +98,6 @@
   </footer>
 
   <r:layoutResources/>
+  <g:googleAnalyticsTracker/>
   </body>
 </html>
