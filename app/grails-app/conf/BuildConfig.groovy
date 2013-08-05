@@ -49,9 +49,6 @@ grails.project.dependency.resolution = {
       runtime ":resources:1.2"
       compile ":lesscss-resources:1.3.3"
       compile ':spring-security-core:1.2.7.3'
-      test(":spock:0.7") {
-        exclude "spock-grails-support"
-      }
       compile ":google-analytics-tracker:0.1"
       // Uncomment these (or add new ones) to enable additional resources capabilities
       //runtime ":zipped-resources:1.0"
