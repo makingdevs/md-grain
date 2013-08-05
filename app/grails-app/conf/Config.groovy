@@ -25,6 +25,10 @@ grails.mime.types = [
     xml:           ['text/xml', 'application/xml']
 ]
 
+// migration configuration
+grails.plugin.databasemigration.updateOnStart = true
+grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
+
 // URL Mapping Cache Max Size, defaults to 5000
 //grails.urlmapping.cache.maxsize = 1000
 
