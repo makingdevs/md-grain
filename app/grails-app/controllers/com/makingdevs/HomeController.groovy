@@ -10,4 +10,8 @@ class HomeController {
   }
 
   def contact(){}
+
+  def courses(){
+  	[categories:Category.list()]
+  }
 }

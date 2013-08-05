@@ -33,10 +33,13 @@
           <g:link controller="home" class="brand">makingdevs</g:link>
           <div class='nav-collapse subnav-collapse collapse pull-right' id='top-navigation'>
             <ul class='nav'>
-              <li class='active'>
+              <li>
                 <g:link controller="home">Home</g:link>
               </li>
-              <li class=''>
+              <li>
+                <g:link controller="home" action="courses">Cursos</g:link>
+              </li>
+              <li>
                 <g:link controller="home" action="contact">Contacto</g:link>
               </li>
             </ul>

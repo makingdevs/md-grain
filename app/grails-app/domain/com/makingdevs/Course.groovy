@@ -11,6 +11,7 @@ class Course {
   String prerequisites
   String goal
   String courseKey
+  CourseStatus courseStatus = CourseStatus.NEW
 
   Date dateCreated
   Date lastUpdated
