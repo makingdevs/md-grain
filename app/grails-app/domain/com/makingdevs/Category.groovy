@@ -7,11 +7,13 @@ class Category {
 
   String name
   String description
+  String code
 
   static hasMany = [ courses:Course ]
 
   static constraints = {
     name blank:false, size:20..100
     description blank:false, size:1..1000
+    code blank:true, size:0..25
   }
 }
