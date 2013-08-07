@@ -271,4 +271,6 @@ databaseChangeLog = {
 	changeSet(author: "neodevelop (generated)", id: "1375493621026-14") {
 		addForeignKeyConstraint(baseColumnNames: "user_id", baseTableName: "user_role", constraintName: "FK143BF46A9F6FF5B2", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user", referencesUniqueColumn: "false")
 	}
+
+	include file:"add-course-status.groovy"
 }

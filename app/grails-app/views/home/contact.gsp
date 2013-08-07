@@ -1,10 +1,10 @@
 <html>
-  <head>
-		<meta name="layout" content="venera"/>
-  </head>
-  <body>
+<head>
+  <meta name="layout" content="venera"/>
+</head>
+<body>
 
-    <section class='section-wrapper contact-page-w'>
+  <section class='section-wrapper contact-page-w'>
     <div class='container'>
       <h3 class='section-header'>Estamos a tus órdenes.</h3>
       <div class='row'>
@@ -38,7 +38,7 @@
         </div>
         <div class='span8'>
           <div class="white-card extra-padding">
-<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;q=Av+M%C3%A9xico+145,+Del+Carmen,+Coyoac%C3%A1n,+04100+Ciudad+de+M%C3%A9xico,+Distrito+Federal,+M%C3%A9xico&amp;aq=&amp;sll=19.338677,-99.106981&amp;sspn=0.025714,0.038581&amp;ie=UTF8&amp;geocode=FWRZJwEd484W-g&amp;split=0&amp;hq=&amp;hnear=Av+M%C3%A9xico+145,+Del+Carmen,+Coyoac%C3%A1n,+Ciudad+de+M%C3%A9xico,+Distrito+Federal,+M%C3%A9xico&amp;t=m&amp;ll=19.356012,-99.16852&amp;spn=0.014171,0.018239&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+            <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;q=Av+M%C3%A9xico+145,+Del+Carmen,+Coyoac%C3%A1n,+04100+Ciudad+de+M%C3%A9xico,+Distrito+Federal,+M%C3%A9xico&amp;aq=&amp;sll=19.338677,-99.106981&amp;sspn=0.025714,0.038581&amp;ie=UTF8&amp;geocode=FWRZJwEd484W-g&amp;split=0&amp;hq=&amp;hnear=Av+M%C3%A9xico+145,+Del+Carmen,+Coyoac%C3%A1n,+Ciudad+de+M%C3%A9xico,+Distrito+Federal,+M%C3%A9xico&amp;t=m&amp;ll=19.356012,-99.16852&amp;spn=0.014171,0.018239&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-    </section>
+  </section>
 
-  </body>
+</body>
 </html>
