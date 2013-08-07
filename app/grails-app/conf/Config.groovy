@@ -116,7 +116,8 @@ log4j = {
       'grails.plugin.webxml',
       'rhino',
       'org.lesscss',
-      'grails.app.resourceMappers'
+      'grails.app.resourceMappers',
+      'liquibase'
 
   error 'net.sf.ehcache', 'net.sf.ehcache.hibernate', 'org.hibernate'
 
