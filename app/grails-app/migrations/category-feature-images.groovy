@@ -8,18 +8,6 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "neodevelop (generated)", id: "1375902454835-2") {
-		modifyDataType(columnName: "course_status", newDataType: "varchar(255)", tableName: "course")
-	}
-
-	changeSet(author: "neodevelop (generated)", id: "1375902454835-8") {
-		dropColumn(columnName: "feature_image", tableName: "category")
-	}
-
-	changeSet(author: "neodevelop (generated)", id: "1375902454835-9") {
-		dropColumn(columnName: "window_image", tableName: "category")
-	}
-
 	changeSet(author: "neodevelop (generated)", id: "1375902454835-3") {
 		addForeignKeyConstraint(baseColumnNames: "category_courses_id", baseTableName: "category_course", constraintName: "FKB5CF267C59346DB9", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "category", referencesUniqueColumn: "false")
 	}
