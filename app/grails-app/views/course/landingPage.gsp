@@ -67,29 +67,7 @@
               </button>
             </div>
             <div class="blog-categories widget-tp">
-              <g:coursesPerCategory name="${category}"/>
-              <h3>
-                <i class="icon-th-list"></i>
-                ${category}
-              </h3>
-
-              <ul>
-                <li>
-                  <a href="#">Quisque quis magna vitae</a>
-                </li>
-                <li>
-                  <a href="#">Fusce pharetra nisl vitae nisl</a>
-                </li>
-                <li>
-                  <a href="#">Sed euismod, metus sed congue</a>
-                </li>
-                <li>
-                  <a href="#">Ut diam arcu, dictum ut vulputate</a>
-                </li>
-                <li>
-                  <a href="#">Etiam molestie nibh vitae turpis</a>
-                </li>
-              </ul>
+              <g:coursesPerCategory name="${category}" currentCourse="${course.id}"/>
             </div>
             
           </div>
