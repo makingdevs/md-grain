@@ -8,7 +8,7 @@ class CourseController {
     if(!params.id)
       redirect controller:"home",action:"courses"
     else
-      [course:Course.findByCourseKey(params.id)]
+      [course:Course.findByCourseKey(params.id),category:params.category]
   }
 
 }
