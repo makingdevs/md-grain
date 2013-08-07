@@ -32,6 +32,11 @@
     </p>
   </div>
   <div class="span5">
-    <r:img alt="Browser-window-2" uri="/assets/images/browser-window.png"/>
+    <g:if test="${category.code}">
+      <r:img alt="Browser-window-${category.id}" uri="/assets/images/${category.code.toLowerCase()}.png"/>
+    </g:if>
+    <g:else>
+      <r:img alt="Browser-window-${category.id}" uri="/assets/images/browser-window.png"/>
+    </g:else>
   </div>
 </div>

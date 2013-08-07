@@ -37,7 +37,7 @@
                 <g:link controller="home">Home</g:link>
               </li>
               <li>
-                <g:link controller="home" action="courses">Cursos</g:link>
+                <g:link mapping="training">Cursos</g:link>
               </li>
               <li>
                 <g:link controller="home" action="contact">Contacto</g:link>

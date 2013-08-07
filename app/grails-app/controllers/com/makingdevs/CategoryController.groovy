@@ -6,7 +6,4 @@ class CategoryController {
 
   def scaffold = Category
 
-  def apiShow(){
-    render Category.list() as JSON
-  }
 }
