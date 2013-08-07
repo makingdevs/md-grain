@@ -7,8 +7,14 @@ class UrlMappings {
 			}
 		}
 
-		"/api/categories"(controller:"category",parseRequest:true){
-      action = [GET:"apiShow"]
+		name training: "/training" {
+			controller = 'home'
+			action = 'courses'
+		}
+
+		name course: "/training/$id" {
+			controller = 'course'
+			action = 'landingPage'
 		}
 
 		"/"(controller:"home")
