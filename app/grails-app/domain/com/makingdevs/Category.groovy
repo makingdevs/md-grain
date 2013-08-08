@@ -9,6 +9,9 @@ class Category {
   String description
   String code
 
+  Date dateCreated                                                                                                                                                                                      │
+  Date lastUpdated                                                                                                                                                                                      │
+
   static hasMany = [ courses:Course ]
 
   static constraints = {

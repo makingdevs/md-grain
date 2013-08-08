@@ -67,7 +67,7 @@
               </button>
             </div>
             <div class="blog-categories widget-tp">
-              <g:coursesPerCategory name="${category}" currentCourse="${course.id}"/>
+              <g:coursesPerCategory code="${category}" currentCourse="${course.id}"/>
             </div>
             
           </div>

@@ -3,19 +3,19 @@ package com.makingdevs
 class CourseTagLib {
 
   def coursesPerCategory = { attrs, body ->
+    def category = Category.findByCode(attrs.code)
     out << """
       <h3>
         <i class='icon-th-list'></i>
-        ${attrs.name}
+        ${category.name}
       </h3>
     """
-    def category = Category.findByName(attrs.name)
     out << "<ul>"
-    category.courses.each { c ->
-      if(!(attrs.currentCourse.toLong() == c.id)){
+    category.courses.each { course ->
+      if(!(attrs.currentCourse.toLong() == course.id)){
         out << """
           <li>
-            <a href='#'>${c.name}</a>
+            <a href='#'>${course.name}</a>
           </li>
         """  
       }
