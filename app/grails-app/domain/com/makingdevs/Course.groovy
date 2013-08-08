@@ -20,7 +20,7 @@ class Course {
     prerequisites nullable:false,blank:false,size:1..1000
     goal nullable:false,blank:false,size:1..1000
     courseKey nullable:false,blank:false,unique:true,size:1..20
-    courseStatus nullable:false, size:1..25
+    courseStatus nullable:false
   }
 
   String toString(){
