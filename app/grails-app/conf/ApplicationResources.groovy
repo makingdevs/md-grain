@@ -10,4 +10,12 @@ modules = {
     resource url:'assets/js/lightbox.js'
     resource url:'assets/js/main.js'
   }
+  wysihtml5 {
+    dependsOn 'jquery'
+    resource url:'js/wysihtml5/img/glyphicons-halflings.png'
+    resource url:'js/wysihtml5/js/wysihtml5-0.3.0_rc2.min.js'
+    resource url:'js/wysihtml5/bootstrap-wysihtml5-0.0.2.css'
+    resource url:'js/wysihtml5/bootstrap-wysihtml5-0.0.2.min.js'
+    resource url:'js/wysihtml5/wysihtml-init.js'
+  }
 }
