@@ -1,8 +1,5 @@
 package com.makingdevs
 
-import groovy.transform.ToString
-
-@ToString
 class Course {
 
   String name
@@ -24,5 +21,9 @@ class Course {
     goal nullable:false,blank:false,size:1..1000
     courseKey nullable:false,blank:false,unique:true,size:1..20
     courseStatus nullable:false, size:1..25
+  }
+
+  String toString(){
+    courseKey
   }
 }
