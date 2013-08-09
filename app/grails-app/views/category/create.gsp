@@ -8,7 +8,7 @@
 		<r:require module="wysihtml5"/>
 	</head>
 	<body>
-		<header class="jumbotron subhead" id="overview">
+		<header class="jumbotron subhead" id="menuOptions">
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
