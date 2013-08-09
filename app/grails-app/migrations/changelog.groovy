@@ -275,4 +275,6 @@ databaseChangeLog = {
 	include file:"add-course-status.groovy"
 
 	include file:"category-feature-images.groovy"
+
+	include file:"add-scheduled-course.groovy"
 }

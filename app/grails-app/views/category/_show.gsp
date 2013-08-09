@@ -10,7 +10,7 @@
         <g:each in="${category.courses}" var="course">
           <li>
             <g:if test="${course.courseStatus == CourseStatus.LIVE}">
-              <g:link controller="course" action="landingPage" id="${course.courseKey.toLowerCase()}" params="[category:category.name]">
+              <g:link controller="course" action="landingPage" id="${course.courseKey.toLowerCase()}" params="[category:category.code.toLowerCase()]">
                 ${course.name} 
               </g:link>
             </g:if>
