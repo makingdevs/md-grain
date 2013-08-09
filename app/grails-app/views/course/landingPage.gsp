@@ -13,17 +13,17 @@
             
             <div class="post-content">
               <p>
-
+              ${course.overview}
               </p>
-              <p>
-
+              <p><h4>A quien va dirigido:</h4>
+              ${course.audience}
               </p>
               <blockquote class="colored">
-                <p></p>
+                <p>${course.goal}</p>
               </blockquote>
-              <p></p>
               <p>
-
+              <h4>Pre-requisitos:</h4>
+              ${course.prerequisites}
               </p>
             </div>
           </div>
@@ -32,7 +32,7 @@
         <div class="span4">
           <div class="blog-side-bar">
 
-            <div class="blog-recent-tweets widget-tp">
+            <!--div class="blog-recent-tweets widget-tp">
               <h3>
               <i class="icon-calendar"></i>
                 Siguientes fechas:
@@ -54,7 +54,7 @@
                   <a href="#">soziev.com</a>
                 </li>
               </ul>
-            </div>
+            </div-->
 
             <div class="blog-side-search widget-tp">
 
@@ -63,7 +63,7 @@
                 ¿Estás listo para tomar el curso?
               </h3>
               <button class="btn btn-large btn-block btn-success" type="button">
-                Contestar la evaluación
+                Contestar la evaluación(Prximamente)
               </button>
             </div>
             <div class="blog-categories widget-tp">

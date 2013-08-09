@@ -15,12 +15,12 @@ class Course {
 
   static constraints = {
     name blank:false,nullable:false,size:1..100
-    overview nullable:false,blank:false,size:1..1000
-    audience nullable:false,blank:false,size:1..1000
-    prerequisites nullable:false,blank:false,size:1..1000
-    goal nullable:false,blank:false,size:1..1000
+    overview nullable:false,blank:false,size:1..2000
+    audience nullable:false,blank:false,size:1..2000
+    prerequisites nullable:false,blank:false,size:1..2000
+    goal nullable:false,blank:false,size:1..2000
     courseKey nullable:false,blank:false,unique:true,size:1..20
-    courseStatus nullable:false, size:1..25
+    courseStatus nullable:false
   }
 
   String toString(){
