@@ -1,6 +1,6 @@
 package com.makingdevs
 
-public enum RegistrationStatus {
+enum RegistrationStatus {
   REGISTERED("registration.registered.no.group"),
   INSCRIBED_AND_WITH_DEBTH("registration.inscribed.with.debt"),
   INSCRIBED_AND_WITH_DEBTH_IN_GROUP("registration.inscribed.with.debt.in.group"),
