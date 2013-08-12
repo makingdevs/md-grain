@@ -31,26 +31,7 @@ class CourseTagLib {
       inList 'scheduledCourseStatus',[ScheduledCourseStatus.PLANNING, ScheduledCourseStatus.SCHEDULED, ScheduledCourseStatus.PROGRESS]
     }
     if(scheduledCourses){
-      out << """
-        <div class="blog-recent-tweets widget-tp">
-        <h3><i class="icon-calendar"></i>Siguientes fechas:</h3>
-        <ul>
-      """
-      scheduledCourses.each { sc ->
-        out << """
-          <li>
-            Inicia: <strong>${formatDate(date:sc.beginDate,format:"dd - MMMM - yyyy")}</strong><br/>
-            Fecha límite: <strong>${formatDate(date:sc.limitRegistrationDate,format:"dd - MMMM - yyyy")}</strong><br/>
-            Duración: <strong>${sc.durationInHours} horas</strong>
-            <hr/>
-            ${link(controller:'register',id:sc.id,class:'btn btn-success'){"<i class='icon-book'> Registrate a este curso!</i>"}}
-          </li>
-        """
-      }
-      out << """
-        </ul>
-        </div>
-      """  
+      out << body(scheduledCourses:scheduledCourses)
     }
     
   }

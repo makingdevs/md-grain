@@ -33,6 +33,22 @@
           <div class="blog-side-bar">
 
             <g:scheduledCourses currentCourse="${course.id}">
+              <div class="blog-recent-tweets widget-tp">
+                <h3><i class="icon-calendar"></i>Siguientes fechas:</h3>
+                <ul>
+                  <g:each in="${scheduledCourses}" var="sc">
+                  <li>
+                    Inicia: <b>${formatDate(date:sc.beginDate,format:"dd - MMMM - yyyy")}</b><br/>
+                    Fecha límite: <b>${formatDate(date:sc.limitRegistrationDate,format:"dd - MMMM - yyyy")}</b><br/>
+                    Duración: <b>${sc.durationInHours} horas</b>
+                    <hr/>
+                    <g:link controller="register" id="${sc.id}" class="btn btn-success">
+                      <i class='icon-book'></i> Registrate a este curso!
+                    </g:link>
+                  </li>
+                  </g:each>
+                </ul>
+              </div>
             </g:scheduledCourses>
 
             <div class="blog-side-search widget-tp">
@@ -42,7 +58,7 @@
                 ¿Estás listo para tomar el curso?
               </h3>
               <button class="btn btn-large btn-block btn-success" type="button">
-                Contestar la evaluación(Próximamente)
+                Evaluación previa (Próximamente)
               </button>
             </div>
             <div class="blog-categories widget-tp">
