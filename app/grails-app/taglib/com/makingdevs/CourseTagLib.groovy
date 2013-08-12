@@ -23,4 +23,17 @@ class CourseTagLib {
     out << "</ul>"
   }
 
+  def scheduledCourses = { attrs, body ->
+    def scheduledCourses = ScheduledCourse.findAll {
+      course {
+        eq 'id',attrs.currentCourse.toLong()
+      }
+      inList 'scheduledCourseStatus',[ScheduledCourseStatus.PLANNING, ScheduledCourseStatus.SCHEDULED, ScheduledCourseStatus.PROGRESS]
+    }
+    if(scheduledCourses){
+      out << body(scheduledCourses:scheduledCourses)
+    }
+    
+  }
+
 }
