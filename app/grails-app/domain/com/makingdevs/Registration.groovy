@@ -12,7 +12,7 @@ class Registration {
   static constraints = {
     lastUpdated display: false, nullable: true
     dateCreated display: false, nullable: true
-    student nullable: false
+    user nullable: false
     scheduledCourse nullable: false
     invoice nullable: true
   }
