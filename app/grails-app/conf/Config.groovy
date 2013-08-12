@@ -117,7 +117,8 @@ log4j = {
       'rhino',
       'org.lesscss',
       'grails.app.resourceMappers',
-      'liquibase'
+      'liquibase',
+      'org.grails.datastore'
 
   error 'net.sf.ehcache', 'net.sf.ehcache.hibernate', 'org.hibernate'
 

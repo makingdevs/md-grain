@@ -32,29 +32,8 @@
         <div class="span4">
           <div class="blog-side-bar">
 
-            <!--div class="blog-recent-tweets widget-tp">
-              <h3>
-              <i class="icon-calendar"></i>
-                Siguientes fechas:
-              </h3>
-              <ul>
-                <li>
-                  <a href="#">about 7 hours ago</a>
-                  Aliquam vehicula tristique turpis dignissim accumsan
-                  <a href="#">soziev.com</a>
-                </li>
-                <li>
-                  <a href="#">about 7 hours ago</a>
-                  Aliquam vehicula tristique turpis dignissim accumsan
-                  <a href="#">soziev.com</a>
-                </li>
-                <li>
-                  <a href="#">about 7 hours ago</a>
-                  Aliquam vehicula tristique turpis dignissim accumsan
-                  <a href="#">soziev.com</a>
-                </li>
-              </ul>
-            </div-->
+            <g:scheduledCourses currentCourse="${course.id}">
+            </g:scheduledCourses>
 
             <div class="blog-side-search widget-tp">
 
@@ -63,7 +42,7 @@
                 ¿Estás listo para tomar el curso?
               </h3>
               <button class="btn btn-large btn-block btn-success" type="button">
-                Contestar la evaluación(Prximamente)
+                Contestar la evaluación(Próximamente)
               </button>
             </div>
             <div class="blog-categories widget-tp">
