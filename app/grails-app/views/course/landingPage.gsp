@@ -42,7 +42,7 @@
                     Fecha límite: <b>${formatDate(date:sc.limitRegistrationDate,format:"dd - MMMM - yyyy")}</b><br/>
                     Duración: <b>${sc.durationInHours} horas</b>
                     <hr/>
-                    <g:link controller="register" id="${sc.id}" class="btn btn-success">
+                    <g:link controller="registration" id="${sc.id}" class="btn btn-success">
                       <i class='icon-book'></i> Registrate a este curso!
                     </g:link>
                   </li>
