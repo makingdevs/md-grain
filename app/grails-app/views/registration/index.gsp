@@ -44,7 +44,7 @@
                         </li>
                       </ul>
                       <p>Recuerda poner tu nombre completo para que la generación de constancias sea acorde a tus datos.</p>
-                      <a href="../register.html" class="btn btn-primary btn-large">Registrarme al entrenamiento</a>
+                      <g:link controller="registration" action="addMe" id="${scheduledCourse.id}" class="btn btn-primary btn-large">Registrarme al entrenamiento</g:link>
                     </div>
                   </div>
                 </div>
