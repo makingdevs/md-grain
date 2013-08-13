@@ -2,5 +2,7 @@ package com.makingdevs
 
 class RegistrationController {
 
-  def index() { }
+  def index() {
+    [scheduledCourse:ScheduledCourse.get(params.id)]
+  }
 }
