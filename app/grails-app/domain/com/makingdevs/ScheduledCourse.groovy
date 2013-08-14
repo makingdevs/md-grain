@@ -27,4 +27,16 @@ class ScheduledCourse {
     durationInHours nullable: false, min:1, max:40
   }
 
+  static hasMany = [
+    registrations:Registration
+  ]
+
+  static mapping = {
+    cache true
+  }
+
+  String toString() {
+    "(${id} : ${beginDate} : ${scheduledCourseStatus})"
+  }
+
 }

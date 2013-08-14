@@ -277,4 +277,6 @@ databaseChangeLog = {
 	include file:"category-feature-images.groovy"
 
 	include file:"add-scheduled-course.groovy"
+
+	include file:"adding-registration.groovy"
 }

@@ -118,7 +118,8 @@ log4j = {
       'org.lesscss',
       'grails.app.resourceMappers',
       'liquibase',
-      'org.grails.datastore'
+      'org.grails.datastore',
+      'grails.plugin.databasemigration'
 
   error 'net.sf.ehcache', 'net.sf.ehcache.hibernate', 'org.hibernate'
 
