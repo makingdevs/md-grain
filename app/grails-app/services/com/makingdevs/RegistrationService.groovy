@@ -2,9 +2,12 @@ package com.makingdevs
 
 class RegistrationService {
 
-  Registration addUserToScheduledCourse(User user, Long scheduledCourseId) {
-    log.debug scheduledCourseId
-    log.debug user
-    null
+  Registration addUserToScheduledCourse(String username, Long scheduledCourseId) {
+    def user = User.findByUsername(username)
+    def scheduledCourse = ScheduledCourse.get(scheduledCourseId)
+    def registration = new Registration(user:user)
+    scheduledCourse.addToRegistrations(registration).save()
+    registration.save()
+    registration
   }
 }

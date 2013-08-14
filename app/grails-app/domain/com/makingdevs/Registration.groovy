@@ -4,7 +4,7 @@ class Registration {
   Date dateCreated
   Date lastUpdated
   User user
-  RegistrationStatus registrationStatus
+  RegistrationStatus registrationStatus = RegistrationStatus.REGISTERED
   Boolean invoice = false
 
   static belongsTo = [scheduledCourse:ScheduledCourse]
