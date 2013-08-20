@@ -109,7 +109,8 @@ databaseChangeLog = {
 
 	changeSet(author: "neodevelop (generated)", id: "1377019288271-2b") {
 		sql("""
-			insert into perfil (id,version,	apellido_paterno,	avatar,	date_created,	fecha_de_nacimiento	,last_updated,	nombre) select id,version,	last_name,avatar,	avatar,	date_created,	date_born ,last_updated,	name from profile
+			insert into perfil (id,version,	apellido_paterno,	avatar,	date_created,	fecha_de_nacimiento	,last_updated,	nombre, sexo) 
+			select 							id,version,last_name, 				avatar,	date_created,	date_born ,					 last_updated,	name, 	'' from profile
 			""")
 		sql("update perfil set sexo='QUIMERA' where 1=1")
 	}
@@ -177,6 +178,10 @@ databaseChangeLog = {
 		}
 	}
 
+	changeSet(author: "neodevelop (generated)", id: "1377019288271-6b") {
+		sql("update user u set u.perfil_id=u.profile_id where u.id = u.id;")
+	}
+
 	changeSet(author: "neodevelop (generated)", id: "1377019288271-19") {
 		dropIndex(indexName: "FK36EBCB27BFDA42", tableName: "user")
 	}
@@ -206,9 +211,11 @@ databaseChangeLog = {
 	}
 
 	changeSet(author: "neodevelop (generated)", id: "1377019288271-24") {
+		sql("SET foreign_key_checks = 0;")
 		createIndex(indexName: "FK36EBCB82201412", tableName: "user") {
 			column(name: "perfil_id")
 		}
+		sql("SET foreign_key_checks = 1;")
 	}
 
 	changeSet(author: "neodevelop (generated)", id: "1377019288271-25") {
@@ -256,7 +263,9 @@ databaseChangeLog = {
 	}
 
 	changeSet(author: "neodevelop (generated)", id: "1377019288271-16") {
+		sql("SET foreign_key_checks = 0;")
 		addForeignKeyConstraint(baseColumnNames: "perfil_id", baseTableName: "user", constraintName: "FK36EBCB82201412", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "perfil", referencesUniqueColumn: "false")
+		sql("SET foreign_key_checks = 1;")
 	}
 
 	changeSet(author: "neodevelop (generated)", id: "1377019288271-17") {
