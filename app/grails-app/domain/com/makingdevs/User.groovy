@@ -1,6 +1,7 @@
 package com.makingdevs
 
 import groovy.transform.ToString;
+import com.makingdevs.*
 
 @ToString(includeNames=true)
 class User {
@@ -13,7 +14,7 @@ class User {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
-	Profile profile
+	Perfil perfil
 
 	static constraints = {
 		username blank: false, unique: true, email:true
