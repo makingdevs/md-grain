@@ -279,4 +279,6 @@ databaseChangeLog = {
 	include file:"add-scheduled-course.groovy"
 
 	include file:"adding-registration.groovy"
+
+	include file:"using-profile-plugin.groovy"
 }

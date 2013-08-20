@@ -33,16 +33,22 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="span4">
-                    <div class="control-group ${hasErrors(bean:user,field:'name','error')}">
+                  <div class="span2">
+                    <div class="control-group ${hasErrors(bean:user,field:'nombre','error')}">
                       <label>Nombre(s)</label>
-                      <input name="name" class="span4" placeholder="Tu(s) nombre(s)..." type="text" value="${user?.name}">
+                      <input name="nombre" class="span2" placeholder="Tu(s) nombre(s)..." type="text" value="${user?.nombre}">
                     </div>
                   </div>
-                  <div class="span4">
-                    <div class="control-group ${hasErrors(bean:user,field:'lastName','error')}">
-                      <label>Apellidos</label>
-                      <input name="lastName" class="span4" placeholder="Tus apellidos..." type="text" value="${user?.lastName}">
+                  <div class="span2">
+                    <div class="control-group ${hasErrors(bean:user,field:'apellidoPaterno','error')}">
+                      <label>Apellido Paterno</label>
+                      <input name="apellidoPaterno" class="span2" placeholder="Apellido paterno" type="text" value="${user?.apellidoPaterno}">
+                    </div>
+                  </div>
+                  <div class="span2">
+                    <div class="control-group ${hasErrors(bean:user,field:'apellidoMaterno','error')}">
+                      <label>Apellido Materno</label>
+                      <input name="apellidoMaterno" class="span2" placeholder="Apellido materno" type="text" value="${user?.apellidoMaterno}">
                     </div>
                   </div>
                 </div>
@@ -97,20 +103,7 @@
           </div>
         </div>
         <div class="span3">
-          <div class="blog-side-text-block widget-filled widget-yellow">
-            <h3>Algunos tips:</h3>
-            <ul class="big-iconed-tips">
-              <li>
-                <i class="icon-credit-card"></i>
-                El registro es gratis 
-              </li>
-              <li>
-                <i class="icon-lock"></i>
-                Tus datos están seguros
-              </li>
-            </ul>
-            <p>Una vez que te registres tendrás la oportunidad de inscribirte a cursos de entrenamiento y eventos relacionados con el desarrollo de software.</p>
-          </div>
+          <g:render template="/registration/tips" />
         </div>
       </div>
     </div>
