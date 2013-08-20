@@ -34,15 +34,17 @@ class SignUpController {
 
 @ToString(includeNames=true)
 class UserCommand {
-  String name
-  String lastName
+  String nombre
+  String apellidoPaterno
+  String apellidoMaterno
   String username
   String password
   String confirmPassword
 
   static constraints = {
-    name blank:false
-    lastName blank:false
+    nombre blank:false
+    apellidoPaterno blank:false
+    apellidoMaterno blank:true
     username email:true, blank: false, unique: true
     password blank: false
     confirmPassword blank:false, validator: { val, obj ->
