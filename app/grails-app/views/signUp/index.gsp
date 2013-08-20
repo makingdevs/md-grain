@@ -33,16 +33,22 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="span4">
-                    <div class="control-group ${hasErrors(bean:user,field:'name','error')}">
+                  <div class="span2">
+                    <div class="control-group ${hasErrors(bean:user,field:'nombre','error')}">
                       <label>Nombre(s)</label>
-                      <input name="name" class="span4" placeholder="Tu(s) nombre(s)..." type="text" value="${user?.name}">
+                      <input name="nombre" class="span2" placeholder="Tu(s) nombre(s)..." type="text" value="${user?.nombre}">
                     </div>
                   </div>
-                  <div class="span4">
-                    <div class="control-group ${hasErrors(bean:user,field:'lastName','error')}">
-                      <label>Apellidos</label>
-                      <input name="lastName" class="span4" placeholder="Tus apellidos..." type="text" value="${user?.lastName}">
+                  <div class="span2">
+                    <div class="control-group ${hasErrors(bean:user,field:'apellidoPaterno','error')}">
+                      <label>Apellido Paterno</label>
+                      <input name="apellidoPaterno" class="span2" placeholder="Apellido paterno" type="text" value="${user?.apellidoPaterno}">
+                    </div>
+                  </div>
+                  <div class="span2">
+                    <div class="control-group ${hasErrors(bean:user,field:'apellidoMaterno','error')}">
+                      <label>Apellido Materno</label>
+                      <input name="apellidoMaterno" class="span2" placeholder="Apellido materno" type="text" value="${user?.apellidoMaterno}">
                     </div>
                   </div>
                 </div>
