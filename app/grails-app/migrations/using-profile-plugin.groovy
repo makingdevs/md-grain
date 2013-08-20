@@ -1,5 +1,20 @@
 databaseChangeLog = {
 
+	changeSet(author: "neodevelop (generated)", id: "1377019288271-0") {
+		sql("ALTER TABLE DATABASECHANGELOG ENGINE=InnoDB;")
+		sql("ALTER TABLE DATABASECHANGELOGLOCK ENGINE=InnoDB;")
+		sql("ALTER TABLE category ENGINE=InnoDB;")
+		sql("ALTER TABLE category_course ENGINE=InnoDB;")
+		sql("ALTER TABLE course ENGINE=InnoDB;")
+		sql("ALTER TABLE profile ENGINE=InnoDB;")
+		sql("ALTER TABLE registration ENGINE=InnoDB;")
+		sql("ALTER TABLE requestmap ENGINE=InnoDB;")
+		sql("ALTER TABLE role ENGINE=InnoDB;")
+		sql("ALTER TABLE scheduled_course ENGINE=InnoDB;")
+		sql("ALTER TABLE user ENGINE=InnoDB;")
+		sql("ALTER TABLE user_role ENGINE=InnoDB;		")
+	}
+
 	changeSet(author: "neodevelop (generated)", id: "1377019288271-1") {
 		sql("set storage_engine=InnoDB;")
 		createTable(tableName: "direccion") {
@@ -90,11 +105,11 @@ databaseChangeLog = {
 				constraints(nullable: "false")
 			}
 		}
+	}
+
+	changeSet(author: "neodevelop (generated)", id: "1377019288271-2b") {
 		sql("""
-			insert into perfil 
-				id,version,	apellido_paterno,	avatar,	date_created,	fecha_de_nacimiento	,last_updated,	nombre
-			select 
-				id,version,	last_name,avatar,	avatar,	date_created,	date_born						,last_updated,	name from profile
+			insert into perfil (id,version,	apellido_paterno,	avatar,	date_created,	fecha_de_nacimiento	,last_updated,	nombre) select id,version,	last_name,avatar,	avatar,	date_created,	date_born ,last_updated,	name from profile
 			""")
 		sql("update perfil set sexo='QUIMERA' where 1=1")
 	}
