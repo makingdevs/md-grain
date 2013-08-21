@@ -42,6 +42,14 @@
               <li>
                 <g:link controller="home" action="contact">Contacto</g:link>
               </li>
+              <sec:ifLoggedIn>
+              <li>
+                <g:link controller="perfil">Mi perfil</g:link>
+              </li>
+              <li>
+                <g:link controller="logout">Salir</g:link>
+              </li>
+              </sec:ifLoggedIn>
             </ul>
             <div class='top-account-control visible-desktop'>
               <sec:ifNotLoggedIn>

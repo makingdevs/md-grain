@@ -27,7 +27,7 @@ class SignUpController {
       }
       User user = signUpService.registerUserWithUserCommand(userCommand)
       springSecurityService.reauthenticate user.username
-      redirect uri: SpringSecurityUtils.securityConfig.successHandler.defaultTargetUrl
+      redirect controller:'perfil'
     }
   }
 }
