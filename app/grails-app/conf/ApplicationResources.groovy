@@ -18,4 +18,7 @@ modules = {
     resource url:'js/wysihtml5/bootstrap-wysihtml5-0.0.2.min.js'
     resource url:'js/wysihtml5/wysihtml-init.js'
   }
+  telefono {
+    resource url:'js/telefono/index.js'
+  }
 }
