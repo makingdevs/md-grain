@@ -11,5 +11,6 @@ class RegistrationController {
 
   def addMe(){
     registrationService.addUserToScheduledCourse(springSecurityService.currentUser, params.id.toLong())
+    redirect controller:"myTraining"
   }
 }
