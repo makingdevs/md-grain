@@ -8,6 +8,7 @@ class Course {
   String prerequisites
   String goal
   String courseKey
+  String content
   CourseStatus courseStatus = CourseStatus.NEW
 
   Date dateCreated
@@ -20,6 +21,7 @@ class Course {
     prerequisites nullable:false,blank:false,size:1..2000
     goal nullable:false,blank:false,size:1..2000
     courseKey nullable:false,blank:false,unique:true,size:1..20
+    content nullable:false,blank:false,size:1..2000
     courseStatus nullable:false
   }
 

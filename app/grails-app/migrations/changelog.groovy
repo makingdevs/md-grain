@@ -281,4 +281,6 @@ databaseChangeLog = {
 	include file:"adding-registration.groovy"
 
 	include file:"using-profile-plugin.groovy"
+
+	include file:"adding-content-course.groovy"
 }
