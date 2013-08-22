@@ -40,6 +40,14 @@
 	<g:textArea name="goal" class="span6" rows="10" maxlength="1000" required="" value="${courseInstance?.goal}"/>
 </div>
 
+<div class="control-group ${hasErrors(bean: courseInstance, field: 'content', 'error')} required">
+	<label for="content">
+		<g:message code="course.content.label" default="Goal" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textArea name="content" class="span6" rows="10" maxlength="1000" required="" value="${courseInstance?.content}"/>
+</div>
+
 <div class="control-group ${hasErrors(bean: courseInstance, field: 'courseKey', 'error')} required">
 	<label for="courseKey">
 		<g:message code="course.courseKey.label" default="Course Key" />

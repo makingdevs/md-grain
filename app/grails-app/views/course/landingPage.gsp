@@ -22,6 +22,10 @@
                 <p>${course.goal}</p>
               </blockquote>
               <p>
+              <h4>Temario del entrenamiento:</h4>
+              ${course.content}
+              </p>
+              <p>
               <h4>Pre-requisitos:</h4>
               ${course.prerequisites}
               </p>
