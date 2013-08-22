@@ -42,7 +42,7 @@
 
 <div class="control-group ${hasErrors(bean: courseInstance, field: 'content', 'error')} required">
 	<label for="content">
-		<g:message code="course.content.label" default="Goal" />
+		<g:message code="course.content.label" default="Content" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textArea name="content" class="span6" rows="10" maxlength="1000" required="" value="${courseInstance?.content}"/>

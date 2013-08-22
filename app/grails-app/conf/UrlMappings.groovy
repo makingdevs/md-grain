@@ -7,9 +7,18 @@ class UrlMappings {
 			}
 		}
 
-		name contac: "/contact" {
+		name contact: "/contact" {
 			controller = 'home'
 			action = 'contact'
+		}
+
+		name signup: "/signup" {
+			controller = 'signUp'
+			action = 'index'
+		}
+
+		name login: "/login/**" {
+			controller = 'login'
 		}
 
 		name training: "/training" {
