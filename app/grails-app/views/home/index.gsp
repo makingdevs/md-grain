@@ -90,13 +90,14 @@
         <g:each in="${categories}" var="category">
           <div class='span3'>
             <div class='white-card'>
-              <!--div class="img-w hover-fader">
-                <a href="assets/images/test-square.png" data-rel="lightbox[gallery]"><img alt="Photo-card" src="assets/images/test-square.png">
-                  <span class="hover-fade">
-                    <i class="icon-zoom-in"></i>
-                  </span>
+              <div class="img-w hover-fader">
+                <!--a href="assets/images/test-square.png" data-rel="lightbox[gallery]"-->
+                  <r:img alt="${category.code.toLowerCase()}_main" uri="/assets/images/${category.code.toLowerCase()}_main.png" />
+                  <!--span class="hover-fade"-->
+                  <!--i class="icon-zoom-in"></i-->
+                  <!--/span-->
                 </a>
-              </div-->
+              </div>
               <h5>${category.name}</h5>
               <p>${category.description}</p>
             </div>
@@ -114,7 +115,9 @@
             <div class='testimonials-users row hidden-phone'>
               <div class='span1'>
                 <a class='testimonials-user-w active' data-toggle='testimonial' href='#testimonial1'>
-                  <span class='testimonials-user'><r:img alt="Avatar-1" uri="/assets/images/test-user.png" /></span>
+                  <span class='testimonials-user'>
+                    <r:img alt="Avatar-1" uri="/assets/images/test-user.png" />
+                  </span>
                 </a>
               </div>
             </div>
