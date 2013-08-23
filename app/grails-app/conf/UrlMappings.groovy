@@ -17,9 +17,15 @@ class UrlMappings {
 			action = 'index'
 		}
 
-		name login: "/login/$action?" {
-			controller = 'login'
-		}
+		name login: "/login/$action?"(controller : 'login')
+
+		name logout: "/logout/$action?"(controller : 'logout')
+
+		name me: "/me/$action?"(controller : 'perfil')
+
+		name telefono: "/telefono/$action?"(controller : 'telefono')
+
+		name registration: "/registration/$action?"(controller : 'registration')
 
 		name training: "/training" {
 			controller = 'home'
