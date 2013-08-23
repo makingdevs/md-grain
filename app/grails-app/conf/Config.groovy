@@ -72,16 +72,6 @@ environments {
 
 log4j = {
 
-  appenders {
-    console name: 'stdout', layout: pattern(conversionPattern: '%d{ISO8601}\t%p\t%c:%L\t%m%n'), threshold: org.apache.log4j.Level.ERROR
-    appender new DailyRollingFileAppender(name: 'file', file: logDirectory + "md-grain.log", datePattern: '\'_\'yyyy-MM-dd', layout: pattern(conversionPattern: '%d{ISO8601}\t%p\t%c:%L\t%m%n'))
-  }
-
-  root {
-    debug 'stdout', 'file'
-    additivity = true
-  }
-
   debug 'grails.app.controllers.com.makingdevs',
       'grails.app.taglib.com.makingdevs',
       'grails.app.services.com.makingdevs',

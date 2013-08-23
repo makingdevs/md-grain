@@ -17,7 +17,7 @@ class UrlMappings {
 			action = 'index'
 		}
 
-		name login: "/login/**" {
+		name login: "/login/$action?" {
 			controller = 'login'
 		}
 
