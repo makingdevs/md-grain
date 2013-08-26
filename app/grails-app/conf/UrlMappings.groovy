@@ -12,10 +12,7 @@ class UrlMappings {
 			action = 'contact'
 		}
 
-		name signup: "/signup" {
-			controller = 'signUp'
-			action = 'index'
-		}
+		name signup: "/signUp/$action?"(controller:'signUp')
 
 		name login: "/login/$action?"(controller : 'login')
 
