@@ -1,11 +1,28 @@
 class UrlMappings {
 
 	static mappings = {
-		"/$controller/$action?/$id?"{
+		"/admin/$controller/$action?/$id?"{
 			constraints {
 				// apply constraints here
 			}
 		}
+
+		name contact: "/contact" {
+			controller = 'home'
+			action = 'contact'
+		}
+
+		name signup: "/signUp/$action?"(controller:'signUp')
+
+		name login: "/login/$action?"(controller : 'login')
+
+		name logout: "/logout/$action?"(controller : 'logout')
+
+		name me: "/me/$action?"(controller : 'perfil')
+
+		name telefono: "/telefono/$action?"(controller : 'telefono')
+
+		name registration: "/registration/$action?"(controller : 'registration')
 
 		name training: "/training" {
 			controller = 'home'

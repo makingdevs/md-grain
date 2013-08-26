@@ -1,12 +1,14 @@
 import com.makingdevs.Course
 import com.makingdevs.Category
 import com.makingdevs.Role
+import com.makingdevs.Requestmap
 
 class BootStrap {
 
   def init = { servletContext ->
     createCategoriesAndCourses()
     createRoles()
+    createRequestMapping()
 
   }
   def destroy = {
@@ -62,6 +64,24 @@ class BootStrap {
       new Role(authority:"ROLE_STUDENT").save(flush:true)
       new Role(authority:"ROLE_INSTRUCTOR").save(flush:true)
       new Role(authority:"ROLE_ADMINISTRATOR").save(flush:true)
+    }
+  }
+
+  def createRequestMapping(){
+    if(!Requestmap.count()){
+      new Requestmap(url: '/js/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+      new Requestmap(url: '/css/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+      new Requestmap(url: '/assets/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+      new Requestmap(url: '/images/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+      new Requestmap(url: '/login/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+      new Requestmap(url: '/logout/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+      new Requestmap(url: '/*', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+      new Requestmap(url: '/me/**', configAttribute: 'ROLE_STUDENT,ROLE_INSTRUCTOR,ROLE_ADMINISTRATOR').save()
+      new Requestmap(url: '/telefono/**', configAttribute: 'ROLE_STUDENT,ROLE_INSTRUCTOR,ROLE_ADMINISTRATOR').save()
+      new Requestmap(url: '/registration/**', configAttribute: 'ROLE_STUDENT').save()
+      new Requestmap(url: '/admin/**', configAttribute: 'ROLE_ADMINISTRATOR').save()
+      new Requestmap(url: '/j_spring_security_switch_user',
+                     configAttribute: 'ROLE_SWITCH_USER,IS_AUTHENTICATED_FULLY').save()
     }
   }
 }
