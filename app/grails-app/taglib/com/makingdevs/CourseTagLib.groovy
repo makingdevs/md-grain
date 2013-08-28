@@ -26,7 +26,7 @@ class CourseTagLib {
   }
 
   def scheduledCourses = { attrs, body ->
-    def scheduledCourses = ScheduledCourse.findAll {
+    def scheduledCourses = ScheduledCourse.withCriteria {
       course {
         eq 'id',attrs.currentCourse.toLong()
       }
