@@ -28,7 +28,8 @@ class ScheduledCourse {
   }
 
   static hasMany = [
-    registrations:Registration
+    registrations:Registration,
+    courseSessions:CourseSession
   ]
 
   static mapping = {
