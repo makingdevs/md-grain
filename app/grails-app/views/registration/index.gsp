@@ -34,7 +34,7 @@
                           Horas de entrenamiento
                         </li>
                         <li>
-                          <strong>2</strong>
+                          <strong>${scheduledCourse.courseSessions.size()}</strong>
                           Sesiones
                         </li>
                         <li>
@@ -70,22 +70,31 @@
                       </tbody>
                     </table>
                     <hr/>
-                    <div class="">
-                      <h4><i class="icon-calendar"></i> Sesiones</h4>
-                      <ul class="icons-lu unstyled">
-                        <li><i class="icon-li icon-ok"></i> Sesión 1</li>
-                        <li><i class="icon-li icon-ok"></i> Sesión 2</li>
-                      </ul>
-                    </div>
-                    <hr/>
-                    <h4><i class="icon-location-arrow"></i> Ubicación</h4>
                     <div class="row-fluid">
-                      <div class="span4">
+                      <div class="span7">
+                        <h4><i class="icon-calendar"></i> Sesiones</h4>
+                        <ul class="icons-lu unstyled">
+                          <g:each in="${scheduledCourse.courseSessions.sort()}" var="courseSession">
+                            <li>
+                              <i class="icon-li icon-ok"></i>
+                              <g:formatDate format="EEEE dd / MMMM / yyyy" date="${courseSession.sessionStartTime}"/> - 
+                              <i class="icon-li icon-time"></i>
+                              <g:formatDate format="HH:mm" date="${courseSession.sessionStartTime}"/> a
+                              <g:formatDate format="HH:mm" date="${courseSession.sessionEndTime}"/> hrs.
+                            </li>
+                          </g:each>
+                        </ul>
+                      </div>
+                      <div class="span5">
+                        <h4><i class="icon-location-arrow"></i> Ubicación</h4>
                         <address>
                           ${scheduledCourse.fullAddress}
                         </address>
                       </div>
-                      <div class="span8">
+                    </div>
+                    <hr/>
+                    <div class="row-fluid">
+                      <div class="span12">
                         <iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=uny2+de+mexico&amp;aq=&amp;sll=19.338677,-99.106981&amp;sspn=0.031788,0.038581&amp;ie=UTF8&amp;hq=uny2+de+mexico&amp;hnear=&amp;ll=19.372462,-99.164186&amp;spn=0.063565,0.077162&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=8295609655684733734&amp;output=embed"></iframe>
                       </div>
                     </div>

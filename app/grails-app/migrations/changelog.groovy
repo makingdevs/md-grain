@@ -283,4 +283,6 @@ databaseChangeLog = {
 	include file:"using-profile-plugin.groovy"
 
 	include file:"adding-content-course.groovy"
+
+	include file:"course-sessions.groovy"
 }
