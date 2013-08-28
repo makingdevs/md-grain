@@ -9,24 +9,24 @@
       <div class="row">
         <div class="span8">
           <div class="single-post-w">
-            <h1 class="post-title">${course.name}.</h1>
+            <h1 class="post-title">${course.name} </h1>
             
             <div class="post-content">
               <p>
-              ${course.overview}
+              <i class="icon-terminal"></i> ${course.overview}
               </p>
-              <p><h4>A quien va dirigido:</h4>
+              <p><h4><i class="icon-male"></i> · A quien va dirigido:</h4>
               ${course.audience}
               </p>
               <blockquote class="colored">
                 <p>${course.goal}</p>
               </blockquote>
               <p>
-              <h4>Temario del entrenamiento:</h4>
+              <h4><i class="icon-road"></i> · Temario del entrenamiento:</h4>
               ${course.content}
               </p>
               <p>
-              <h4>Pre-requisitos:</h4>
+              <h4><i class="icon-tasks"></i> · Pre-requisitos:</h4>
               ${course.prerequisites}
               </p>
             </div>
