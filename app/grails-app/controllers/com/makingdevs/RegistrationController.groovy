@@ -6,7 +6,7 @@ class RegistrationController {
   def springSecurityService
 
   def index() {
-    [scheduledCourse:ScheduledCourse.get(params.id)]
+    [scheduledCourse:ScheduledCourse.findById(params.id,[fetch:[courseSessions:'eager',course:'join']])]
   }
 
   def addMe(){
