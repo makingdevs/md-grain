@@ -11,7 +11,8 @@ class CourseSession implements Comparable{
   
   static belongsTo = [scheduledCourse:ScheduledCourse]
 
-  static dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm")
+  transient dateFormatStartTime = new SimpleDateFormat("dd/MM/yyyy HH:mm")
+  transient dateFormatEndTime = new SimpleDateFormat("HH:mm")
   
   static constraints = {
     sessionStartTime nullable:false
@@ -21,7 +22,7 @@ class CourseSession implements Comparable{
   }
   
   String toString(){
-    dateFormat.format(this.sessionStartTime)
+    "${dateFormatStartTime.format(this.sessionStartTime)} - ${dateFormatEndTime.format(this.sessionEndTime)}"
   }
 
   int compareTo(obj){
