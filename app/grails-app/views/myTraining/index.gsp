@@ -44,11 +44,10 @@
               <strong>Promociones vigentes:</strong>
             </p>
             <p>
-              <strong>Status:</strong>
-              Costo
               <a class="btn btn-success" href="#">
                 <i class="icon-shopping-cart icon-large"></i> 
                 Pagar
+                $ <g:formatNumber number="${registration.scheduledCourse.costByCourse}" format="###,##0.00" locale="es_MX"/>
               </a>
             </p>
           </div>
