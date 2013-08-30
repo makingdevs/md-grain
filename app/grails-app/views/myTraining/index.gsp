@@ -45,11 +45,16 @@
             </p>
             <p>
               <a class="btn btn-success" href="#">
-                <i class="icon-shopping-cart icon-large"></i> 
+                <i class="icon-money"></i> 
                 Pagar
                 $ <g:formatNumber number="${registration.scheduledCourse.costByCourse}" format="###,##0.00" locale="es_MX"/>
               </a>
             </p>
+            <hr/>
+            <a class="btn btn-primary" href="#">
+              <i class="icon-certificate"></i> 
+              Realizar evaluación
+            </a>
           </div>
         </div>
         </g:each>
