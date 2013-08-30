@@ -25,11 +25,32 @@
           <h3 class="section-header">Mis registros</h3>
         </div>
 
-        <g:each in="${1..7}" var="i">
+        <g:each in="${registrations}" var="registration">
         <div class="span3">
           <div class="white-card">
-            <h5>Frank Lampard.</h5>
-            <p>Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.</p>
+            <h5>${registration.scheduledCourse.course.name}</h5>
+            <p>
+              <strong>Sesiones:</strong>
+              <ul class="unstyled"ll>
+              <g:each in="${registration.scheduledCourse.courseSessions.sort()}" var="courseSession">
+              <li class="unstyled">
+                <i class="icon-li icon-ok"></i>
+                <g:formatDate format="EEEE dd / MMMM / yyyy" date="${courseSession.sessionStartTime}"/>
+              </li>
+              </g:each>
+              </ul>
+            </p>
+            <p>
+              <strong>Promociones vigentes:</strong>
+            </p>
+            <p>
+              <strong>Status:</strong>
+              Costo
+              <a class="btn btn-success" href="#">
+                <i class="icon-shopping-cart icon-large"></i> 
+                Pagar
+              </a>
+            </p>
           </div>
         </div>
         </g:each>
