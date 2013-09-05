@@ -44,17 +44,17 @@
               <strong>Promociones vigentes:</strong>
             </p>
             <p>
-              <a class="btn btn-success" href="#">
+              <g:remoteLink controller="myTraining" action="sendPaymentInstructions" class="btn btn-success">
                 <i class="icon-money"></i> 
                 Pagar
                 $ <g:formatNumber number="${registration.scheduledCourse.costByCourse}" format="###,##0.00" locale="es_MX"/>
-              </a>
+              </g:remoteLink>
             </p>
             <hr/>
-            <a class="btn btn-primary" href="#">
+            <!--a class="btn btn-primary" href="#">
               <i class="icon-certificate"></i> 
               Realizar evaluación
-            </a>
+            </a-->
           </div>
         </div>
         </g:each>
