@@ -10,7 +10,6 @@
   <meta name="description" content="Impulsamos la carrera de los desarrolladores de software a través de Técnicas, métodos. metodologías y tecnología" />
   <meta name="keywords" content="agile,groovy,grails,spring,jquery,desarrollo de software,entrenamiento,cursos" />
   <title>. : MakingDevs - <g:layoutTitle default="Welcome"/> : .</title>
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <r:require module="venera"/>
   <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
@@ -68,8 +67,6 @@
       </div>
     </div>
   </header>
-
-  <g:render template="/common/messages" />
         
   <g:layoutBody/>
 

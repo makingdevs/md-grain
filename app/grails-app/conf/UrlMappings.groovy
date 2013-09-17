@@ -24,6 +24,8 @@ class UrlMappings {
 
 		name registration: "/registration/$action?"(controller : 'registration')
 
+		name myTraining: "/myTraining/$action?"(controller : 'myTraining')
+
 		name training: "/training" {
 			controller = 'home'
 			action = 'courses'
