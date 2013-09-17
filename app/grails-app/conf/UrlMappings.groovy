@@ -34,6 +34,11 @@ class UrlMappings {
 			action = 'landingPage'
 		}
 
+		name myPayments : "/myPayments/" {
+			controller = 'payment'
+			action = 'myPayments'
+		}
+
 		"/"(controller:"home")
 		"500"(view:'/error')
 	}
