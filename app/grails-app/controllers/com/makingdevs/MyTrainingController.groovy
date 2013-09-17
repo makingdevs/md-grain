@@ -13,6 +13,7 @@ class MyTrainingController {
 
   def sendPaymentInstructions(){
     log.debug "OK"
+    Thread.sleep(10000)
     mailService.sendMail {
       to "juan@makingdevs.com"
       from "info@makingdevs.com"

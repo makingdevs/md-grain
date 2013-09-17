@@ -4,6 +4,7 @@
   <head>
     <meta name="layout" content="venera"/>
     <title>Mi entrenamiento</title>
+    <r:require module="myTraining"/>
   </head>
 
   <body>
@@ -44,7 +45,7 @@
               <strong>Promociones vigentes:</strong>
             </p>
             <p>
-              <g:remoteLink controller="myTraining" action="sendPaymentInstructions" class="btn btn-success">
+              <g:remoteLink name="paymentRegistration${registration.id}" controller="myTraining" action="sendPaymentInstructions" params="[registrationId:registration.id]" class="btn btn-success" onLoading="var loader = new ButtonLoader(${registration.id}); loader.preload()">
                 <i class="icon-money"></i> 
                 Pagar
                 $ <g:formatNumber number="${registration.scheduledCourse.costByCourse}" format="###,##0.00" locale="es_MX"/>
