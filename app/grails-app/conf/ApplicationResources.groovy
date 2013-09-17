@@ -21,4 +21,7 @@ modules = {
   telefono {
     resource url:'js/telefono/index.js'
   }
+  myTraining {
+    resource url:'js/myTraining/index.js'
+  }
 }
