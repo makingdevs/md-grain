@@ -4,6 +4,7 @@
   <head>
     <meta name="layout" content="venera"/>
     <title>Mi entrenamiento</title>
+    <r:require module="myTraining"/>
   </head>
 
   <body>
@@ -20,6 +21,8 @@
   <section class="section-wrapper stripped">
     <div class="container">
       <div class="row">
+
+        <g:render template="/common/messages" />
 
         <div class="span12">
           <h3 class="section-header">Mis registros</h3>
@@ -44,17 +47,17 @@
               <strong>Promociones vigentes:</strong>
             </p>
             <p>
-              <a class="btn btn-success" href="#">
+              <g:remoteLink name="paymentRegistration${registration.id}" controller="myTraining" action="sendPaymentInstructions" params="[registrationId:registration.id]" class="btn btn-success" onLoading="var loader${registration.id} = new ButtonLoader(${registration.id},'${registration.scheduledCourse.course.name}'); loader${registration.id}.preload()" onSuccess="loader${registration.id}.success()" onComplete="loader${registration.id}.complete()">
                 <i class="icon-money"></i> 
                 Pagar
                 $ <g:formatNumber number="${registration.scheduledCourse.costByCourse}" format="###,##0.00" locale="es_MX"/>
-              </a>
+              </g:remoteLink>
             </p>
             <hr/>
-            <a class="btn btn-primary" href="#">
+            <!--a class="btn btn-primary" href="#">
               <i class="icon-certificate"></i> 
               Realizar evaluación
-            </a>
+            </a-->
           </div>
         </div>
         </g:each>

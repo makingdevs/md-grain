@@ -59,6 +59,7 @@ grails.project.dependency.resolution = {
     build ":tomcat:$grailsVersion"
     runtime ":database-migration:1.3.5"
     compile ':cache:1.0.1'
+    compile ":mail:1.0.1"
     compile ':profile:latest.integration'
   }
 }
