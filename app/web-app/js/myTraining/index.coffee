@@ -1,5 +1,10 @@
 class window.ButtonLoader
-  constructor : (@buttonId,@labelName) ->
+  buttonId: 0
+  labelName: ''
+
+  constructor : (buttonId, labelName) ->
+    @buttonId = buttonId
+    @labelName = labelName
 
   preload : ->
     element = $("a[name=paymentRegistration" + @buttonId + "] > i")
@@ -11,7 +16,7 @@ class window.ButtonLoader
     messages = $("#messages").show()
     okMessage = messages.find("div.ok").clone().removeClass("ok")
     okMessage.appendTo("#messagesArea")
-    #okMessage.find("span.message").text("Te hemos enviado la información del curso:" + @labelName + " a tu correo")
+    okMessage.find("span.message").html("Te hemos enviado la información del curso <b>'#{@labelName}'</b> a tu correo.")
     okMessage.show()
 
   complete: ->

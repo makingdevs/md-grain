@@ -3,6 +3,10 @@
 
   window.ButtonLoader = (function() {
 
+    ButtonLoader.prototype.buttonId = 0;
+
+    ButtonLoader.prototype.labelName = '';
+
     function ButtonLoader(buttonId, labelName) {
       this.buttonId = buttonId;
       this.labelName = labelName;
@@ -24,6 +28,7 @@
       messages = $("#messages").show();
       okMessage = messages.find("div.ok").clone().removeClass("ok");
       okMessage.appendTo("#messagesArea");
+      okMessage.find("span.message").html("Te hemos enviado la información del curso <b>'" + this.labelName + "'</b> a tu correo.");
       return okMessage.show();
     };
 
