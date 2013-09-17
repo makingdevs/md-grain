@@ -1,5 +1,7 @@
 package com.makingdevs
 
+import grails.converters.JSON
+
 class MyTrainingController {
 
   def springSecurityService
@@ -12,14 +14,14 @@ class MyTrainingController {
   }
 
   def sendPaymentInstructions(){
-    log.debug "OK"
-    Thread.sleep(10000)
+    log.debug params
+    Registration registration = Registration.findById(params.long('registrationId'))
     mailService.sendMail {
       to "juan@makingdevs.com"
       from "info@makingdevs.com"
       subject "Hello John"
       body 'this is some text'
     }
-    render "ok"
+    render registration as JSON
   }
 }
