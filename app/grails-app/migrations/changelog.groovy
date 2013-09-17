@@ -285,4 +285,6 @@ databaseChangeLog = {
 	include file:"adding-content-course.groovy"
 
 	include file:"course-sessions.groovy"
+
+	include file: 'adding-payable-plugin.groovy'
 }
