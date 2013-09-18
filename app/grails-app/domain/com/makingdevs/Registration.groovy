@@ -1,6 +1,8 @@
 package com.makingdevs
 
-class Registration {
+import com.payable.Payable
+
+class Registration extends Payable {
   Date dateCreated
   Date lastUpdated
   User user

@@ -49,6 +49,9 @@
                 <g:link controller="perfil">Mi perfil</g:link>
               </li>
               <li>
+                <g:link mapping="myPayments">Pagos</g:link>
+              </li>
+              <li>
                 <g:link controller="logout">Salir</g:link>
               </li>
               </sec:ifLoggedIn>
