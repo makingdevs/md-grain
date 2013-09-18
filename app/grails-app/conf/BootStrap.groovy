@@ -79,6 +79,7 @@ class BootStrap {
       new Requestmap(url: '/me/**', configAttribute: 'ROLE_STUDENT,ROLE_INSTRUCTOR,ROLE_ADMINISTRATOR').save()
       new Requestmap(url: '/telefono/**', configAttribute: 'ROLE_STUDENT,ROLE_INSTRUCTOR,ROLE_ADMINISTRATOR').save()
       new Requestmap(url: '/registration/**', configAttribute: 'ROLE_STUDENT').save()
+      new Requestmap(url: '/myPayments', configAttribute: 'ROLE_STUDENT').save()
       new Requestmap(url: '/admin/**', configAttribute: 'ROLE_ADMINISTRATOR').save()
       new Requestmap(url: '/j_spring_security_switch_user',
                      configAttribute: 'ROLE_SWITCH_USER,IS_AUTHENTICATED_FULLY').save()
