@@ -21,7 +21,7 @@
                       <div class='plan-price'>
                         <span class='price-currency'>$</span>
                         <span class='price-self'>
-                           <g:formatNumber number="${scheduledCourse.costByCourse}" format="###,##0.00" locale="es_MX"/>
+                           <g:formatNumber number="${scheduledCourse.esquemaDePago.cantidadDePago}" format="###,##0.00" locale="es_MX"/>
                         </span>
                         <span class='price-period'>/mxn</span>
                       </div>
@@ -39,7 +39,9 @@
                         </li>
                         <li>
                           Aprovecha hasta
-                          <strong>20%</strong>
+                          <strong>
+                            <g:formatNumber number="${scheduledCourse.esquemaDePago.descuentos.sum(0) { it.porcentaje } }" format="###,##0" locale="es_MX"/>%
+                          </strong>
                           de descuento
                         </li>
                       </ul>
@@ -62,11 +64,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>10% de descuento si apartas tu lugar</td>
-                          <td>15 - Septiembre - 2013</td>
-                        </tr>
+                        <g:each in="${scheduledCourse.esquemaDePago.descuentos.sort{ it.id } }" var="descuento" status="row">
+                          <tr>
+                            <td>${row + 1}</td>
+                            <td>${descuento.nombreDeDescuento} </td>
+                            <td><g:formatDate format="dd - MMMM - yyyy" date="${scheduledCourse.beginDate - descuento.diasPreviosParaCancelarDescuento}"/></td>
+                          </tr>
+                        </g:each>
                       </tbody>
                     </table>
                     <hr/>

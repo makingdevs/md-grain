@@ -1,11 +1,13 @@
 package com.makingdevs
 
+import com.payable.EsquemaDePago
+
 class ScheduledCourse {
 
   Course course
   Date beginDate
   Date limitRegistrationDate
-  BigDecimal costByCourse
+  EsquemaDePago esquemaDePago
   ScheduledCourseStatus scheduledCourseStatus
   String geolocation = ''
   String fullAddress = ''
@@ -21,7 +23,6 @@ class ScheduledCourse {
       if (val >= obj.beginDate)
         return 'scheduledcourse.limitRegistrationDate.invalid'
     }
-    costByCourse nullable: false
     geolocation nullable: true, blank: true, size: 0..200
     fullAddress nullable: true, blank: true, size: 0..1000
     durationInHours nullable: false, min:1, max:40

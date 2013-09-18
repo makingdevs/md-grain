@@ -43,6 +43,9 @@
               </li>
               <sec:ifLoggedIn>
               <li>
+                <g:link mapping="myTraining">Mi entrenamiento</g:link>
+              </li>
+              <li>
                 <g:link controller="perfil">Mi perfil</g:link>
               </li>
               <li>
