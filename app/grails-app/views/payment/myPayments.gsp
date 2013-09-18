@@ -19,18 +19,10 @@
 
   <div class="row-fluid">
     <div>
-      <g:render template="/statement/paymentsDue" model="[pagos: payments.pagosVencidos]"/>
-    </div>
-    <p>     
-    </p>
-    <div>
       <g:render template="/statement/paymentsOnTime" model="[pagosTiempo: payments.pagosEnTiempo]"/>
     </div>
     <div>
       <g:render template="/statement/comingPayments" model="[pagosRealizar: payments.pagosPorRealizar]"/>
-    </div>
-    <div class="span6">
-      <g:render template="/statement/monthlyPayments" model="[pagosMensuales: payments.pagosMensuales]"/>
     </div>
   </div>
 
