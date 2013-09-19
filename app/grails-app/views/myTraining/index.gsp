@@ -50,7 +50,7 @@
               <g:remoteLink name="paymentRegistration${registration.id}" controller="myTraining" action="sendPaymentInstructions" params="[registrationId:registration.id]" class="btn btn-success" onLoading="var loader${registration.id} = new ButtonLoader(${registration.id},'${registration.scheduledCourse.course.name}'); loader${registration.id}.preload()" onSuccess="loader${registration.id}.success()" onComplete="loader${registration.id}.complete()">
                 <i class="icon-money"></i> 
                 Pagar
-                $ <g:formatNumber number="${registration.scheduledCourse.costByCourse}" format="###,##0.00" locale="es_MX"/>
+                $ <g:formatNumber number="10.00" format="###,##0.00" locale="es_MX"/>
               </g:remoteLink>
             </p>
             <hr/>

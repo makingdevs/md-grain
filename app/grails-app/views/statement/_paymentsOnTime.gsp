@@ -11,6 +11,10 @@
     </tr>     
    </thead>
     <g:each in="${pagosTiempo}" var="p">
+
+      <g:set var="descuentoTotal" value="${p.descuentos.sum(0) { it.porcentaje } }" />
+      <g:set var="descuentoRealPorcentaje" value="${descuentoTotal / 100 * p.cantidadDePago }" />
+
       <tr class="info">
         <td>
           ${p.conceptoDePago}
@@ -22,20 +26,11 @@
           <g:formatNumber number="${p.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
         </td>
         <td>
-          <g:if test="${p.descuentoRealPorcentaje}" >
-            <g:formatNumber number="${p.descuentoRealPorcentaje}" format="\$ ###,##0.00" locale="es_MX"/> ( ${p.sumaDescuentosPorcentaje} %)
-          </g:if>
-          <g:elseif test="${p.porcentajeEnBaseACantidad}" >
-            <g:formatNumber number="${p.sumaDescuentosCantidad}" format="\$ ###,##0.00" locale="es_MX"/> ( ${p.porcentajeEnBaseACantidad} %)
-          </g:elseif>
+          <g:formatNumber number="${descuentoRealPorcentaje}" format="\$ ###,##0.00" locale="es_MX" />
+          (<g:formatNumber number="${descuentoTotal}" format="###,##0" locale="es_MX"/>%)
         </td>
         <td>
-          <g:if test="${p.descuentoRealPorcentaje}" >
-            <g:formatNumber number="${p.cantidadDePago - p.descuentoRealPorcentaje}" format="\$ ###,##0.00" locale="es_MX"/>  
-          </g:if>  
-          <g:elseif test="p.sumaDescuentosCantidad" >
-            <g:formatNumber number="${p.cantidadDePago - p.sumaDescuentosCantidad}" format="\$ ###,##0.00" locale="es_MX"/>    
-          </g:elseif>        
+          <g:formatNumber number="${p.cantidadDePago - descuentoRealPorcentaje}" format="\$ ###,##0.00" locale="es_MX"/>
         </td>
         <td>
           &nbsp;
