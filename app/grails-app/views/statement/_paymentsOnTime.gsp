@@ -22,20 +22,11 @@
           <g:formatNumber number="${p.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
         </td>
         <td>
-          <g:if test="${p.descuentoRealPorcentaje}" >
-            <g:formatNumber number="${p.descuentoRealPorcentaje}" format="\$ ###,##0.00" locale="es_MX"/> ( ${p.sumaDescuentosPorcentaje} %)
-          </g:if>
-          <g:elseif test="${p.porcentajeEnBaseACantidad}" >
-            <g:formatNumber number="${p.sumaDescuentosCantidad}" format="\$ ###,##0.00" locale="es_MX"/> ( ${p.porcentajeEnBaseACantidad} %)
-          </g:elseif>
+          <descuento:cantidadAplicable pago="${p}" />
+          <descuento:porcentajeTotal pago="${p}" />
         </td>
         <td>
-          <g:if test="${p.descuentoRealPorcentaje}" >
-            <g:formatNumber number="${p.cantidadDePago - p.descuentoRealPorcentaje}" format="\$ ###,##0.00" locale="es_MX"/>  
-          </g:if>  
-          <g:elseif test="p.sumaDescuentosCantidad" >
-            <g:formatNumber number="${p.cantidadDePago - p.sumaDescuentosCantidad}" format="\$ ###,##0.00" locale="es_MX"/>    
-          </g:elseif>        
+          <descuento:totalConDescuento pago="${p}" />
         </td>
         <td>
           &nbsp;
