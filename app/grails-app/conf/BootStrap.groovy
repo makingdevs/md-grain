@@ -89,7 +89,8 @@ class BootStrap {
   }
 
   private def createOrganization() {
-    new Organizacion( nombre : "Making Devs" ).save()
+    if(!Organizacion.count())
+      new Organizacion( nombre : "Making Devs" ).save()
   }
 
 }
