@@ -17,7 +17,7 @@ class MyTrainingController {
     def currentUser = springSecurityService.currentUser
     Registration registration = Registration.findById(params.long('registrationId'))
     // TODO: Sacar a un servicio(en el plugin probablemente)
-    def totalAPagar = registration.pagos*.cantidadDePago.sum(0)
+    def totalAPagar = registration.pagos*.cantidadDePago.sum(0) + registration.pagos*.recargosAcumulados.sum(0) - registration.pagos*.descuentoAplicable.sum(0)
     mailService.sendMail {
       to currentUser.username
       from "info@makingdevs.com"
