@@ -292,5 +292,5 @@ databaseChangeLog = {
 
   include file: 'adding-payable-to-registration.groovy'
 
-	include file: 'adding-constraints-to-esquema-de-pago.groovy'
+	//include file: 'adding-constraints-to-esquema-de-pago.groovy'
 }
