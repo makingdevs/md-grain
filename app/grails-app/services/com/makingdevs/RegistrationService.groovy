@@ -17,7 +17,6 @@ class RegistrationService {
       registration.addToPagos(pago)
       registration.save()  
     }
-
     registration
   }
 
