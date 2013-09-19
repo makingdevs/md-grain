@@ -26,6 +26,8 @@ class UrlMappings {
 
 		name myTraining: "/myTraining/$action?"(controller : 'myTraining')
 
+		name notification: "/notification/$action?"(controller : 'notification')
+
 		name training: "/training" {
 			controller = 'home'
 			action = 'courses'
