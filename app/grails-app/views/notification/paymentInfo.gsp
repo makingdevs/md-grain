@@ -182,7 +182,7 @@ body{width:auto!important;}
                       <td mc:edit="date" height="50" class="date" style="font-size: 13px; color: #272727; font-weight: light; text-align: right; font-family: Helvetica, Arial, sans-serif; line-height: 20px; vertical-align: middle;">
                       <h5>MAKING BEST CODE, THROUGH BETTER DEVELOPERS.</h5>
                       <!--
-                          <multiline><p> <img editable="true"  src="img/icon.jpg" style="float:left;" alt="" border="0">March <span style="color: #4f9dd3;">15</span>, 2013</p> </multiline>   
+                          <multiline><p> <img editable="true"  src="${grailsApplication.config.grails.serverURL}/mail/img/icon.jpg" style="float:left;" alt="" border="0">March <span style="color: #4f9dd3;">15</span>, 2013</p> </multiline>   
                       </td>
                       -->
                     </tr>
@@ -213,7 +213,7 @@ body{width:auto!important;}
                     <table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="SizeHeadTable">
                        <tr>
                          <td width="580">
-                       <a href="#"><img editable="true"  class="SizeHead" width="580"  mc:edit="Head_Image" src="img/header-image.jpg" alt="" border="0" ></a>
+                       <a href="#"><img editable="true"  class="SizeHead" width="580"  mc:edit="Head_Image" src="${grailsApplication.config.grails.serverURL}/mail/img/header-image.jpg" alt="" border="0" ></a>
                        </td>
                      </tr>
                   </table><!-- Head Image -->
@@ -309,7 +309,7 @@ body{width:auto!important;}
                           <tr> 
                             <td   width=" 100%" height="50" style="font-size: 15px; color: #45484E; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 30px; vertical-align: top;">
                             
-                              <a mc:edit="Scr_Title" href="#" style="text-decoration: none; color: #45484E"><img style="float:left;" src="img/icon2.jpg" alt="" /><multiline>Visita <span style="color:#4f9dd3;">nuestras</span> comunidades</multiline></a>    
+                              <a mc:edit="Scr_Title" href="#" style="text-decoration: none; color: #45484E"><img style="float:left;" src="${grailsApplication.config.grails.serverURL}/mail/img/icon2.jpg" alt="" /><multiline>Visita <span style="color:#4f9dd3;">nuestras</span> comunidades</multiline></a>    
                             </td>
                           </tr>
                         </table>
@@ -318,7 +318,7 @@ body{width:auto!important;}
                           <tr>
                             <td style="text-align: center; " width="180" height="110"  class="SecImage2W">
                             
-                              <a  href="http://artesanos.de"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="img/image4.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
+                              <a  href="http://artesanos.de"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="${grailsApplication.config.grails.serverURL}/mail/img/image4.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
                             </td>
                           </tr>
                         </table>
@@ -335,7 +335,7 @@ body{width:auto!important;}
                           <tr>
                             <td style="text-align: center; " width="180" height="110" class="SecImage2W">
                             
-                              <a href="http://recursivo.org"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="img/image3.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
+                              <a href="http://recursivo.org"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="${grailsApplication.config.grails.serverURL}/mail/img/image3.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
                             </td>
                           </tr>
                         </table>
@@ -352,7 +352,7 @@ body{width:auto!important;}
                           <tr>
                             <td style="text-align: center; " width="180" height="110" class="SecImage2W">
                             
-                              <a href="http://grails.org.mx"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="img/image5.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
+                              <a href="http://grails.org.mx"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="${grailsApplication.config.grails.serverURL}/mail/img/image5.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
                             </td>
                           </tr>
                         </table>
@@ -368,7 +368,7 @@ body{width:auto!important;}
                           <tr>
                             <td style="text-align: center; " width="180" height="110" class="SecImage2W">
                             
-                              <a href="http://springhispano.org"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="img/image6.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
+                              <a href="http://springhispano.org"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="${grailsApplication.config.grails.serverURL}/mail/img/image6.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
                             </td>
                           </tr>
                         </table>
@@ -385,7 +385,7 @@ body{width:auto!important;}
                           <tr>
                             <td style="text-align: center; " width="180" height="110" class="SecImage2W">
                             
-                              <a href="http://vivecodigo.org"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="img/image7.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
+                              <a href="http://vivecodigo.org"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="${grailsApplication.config.grails.serverURL}/mail/img/image7.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
                             </td>
                           </tr>
                         </table>
@@ -402,7 +402,7 @@ body{width:auto!important;}
                           <tr>
                             <td style="text-align: center; " width="180" height="110" class="SecImage2W">
                             
-                              <a href="http://scala-mug.org"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="img/image8.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
+                              <a href="http://scala-mug.org"><img editable="true" width="180" height="110" mc:edit="Sec_Image2" src="${grailsApplication.config.grails.serverURL}/mail/img/image8.jpg" alt="" border="0" style="  width: 180px; height: 110px; display: block;" class="SecImage2"></a>
                             </td>
                           </tr>
                         </table>
@@ -440,7 +440,7 @@ body{width:auto!important;}
                    <!-- Section1 Image -->
                     <!-- Aqui es el encabezado del video-->
                   <table align="left" cellpadding="0" cellspacing="0" bgcolor="#ffffff" border="0" class="SecTable1">
-                    <tr><TH style="font-size: 15px; color: #45484E; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 30px; vertical-align: top;"><a mc:edit="Scr_Title" href="http://vivecodigo.org" style="text-decoration: none; color: #45484E"><img style="float:left;" src="img/icono_video.png" alt="" /><multiline>&nbsp;&nbsp;Temporada 01 de <span style="color:#4f9dd3;">ViveCodigo.org</span></multiline></a></TH>
+                    <tr><TH style="font-size: 15px; color: #45484E; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 30px; vertical-align: top;"><a mc:edit="Scr_Title" href="http://vivecodigo.org" style="text-decoration: none; color: #45484E"><img style="float:left;" src="${grailsApplication.config.grails.serverURL}/mail/img/icono_video.png" alt="" /><multiline>&nbsp;&nbsp;Temporada 01 de <span style="color:#4f9dd3;">ViveCodigo.org</span></multiline></a></TH>
                       <td valign="top" align="right" ></td>
 
                     </tr>
@@ -514,7 +514,7 @@ body{width:auto!important;}
                           <tr>
                             <td   mc:edit="button1" style="font-size: 13px; padding:20px 0 0; color: #959595; font-weight: normal; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top;" class="button1">
                             <!--
-                                 <a href="http://vivecodigo.org"><img editable="true" mc:edit="button" src="img/button1.jpg" alt="" border="0"></a>
+                                 <a href="http://vivecodigo.org"><img editable="true" mc:edit="button" src="${grailsApplication.config.grails.serverURL}/mail/img/button1.jpg" alt="" border="0"></a>
                             --> 
                               
                             </td>
@@ -543,7 +543,7 @@ body{width:auto!important;}
                           <tr>
                             <td   mc:edit="button1" style="font-size: 13px; padding:20px 0 0; color: #959595; font-weight: normal; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top;" class="button1">
 
-                                 <a href="http://vivecodigo.org"><img editable="true" mc:edit="button" src="img/button4.jpg" alt="" border="0"></a>
+                                 <a href="http://vivecodigo.org"><img editable="true" mc:edit="button" src="${grailsApplication.config.grails.serverURL}/mail/img/button4.jpg" alt="" border="0"></a>
                                
                               
                             </td>
@@ -593,7 +593,7 @@ body{width:auto!important;}
                                                        <table width="55" border="0" cellpadding="0" cellspacing="0" align="left" class="CtaTitle">
                                   <tr>
                                   <td mc:edit="Icon3">
-                                 <img editable="true" src="img/icon3.jpg" alt="" />
+                                 <img editable="true" src="${grailsApplication.config.grails.serverURL}/mail/img/icon3.jpg" alt="" />
                                   </td>
                                   </tr>
                              </table>
@@ -615,7 +615,7 @@ body{width:auto!important;}
                   <table  width="30%" border="0" cellpadding="0" cellspacing="0" align="right" class="CtaTitle">
                     <tr>
                       <td>
-                    <a mc:edit="ctabutton" href="http://makingdevs.com" style="text-decoration: none; color: #45484E"><img editable="true" class="CtaButton" style="float:left;" src="img/button2.jpg" alt="" /> </a>
+                    <a mc:edit="ctabutton" href="http://makingdevs.com" style="text-decoration: none; color: #45484E"><img editable="true" class="CtaButton" style="float:left;" src="${grailsApplication.config.grails.serverURL}/mail/img/button2.jpg" alt="" /> </a>
                     </td>
               
                   </tr>
@@ -657,9 +657,9 @@ body{width:auto!important;}
                   <table  width="118" border="0" cellpadding="0" cellspacing="0" align="right" class="Footer1Social">
                     <tr>
                       <td class="Footer1SocialW" mc:edit="SocialI">
-                    <a href="https://www.facebook.com/makingdevs" style="float:left; text-decoration: none; color: #45484E"><img editable="true" style="float:left;" src="img/social1.jpg" alt="" /> </a>
-                    <a href="https://twitter.com/makingdevs" style="float:left; text-decoration: none; color: #45484E"><img editable="true" style="float:left;" src="img/social2.jpg" alt="" /> </a>
-                    <!--<a href="#" style="float:left; text-decoration: none; color: #45484E"><img editable="true" style="float:left;" src="img/social3.jpg" alt="" /> </a>-->
+                    <a href="https://www.facebook.com/makingdevs" style="float:left; text-decoration: none; color: #45484E"><img editable="true" style="float:left;" src="${grailsApplication.config.grails.serverURL}/mail/img/social1.jpg" alt="" /> </a>
+                    <a href="https://twitter.com/makingdevs" style="float:left; text-decoration: none; color: #45484E"><img editable="true" style="float:left;" src="${grailsApplication.config.grails.serverURL}/mail/img/social2.jpg" alt="" /> </a>
+                    <!--<a href="#" style="float:left; text-decoration: none; color: #45484E"><img editable="true" style="float:left;" src="${grailsApplication.config.grails.serverURL}/mail/img/social3.jpg" alt="" /> </a>-->
                     </td>
               
                   </tr>
@@ -685,7 +685,7 @@ body{width:auto!important;}
                     <!--<tr>
                       <td mc:edit="Footer2T" align="center" class="Footer2T1" style=" font-weight:400; font-size: 12px; color: #b2b3b6; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 1; vertical-align: top;">
                     <multiline>          
-                    <p  style=" font-weight:400; text-decoration: none; color: #b2b3b6">  <img alt="" src="img/icon4.jpg" /> <b style="color:#fff;  font-weight:600;"> Having problems? </b>  <a href="#" style="font-weight:600; text-decoration: none;  color:#4f9dd3"> view it online</a> or <a href="#" style="font-weight:600; text-decoration: none;  color:#4f9dd3"> unsubscribe </a> instantly</p></multiline>
+                    <p  style=" font-weight:400; text-decoration: none; color: #b2b3b6">  <img alt="" src="${grailsApplication.config.grails.serverURL}/mail/img/icon4.jpg" /> <b style="color:#fff;  font-weight:600;"> Having problems? </b>  <a href="#" style="font-weight:600; text-decoration: none;  color:#4f9dd3"> view it online</a> or <a href="#" style="font-weight:600; text-decoration: none;  color:#4f9dd3"> unsubscribe </a> instantly</p></multiline>
                     </td>
               
                   </tr>

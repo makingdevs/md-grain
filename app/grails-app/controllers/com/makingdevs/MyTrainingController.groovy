@@ -14,10 +14,11 @@ class MyTrainingController {
   }
 
   def sendPaymentInstructions(){
-    log.debug params
+    def currentUser = springSecurityService.currentUser
+    log.debug currentUser.username
     Registration registration = Registration.findById(params.long('registrationId'))
     mailService.sendMail {
-      to "juan@makingdevs.com"
+      to currentUser.username
       from "info@makingdevs.com"
       subject "Hello John"
       body 'this is some text'
