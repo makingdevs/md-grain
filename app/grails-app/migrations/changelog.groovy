@@ -288,9 +288,11 @@ databaseChangeLog = {
 
   include file: 'adding-payable-plugin.groovy'
 
-  include file: 'adding-payment-scheme.groovy'
+  // include file: 'adding-payment-scheme.groovy'
 
   include file: 'adding-payable-to-registration.groovy'
+
+	include file: 'adding-table-per-hierarchy-false.groovy'
 
 	include file: 'adding-constraints-to-esquema-de-pago.groovy'
 }
