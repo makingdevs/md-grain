@@ -1,3 +1,4 @@
+<%@ page contentType="text/html"%>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -246,7 +247,7 @@ body{width:auto!important;}
                          <td  class="HeadTxt" mc:edit="Head_Txt" height="35" style=" font-size:13px; line-height:1.5; font-weight:400; font-family: Helvetica, Arial, sans-serif; text-decoration: none; color: #7b7b7b; padding:0 0 30px;">
                        <multiline>
                           Enhorabuena!<br/><br/>
-                          Te has registrado al curso: <b>Nombre del curso</b>, nos sentimos honrados por ofrecerte nuestros servicios, y es por esto que queremos que estés listo para recibir una experiencia en entrenamiento que te hará más productivo y mejorará tu carrera como desarrollador de software.<br/><br/>
+                          Te has registrado al curso: <b>${course?.name ?: 'Nombre del curso'}</b>, nos sentimos honrados por ofrecerte nuestros servicios, y es por esto que queremos que estés listo para recibir una experiencia en entrenamiento que te hará más productivo y mejorará tu carrera como desarrollador de software.<br/><br/>
                           Los datos de la cuenta bancaria donde puedes depositarnos son:<br/>
                           <div style="padding-left: 50px;">
                           Banco: <b>Banorte</b><br/>
@@ -255,7 +256,9 @@ body{width:auto!important;}
                           Correo: i<b>nfo@makingdevs.com</b><br/>
                           Teléfono: <b>6363 - 8147</b><br/>
                           </div><br/>
-                          Te recordamos que la cantidad que tienes que pagar en estos momentos es de <b>$0.00 mxn. pesos</b>, la cuál respetará las promociones que tenemos vigentes para ti; sin embargo, si no pagas antes de que expire alguna promoción entonces recalcularemos este monto por ti, así que aprovecha y págalo ahora.<br/><br/>
+                          Te recordamos que la cantidad que tienes que pagar en estos momentos es de 
+                          <b>$ <g:formatNumber number="${totalAPagar ?: 3500}" format="###,##0.00" locale="es_MX"/> mxn. pesos</b>, 
+                          la cuál respetará las promociones que tenemos vigentes para ti; sin embargo, si no pagas antes de que expire alguna promoción entonces recalcularemos este monto por ti, así que aprovecha y págalo ahora.<br/><br/>
                           Te solicitamos de antemano nos mandes tu comprobante de pago en imagen para cotejarlo y considerarte en nuestras listas de asistencia.<br/><br/>
                           <center>
                             Sin más por el momento, recibe nuestras expresion de gratitud por ser parte de MakingDevs.
@@ -425,152 +428,7 @@ body{width:auto!important;}
            
       </table><!-- End Section3 Basic Wrapper -->
       
-        <!-- Section1 Wide Wrap -->
-      <table class="WideWrap" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
-        <tr>
-          <td width="100%" valign="top" >
-          
-            <!-- Box Wrapper -->
-
-            <table class="BoxWrap" width="580" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:24px auto 0; background-color:#fff; border:1px solid #ebebeb;">
-              
-              <tr>
-                <td>
-                   
-                   <!-- Section1 Image -->
-                    <!-- Aqui es el encabezado del video-->
-                  <table align="left" cellpadding="0" cellspacing="0" bgcolor="#ffffff" border="0" class="SecTable1">
-                    <tr><TH style="font-size: 15px; color: #45484E; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 30px; vertical-align: top;"><a mc:edit="Scr_Title" href="http://vivecodigo.org" style="text-decoration: none; color: #45484E"><img style="float:left;" src="${grailsApplication.config.grails.serverURL}/mail/img/icono_video.png" alt="" /><multiline>&nbsp;&nbsp;Temporada 01 de <span style="color:#4f9dd3;">ViveCodigo.org</span></multiline></a></TH>
-                      <td valign="top" align="right" ></td>
-
-                    </tr>
-                    <tr>
-                      <td valign="top" align="right" bgcolor="#ffffff" >
-                      
-                        <table align="right" border="0" cellpadding="0" bgcolor="#ffffff" cellspacing="0">
-                          <tr>
-                            <td style="text-align: center; " width="280" height="187"  class="SecImage1W">
-                              <!-- incrustacion del primero video -->
-                              <object width="280" height="157"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=71478527&amp;force_embed=1&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=71478527&amp;force_embed=1&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="280" height="157"></embed></object> 
-                            </td>
-
-                          </tr>
-                          <tr>
-                            <td style="text-align: center; " width="280" height="187"  class="SecImage1W">
-                              <!-- incrustacion del segundo video -->
-                              <br/>
-                              <br/>
-                              <object width="280" height="158"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=72417851&amp;force_embed=1&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=72417851&amp;force_embed=1&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="280" height="158"></embed></object>
-                            </td>
-                            
-                          </tr>
-                        </table>
-                        
-                      </td>
-                    </tr>
-                    
-                  </table><!-- End Section1 Image -->
-                  
-                        <!-- Section1 Padding -->
-                  <table class="RespoHide" width="15" border="0" cellpadding="0" cellspacing="0" align="left" style="font-size: 0;line-height: 0;border-collapse: collapse;">
-                    <tr>
-                      <td width="0" height="130" style="font-size: 0;line-height: 0;border-collapse: collapse;"><p>&nbsp;</p>               
-                      </td>
-                    </tr>
-                  </table>
-                  
-                  <!-- Section1 Text -->
-                  <table align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" border="0"  class="SecTxt1">
-                    
-                    <tr>
-                      <td valign="top" height="20" align="center" bgcolor="#ffffff" ></td>
-                    </tr>
-                    <tr>
-                      <td width="240" valign="top" height="30" align="center" bgcolor="#ffffff">
-                      
-                        <!-- Title and Text -->
-                        <table  width="240" border="0" cellpadding="0" cellspacing="0" align="center" class="SecTxt1" >
-                          <tr> 
-                            <br/>
-                            
-                            <!-- primer video descripcion-->
-                            <td  class="SecTitle1" mc:edit="Sec_Title1"  style="font-size: 15px; color: #45484E; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top;">
-                              <a href="http://vivecodigo.org/2013/08/01/episodio-0-de-la-temporada-1-elixir-con-hiphoox/" style="text-decoration: none; color: #45484E"><multiline>ViveCodigo.org 01x00 Elixir con @hiphoox</multiline></a>             
-                            </td>
-                          </tr>
-                          <tr>
-                            <td height="14"></td>
-                          </tr>
-                          <tr>
-                            <td  class="SecPrg1" mc:edit="Sec_Txt1" style="font-size: 13px; color: #959595; font-weight: normal; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top;" >
-
-                              <multiline>Norberto, nos platica de Elixir, un lenguaje de programación basado en Erlang y nos introduce los conceptos que rigen al lenguaje dándonos muestra de su gran capacidad.</multiline>
-                               
-                              
-                            </td>
-                          </tr>
-
-                          
-                          <tr>
-                            <td   mc:edit="button1" style="font-size: 13px; padding:20px 0 0; color: #959595; font-weight: normal; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top;" class="button1">
-                            <!--
-                                 <a href="http://vivecodigo.org"><img editable="true" mc:edit="button" src="${grailsApplication.config.grails.serverURL}/mail/img/button1.jpg" alt="" border="0"></a>
-                            --> 
-                              
-                            </td>
-                          </tr>
-
-
-                          <tr>
-                            <!-- segundo video descripcion-->
-                            <td  class="SecTitle1" mc:edit="Sec_Title1"  style="font-size: 15px; color: #45484E; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top;">
-                              <a href="http://vivecodigo.org/2013/08/15/episodio-1-de-la-temporada-1-ceylon-con-chochosmx/" style="text-decoration: none; color: #45484E"><multiline>ViveCodigo.org 01x01 Ceylon con @chochosmx</multiline></a>             
-                            </td>
-                          </tr>
-                          <tr>
-                            <td height="14"></td>
-                          </tr>
-                          <tr>
-                            <td  class="SecPrg1" mc:edit="Sec_Txt1" style="font-size: 13px; color: #959595; font-weight: normal; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top;" >
-
-                              <multiline>Una amena entrevista con uno de los contribuidores a lenguaje Ceylon, un lenguaje que corre sobre la JVM y que nos ofrece características de tipado estático.</multiline>
-                               
-                              
-                            </td>
-                          </tr>
-                              
-                          
-                          <tr>
-                            <td   mc:edit="button1" style="font-size: 13px; padding:20px 0 0; color: #959595; font-weight: normal; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top;" class="button1">
-
-                                 <a href="http://vivecodigo.org"><img editable="true" mc:edit="button" src="${grailsApplication.config.grails.serverURL}/mail/img/button4.jpg" alt="" border="0"></a>
-                               
-                              
-                            </td>
-                          </tr>
-                        </table>
-
-                        
-                      </td>
-                    </tr>
-                  </table><!-- Section1 Text -->
-
-
-
-
-                
-                    
-                </td>
-              </tr>
-              
-            </table><!-- End Box Wrapper -->
-        
-          </td>
-        </tr>
-           
-      </table><!-- End Section1 Basic Wrapper -->
-      
-        <!-- Cta Wide Wrap -->
+      <!-- Cta Wide Wrap -->
       <table class="WideWrap" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
         <tr>
           <td width="100%" valign="top" >
@@ -649,7 +507,7 @@ body{width:auto!important;}
                     <tr>
                       <td class="Footer1Td" style=" font-weight:400; font-size: 12px; color: #b2b3b6; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 2.8; vertical-align: top;">
                                
-                    <a mc:edit="Footer1T" href="#" style=" font-weight:400; text-decoration: none; color: #b2b3b6"><multiline> No olvides <b style="color:#fff;  font-weight:600;"> compartir </b> este correo con tus amigos y seguirnos en los Social Medias </multiline></a>
+                    <a mc:edit="Footer1T" href="#" style=" font-weight:400; text-decoration: none; color: #b2b3b6"><multiline> No olvides <b style="color:#fff;  font-weight:600;"> compartir </b> este correo con tus amigos y seguirnos en Twitter y Facebook </multiline></a>
                     </td>
               
                   </tr>

@@ -15,13 +15,14 @@ class MyTrainingController {
 
   def sendPaymentInstructions(){
     def currentUser = springSecurityService.currentUser
-    log.debug currentUser.username
     Registration registration = Registration.findById(params.long('registrationId'))
+    // TODO: Sacar a un servicio(en el plugin probablemente)
+    def totalAPagar = registration.pagos*.cantidadDePago.sum(0)
     mailService.sendMail {
       to currentUser.username
       from "info@makingdevs.com"
-      subject "Hello John"
-      body 'this is some text'
+      subject "· Instrucciones de pago ·"
+      body( view:"/notification/paymentInfo", model:[course:registration.scheduledCourse.course,totalAPagar:totalAPagar])
     }
     render registration as JSON
   }
