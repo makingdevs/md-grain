@@ -13,8 +13,8 @@ class RegistrationService {
     if(!registration){
       registration = new Registration(user:user)
       scheduledCourse.addToRegistrations(registration).save()
-      //Pago pago = pagoService.crearPago( scheduledCourse.beginDate, scheduledCourse.esquemaDePago.id )
-      //registration.addToPagos(pago)
+      Pago pago = pagoService.crearPago( scheduledCourse.beginDate, scheduledCourse.esquemaDePago.id )
+      registration.addToPagos(pago)
       registration.save()  
     }
     registration
