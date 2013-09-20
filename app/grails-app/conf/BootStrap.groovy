@@ -2,6 +2,7 @@ import com.makingdevs.Course
 import com.makingdevs.Category
 import com.makingdevs.Role
 import com.makingdevs.Requestmap
+import com.payable.Organizacion
 
 class BootStrap {
 
@@ -9,6 +10,7 @@ class BootStrap {
     createCategoriesAndCourses()
     createRoles()
     createRequestMapping()
+    createOrganization()
 
   }
   def destroy = {
@@ -85,4 +87,10 @@ class BootStrap {
                      configAttribute: 'ROLE_SWITCH_USER,IS_AUTHENTICATED_FULLY').save()
     }
   }
+
+  private def createOrganization() {
+    if(!Organizacion.count())
+      new Organizacion( nombre : "Making Devs" ).save()
+  }
+
 }

@@ -60,12 +60,13 @@ grails.hibernate.cache.queries = false
 def logDirectory = "target/"
 environments {
   development {
-      grails.logging.jul.usebridge = true
+    grails.serverURL = "http://localhost:8080/md-grain"
+    grails.logging.jul.usebridge = true
   }
   production {
-      grails.logging.jul.usebridge = false
-      // TODO: grails.serverURL = "http://www.changeme.com"
-      logDirectory = "logs/"
+    grails.serverURL = "http://makingdevs.com"
+    grails.logging.jul.usebridge = false
+    logDirectory = "logs/"
   }
 }
 

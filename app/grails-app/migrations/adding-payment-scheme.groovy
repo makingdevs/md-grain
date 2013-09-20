@@ -14,6 +14,10 @@ databaseChangeLog = {
 		sql("ALTER TABLE recargo ENGINE=InnoDB;")
 		sql("ALTER TABLE s3asset_options ENGINE=InnoDB;")
 		sql("ALTER TABLE scheduled_course ENGINE=InnoDB;")
+		sql("ALTER TABLE organizacion ENGINE=InnoDB;")
+		sql("ALTER TABLE payable ENGINE=InnoDB;")
+		sql("ALTER TABLE s3asset ENGINE=InnoDB;")
+
 	}
 
 	changeSet(author: "neodevelop (generated)", id: "1379464472380-1") {
