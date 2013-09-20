@@ -181,7 +181,7 @@ body{width:auto!important;}
                     </tr>
                     <tr>
                       <td mc:edit="date" height="50" class="date" style="font-size: 13px; color: #272727; font-weight: light; text-align: right; font-family: Helvetica, Arial, sans-serif; line-height: 20px; vertical-align: middle;">
-                      <h5>MAKING BEST CODE, THROUGH BETTER DEVELOPERS.</h5>
+                      <h5>Making best code, through betters developers.</h5>
                       <!--
                           <multiline><p> <img editable="true"  src="${grailsApplication.config.grails.serverURL}/mail/img/icon.jpg" style="float:left;" alt="" border="0">March <span style="color: #4f9dd3;">15</span>, 2013</p> </multiline>   
                       </td>
