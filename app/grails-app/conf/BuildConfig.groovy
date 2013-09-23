@@ -63,9 +63,7 @@ grails.project.dependency.resolution = {
     build ":tomcat:$grailsVersion"
     runtime ":database-migration:1.3.6"
     compile ':cache:1.0.1'
-    compile(":mail:1.0.1"){
-      exclude "spring-test"
-    }
+    compile ":mail:1.0.1"
     compile ':profile:latest.integration'
     compile ':payable:latest.integration'
   }
