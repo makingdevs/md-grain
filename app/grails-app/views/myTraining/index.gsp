@@ -57,6 +57,10 @@
                 Pagar
                 $ <g:formatNumber number="${registration.pagos*.cantidadDePago.sum(0) + registration.pagos*.recargosAcumulados.sum(0) - registration.pagos*.descuentoAplicable.sum(0)}" format="###,##0.00" locale="es_MX"/>
               </g:remoteLink>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=C7U4YESJJEDQ4&lc=MX&item_name=Inscripci%c3%b3n%20individual%20en%20Curso&item_number=GROOVY&amount=3250%2e00&currency_code=MXN&button_subtype=services&no_note=0&cn=Dar%20instrucciones%20especiales%20al%20vendedor%3a&no_shipping=1&rm=1&return=http%3a%2f%2fmakingdevs%2ecom%2fpayed&cancel_return=http%3a%2f%2fmakingdevs%2ecom%2fcancel&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted" class="btn">
+                Pago con PayPal
+              </a>
+              <paypal:pay />
             </p>
             <hr/>
             <!--a class="btn btn-primary" href="#">
