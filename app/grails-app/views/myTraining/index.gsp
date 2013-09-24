@@ -1,5 +1,5 @@
+<%@ page import="com.makingdevs.RegistrationStatus" %>
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta name="layout" content="venera"/>
@@ -53,12 +53,14 @@
             </p>
             <hr/>
             <p>
-              <g:remoteLink name="paymentRegistration${registration.id}" controller="myTraining" action="sendPaymentInstructions" params="[registrationId:registration.id]" class="btn btn-success" onLoading="var loader${registration.id} = new ButtonLoader(${registration.id},'${registration.scheduledCourse.course.name}'); loader${registration.id}.preload()" onSuccess="loader${registration.id}.success()" onComplete="loader${registration.id}.complete()">
-                <i class="icon-money"></i> 
-                Pagar con SPEI
-                $ <g:formatNumber number="${registration.pagos*.cantidadDePago.sum(0) + registration.pagos*.recargosAcumulados.sum(0) - registration.pagos*.descuentoAplicable.sum(0)}" format="###,##0.00" locale="es_MX"/>
-              </g:remoteLink>
-              <paypal:pay registration="${registration}"/>
+              <g:if test="${registration.registrationStatus == RegistrationStatus.REGISTERED || registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH || registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH_IN_GROUP}">
+                <g:remoteLink name="paymentRegistration${registration.id}" controller="myTraining" action="sendPaymentInstructions" params="[registrationId:registration.id]" class="btn btn-success" onLoading="var loader${registration.id} = new ButtonLoader(${registration.id},'${registration.scheduledCourse.course.name}'); loader${registration.id}.preload()" onSuccess="loader${registration.id}.success()" onComplete="loader${registration.id}.complete()">
+                  <i class="icon-money"></i> 
+                  Pagar con SPEI
+                  $ <g:formatNumber number="${registration.pagos*.cantidadDePago.sum(0) + registration.pagos*.recargosAcumulados.sum(0) - registration.pagos*.descuentoAplicable.sum(0)}" format="###,##0.00" locale="es_MX"/>
+                </g:remoteLink>
+                <paypal:pay registration="${registration}"/>
+              </g:if>
             </p>
             <!--a class="btn btn-primary" href="#">
               <i class="icon-certificate"></i> 
