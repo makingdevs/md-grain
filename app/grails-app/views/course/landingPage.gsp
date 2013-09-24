@@ -44,7 +44,9 @@
                   <li>
                     Inicia: <b>${formatDate(date:sc.beginDate,format:"dd - MMMM - yyyy")}</b><br/>
                     Fecha límite: <b>${formatDate(date:sc.limitRegistrationDate,format:"dd - MMMM - yyyy")}</b><br/>
-                    Duración: <b>${sc.durationInHours} horas</b>
+                    Duración: <b>${sc.durationInHours} horas</b><br/>
+                    Costo: <b>$ <g:formatNumber number="${sc.esquemaDePago.cantidadDePago}" format="###,##0.00" locale="es_MX"/> mxn.</b><br/>
+                    Descuento de hasta <b><g:formatNumber number="${sc.esquemaDePago.descuentos.sum(0) { it.porcentaje } }" format="###,##0" locale="es_MX"/>%</b> en este momento.
                     <hr/>
                     <g:link controller="registration" id="${sc.id}" class="btn btn-success">
                       <i class='icon-book'></i> Registrate a este curso!

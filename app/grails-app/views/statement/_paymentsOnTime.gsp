@@ -11,10 +11,6 @@
     </tr>     
    </thead>
     <g:each in="${pagosTiempo}" var="p">
-
-      <g:set var="descuentoTotal" value="${p.descuentos.sum(0) { it.porcentaje } }" />
-      <g:set var="descuentoRealPorcentaje" value="${descuentoTotal / 100 * p.cantidadDePago }" />
-
       <tr class="info">
         <td>
           ${p.conceptoDePago}
@@ -26,11 +22,11 @@
           <g:formatNumber number="${p.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
         </td>
         <td>
-          <g:formatNumber number="${descuentoRealPorcentaje}" format="\$ ###,##0.00" locale="es_MX" />
-          (<g:formatNumber number="${descuentoTotal}" format="###,##0" locale="es_MX"/>%)
+          <descuento:cantidadAplicable pago="${p}" />
+          <descuento:porcentajeTotal pago="${p}" />
         </td>
         <td>
-          <g:formatNumber number="${p.cantidadDePago - descuentoRealPorcentaje}" format="\$ ###,##0.00" locale="es_MX"/>
+          <descuento:totalConDescuento pago="${p}" />
         </td>
         <td>
           &nbsp;
