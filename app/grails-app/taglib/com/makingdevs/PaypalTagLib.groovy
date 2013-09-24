@@ -1,20 +1,23 @@
 package com.makingdevs
 
 class PaypalTagLib {
+
+  def grailsApplication
+
   static namespace = 'paypal'
 
   def pay = { attrs, body ->
     def registration = attrs.registration
-    def businessId = 'C7U4YESJJEDQ4'
+    def businessId = grailsApplication.config.paypal.businessId
     def itemName = "Inscripción individual - ${registration.scheduledCourse.course.name}"
     def itemNumber = registration.scheduledCourse.course.courseKey
-    def payedReturnUrl = 'http://makingdevs.com/payed'
-    def cancelReturnUrl = 'http://makingdevs.com/cancel'
+    def payedReturnUrl = grailsApplication.config.paypal.payedReturnUrl
+    def cancelReturnUrl = grailsApplication.config.paypal.cancelReturnUrl
     def amount = registration.pagos*.cantidadDePago.sum(0) + registration.pagos*.recargosAcumulados.sum(0) - registration.pagos*.descuentoAplicable.sum(0)
 
     out << """
       <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-        <input type='hidden' name='business' value='C7U4YESJJEDQ4'>
+        <input type='hidden' name='business' value='${businessId}'>
         <input type='hidden' name='cmd' value='_xclick'>
         <input type='hidden' name='item_name' value='${itemName}'>
         <input type='hidden' name='item_number' value='${itemNumber}'>
