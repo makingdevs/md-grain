@@ -4,13 +4,13 @@ class PaypalTagLib {
   static namespace = 'paypal'
 
   def pay = { attrs, body ->
+    def registration = attrs.registration
     def businessId = 'C7U4YESJJEDQ4'
-    def itemName = 'Inscripción individual'
-    def itemNumber = 'GROOVY'
+    def itemName = "Inscripción individual - ${registration.scheduledCourse.course.name}"
+    def itemNumber = registration.scheduledCourse.course.courseKey
     def payedReturnUrl = 'http://makingdevs.com/payed'
     def cancelReturnUrl = 'http://makingdevs.com/cancel'
-    def paypalUrl = ''
-    def amount = '1234'
+    def amount = registration.pagos*.cantidadDePago.sum(0) + registration.pagos*.recargosAcumulados.sum(0) - registration.pagos*.descuentoAplicable.sum(0)
 
     out << """
       <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
@@ -26,7 +26,6 @@ class PaypalTagLib {
         <input type='hidden' name='rm' value='1'>
         <input type='hidden' name='return' value='${payedReturnUrl}'>
         <input type='hidden' name='cancel_return' value='${cancelReturnUrl}'>
-        <input type='hidden' name='bn' value='PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted'>
         <input type='hidden' name='charset' value='utf-8'>
         <button type='submit' name='submit' class='btn btn-primary' alt='Pago seguro con PayPal'>
           <i class='icon-credit-card'></i> Pagar con PayPal

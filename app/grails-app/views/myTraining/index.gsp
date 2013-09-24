@@ -58,7 +58,7 @@
                 Pagar
                 $ <g:formatNumber number="${registration.pagos*.cantidadDePago.sum(0) + registration.pagos*.recargosAcumulados.sum(0) - registration.pagos*.descuentoAplicable.sum(0)}" format="###,##0.00" locale="es_MX"/>
               </g:remoteLink>
-              <paypal:pay />
+              <paypal:pay registration="${registration}"/>
             </p>
             <!--a class="btn btn-primary" href="#">
               <i class="icon-certificate"></i> 
