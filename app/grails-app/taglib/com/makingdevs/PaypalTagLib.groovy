@@ -28,7 +28,7 @@ class PaypalTagLib {
         <input type='hidden' name='cancel_return' value='${cancelReturnUrl}'>
         <input type='hidden' name='charset' value='utf-8'>
         <button type='submit' name='submit' class='btn btn-primary' alt='Pago seguro con PayPal'>
-          <i class='icon-credit-card'></i> Pagar con PayPal
+          <i class='icon-credit-card'></i> Pagar con PayPal \$ ${g.formatNumber(number:amount,format:'###,##0.00',locale:'es_MX')}
         </button>
       </form>
     """
