@@ -48,6 +48,11 @@ class UrlMappings {
 			action = 'paypalCancel'
 		}
 
+		name paypalPayed : "/paypal/payed" {
+			controller = 'payment'
+			action = 'paypalPayed'
+		}
+
 		"/"(controller:"home")
 		"500"(view:'/error')
 	}
