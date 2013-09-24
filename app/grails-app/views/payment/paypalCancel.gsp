@@ -47,10 +47,18 @@
                 <tr>
                   <td>${i+1}</td>
                   <td>${r.scheduledCourse.course.name}</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>${formatDate(date:r.scheduledCourse.beginDate,format:"dd - MMMM - yyyy")}</td>
+                  <td>${r.scheduledCourse.durationInHours} horas</td>
+                  <td>
+                    <span class="label">
+                    <g:message code="${r.scheduledCourse.scheduledCourseStatus.code}"/>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="label">
+                    <g:message code="${r.registrationStatus.code}"/>
+                    </span>
+                  </td>
                 </tr>
                 </g:each>
               </tbody>
