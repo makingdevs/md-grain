@@ -11,8 +11,8 @@ class PaypalTagLib {
     def businessId = grailsApplication.config.paypal.businessId
     def itemName = "Inscripción individual - ${registration.scheduledCourse.course.name}"
     def itemNumber = registration.scheduledCourse.course.courseKey
-    def payedReturnUrl = grailsApplication.config.paypal.payedReturnUrl
-    def cancelReturnUrl = grailsApplication.config.paypal.cancelReturnUrl
+    def payedReturnUrl = grailsApplication.config.paypal.payedReturnUrl + "?transactions=" + registration.pagos*.transactionId.join(',')
+    def cancelReturnUrl = grailsApplication.config.paypal.cancelReturnUrl + "?transactions=" + registration.pagos*.transactionId.join(',')
     def amount = registration.pagos*.cantidadDePago.sum(0) + registration.pagos*.recargosAcumulados.sum(0) - registration.pagos*.descuentoAplicable.sum(0)
 
     out << """
