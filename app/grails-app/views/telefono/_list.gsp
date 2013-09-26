@@ -41,8 +41,7 @@
         <td> ${t.extension} </td>
         <td style="text-align:center;">
           <div class="btn-group">
-            <g:remoteLink id="${t.id}" class="btn btn-warning"><i class="icon-edit icon-white"></i></g:remoteLink>
-            <g:remoteLink id="${t.id}" class="btn btn-danger"><i class="icon-trash icon-white"></i></g:remoteLink>
+            <g:remoteLink id="${t.id}" update="listaTelefono" controller="telefono" action="borrarTelefonoASync" class="btn btn-danger"><i class="icon-trash icon-white"></i></g:remoteLink>
           </div>
         </td>
       </tr>
