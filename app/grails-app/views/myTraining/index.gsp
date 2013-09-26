@@ -53,7 +53,10 @@
             </p>
             <hr/>
             <p>
-              <g:if test="${registration.registrationStatus == RegistrationStatus.REGISTERED || registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH || registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH_IN_GROUP}">
+              <g:if test="${
+                registration.registrationStatus == RegistrationStatus.REGISTERED || 
+                registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH || 
+                registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH_IN_GROUP}">
                 <g:remoteLink name="paymentRegistration${registration.id}" controller="myTraining" action="sendPaymentInstructions" params="[registrationId:registration.id]" class="btn btn-success" onLoading="var loader${registration.id} = new ButtonLoader(${registration.id},'${registration.scheduledCourse.course.name}'); loader${registration.id}.preload()" onSuccess="loader${registration.id}.success()" onComplete="loader${registration.id}.complete()">
                   <i class="icon-money"></i> 
                   Pagar con SPEI
@@ -62,10 +65,25 @@
                 <paypal:pay registration="${registration}"/>
               </g:if>
             </p>
-            <!--a class="btn btn-primary" href="#">
+            <g:if test="${
+                registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_PAYED || 
+                registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_PAYED_IN_GROUP }">
+                Pagado
+            </g:if>
+
+            <g:if test="${
+                registration.registrationStatus == RegistrationStatus.FINISHED}">
+            <a class="btn btn-primary" href="#">
               <i class="icon-certificate"></i> 
-              Realizar evaluación
-            </a-->
+              Obtener certificado
+            </a>
+            </g:if>
+
+            <g:if test="${
+                registration.registrationStatus == RegistrationStatus.CANCELLED}">
+              Cancelado
+            </g:if>
+
           </div>
         </div>
         </g:each>
