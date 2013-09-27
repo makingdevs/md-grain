@@ -68,7 +68,10 @@
             <g:if test="${
                 registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_PAYED || 
                 registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_PAYED_IN_GROUP }">
-                Pagado
+                <p>
+                  <span class="label label-success"><i class="icon-thumbs-up-alt"></i> Todo listo para comenzar el curso.</span>
+                </p>
+                
             </g:if>
 
             <g:if test="${
@@ -81,7 +84,9 @@
 
             <g:if test="${
                 registration.registrationStatus == RegistrationStatus.CANCELLED}">
-              Cancelado
+              <p>
+                <span class="label label-inverse"><i class="icon-remove"></i> Este registro se ha cancelado.</span>
+              </p>
             </g:if>
 
           </div>
