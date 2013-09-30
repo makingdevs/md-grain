@@ -23,8 +23,9 @@
   <header class="jumbotron subhead" id="overview">
     <div class="container">
       <div class="docs-header-icon">
-        <h1><i class="${pageIco ?: 'icon-laptop'}"></i> · ${mainTitle ?: 'MakingDevs'}</h1>
-        <p class="lead">${subTitle ?: 'Desarrollo de software'}</p>
+        <h1><i class="${pageIco ?: 'icon-laptop'}"></i> · ${mainTitle ?: 'Mi entrenamiento'}</h1>
+        <g:set var="username" value="${sec.loggedInUserInfo(field:'username')}"/> 
+        <p class="lead">${username ?: 'Desarrollador de software'}</p>
       </div>
     </div>
   </header>
@@ -36,9 +37,10 @@
       <div class="row-fluid">
         <div class="span2 well well-small">
           <ul class="nav nav-list">
-            <li class="active"><a href="#"><i class="icon-fixed-width icon-home"></i> Mis registros</a></li>
-            <li><a href="#"><i class="icon-fixed-width icon-book"></i> Mis pagos</a></li>
-            <li><a href="#"><i class="icon-fixed-width icon-pencil"></i> Mis sesiones</a></li>
+            <li class=""><a href="#"><i class="icon-fixed-width icon-book"></i> Mis registros</a></li>
+            <li class=""><a href="#"><i class="icon-fixed-width icon-usd"></i> Mis pagos</a></li>
+            <li class=""><a href="#"><i class="icon-fixed-width icon-calendar"></i> Mis sesiones</a></li>
+            <li class=""><a href="#"><i class="icon-fixed-width icon-road"></i> Historial académico</a></li>
           </ul>
         </div>
         <div class="span9 offset1">
