@@ -36,10 +36,9 @@
       <div class="row-fluid">
         <div class="span2 well well-small">
           <ul class="nav nav-list">
-            <li class="active"><a href="#"><i class="icon-fixed-width icon-home"></i> Home</a></li>
-            <li><a href="#"><i class="icon-fixed-width icon-book"></i> Library</a></li>
-            <li><a href="#"><i class="icon-fixed-width icon-pencil"></i> Applications</a></li>
-            <li><a href="#"><i class="icon-fixed-width icon-cogs"></i> Settings</a></li>
+            <li class="active"><a href="#"><i class="icon-fixed-width icon-home"></i> Mis registros</a></li>
+            <li><a href="#"><i class="icon-fixed-width icon-book"></i> Mis pagos</a></li>
+            <li><a href="#"><i class="icon-fixed-width icon-pencil"></i> Mis sesiones</a></li>
           </ul>
         </div>
         <div class="span9 offset1">

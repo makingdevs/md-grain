@@ -1,4 +1,4 @@
-<div class="container" id="messages">
+<div class="container-fluid" id="messages">
   <div class="row">
     <div id="messagesArea" class="span12">
       <div class="ok hide alert alert-success">
