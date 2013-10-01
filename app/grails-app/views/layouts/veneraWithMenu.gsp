@@ -52,7 +52,9 @@
                 <i class="icon-fixed-width icon-calendar"></i> Mis sesiones
               </g:link>
             </li>
-            <li class=""><a href="#"><i class="icon-fixed-width icon-road"></i> Historial académico</a></li>
+            <!--li class="">
+              <a href="#"><i class="icon-fixed-width icon-road"></i> Historial académico</a>
+            </li-->
           </ul>
         </div>
         <div class="span10">
