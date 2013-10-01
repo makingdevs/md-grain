@@ -43,6 +43,11 @@ class UrlMappings {
 			action = 'myPayments'
 		}
 
+		name mySessions : "/mySessions/" {
+			controller = 'attendee'
+			action = 'mySessions'
+		}
+
 		name paypalCancel : "/paypal/cancel" {
 			controller = 'payment'
 			action = 'paypalCancel'
