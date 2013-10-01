@@ -10,7 +10,7 @@
   </tr>     
  </thead>
   <g:each in="${pagosRealizar}" var="p">
-    <tr class="info">
+    <tr class="info"> 
       <td>
         ${p.conceptoDePago}
       </td>
