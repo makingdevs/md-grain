@@ -37,14 +37,24 @@
       <div class="row-fluid">
         <div class="span2 well well-small">
           <ul class="nav nav-list">
-            <li class=""><a href="#"><i class="icon-fixed-width icon-book"></i> Mis registros</a></li>
-            <li class=""><a href="#"><i class="icon-fixed-width icon-usd"></i> Mis pagos</a></li>
+            <li class="">
+              <g:link controller="myTraining">
+                <i class="icon-fixed-width icon-book"></i> Mis registros
+              </g:link>
+            </li>
+            <li class="">
+              <g:link controller="payment" action="myPayments">
+                <i class="icon-fixed-width icon-usd"></i> Mis pagos
+              </g:link>
+            </li>
             <li class=""><a href="#"><i class="icon-fixed-width icon-calendar"></i> Mis sesiones</a></li>
             <li class=""><a href="#"><i class="icon-fixed-width icon-road"></i> Historial académico</a></li>
           </ul>
         </div>
-        <div class="span9 offset1">
-          <g:layoutBody/>
+        <div class="span10">
+          <div class="white-card extra-padding">
+            <g:layoutBody/>
+          </div>
         </div>
       </div>
     </div>

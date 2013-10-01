@@ -2,30 +2,25 @@
 
 <html>
   <head>
-    <meta name="layout" content="venera"/>
+    <meta name="layout" content="veneraWithMenu"/>
     <title>Mis pagos</title>
   </head>
 
   <body>
 
-  <header class="jumbotron subhead" id="overview">
-    <div class="container">
-      <div class="docs-header-icon">
-        <h1><i class="icon-usd"></i> · Mis pagos</h1>
-        <p class="lead">Historial de pagos.</p>
-      </div>
-    </div>
-  </header>
-
   <div class="row-fluid">
-    <div>
+
+    <div class="span12">
+      <h3 class="section-header">Pagos con beneficios</h3>
       <g:render template="/statement/paymentsOnTime" model="[pagosTiempo: payments.pagosEnTiempo]"/>
     </div>
-    <div>
+  </div>
+  <hr>
+  <div class="row-fluid">
+    <div class="span12">
+      <h3 class="section-header">Pagos por realizar</h3>
       <g:render template="/statement/comingPayments" model="[pagosRealizar: payments.pagosPorRealizar]"/>
     </div>
   </div>
-
-
   </body>
 </html>
