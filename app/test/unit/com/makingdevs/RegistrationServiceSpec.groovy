@@ -8,6 +8,7 @@ import grails.plugins.springsecurity.SpringSecurityService
 import com.payable.PagoService
 import com.payable.EsquemaDePago
 import com.payable.Pago
+import com.payable.DescuentoAplicableService
 
 @TestFor(RegistrationService)
 @Mock([ScheduledCourse,User,Registration,EsquemaDePago,Pago])
@@ -27,7 +28,11 @@ class RegistrationServiceSpec extends Specification {
       pagoServiceMock.demand.crearPago { beginDate, scheduledCourseId ->
         new Pago().save(validate:false)
       }
+      def descuentoAplicableServiceMock = mockFor(DescuentoAplicableService)
+      descuentoAplicableServiceMock.demand.generarParaPagoConEsquemaDePagoConFechaReferencia { esquemdaDePago, fechaDeReferencia -> }
+      descuentoAplicableServiceMock.demand.agregarDescuentoAplicableAUnPago { descuentoAplicable, pagoId -> }
       service.pagoService = pagoServiceMock.createMock()
+      service.descuentoAplicableService = descuentoAplicableServiceMock.createMock()
 
     when:
       def registration = service.addUserToScheduledCourse("me@me.com", 1L)
