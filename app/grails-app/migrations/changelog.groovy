@@ -295,5 +295,6 @@ databaseChangeLog = {
 	include file: 'adding-table-per-hierarchy-false.groovy'
 
 	include file: 'adding-constraints-to-esquema-de-pago.groovy'
-  
+
+  include file: 'add-descuento-aplicable.groovy'
 }
