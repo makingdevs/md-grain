@@ -21,7 +21,7 @@
         <p>
           <strong>Promociones vigentes:</strong>
           <ul>
-            <g:each in="${registration.pagos*.descuentos.flatten().sort{ it.id }}" var="descuento">
+            <g:each in="${registration.pagos*.descuentosAplicables*.descuento.flatten().sort{ it.id }}" var="descuento">
             <li> ${descuento.nombreDeDescuento} </li>
           </g:each>
           </ul>
