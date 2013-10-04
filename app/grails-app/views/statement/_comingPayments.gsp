@@ -1,5 +1,5 @@
 <table class="table no-margin table-striped table-bordered">
- <thead style="background-color:whiteSmoke">
+ <thead>
    <tr>
     <th>Concepto</th>
     <th>Pagar antes de</th>
@@ -10,12 +10,12 @@
   </tr>     
  </thead>
   <g:each in="${pagosRealizar}" var="p">
-    <tr class="info"> 
+    <tr> 
       <td>
         ${p.conceptoDePago}
       </td>
       <td>
-        <g:formatDate format="yyyy-MM-dd" date="${p.fechaDeVencimiento}"/>
+        <g:formatDate format="dd-MMMM-yyyy" date="${p.fechaDeVencimiento}"/>
       </td>
       <td>
         <g:formatNumber number="${p.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>

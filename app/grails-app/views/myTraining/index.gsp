@@ -1,4 +1,5 @@
 <%@ page import="com.makingdevs.RegistrationStatus" %>
+<%@ page import="com.payable.DescuentoAplicableStatus" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +22,17 @@
         <p>
           <strong>Promociones vigentes:</strong>
           <ul>
-            <g:each in="${registration.pagos*.descuentosAplicables*.descuento.flatten().sort{ it.id }}" var="descuento">
-            <li> ${descuento.nombreDeDescuento} </li>
+            <g:each in="${registration.pagos*.descuentosAplicables.flatten().sort{ it.id }}" var="descuentoAplicable">
+            <li>
+              ${descuentoAplicable.descuento.nombreDeDescuento}
+              <g:set var="label" value="label-success"/>
+              <g:if test="${descuentoAplicable.descuentoAplicableStatus == DescuentoAplicableStatus.EXPIRADO}">
+                <g:set var="label" value="label-warning"/>
+              </g:if>
+              <span class="label ${label}">
+                ${descuentoAplicable.descuentoAplicableStatus}
+              </span>
+            </li>
           </g:each>
           </ul>
         </p>

@@ -87,6 +87,7 @@ log4j = {
       'grails.app.domain.com.makingdevs',
       'grails.app.conf',
       'grails.app.jobs.com.makingdevs',
+      'grails.app.jobs.com.payable',
       'groovyx'
 
   warn 'org.codehaus.groovy.grails.web.servlet',  //  controllers
@@ -119,7 +120,8 @@ log4j = {
       'liquibase',
       'org.grails.datastore',
       'grails.plugin.databasemigration',
-      'grails.app.jobs'
+      'grails.app.jobs',
+      'grails.plugins.quartz'
 
   error 'net.sf.ehcache', 'net.sf.ehcache.hibernate', 'org.hibernate'
 
