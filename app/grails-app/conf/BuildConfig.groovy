@@ -12,7 +12,7 @@ grails.project.source.level = 1.6
 //  run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
 //]
 
-grails.plugin.location.'Payable' = "../../Payable"
+//grails.plugin.location.'Payable' = "../../Payable"
 
 grails.project.dependency.resolution = {
   // inherit Grails' default dependencies
@@ -65,6 +65,6 @@ grails.project.dependency.resolution = {
     compile ':cache:1.0.1'
     compile ":mail:1.0.1"
     compile 'com.makingdevs:profile:latest.integration'
-    //compile ':payable:latest.integration'
+    compile ':payable:latest.integration'
   }
 }
