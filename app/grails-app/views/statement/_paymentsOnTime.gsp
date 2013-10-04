@@ -15,7 +15,7 @@
         ${p.conceptoDePago}
       </td>
       <td>
-        <g:formatDate format="yyyy-MM-dd" date="${p.fechaDeVencimiento}"/>
+        <g:formatDate format="dd-MMMM-yyyy" date="${p.fechaDeVencimiento}"/>
       </td>
       <td>
         <g:formatNumber number="${p.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
