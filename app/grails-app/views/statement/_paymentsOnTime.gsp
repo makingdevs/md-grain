@@ -1,5 +1,5 @@
 <table class="table no-margin table-striped table-bordered">
- <thead style="background-color:whiteSmoke">
+ <thead>
    <tr>
     <th>Concepto</th>
     <th>Pagar antes de</th>
@@ -10,7 +10,7 @@
   </tr>     
  </thead>
   <g:each in="${pagosTiempo}" var="p">
-    <tr class="info">
+    <tr>
       <td>
         ${p.conceptoDePago}
       </td>
