@@ -58,6 +58,11 @@ class UrlMappings {
 			action = 'paypalPayed'
 		}
 
+		name scheduledCourseInfo : "/courseInfo" {
+			controller = 'registration'
+			action = 'index'
+		}
+
 		"/"(controller:"home")
 		"500"(view:'/error')
 	}
