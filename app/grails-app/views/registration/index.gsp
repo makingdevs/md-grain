@@ -67,7 +67,15 @@
                         <g:each in="${scheduledCourse.esquemaDePago.descuentos.sort{ it.id } }" var="descuento" status="row">
                           <tr>
                             <td>${row + 1}</td>
-                            <td>${descuento.nombreDeDescuento} </td>
+                            <td>
+                              ${descuento.nombreDeDescuento}
+                              <g:if test="${new Date() < (scheduledCourse.beginDate - descuento.diasPreviosParaCancelarDescuento)}">
+                                <span class="label label-success">Vigente</span>
+                              </g:if>
+                              <g:else>
+                                <span class="label label-warning">Expirado</span>
+                              </g:else>
+                            </td>
                             <td><g:formatDate format="dd - MMMM - yyyy" date="${scheduledCourse.beginDate - descuento.diasPreviosParaCancelarDescuento}"/></td>
                           </tr>
                         </g:each>
