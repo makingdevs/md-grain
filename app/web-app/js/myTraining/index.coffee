@@ -1,15 +1,15 @@
 class window.ButtonLoader
   buttonId: 0
   labelName: ''
-  idName: ''
+  tagName: ''
 
-  constructor : (buttonId, labelName, idName) ->
+  constructor : (buttonId, labelName, tagName) ->
     @buttonId = buttonId
     @labelName = labelName
-    @idName = 
+    @tagName = tagName
 
   preload : ->
-    element = $("a[name=paymentRegistration" + @buttonId + "] > i")
+    element = $("a[name="+ @tagName + @buttonId + "] > i")
     classes = element.attr("class").split(" ")
     element.removeClass(c) for c in classes
     element.addClass('icon-refresh icon-spin')
@@ -22,7 +22,7 @@ class window.ButtonLoader
     okMessage.show()
 
   complete: ->
-    element = $("a[name=paymentRegistration" + @buttonId + "] > i")
+    element = $("a[name="+ @tagName + @buttonId + "] > i")
     classes = element.attr("class").split(" ")
     element.removeClass(c) for c in classes
     element.addClass('icon-ok')
