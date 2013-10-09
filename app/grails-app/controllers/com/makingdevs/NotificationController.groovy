@@ -23,10 +23,10 @@ class NotificationController {
       }
     }
     mailService.sendMail {
-      to currentUser.username
+      to params.id
       from "info@makingdevs.com"
-      subject "· Instrucciones de pago ·"
-      body( view:"/notification/${params.course}Quiz", model:[registration:registration])
+      subject "· Evaluación para entrenamiento - ${registration?.scheduledCourse?.course?.name} ·"
+      body( view:"/notification/${params.course.toLowerCase()}Quiz", model:[registration:registration])
     }
     render registration as JSON
   }

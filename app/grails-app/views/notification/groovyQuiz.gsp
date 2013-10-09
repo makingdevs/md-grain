@@ -240,7 +240,7 @@ body{width:auto!important;}
                     
                      <tr>
                          <td class="HeadTitle">
-                         <a href="#" mc:edit="Head_Title" style=" font-size:16px; font-weight:800; font-family: Helvetica, Arial, sans-serif; text-decoration: none; color: #45484e">Bienvenido <span style="color:#4f9dd3;">${registration?.user?perfil?.nombreCompleto() ?: 'Nombre'}</span> al curso de <span style="color:#4f9dd3;">${registration?.scheduledCourse?.course?.name ?: 'curso'}</span></a>
+                         <a href="#" mc:edit="Head_Title" style=" font-size:16px; font-weight:800; font-family: Helvetica, Arial, sans-serif; text-decoration: none; color: #45484e">Bienvenido <span style="color:#4f9dd3;">${registration?.user?.perfil?.nombreCompleto() ?: 'Nombre'}</span> al curso <span style="color:#4f9dd3;">${registration?.scheduledCourse?.course?.name ?: 'curso'}</span></a>
                        </td>
                      </tr>
                      
@@ -256,35 +256,58 @@ body{width:auto!important;}
                           Sabemos que es importante estar preparado para comenzar a entrenar, es por esto que queremos ayudarte con esta evaluación que nos permitirá ayudarte a tener un mejor rendimiento al obtener conocimiento.</p>
                           <p>Se libre de contestar aquí mismo y nosotros te apoyaremos con los temas que desconozcas a través de vínculos a artículos, videos o podcast.</p>
                           </br>
-                        <strong>¿Manejas un editor de texto para programar?</strong></br>
-                        R:</br>
-                        <strong>¿Qué editores de textos conoces, y cuál recomiendas para desarrollar?</strong></br>
-                        R:</br>
-                        <strong>¿Usas la línea de comando de tus sistema operativo?</strong></br>
-                        R:</br>
-                        <strong>¿Qué shell usas en tus sistema operativo?</strong></br>
-                        R:</br>
-                        <strong>¿Sabes compilar con el SDK de Java en línea de comando incluyendo librerías en el classpath?</strong></br>
-                        R:</br>
-                        <strong>¿Puedes dar un ejemplo de compilación de un archivo Java incluyendo alguna librería?</strong></br>
-                        R:</br>
-                        <strong>¿Cuáles son las características principales del lenguaje Java?</strong></br>
-                        R:</br>
-                        <strong>¿Cuáles serían las librerías más comunes que usas en Java?</strong></br>
-                        R:</br>
-                        <strong>¿Qué es una interfaz y para que sirve?</strong></br>
-                        R:</br>
-                        <strong>¿Que son las clases internas anónimas?</strong></br>
-                        R:</br>
-                        <strong>Describe: ¿qué es la convención de Java Beans?</strong></br>
-                        R:</br>
-                        <p style="text-align:center;">
-                        Muchas gracias por tu preferencia.<br/>
-                          <strong>
-                            Atentamente<br/>
-                            El equipo de MakingDevs
-                          </strong>
-                        </p>
+                          <p>
+                          <strong>¿Manejas un editor de texto para programar?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Qué editores de textos conoces, y cuál recomiendas para desarrollar?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Usas la línea de comando de tus sistema operativo?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Qué shell usas en tus sistema operativo?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Sabes compilar con el SDK de Java en línea de comando incluyendo librerías en el classpath?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Puedes dar un ejemplo de compilación de un archivo Java incluyendo alguna librería?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Cuáles son las características principales del lenguaje Java?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Cuáles serían las librerías más comunes que usas en Java?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Qué es una interfaz y para que sirve?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>¿Que son las clases internas anónimas?</strong></br>
+                          R:
+                          </p>
+                          <p>
+                          <strong>Describe: ¿qué es la convención de Java Beans?</strong></br>
+                          R:
+                          </p>
+                          
+                          <p style="text-align:center;">
+                          Muchas gracias por tu preferencia.<br/>
+                            <strong>
+                              Atentamente<br/>
+                              El equipo de MakingDevs
+                            </strong>
+                          </p>
                        </td>
                      </tr>
                      

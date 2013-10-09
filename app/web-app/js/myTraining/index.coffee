@@ -1,10 +1,12 @@
 class window.ButtonLoader
   buttonId: 0
   labelName: ''
+  idName: ''
 
-  constructor : (buttonId, labelName) ->
+  constructor : (buttonId, labelName, idName) ->
     @buttonId = buttonId
     @labelName = labelName
+    @idName = 
 
   preload : ->
     element = $("a[name=paymentRegistration" + @buttonId + "] > i")
