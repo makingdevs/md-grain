@@ -34,6 +34,7 @@
                   <g:sortableColumn property="scheduledCourse.course" title="Curso" defaultOrder="desc"/>
                   <g:sortableColumn property="dateCreated" title="Registrado" defaultOrder="desc"/>
                   <g:sortableColumn property="registrationStatus" title="Status" defaultOrder="desc"/>
+                  <th>&nbsp;</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,6 +46,11 @@
                   <td>${r.scheduledCourse.course}</td>
                   <td>${formatDate(date:r.dateCreated,format:"dd - MMMM - yyyy")}</td>
                   <td>${r.registrationStatus}</td>
+                  <td>
+                    <g:remoteLink class="btn btn-mini" controller="notification" action="quizFor" id="${r.user.username}" params="[course:r.scheduledCourse.course]">
+                      <i class="icon-envelope"></i>
+                    </g:remoteLink>
+                  </td>
                 </tr>
                 </g:each>
               </tbody>
