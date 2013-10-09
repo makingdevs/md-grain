@@ -5,13 +5,10 @@
 
     ButtonLoader.prototype.buttonId = 0;
 
-    ButtonLoader.prototype.labelName = '';
-
     ButtonLoader.prototype.tagName = '';
 
-    function ButtonLoader(buttonId, labelName, tagName) {
+    function ButtonLoader(buttonId, tagName) {
       this.buttonId = buttonId;
-      this.labelName = labelName;
       this.tagName = tagName;
     }
 

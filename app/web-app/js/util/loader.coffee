@@ -1,11 +1,9 @@
 class window.ButtonLoader
   buttonId: 0
-  labelName: ''
   tagName: ''
 
-  constructor : (buttonId, labelName, tagName) ->
+  constructor : (buttonId, tagName) ->
     @buttonId = buttonId
-    @labelName = labelName
     @tagName = tagName
 
   preload : ->
