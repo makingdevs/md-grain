@@ -5,7 +5,7 @@
 <head>
   <meta name="layout" content="veneraWithMenu"/>
   <title>Mi entrenamiento</title>
-  <r:require module="myTraining"/>
+  <r:require module="buttonLoader"/>
 </head>
 
 <body>
