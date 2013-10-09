@@ -7,14 +7,17 @@
 
     ButtonLoader.prototype.labelName = '';
 
-    function ButtonLoader(buttonId, labelName) {
+    ButtonLoader.prototype.tagName = '';
+
+    function ButtonLoader(buttonId, labelName, tagName) {
       this.buttonId = buttonId;
       this.labelName = labelName;
+      this.tagName = tagName;
     }
 
     ButtonLoader.prototype.preload = function() {
       var c, classes, element, _i, _len;
-      element = $("a[name=paymentRegistration" + this.buttonId + "] > i");
+      element = $("a[name=" + this.tagName + this.buttonId + "] > i");
       classes = element.attr("class").split(" ");
       for (_i = 0, _len = classes.length; _i < _len; _i++) {
         c = classes[_i];
@@ -23,18 +26,18 @@
       return element.addClass('icon-refresh icon-spin');
     };
 
-    ButtonLoader.prototype.success = function() {
+    ButtonLoader.prototype.success = function(message) {
       var messages, okMessage;
       messages = $("#messages").show();
       okMessage = messages.find("div.ok").clone().removeClass("ok");
       okMessage.appendTo("#messagesArea");
-      okMessage.find("span.message").html("Te hemos enviado la información del curso <b>'" + this.labelName + "'</b> a tu correo.");
+      okMessage.find("span.message").html(message);
       return okMessage.show();
     };
 
     ButtonLoader.prototype.complete = function() {
       var c, classes, element, _i, _len;
-      element = $("a[name=paymentRegistration" + this.buttonId + "] > i");
+      element = $("a[name=" + this.tagName + this.buttonId + "] > i");
       classes = element.attr("class").split(" ");
       for (_i = 0, _len = classes.length; _i < _len; _i++) {
         c = classes[_i];

@@ -14,11 +14,11 @@ class window.ButtonLoader
     element.removeClass(c) for c in classes
     element.addClass('icon-refresh icon-spin')
     
-  success : ->
+  success : (message) ->
     messages = $("#messages").show()
     okMessage = messages.find("div.ok").clone().removeClass("ok")
     okMessage.appendTo("#messagesArea")
-    okMessage.find("span.message").html("Te hemos enviado la información del curso <b>'#{@labelName}'</b> a tu correo.")
+    okMessage.find("span.message").html(message)
     okMessage.show()
 
   complete: ->
