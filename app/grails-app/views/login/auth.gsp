@@ -51,7 +51,9 @@
 											Recuérdame en este equipo
 										</label>
                 	</div>
-                	<input type='submit' id="submit" class="btn btn-large" value='Ingresa ahora'/>
+                  <button type="submit" id="submit" class="btn btn-large">
+                   <i class="icon icon-smile"></i> Ingresa ahora
+                  </button>
                 </div>
                 <div class="span6">
                 	<h3>¿Aún no tienes cuenta?</h3>
