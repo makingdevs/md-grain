@@ -48,6 +48,7 @@ grails.project.dependency.resolution = {
     runtime ":hibernate:$grailsVersion"
     runtime ":jquery:1.8.3"
     runtime ":resources:1.2"
+    runtime ":cache-headers:1.1.5"
     compile ":lesscss-resources:1.3.3"
     compile ':spring-security-core:1.2.7.3'
     test(":spock:0.7") {
