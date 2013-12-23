@@ -51,6 +51,9 @@
                     <g:remoteLink name="quizFor${r.id}" class="btn btn-mini" controller="notification" action="quizFor" id="${r.user.username}" params="[course:r.scheduledCourse.course]" onLoading="var loader${r.id} = new ButtonLoader(${r.id},'quizFor'); loader${r.id}.preload()" onSuccess="loader${r.id}.success('Cuestionario enviado a: ${r.user.username}.')" onComplete="loader${r.id}.complete()">
                       <i class="icon-envelope"></i>
                     </g:remoteLink>
+                    <g:link controller="paymentReceipt" id="${r.pagos.id}" class="btn btn-mini">
+                      <i class="icon-cloud-upload"></i>
+                    </g:link>
                   </td>
                 </tr>
                 </g:each>

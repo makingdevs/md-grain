@@ -9,26 +9,28 @@
     <th>&nbsp;</th>
   </tr>     
  </thead>
-  <g:each in="${pagosRealizar}" var="p">
+  <g:findAll in="${pagosRealizar}" expr="${it.descuentoAplicable == 0}">
     <tr> 
       <td>
-        ${p.conceptoDePago}
+        ${it.conceptoDePago}
       </td>
       <td>
-        <g:formatDate format="dd-MMMM-yyyy" date="${p.fechaDeVencimiento}"/>
+        <g:formatDate format="dd-MMMM-yyyy" date="${it.fechaDeVencimiento}"/>
       </td>
       <td>
-        <g:formatNumber number="${p.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
+        <g:formatNumber number="${it.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
       </td>
       <td>
         $ 0.0
       </td>
       <td>
-        <g:formatNumber number="${p.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>        
+        <g:formatNumber number="${it.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>        
       </td>
       <td>
-        &nbsp;
+        <g:link controller="paymentReceipt" id="${it.id}" class="btn btn-mini">
+          <i class="icon-cloud-upload"></i>
+        </g:link>
       </td>
     </tr>
-  </g:each>
+  </g:findAll>
 </table>

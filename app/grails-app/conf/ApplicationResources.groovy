@@ -24,4 +24,11 @@ modules = {
   buttonLoader {
     resource url:'js/util/loader.js'
   }
+
+  upload {
+    resource url:'js/upload/css/basic.css'
+    resource url:'js/upload/css/dropzone.css'
+    resource url:'js/upload/dropzone.min.js'
+
+  }
 }
