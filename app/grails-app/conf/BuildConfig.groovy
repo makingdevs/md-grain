@@ -46,7 +46,7 @@ grails.project.dependency.resolution = {
 
   plugins {
     runtime ":hibernate:$grailsVersion"
-    runtime ":jquery:1.8.3"
+    runtime ":jquery:1.10.2.2"
     runtime ":resources:1.2"
     runtime ":cache-headers:1.1.5"
     compile ":lesscss-resources:1.3.3"
