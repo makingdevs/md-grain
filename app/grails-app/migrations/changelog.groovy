@@ -297,4 +297,6 @@ databaseChangeLog = {
 	include file: 'adding-constraints-to-esquema-de-pago.groovy'
 
   include file: 'add-descuento-aplicable.groovy'
+
+  include file: 'adding-avatar.groovy'
 }
