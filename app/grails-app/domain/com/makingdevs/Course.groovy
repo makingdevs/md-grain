@@ -21,7 +21,7 @@ class Course {
     prerequisites nullable:false,blank:false,size:1..2000
     goal nullable:false,blank:false,size:1..2000
     courseKey nullable:false,blank:false,unique:true,size:1..20
-    content nullable:false,blank:false,size:1..2000
+    content nullable:false,blank:false,size:1..4000
     courseStatus nullable:false
   }
 

@@ -176,7 +176,7 @@
       </div>
     </div>
   </section>
-  <section class='section-wrapper stripped'>
+  <!--section class='section-wrapper stripped'>
     <div class='container'>
       <div class='row clients-w'>
         <div class='span12'>
@@ -214,7 +214,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section-->
 
   </body>
 </html>
