@@ -56,7 +56,7 @@ grails.project.dependency.resolution = {
   plugins {
     compile ":scaffolding:2.0.1"
     runtime ":hibernate:3.6.10.4" // or ":hibernate4:4.1.11.4"
-    runtime ":jquery:1.10.2.2"
+    runtime ":jquery:1.10.2"
     runtime ":resources:1.2"
     runtime ":cache-headers:1.1.5"
     compile ":lesscss-resources:1.3.3"
@@ -69,8 +69,9 @@ grails.project.dependency.resolution = {
     }
 
     build ":tomcat:7.0.47"
-    runtime ":database-migration:1.3.6"
-    compile ':cache:1.0.1'
+    compile ":grails-melody:1.48.0"
+    runtime ":database-migration:1.3.8"
+    compile ':cache:1.1.1'
     compile ":mail:1.0.1"
     compile 'com.makingdevs:profile:0.1.6'
     compile 'com.payable:payable:0.2.9'
