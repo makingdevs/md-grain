@@ -50,27 +50,27 @@ grails.project.dependency.resolution = {
   }
 
   dependencies {
-    runtime 'mysql:mysql-connector-java:5.1.22'
+    compile 'mysql:mysql-connector-java:5.1.22'
   }
 
   plugins {
     compile ":scaffolding:2.0.1"
-    runtime ":hibernate:3.6.10.4" // or ":hibernate4:4.1.11.4"
-    runtime ":jquery:1.10.2.2"
-    runtime ":resources:1.2"
-    runtime ":cache-headers:1.1.5"
+    compile ":hibernate:3.6.10.4" // or ":hibernate4:4.1.11.4"
+    compile ":jquery:1.10.2.2"
+    compile ":resources:1.2"
+    compile ":cache-headers:1.1.5"
     compile ":lesscss-resources:1.3.3"
     compile ':spring-security-core:1.2.7.3'
     compile ":google-analytics-tracker:0.1"
     if(Environment.current == Environment.PRODUCTION){
-      runtime ":zipped-resources:1.0"
-      runtime ":cached-resources:1.0"
-      runtime ":yui-minify-resources:0.1.5"  
+      compile ":zipped-resources:1.0"
+      compile ":cached-resources:1.0"
+      compile ":yui-minify-resources:0.1.5"  
     }
 
     build ":tomcat:7.0.47"
     compile ":grails-melody:1.48.0"
-    runtime ":database-migration:1.3.8"
+    compile ":database-migration:1.3.8"
     compile ':cache:1.1.1'
     compile ":mail:1.0.1"
     compile 'com.makingdevs:profile:0.1.6'
