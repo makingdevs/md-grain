@@ -65,7 +65,7 @@ grails.project.dependency.resolution = {
     if(Environment.current == Environment.PRODUCTION){
       compile ":zipped-resources:1.0"
       compile ":cached-resources:1.0"
-      compile ":yui-minify-resources:0.1.5"  
+      //compile ":yui-minify-resources:0.1.5"  
     }
 
     build ":tomcat:7.0.47"
