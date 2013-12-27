@@ -45,7 +45,7 @@ grails.project.dependency.resolution = {
 
     mavenLocal()
     mavenCentral()
-    mavenRepo("http://makingdevs.com:8081/nexus/content/repositories/thirdparty")
+    mavenRepo "http://makingdevs.com:8081/nexus/content/repositories/thirdparty"
 
   }
 
@@ -56,7 +56,7 @@ grails.project.dependency.resolution = {
   plugins {
     compile ":scaffolding:2.0.1"
     runtime ":hibernate:3.6.10.4" // or ":hibernate4:4.1.11.4"
-    runtime ":jquery:1.10.2"
+    runtime ":jquery:1.10.2.2"
     runtime ":resources:1.2"
     runtime ":cache-headers:1.1.5"
     compile ":lesscss-resources:1.3.3"
