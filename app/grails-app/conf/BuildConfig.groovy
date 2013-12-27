@@ -51,9 +51,6 @@ grails.project.dependency.resolution = {
 
   dependencies {
     runtime 'mysql:mysql-connector-java:5.1.22'
-    test("org.spockframework:spock-grails-support:0.7-groovy-2.0"){
-      exclude 'hamcrest-core'
-    }
   }
 
   plugins {
@@ -64,9 +61,6 @@ grails.project.dependency.resolution = {
     runtime ":cache-headers:1.1.5"
     compile ":lesscss-resources:1.3.3"
     compile ':spring-security-core:1.2.7.3'
-    test(":spock:0.7") {
-      exclude "spock-grails-support"
-    }
     compile ":google-analytics-tracker:0.1"
     if(Environment.current == Environment.PRODUCTION){
       runtime ":zipped-resources:1.0"
