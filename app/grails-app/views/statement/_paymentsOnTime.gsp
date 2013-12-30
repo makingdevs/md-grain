@@ -28,10 +28,110 @@
         <descuento:totalConDescuento pago="${it}" />
       </td>
       <td>
-        <g:link controller="paymentReceipt" id="${r.pagos.id}" class="btn btn-mini">
+        <g:link controller="paymentReceipt" id="${it.id}" class="btn btn-mini">
           <i class="icon-cloud-upload"></i>
         </g:link>
       </td>
     </tr>
   </g:findAll>
+  <g:each in="${pagosPorRealizar}">
+    <tr>
+      <td>
+        ${it.conceptoDePago}
+      </td>
+      <td>
+        <g:formatDate format="dd-MMMM-yyyy" date="${it.fechaDeVencimiento}"/>
+      </td>
+      <td>
+        <g:formatNumber number="${it.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
+      </td>
+      <td>
+        <descuento:cantidadAplicable pago="${it}" />
+        <descuento:porcentajeTotal pago="${it}" />
+      </td>
+      <td>
+        <descuento:totalConDescuento pago="${it}" />
+      </td>
+      <td>
+        <g:link controller="paymentReceipt" id="${it.id}" class="btn btn-mini">
+          <i class="icon-cloud-upload"></i>
+        </g:link>
+      </td>
+    </tr>
+  </g:each>  
+  <g:each in="${pagosRechazados}">
+    <tr>
+      <td>
+        ${it.conceptoDePago}
+      </td>
+      <td>
+        <g:formatDate format="dd-MMMM-yyyy" date="${it.fechaDeVencimiento}"/>
+      </td>
+      <td>
+        <g:formatNumber number="${it.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
+      </td>
+      <td>
+        <descuento:cantidadAplicable pago="${it}" />
+        <descuento:porcentajeTotal pago="${it}" />
+      </td>
+      <td>
+        <descuento:totalConDescuento pago="${it}" />
+      </td>
+      <td>
+        <g:link controller="paymentReceipt" id="${it.id}" class="btn btn-mini">
+          <i class="icon-cloud-upload"></i>
+        </g:link>
+      </td>
+    </tr>
+  </g:each>
+  <g:each in="${pagosRechazados}">
+    <tr>
+      <td>
+        ${it.conceptoDePago}
+      </td>
+      <td>
+        <g:formatDate format="dd-MMMM-yyyy" date="${it.fechaDeVencimiento}"/>
+      </td>
+      <td>
+        <g:formatNumber number="${it.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
+      </td>
+      <td>
+        <descuento:cantidadAplicable pago="${it}" />
+        <descuento:porcentajeTotal pago="${it}" />
+      </td>
+      <td>
+        <descuento:totalConDescuento pago="${it}" />
+      </td>
+      <td>
+        <g:link controller="paymentReceipt" id="${it.id}" class="btn btn-mini">
+          <i class="icon-cloud-upload"></i>
+        </g:link>
+      </td>
+    </tr>
+  </g:each>
+  <g:each in="${pagosProcesados}">
+    <tr>
+      <td>
+        ${it.conceptoDePago}
+      </td>
+      <td>
+        <g:formatDate format="dd-MMMM-yyyy" date="${it.fechaDeVencimiento}"/>
+      </td>
+      <td>
+        <g:formatNumber number="${it.cantidadDePago}" format="\$ ###,##0.00" locale="es_MX"/>
+      </td>
+      <td>
+        <descuento:cantidadAplicable pago="${it}" />
+        <descuento:porcentajeTotal pago="${it}" />
+      </td>
+      <td>
+        <descuento:totalConDescuento pago="${it}" />
+      </td>
+      <td>
+        <g:link controller="paymentReceipt" id="${it.id}" class="btn btn-mini">
+          <i class="icon-cloud-upload"></i>
+        </g:link>
+      </td>
+    </tr>
+  </g:each>
 </table>
