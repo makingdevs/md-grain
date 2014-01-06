@@ -20,9 +20,14 @@ class CourseSession implements Comparable{
     lastUpdated display:false
     dateCreated display:false
   }
+
+  static transients = ['dateFormatStartTime','dateFormatEndTime']
   
   String toString(){
-    "${dateFormatStartTime.format(this.sessionStartTime)} - ${dateFormatEndTime.format(this.sessionEndTime)}"
+    if(sessionStartTime && sessionEndTime)
+      "${dateFormatStartTime.format(this.sessionStartTime)} - ${dateFormatEndTime.format(this.sessionEndTime)}"
+    else
+      "Not set"
   }
 
   int compareTo(obj){
