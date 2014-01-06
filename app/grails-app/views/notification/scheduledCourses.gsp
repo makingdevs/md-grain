@@ -136,7 +136,9 @@
                               </tr>
                               <tr>
                                 <td height="20">
-                                  <font color="white" font size="2" style="font-family:Arial;">Titulo aqui</font>
+                                  <font color="white" font size="2" style="font-family:Arial;">
+                                    Queremos que seas un mejor desarrollador de software...
+                                  </font>
                                 </td>
                               </tr>
                               <tr>
@@ -152,8 +154,8 @@
                               </tr>
                               <tr>
                                 <td mc:edit="date" height="15px" class="date" style="font-size: 13px; color: #272727;">
-                                  <a href="https://www.facebook.com/makingdevs" target="_blank"><img src="images/facebook.gif" height="36px"   width="30px" ></a>
-                                  <a href="https://twitter.com/makingdevs" target="_blank"><img src="images/twiiter.gif" height="37" width="  31px"></a>
+                                  <a href="https://www.facebook.com/makingdevs" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/facebook.gif" height="36px"   width="30px" ></a>
+                                  <a href="https://twitter.com/makingdevs" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/twiiter.gif" height="37" width="  31px"></a>
                                 </td>
                               </tr>
                               <tr>
@@ -184,7 +186,7 @@
                             <tbody>
                               <tr>
                                 <td width="580">
-                                  <a href="#"><img  width="580" mc:edit="Head_Image" src="images/encabezado.gif" alt="" border="0"></a>
+                                  <a href="#"><img  width="580" mc:edit="Head_Image" src="${grailsApplication.config.grails.serverURL}/mail/new/encabezado.gif" alt="" border="0"></a>
                                 </td>
                               </tr>
                             </tbody>
@@ -221,13 +223,13 @@
                                 <td>
                                   <table style="padding-right:10px;">
                                     <tr>
-                                      <td colspan="2" align="center"><img src="images/separador.gif" width="300px">&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://makingdevs.com" target="_blank"><img src="images/boton.gif"></a></td>
+                                      <td colspan="2" align="center"><img src="${grailsApplication.config.grails.serverURL}/mail/new/separador.gif" width="300px">&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://makingdevs.com" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/boton.gif"></a></td>
                                     </tr>
                                     <tr>
                                       <td><h1 style="color: #046290">TITULO </h1><p id="primero" align="justify">La mente, por ejemplo, es considerada por muchos como un fenómeno emergente ya que surge de la interacción distribuida entre diversos procesos neuronales (incluyendo también algunos corporales y del entorno) sin que pueda reducirse a ninguno de los componentes que participan en el proceso (ninguna de las neuronas por separado es consciente). </p></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="2" align="center"><img src="images/separador.gif" width="300px">&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://makingdevs.com" target="_blank"><img src="images/boton.gif"></a></td>
+                                      <td colspan="2" align="center"><img src="${grailsApplication.config.grails.serverURL}/mail/new/separador.gif" width="300px">&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://makingdevs.com" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/boton.gif"></a></td>
                                     </tr>
                                   </table>
                                 </td>
@@ -239,7 +241,7 @@
                                       <td><h1 style="color: #046290">TITULO </h1><p id="primero" align="justify">La mente, por ejemplo, es considerada por muchos como un fenómeno emergente ya que surge de la interacción distribuida entre diversos procesos neuronales (incluyendo también algunos corporales y del entorno) sin que pueda reducirse a ninguno de los componentes que participan en el proceso (ninguna de las neuronas por separado es consciente). </p></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="2" align="center"><img src="images/separador.gif" width="300px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://makingdevs.com" target="_blank"><img src="images/boton.gif"></a></td>
+                                      <td colspan="2" align="center"><img src="${grailsApplication.config.grails.serverURL}/mail/new/separador.gif" width="300px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://makingdevs.com" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/boton.gif"></a></td>
                                     </tr>
                                     <tr>
                                       <td height="10px"></td>
@@ -262,7 +264,7 @@
             <tbody>
               <tr>
                 <td width="580" >
-                  <img  width="580" mc:Head"_Image" src="images/footer1.gif" border="0" usemap="#redes">
+                  <img  width="580" mc:Head"_Image" src="${grailsApplication.config.grails.serverURL}/mail/new/footer1.gif" border="0" usemap="#redes">
                   <map name="redes">
                     <area shape="rect" coords="455,40,505,60" target="_blank" style="outline: 0;" href="https://twitter.com/makingdevs">
                     <area shape="rect" coords="520,40,555,60" href="https://www.facebook.com/makingdevs" style="outline: 0;" target="_blank">
@@ -274,7 +276,7 @@
                   <table>
                     <tr align="center">
                       <td width="190px" ><p><multiline> © 2013 Makingdevs.com</multiline></p></td>
-                      <td width="190px" ><img src="images/logo.gif"></td>
+                      <td width="190px" ><img src="${grailsApplication.config.grails.serverURL}/mail/new/logo.gif"></td>
                       <td width="190px" ><p><multiline> All rights reserved </multiline></p></td>
                     </tr>
                   </table>
