@@ -98,7 +98,7 @@
                             <tbody>
                               <tr>
                                 <td width="580">
-                                  <a href="#"><img  width="580" mc:edit="Head_Image" src="${grailsApplication.config.grails.serverURL}/mail/new/encabezado.gif" alt="" border="0"></a>
+                                  <a href="${grailsApplication.config.grails.serverURL}"><img  width="580" mc:edit="Head_Image" src="${grailsApplication.config.grails.serverURL}/mail/new/encabezado.gif" alt="" border="0"></a>
                                 </td>
                               </tr>
                             </tbody>

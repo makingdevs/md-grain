@@ -63,7 +63,7 @@ class UrlMappings {
 			action = 'index'
 		}
 
-		name nextCourses : "/nextCourses" {
+		name nextTraining : "/nextTraining" {
 			controller = 'notification'
 			action = 'scheduledCourses'
 		}
