@@ -146,7 +146,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', end
                                           </h3>
                                           <p class="primero" align="justify" style="font-size:12px;">
                                             <a href="${grailsApplication.config.grails.serverURL}/training/${sc.course.courseKey.toLowerCase()}" style="text-decoration:none;">
-                                              <img alt="image_${sc.course.courseKey.toLowerCase()}" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.gif" style="border: 0px solid ;" align="left" hspace="10" width="98">
+                                              <img alt="image_${sc.course.courseKey.toLowerCase()}" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.png" style="border: 0px solid ;" align="left" hspace="10" width="98">
                                             </a>
                                             ${sc.course.overview.substring(0,sc.course.overview.indexOf('<br>'))}
                                             
