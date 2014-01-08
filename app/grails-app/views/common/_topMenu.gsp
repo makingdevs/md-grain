@@ -20,8 +20,12 @@
                 <g:link mapping="training">Cursos</g:link>
               </li>
               <li>
+                <g:link mapping="calendar">Calendario</g:link>
+              </li>
+              <li>
                 <g:link controller="home" action="contact">Contacto</g:link>
               </li>
+
               <sec:ifLoggedIn>
               <li>
                 <g:link controller="myTraining" action="index">Mi entrenamiento</g:link>
