@@ -143,13 +143,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', end
                                             Inicia el <g:formatDate date="${sc.beginDate}" format="dd 'del' MMMM 'de' yyyy"/> con duración de ${sc.durationInHours} hrs.
                                           </h3>
                                           <p class="primero" align="justify" style="font-size:12px;">
-                                            <img alt="image" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.gif" style="border: 0px solid ;" align="left" hspace="10">
+                                            <img alt="image_${sc.course.courseKey.toLowerCase()}" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.gif" style="border: 0px solid ;" align="left" hspace="10" width="98">
                                             ${sc.course.overview.substring(0,sc.course.overview.indexOf('<br>'))}
                                           </p>
                                           </td>
                                       </tr>
                                       <tr>
-                                        <td colspan="2" align="center"><img src="${grailsApplication.config.grails.serverURL}/mail/new/separador.gif" width="300px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://makingdevs.com" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/boton.gif"></a></td>
+                                        <td colspan="2" align="center">
+                                          <img src="${grailsApplication.config.grails.serverURL}/mail/new/separador.gif" width="300px">
+                                        </td>
                                       </tr>
                                       <tr>
                                         <td height="10px"></td>
