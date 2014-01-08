@@ -63,6 +63,16 @@ class UrlMappings {
 			action = 'index'
 		}
 
+		name nextTraining : "/nextTraining" {
+			controller = 'notification'
+			action = 'scheduledCourses'
+		}
+
+		name nextTraining : "/calendar" {
+			controller = 'calendar'
+			action = 'index'
+		}
+
 		"/"(controller:"home")
 		"500"(view:'/error')
 		"404"(view:'/notFound')

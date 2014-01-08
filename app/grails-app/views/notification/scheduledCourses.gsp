@@ -20,9 +20,8 @@
     @media only screen and (max-width: 479px)  {
       body{width:auto!important;}
       
-        .primero { 
-          word-wrap: break-word;
-        }
+      .primero { 
+        word-wrap: break-word; }
       }
     </style>
   </head>
@@ -50,7 +49,7 @@
                               <tr>
                                 <td height="20">
                                   <font color="white" font size="2" style="font-family:Arial;">
-                                    Gracias por tu preferencia, estamos para servirte...
+                                    Queremos que seas un mejor desarrollador de software...
                                   </font>
                                 </td>
                               </tr>
@@ -115,34 +114,48 @@
                                 <td height="10px"></td>
                               </tr>
                               <tr>
-                              <td>
-                                  
-                                    <h1 style="color: #046290; padding: 0px 10px; border: 0px 0px; margin:0px; font-size:20px;">
-                                    Instrucciones para realizar tu pago
-                                    </h1>
-                                    <p align="justify" style="font-size:12px; padding: 0px 20px;">
-                                    Enhorabuena!<br/>
-                                    Te has registrado al curso: <b>${course?.name ?: 'Nombre del curso'}</b>, nos sentimos honrados por ofrecerte nuestros servicios, y es por esto que queremos que estés listo para recibir una experiencia en entrenamiento que te hará más productivo y mejorará tu carrera como desarrollador de software.<br/><br/>
-                                    Los datos de la cuenta bancaria donde puedes depositarnos son:<br/>
-                                    </p>
-                                    <p align="justify" style="font-size:12px; padding: 0px 20px;">
-                                    
-                                      Banco: <b>Banorte</b><br/>
-                                      Nombre: <b>Making Devs S.C.</b><br/>
-                                      CLABE: <b>072 180 0 0892549249 4</b><br/>
-                                      Correo: i<b>nfo@makingdevs.com</b><br/>
-                                      Teléfono: <b>6363 - 8147</b><br/>
-                                    
-                                    </p>
-                                    <p align="justify" style="font-size:12px; padding: 0px 20px;">
-                                    Te recordamos que la cantidad que tienes que pagar en estos momentos es de 
-                                    <b>$ <g:formatNumber number="${totalAPagar ?: 3500}" format="###,##0.00" locale="es_MX"/> mxn. pesos</b>, 
-                                    la cuál respetará las promociones que tenemos vigentes para ti; sin embargo, si no pagas antes de que expire alguna promoción entonces recalcularemos este monto por ti, así que aprovecha y págalo ahora.<br/><br/>
-                                    Te solicitamos de antemano nos mandes tu comprobante de pago en imagen para cotejarlo y considerarte en nuestras listas de asistencia.<br/>
-                                    </p>
-                                    <p align="center" class="color: #046290; padding: 0px 10px;">
-                                      Sin más por el momento, recibe nuestras expresion de gratitud por ser parte de MakingDevs.
-                                    </p>
+                                <td align="center" style="color:#ffffff; background: #88bfe8; /* Old browsers */
+background: -moz-linear-gradient(top, #88bfe8 0%, #70b0e0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#88bfe8), color-stop(100%,#70b0e0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #88bfe8 0%,#70b0e0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #88bfe8 0%,#70b0e0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #88bfe8 0%,#70b0e0 100%); /* IE10+ */
+background: linear-gradient(to bottom, #88bfe8 0%,#70b0e0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', endColorstr='#70b0e0',GradientType=0 ); /* IE6-9 */; margin:10px;">
+                                  <h2>
+                                    Aprovecha hasta un <g:formatNumber number="${esquemaDePago.descuentos*.porcentaje.sum()}" format="###" /> % de descuento
+                                  </h2>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="10px"></td>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                  <table style="padding:0 10px;">
+                                    <g:each in="${scheduledCourseList}" var="sc">
+                                      <tr>
+                                        <td>
+                                          <h1 style="color: #046290; padding: 3px 0px; border: 0px 0px; margin:0px; font-size:20px;">
+                                            ${sc.course.name}
+                                          </h1>
+                                          <h3 style="padding: 3px 10px; border: 0px; margin:0px; background-color:#0578A9; color: #FFFFFF; font-size:13px;">
+                                            Inicia el <g:formatDate date="${sc.beginDate}" format="dd 'del' MMMM 'de' yyyy"/> con duración de ${sc.durationInHours} hrs.
+                                          </h3>
+                                          <p class="primero" align="justify" style="font-size:12px;">
+                                            <img alt="image" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.gif" style="border: 0px solid ;" align="left" hspace="10">
+                                            ${sc.course.overview.substring(0,sc.course.overview.indexOf('<br>'))}
+                                          </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2" align="center"><img src="${grailsApplication.config.grails.serverURL}/mail/new/separador.gif" width="300px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://makingdevs.com" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/boton.gif"></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td height="10px"></td>
+                                      </tr>
+                                    </g:each>
+                                  </table>
                                 </td>
                               </tr>
                             </tbody>

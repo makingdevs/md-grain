@@ -11,7 +11,6 @@ class AttendeeController {
     def courseSessions = courseSessionCriteria.list {
       'in'('scheduledCourse',registrations*.scheduledCourse)
     }
-    log.debug courseSessions
     [courseSessions:courseSessions]
   }
 
