@@ -21,7 +21,7 @@ class CalendarController {
             title:cs.scheduledCourse.course.name + " - Sesión ${i++}",
             start:df.format(cs.sessionStartTime),
             end:df.format(cs.sessionEndTime),
-            url:"http://makingdevs.com"
+            url:createLink(controller:'course',action:'landingPage',id:sc.course.courseKey.toLowerCase())
           ]
         }
       }.flatten()
