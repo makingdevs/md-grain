@@ -21,7 +21,7 @@
       <div class="white-card extra-padding">
         <div id="calendar"></div>
       </div>
-    </div> 
+    </div>
   </section>
 
   <script src='http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js'></script>
@@ -42,12 +42,7 @@
           week:'semana',
           day:'día'
         },
-        events:[
-          {
-            title:"All day event",
-            start:new Date(y.m,1)
-          }
-        ]
+        events:"${createLink(action:'courseInfoForCalendar')}"
       });
     });
   </script>
