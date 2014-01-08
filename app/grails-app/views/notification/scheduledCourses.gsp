@@ -136,15 +136,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', end
                                     <g:each in="${scheduledCourseList}" var="sc">
                                       <tr>
                                         <td>
-                                          <h1 style="color: #046290; padding: 3px 0px; border: 0px 0px; margin:0px; font-size:20px;">
-                                            ${sc.course.name}
+                                          <h1 style="color: #046290; padding: 3px 0px; border: 0px 0px; margin:0px; font-size:20px; ">
+                                            <a href="${grailsApplication.config.grails.serverURL}/training/${sc.course.courseKey.toLowerCase()}" style="color: #046290;text-decoration:none;">
+                                              ${sc.course.name}
+                                            </a>
                                           </h1>
                                           <h3 style="padding: 3px 10px; border: 0px; margin:0px; background-color:#0578A9; color: #FFFFFF; font-size:13px;">
                                             Inicia el <g:formatDate date="${sc.beginDate}" format="dd 'del' MMMM 'de' yyyy"/> con duración de ${sc.durationInHours} hrs.
                                           </h3>
                                           <p class="primero" align="justify" style="font-size:12px;">
-                                            <img alt="image_${sc.course.courseKey.toLowerCase()}" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.gif" style="border: 0px solid ;" align="left" hspace="10" width="98">
+                                            <a href="${grailsApplication.config.grails.serverURL}/training/${sc.course.courseKey.toLowerCase()}" style="text-decoration:none;">
+                                              <img alt="image_${sc.course.courseKey.toLowerCase()}" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.gif" style="border: 0px solid ;" align="left" hspace="10" width="98">
+                                            </a>
                                             ${sc.course.overview.substring(0,sc.course.overview.indexOf('<br>'))}
+                                            
+                                            
+                                          </p>
+                                          <p style="font-size:13px;">
+                                            <strong>
+                                            <a style="text-decoration:none; color:#88bfe8;" href="${grailsApplication.config.grails.serverURL}/training/${sc.course.courseKey.toLowerCase()}">Más información...</a>
+                                            </strong>
                                           </p>
                                           </td>
                                       </tr>
