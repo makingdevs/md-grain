@@ -42,12 +42,7 @@
           week:'semana',
           day:'día'
         },
-        events:[
-          {
-            title:"All day event",
-            start:new Date(y,m,1)
-          }
-        ]
+        events:"${createLink(action:'courseInfoForCalendar')}"
       });
     });
   </script>

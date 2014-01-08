@@ -68,9 +68,8 @@ class UrlMappings {
 			action = 'scheduledCourses'
 		}
 
-		name nextTraining : "/calendar" {
+		name calendar : "/calendar/$action?" {
 			controller = 'calendar'
-			action = 'index'
 		}
 
 		"/"(controller:"home")
