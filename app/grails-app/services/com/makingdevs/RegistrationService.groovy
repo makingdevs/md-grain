@@ -25,4 +25,14 @@ class RegistrationService {
     registration
   }
 
+  Registration changeRegistrationStatusWithPaymentId(Long paymentId){
+    Registration registration = Registration.withCriteria(uniqueResult: true){
+      pagos {
+        eq("id",paymentId)
+      }
+    }
+    registration.registrationStatus = RegistrationStatus.INSCRIBED_AND_WITH_DEBTH_IN_GROUP
+    registration
+  }
+
 }
