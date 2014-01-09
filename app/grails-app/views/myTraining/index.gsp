@@ -40,8 +40,7 @@
         <p>
           <g:if test="${
           registration.registrationStatus == RegistrationStatus.REGISTERED || 
-          registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH || 
-          registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH_IN_GROUP}">
+          registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH}">
           <g:remoteLink name="paymentRegistration${registration.id}" controller="myTraining" action="sendPaymentInstructions" params="[registrationId:registration.id]" class="btn btn-success" onLoading="var loader${registration.id} = new ButtonLoader(${registration.id},'paymentRegistration'); loader${registration.id}.preload()" onSuccess="loader${registration.id}.success('Te hemos enviado la información de los datos bancarios para el pago del entrenamiento: ${registration.scheduledCourse.course.name}.')" onComplete="loader${registration.id}.complete()">
           <i class="icon-money"></i> 
           Pagar con SPEI 
@@ -50,6 +49,9 @@
           <paypal:pay registration="${registration}"></paypal:pay>
           </g:if>
         </p>
+        <g:if test="${registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_WITH_DEBTH_IN_GROUP}">
+          <span class="label label-info"><i class="icon-gears"></i> Estamos validando tu pago.</span>
+        </g:if>
         <g:if test="${registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_PAYED || registration.registrationStatus == RegistrationStatus.INSCRIBED_AND_PAYED_IN_GROUP }">
           <p>
             <span class="label label-success"><i class="icon-thumbs-up-alt"></i> Todo listo para comenzar el curso.</span>
