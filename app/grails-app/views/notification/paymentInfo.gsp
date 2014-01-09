@@ -1,3 +1,4 @@
+<%@ page contentType="text/html"%>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -67,8 +68,9 @@
                               </tr>
                               <tr>
                                 <td mc:edit="date" height="15px" class="date" style="font-size: 13px; color: #272727;">
-                                  <a href="https://www.facebook.com/makingdevs" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/facebook.gif" height="36px"   width="30px" ></a>
-                                  <a href="https://twitter.com/makingdevs" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/twiiter.gif" height="37" width="  31px"></a>
+                                  <a href="https://www.facebook.com/makingdevs" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/facebook.png"></a>
+                                  <a href="https://twitter.com/makingdevs" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/twitter.png"></a>
+                                  <a href="http://www.youtube.com/channel/UCgihnSms46sj_ip5GMw1GFw" target="_blank"><img src="${grailsApplication.config.grails.serverURL}/mail/new/youtube.png"></a>
                                 </td>
                               </tr>
                               <tr>
@@ -99,7 +101,9 @@
                             <tbody>
                               <tr>
                                 <td width="580">
-                                  <a href="${grailsApplication.config.grails.serverURL}"><img  width="580" mc:edit="Head_Image" src="${grailsApplication.config.grails.serverURL}/mail/new/encabezado.gif" alt="" border="0"></a>
+                                  <a href="${grailsApplication.config.grails.serverURL}">
+                                    <img  width="580" mc:edit="Head_Image" src="${grailsApplication.config.grails.serverURL}/mail/new/encabezado.gif" alt="" border="0">
+                                  </a>
                                 </td>
                               </tr>
                             </tbody>
@@ -160,8 +164,9 @@
             <tbody>
               <tr>
                 <td width="580" >
-                  <img  width="580" mc:Head"_Image" src="${grailsApplication.config.grails.serverURL}/mail/new/footer1.gif" border="0" usemap="#redes">
+                  <img  width="580" mc:Head"_Image" src="${grailsApplication.config.grails.serverURL}/mail/new/footer1.png" border="0" usemap="#redes">
                   <map name="redes">
+                    <area shape="rect" coords="390,40,480,60" href="http://www.youtube.com/channel/UCgihnSms46sj_ip5GMw1GFw" style="outline: 0;" target="_blank">
                     <area shape="rect" coords="455,40,505,60" target="_blank" style="outline: 0;" href="https://twitter.com/makingdevs">
                     <area shape="rect" coords="520,40,555,60" href="https://www.facebook.com/makingdevs" style="outline: 0;" target="_blank">
                   </map>
@@ -173,7 +178,7 @@
                     <tr align="center">
                       <td width="190px" ><p><multiline> © 2014 Makingdevs.com</multiline></p></td>
                       <td width="190px" ><img src="${grailsApplication.config.grails.serverURL}/mail/new/logo.gif"></td>
-                      <td width="190px" ><p><multiline> All rights reserved </multiline></p></td>
+                      <td width="190px" ><p><multiline> Making best code through better developers </multiline></p></td>
                     </tr>
                   </table>
                 </td>

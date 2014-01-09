@@ -150,8 +150,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', end
                                               <img alt="image_${sc.course.courseKey.toLowerCase()}" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.png" style="border: 0px solid ;" align="left" hspace="10" width="98">
                                             </a>
                                             ${sc.course.overview.substring(0,sc.course.overview.indexOf('<br>'))}
-                                            
-                                            
                                           </p>
                                           <p style="font-size:13px;">
                                             <strong>
