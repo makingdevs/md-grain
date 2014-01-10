@@ -53,27 +53,11 @@
           </tbody>
         </table>
 
-        <g:form class="form-horizontal" id="conciliacion" name="conciliacion" controller="comprobante" action="validarComprobante">
+        <g:form class="form-horizontal" name="conciliacion" controller="voucher" action="approve" id="${pago.id}">
           <legend>Datos del comprobante</legend>
           <fieldset>
-            <label>Fecha comprobante</label>
-            <div id="datetimepicker1" class="input-append date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-              <input id="fechaDePago" name="fechaDePago" data-format="yyyy-mm-dd" type="text"></input>
-              <span class="add-on">
-                <i class="icon-calendar"></i>
-              </span>
-            </div>
-            <label>Monto</label>
-            $ <g:formatNumber format="###,##0.00" locale="es_MX" number="${pago.cantidadDePago}"/>
             <label>Tipo de pago</label>
             <g:select id="tipoDePago" name="tipoDePago" noSelection="['':'- Tipo de Pago-']" from="${TipoDePago.values()}" optionKey="key" />
-            <label>Referencia del banco</label>
-            <div class="input-prepend">
-              <input type="text" id="folioBanco" name="folioBanco">
-              <span class="add-on">
-                <i class="icon-edit"></i>
-              </span>
-            </div>
             <div class="form-actions ">
               <button type="submit" class="btn btn-success"><i class="icon-thumbs-up-alt"></i> Aprobar</button>
               &nbsp; &nbsp; &nbsp;
