@@ -16,26 +16,24 @@
       <section class='section-wrapper stripped'>
         <div class="container">
           <div class="page-header position-relative  ">
-            <h1> Comprobante de pago </h1>
+            <h1><i class="icon-money"></i> · Comprobante de pago </h1>
           </div><!--/.page-header-->
           <div class="row-fluid">
             <div class="span12">
               <!--PAGE CONTENT BEGINS-->
               <div class="row-fluid">
                 <div class="span12 widget-container-span">
+                  <g:link mapping="myPayments" class="btn btn-primary">
+                    Mi lista de pagos
+                  </g:link><br/><br/>
                   <div class="widget-box">
-                    <div class="widget-header widget-header-small header-color-blue2">
-                      <h5 class="bigger lighter">
-                        <i class="icon-money"></i>
-                        Pago
-                      </h5> 
-                    </div>
                     <div class="widget-body">
                       <div class="widget-main no-padding">
                         <table class="table table-striped table-bordered table-hover">
                           <thead>
                             <tr>
                               <th>Concepto</th>
+                              <th>Monto</th>
                               <th class=" green">
                                 Descuento
                               </th>
@@ -43,16 +41,21 @@
                                 Total con Descuento
                               </th>
                               <th>F. Vencimiento</th>
-                              <th>Monto</th>
+                              <th>Status de pago</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>${pago.conceptoDePago}</td>
+                              <td>$ ${pago.cantidadDePago}</td>
                               <td>$ ${pago.descuentoAplicable}</td>
                               <td>$ ${pago.cantidadDePago - pago.descuentoAplicable}</td>
                               <td>${pago.fechaDeVencimiento.format('dd-MMM-yyyy')}</td>
-                              <td>$ ${pago.cantidadDePago}</td>      
+                              <td>
+                                <span class="label label-info">
+                                  ${pago.estatusDePago}
+                                </span>
+                              </td>
                             </tr>
                           </tbody>  
                         </table>
@@ -73,7 +76,12 @@
                       <div class="widget-body">
                         <div class="widget-main">
                           <div class="center">
-                            <div id="dropzone" class="dropzone">
+                            <g:if test="${pago.comprobanteDePago}">
+                              <iframe class="cboxPhoto" src="${pago.comprobanteDePago.url()}"  width="100%" height="450px" ></iframe>  
+                            </g:if>
+                            <g:else>
+                              <div id="dropzone" class="dropzone">
+                            </g:else>
                             </div>
                           </div>
                         </div>

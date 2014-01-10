@@ -1,12 +1,14 @@
 package com.makingdevs
 
 import com.payable.Pago
+import com.payable.EstatusDePago
 import com.payable.DescuentoAplicable
 
 class RegistrationService {
 
   def pagoService
   def descuentoAplicableService
+  def comprobanteService
 
   Registration addUserToScheduledCourse(String username, Long scheduledCourseId) {
     def user = User.findByUsername(username)
@@ -22,6 +24,38 @@ class RegistrationService {
       registration.addToPagos(pago)
       registration.save()  
     }
+    registration
+  }
+
+  Registration changeRegistrationStatusWithPaymentId(Long paymentId){
+    Registration registration = Registration.withCriteria(uniqueResult: true){
+      pagos {
+        eq("id",paymentId)
+      }
+    }
+    registration.registrationStatus = RegistrationStatus.INSCRIBED_AND_WITH_DEBTH_IN_GROUP
+    registration
+  }
+
+  Registration approveRegistrationWithPaymentTx(String transactionId){
+    def pago = comprobanteService.aprobarPago(transactionId,new Date(),"TRANSFERENCIA_BANCARIA")
+    Registration registration = Registration.withCriteria(uniqueResult: true){
+      pagos {
+        eq("transactionId",transactionId)
+      }
+    }
+    registration.registrationStatus = RegistrationStatus.INSCRIBED_AND_PAYED
+    registration
+  }
+
+  Registration rejectReceiptWithPaymentTx(String transactionId){
+    def pago = comprobanteService.rechazarPago(transactionId)
+    Registration registration = Registration.withCriteria(uniqueResult: true){
+      pagos {
+        eq("transactionId",transactionId)
+      }
+    }
+    registration.registrationStatus = RegistrationStatus.INSCRIBED_AND_WITH_DEBTH
     registration
   }
 

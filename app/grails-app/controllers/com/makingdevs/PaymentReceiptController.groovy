@@ -6,6 +6,7 @@ import com.payable.*
 class PaymentReceiptController {
 
   def comprobanteService
+  def registrationService
 
   def index() {
     def paymentId = params.id.replace('[','')?.replace(']','')?.split(',')
@@ -14,6 +15,7 @@ class PaymentReceiptController {
 
   def uploadReceipt() {
     Pago payment = comprobanteService.agregarComprobanteAPago(params.long('id'), params.file)
+    Registration registration = registrationService.changeRegistrationStatusWithPaymentId(payment.id)
     render payment as JSON
   }
 

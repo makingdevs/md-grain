@@ -1,5 +1,7 @@
 package com.makingdevs
 
+import com.payable.*
+
 class PaymentController {
 
   def springSecurityService
@@ -31,6 +33,8 @@ class PaymentController {
         'in'('transactionId',transactions)
       }
     }
+    registrations*.pagos*.tipoDePago = TipoDePago.PAYPAL
+    registrations*.pagos*.estatusDePago = EstatusDePago.PAGADO
     registrations*.registrationStatus = RegistrationStatus.INSCRIBED_AND_PAYED
     [registrations:registrations]
   }

@@ -121,7 +121,9 @@ log4j = {
       'org.grails.datastore',
       'grails.plugin.databasemigration',
       'grails.app.jobs',
-      'grails.plugins.quartz'
+      'grails.plugins.quartz',
+      'org.jets3',
+      'grails.util'
 
   error 'net.sf.ehcache', 'net.sf.ehcache.hibernate', 'org.hibernate'
 

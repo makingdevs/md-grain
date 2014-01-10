@@ -72,6 +72,10 @@ class UrlMappings {
 			controller = 'calendar'
 		}
 
+		name uploadReceipt : "/uploadReceipt/$action?/$id?" {
+			controller = 'paymentReceipt'
+		}
+
 		"/"(controller:"home")
 		"500"(view:'/error')
 		"404"(view:'/notFound')
