@@ -35,4 +35,17 @@ class RegistrationService {
     registration
   }
 
+  Registration approveRegistrationWithPaymentId(Long paymentId){
+    def pago = pagoService.obtenerPagoParaValidarComprobante(params.id)
+    pago.fechaDePago = new Date()
+    pago.estatusDePago = EstatusDePago.PAGADO
+    Registration registration = Registration.withCriteria(uniqueResult: true){
+      pagos {
+        eq("id",paymentId)
+      }
+    }
+    registration.registrationStatus = RegistrationStatus.INSCRIBED_AND_PAYED
+    registration
+  }
+
 }
