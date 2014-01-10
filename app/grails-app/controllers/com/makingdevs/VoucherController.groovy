@@ -15,7 +15,14 @@ class VoucherController {
   }
 
   def approve(){
-    def registration = registrationService.approveRegistrationWithPaymentId(params.id)
-    redirect action:"show", id:params.id
+    def registration = registrationService.approveRegistrationWithPaymentTx(params.id)
+    flash.success = "El pago se ha aprobado correctamente"
+    redirect action:"all", controller:"registration"
+  }
+
+  def reject(){
+    def pago = registrationService.rejectReceiptWithPaymentTx(params.transactionId)
+    flash.error = "El pago se ha rechazado"
+    redirect action:"all", controller:"registration"
   }
 }
