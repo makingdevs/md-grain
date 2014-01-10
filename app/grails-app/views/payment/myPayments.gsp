@@ -12,7 +12,7 @@
 
     <div class="span12">
       <h3 class="section-header">Pagos </h3>
-      <g:render template="/statement/paymentsOnTime" model="[pagosTiempo: payments.pagosEnTiempo, pagosPorRealizar: payments.pagosPorRealizar, pagosRechazados: payments.pagosRechazados, pagosProcesados: payments.pagosProcesados]"/>
+      <g:render template="/statement/paymentsOnTime" model="[pagosTiempo: payments.pagosEnTiempo, pagosPorRealizar: payments.pagosPorRealizar, pagosRechazados: payments.pagosRechazados, pagosProcesados: payments.pagosProcesados, pagosCorrectos:payments.pagoCorrectos]"/>
     </div>
   </div>
   <hr>

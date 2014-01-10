@@ -19,10 +19,10 @@
   <g:each in="${pagosRechazados}">
     <g:render template="/statement/paymentDetails" model="[pago:it]"/>
   </g:each>
-  <g:each in="${pagosRechazados}">
+  <g:each in="${pagosProcesados}">
     <g:render template="/statement/paymentDetails" model="[pago:it]"/>
   </g:each>
-  <g:each in="${pagosProcesados}">
+  <g:each in="${pagosCorrectos}">
     <g:render template="/statement/paymentDetails" model="[pago:it]"/>
   </g:each>
 </table>
