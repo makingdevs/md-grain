@@ -28,6 +28,10 @@
             <dl>
               <dt >Importe</dt>
               <dl ><strong>$<g:formatNumber format="###,##0.00" locale="es_MX" number="${pago.cantidadDePago - pago.descuentoAplicable}" /></strong></dl>
+              <dt >Status</dt>
+              <dl>${pago.estatusDePago}</dl>
+              <dt >Tipo De Pago</dt>
+              <dl>${pago.tipoDePago}</dl>
             </dl>
           </div>
         </div>
@@ -53,13 +57,13 @@
           </tbody>
         </table>
 
-        <g:form class="form-horizontal" name="conciliacion" controller="voucher" action="approve" id="${pago.id}">
+        <g:form class="form-horizontal" name="conciliacion" controller="voucher" action="approve" id="${pago.transactionId}">
           <legend>Datos del comprobante</legend>
           <fieldset>
             <div class="form-actions ">
               <button type="submit" class="btn btn-success"><i class="icon-thumbs-up-alt"></i> Aprobar</button>
               &nbsp; &nbsp; &nbsp;
-              <g:link controller="comprobante" action="rechazarPago" params="[transactionId: "${pago?.transactionId}"]" ><button type="button" class="btn btn-danger"><i class="icon-reply bigger-150"></i></i> Rechazar</button></g:link>
+              <g:link controller="voucher" action="reject" params="[transactionId: "${pago?.transactionId}"]" ><button type="button" class="btn btn-danger"><i class="icon-reply bigger-150"></i></i> Rechazar</button></g:link>
             </div>
           </fieldset>
         </g:form>
