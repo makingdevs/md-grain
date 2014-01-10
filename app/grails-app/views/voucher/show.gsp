@@ -32,7 +32,7 @@
           </div>
         </div>
 
-        <h5 class="bigger lighter">Descuentos</h5>        
+        <h5>Descuentos</h5>        
 
         <table class="table table-striped table-bordered table-hover table-condensed">
           <thead>
@@ -56,8 +56,6 @@
         <g:form class="form-horizontal" name="conciliacion" controller="voucher" action="approve" id="${pago.id}">
           <legend>Datos del comprobante</legend>
           <fieldset>
-            <label>Tipo de pago</label>
-            <g:select id="tipoDePago" name="tipoDePago" noSelection="['':'- Tipo de Pago-']" from="${TipoDePago.values()}" optionKey="key" />
             <div class="form-actions ">
               <button type="submit" class="btn btn-success"><i class="icon-thumbs-up-alt"></i> Aprobar</button>
               &nbsp; &nbsp; &nbsp;

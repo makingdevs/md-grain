@@ -5,6 +5,7 @@ import com.payable.*
 class VoucherController {
 
   def pagoService
+  def registrationService
 
   def index() { }
 
@@ -14,9 +15,7 @@ class VoucherController {
   }
 
   def approve(){
-    def pago = pagoService.obtenerPagoParaValidarComprobante(params.id)
-    pago.fechaDePago = new Date()
-    pago.estatusDePago = EstatusDePago.PAGADO
+    def registration = registrationService.approveRegistrationWithPaymentId(params.id)
     redirect action:"show", id:params.id
   }
 }
