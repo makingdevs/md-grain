@@ -78,7 +78,7 @@
             <span class="control-group warning">
               <span class="btn btn-large btn-info btn-mini" href="#">
                 <i class="icon-file-text bigger-160"></i>
-                Comporbante Pago
+                Comprobante Pago
               </span>
               <span class=" help-inline pink">
                 Comprobante adjuntado <strong> ${pago.lastUpdated.format('dd/MM/yyyy')} </strong>

@@ -15,7 +15,9 @@
 	<ul>
 	<g:each in="${registration?.pagos}" var="pago">
 		<li>
-			${pago}
+			<g:link controller="voucher" action="show" id="${pago.id}">
+				${pago.cantidadDePago} por ${pago.conceptoDePago}
+			</g:link>
 		</li>
 	</g:each>
 	</ul>
