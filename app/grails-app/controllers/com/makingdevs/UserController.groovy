@@ -3,8 +3,7 @@ package com.makingdevs
 class UserController {
 
   def show() {
-    def user = User.get(params.id)
-    log.debug user
-    [:]
+    def user = User.findById(params.long('id'),[fetch:['eager':'registrations']])
+    [user:user]
   }
 }
