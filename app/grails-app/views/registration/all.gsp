@@ -43,7 +43,11 @@
                 <tr>
                   <td>${i + 1}</td>
                   <td>${r.user.perfil.nombreCompleto()}</td>
-                  <td>${r.user.username}</td>
+                  <td>
+                    <g:link controller="user" action="show" id="${r.user.id}">
+                      ${r.user.username}
+                    </g:link>
+                  </td>
                   <td>${r.scheduledCourse.course}</td>
                   <td>${formatDate(date:r.dateCreated,format:"dd - MMMM - yyyy")}</td>
                   <td>${r.registrationStatus}</td>

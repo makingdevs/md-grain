@@ -78,7 +78,7 @@
             <span class="control-group warning">
               <span class="btn btn-large btn-info btn-mini" href="#">
                 <i class="icon-file-text bigger-160"></i>
-                Comporbante Pago
+                Comprobante Pago
               </span>
               <span class=" help-inline pink">
                 Comprobante adjuntado <strong> ${pago.lastUpdated.format('dd/MM/yyyy')} </strong>
@@ -92,7 +92,12 @@
         <div class="widget-body">
           <div class="widget-main">
             <div class="center">
-              <iframe class="cboxPhoto" src="${pago.comprobanteDePago.url()}"  width="100%" height="450px" ></iframe>  
+              <g:if test="${pago.comprobanteDePago}">
+                <iframe class="cboxPhoto" src="${pago.comprobanteDePago.url()}"  width="100%" height="450px" ></iframe>  
+              </g:if>
+              <g:else>
+                <div id="dropzone" class="dropzone">
+              </g:else>
             </div>
           </div>
         </div>
