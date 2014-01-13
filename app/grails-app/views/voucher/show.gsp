@@ -92,7 +92,12 @@
         <div class="widget-body">
           <div class="widget-main">
             <div class="center">
-              <iframe class="cboxPhoto" src="${pago.comprobanteDePago.url()}"  width="100%" height="450px" ></iframe>  
+              <g:if test="${pago.comprobanteDePago}">
+                <iframe class="cboxPhoto" src="${pago.comprobanteDePago.url()}"  width="100%" height="450px" ></iframe>  
+              </g:if>
+              <g:else>
+                <div id="dropzone" class="dropzone">
+              </g:else>
             </div>
           </div>
         </div>
