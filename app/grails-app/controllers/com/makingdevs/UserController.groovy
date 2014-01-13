@@ -12,4 +12,12 @@ class UserController {
     log.debug registration
     [registration:registration]
   }
+
+  def saveRegistration(){
+    def registration = Registration.get(params.id)
+    registration.properties = params
+    registration.save(flush:true)
+    flash.message = "Registration updated correctly!"
+    redirect action:'show',id:registration.user.id
+  }
 }

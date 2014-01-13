@@ -40,6 +40,12 @@
                           <g:link controller="user" action="registration" id="${registration.id}" class="btn btn-mini">
                             <i class="icon icon-edit"></i> Edit</button>
                           </g:link>
+                          <g:link id="${registration.id}" class="btn btn-mini">
+                            <i class="icon icon-list"></i> Evaluate</button>
+                          </g:link>
+                          <g:link id="${registration.id}" class="btn btn-mini">
+                            <i class="icon icon-remove"></i> Cancel</button>
+                          </g:link>
                         </div>
                       </td>
                     </tr>

@@ -19,8 +19,6 @@
           	</div>
 
           	<div class="row-fluid">
-          		
-								<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 								<g:if test="${flash.message}">
 								<div class="message" role="status">${flash.message}</div>
 								</g:if>
@@ -31,14 +29,11 @@
 									</g:eachError>
 								</ul>
 								</g:hasErrors>
-								<g:form url="[resource:registration, action:'update']" method="PUT" >
+								<g:form url="[resource:user, action:'saveRegistration']" method="PUT">
+									<g:hiddenField name="id" value="${registration?.id}" />
 									<g:hiddenField name="version" value="${registration?.version}" />
-									<fieldset class="form">
-										<g:render template="form"/>
-									</fieldset>
-									<fieldset class="buttons">
-										<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
-									</fieldset>
+									<g:render template="form"/>
+									<g:actionSubmit class="save" action="saveRegistration" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 								</g:form>
 							
           	</div>
