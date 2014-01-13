@@ -37,7 +37,7 @@
                       <td>${registration.invoice}</td>
                       <td>
                         <div class="btn-group">
-                          <g:link controller="user" action="registration" class="btn btn-mini">
+                          <g:link controller="user" action="registration" id="${registration.id}" class="btn btn-mini">
                             <i class="icon icon-edit"></i> Edit</button>
                           </g:link>
                         </div>
