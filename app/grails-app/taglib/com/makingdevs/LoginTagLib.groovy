@@ -32,7 +32,10 @@ class LoginTagLib {
                       <label class="checkbox">
                         <input type='checkbox' name='${config.rememberMe.parameter}' id='remember_me' ${rememberMe ? 'checked="checked"' : '' } />
                         Recordarme
-                      </label>  
+                      </label>
+                      <label>
+                        ¿Olvidaste tu contraseña?
+                      </label>
                     </div>
                   </div>
                   <div class='login-actions'>
