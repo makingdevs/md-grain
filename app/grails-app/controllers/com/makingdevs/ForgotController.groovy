@@ -2,6 +2,8 @@ package com.makingdevs
 
 class ForgotController {
 
+  def forgotTokenService
+
   def index() {
 
   }
@@ -9,14 +11,16 @@ class ForgotController {
   def recover(){
     def user = User.findByUsername(params.j_username)
     if(user){
-      def forgotToken = new ForgotToken(user:user).save()
-      // se arma la url de recuperacion con el tokn e
-      // correo de recuperacion
+      forgotTokenService.recoverAccountForUser(user)
       flash.success = "Se han enviado las instrucciones para restablcer tu cuenta a tu correo"
     }else{
       flash.error = "No se ha encontrado un usuario con ese correo"     
     }
     redirect action:"index"
+  }
+
+  def reset(){
+    
   }
 
 }
