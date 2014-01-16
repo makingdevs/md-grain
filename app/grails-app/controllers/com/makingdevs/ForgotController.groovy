@@ -28,4 +28,9 @@ class ForgotController {
     [forgotToken:forgotToken]
   }
 
+  def changePassword(){
+    forgotTokenService.changePasswordWithToken(params.token,params.j_password)
+    redirect controller:"login"
+  }
+
 }

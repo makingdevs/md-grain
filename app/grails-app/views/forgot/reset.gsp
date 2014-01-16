@@ -11,7 +11,7 @@
     <div class="row">
       <div class="span9">
         <div class="white-card extra-padding">
-          <form method='POST' id='recoverForm' class='cssform' action="recover">
+          <form method='POST' id='resetForm' class='cssform' action="changePassword">
             <fieldset>
               <div class="row-fluid">
                 <div class="span12">

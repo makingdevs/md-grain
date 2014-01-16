@@ -26,4 +26,11 @@ class ForgotTokenService {
     }
   }
 
+  def changePasswordWithToken(token,password){
+    def forgotToken = ForgotToken.findByToken(token)
+    forgotToken.used = true
+    forgotToken.user.password = password
+    forgotToken
+  }
+
 }
