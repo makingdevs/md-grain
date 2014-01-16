@@ -24,6 +24,6 @@ class ForgotTokenService {
         El equipo de MakingDevs
       """
     }
-
   }
+
 }
