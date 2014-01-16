@@ -11,16 +11,21 @@
     <div class="row">
       <div class="span9">
         <div class="white-card extra-padding">
-          <form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
+          <form method='POST' id='recoverForm' class='cssform' action="recover">
             <fieldset>
               <div class="row-fluid">
                 <div class="span12">
                   <h1 class="form-header">
                     Restablece tu contraseña
                   </h1>
-                  <g:if test='${flash.message}'>
+                  <g:if test='${flash.error}'>
                     <div class="alert alert-error">
-                      ${flash.message}
+                      ${flash.error}
+                    </div>
+                  </g:if>
+                  <g:if test='${flash.success}'>
+                    <div class="alert alert-success">
+                      ${flash.success}
                     </div>
                   </g:if>
                 </div>
