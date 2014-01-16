@@ -299,4 +299,6 @@ databaseChangeLog = {
   include file: 'add-descuento-aplicable.groovy'
 
   include file: 'adding-avatar.groovy'
+
+	include file: 'forgot-token.groovy'
 }

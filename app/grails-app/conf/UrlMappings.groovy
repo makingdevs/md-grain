@@ -76,6 +76,10 @@ class UrlMappings {
 			controller = 'paymentReceipt'
 		}
 
+		name forgot : "/forgot/$action?" {
+			controller = "forgot"
+		}
+
 		"/"(controller:"home")
 		"500"(view:'/error')
 		"404"(view:'/notFound')
