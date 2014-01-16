@@ -54,6 +54,10 @@
                   <button type="submit" id="submit" class="btn btn-large">
                    <i class="icon icon-smile"></i> Ingresa ahora
                   </button>
+                  <hr>
+                  <label>
+                    ${g.link([controller:'forgot',action:'index']){'¿Olvidaste tu contraseña?'}}
+                  </label>
                 </div>
                 <div class="span6">
                 	<h3>¿Aún no tienes cuenta?</h3>

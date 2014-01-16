@@ -34,7 +34,7 @@ class LoginTagLib {
                         Recordarme
                       </label>
                       <label>
-                        ¿Olvidaste tu contraseña?
+                        ${g.link([controller:'forgot',action:'index']){'¿Olvidaste tu contraseña?'}}
                       </label>
                     </div>
                   </div>
