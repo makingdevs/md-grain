@@ -24,7 +24,7 @@
       <td>${r.scheduledCourse.course}</td>
       <td>${formatDate(date:r.dateCreated,format:"dd - MMMM - yyyy")}</td>
       <td>
-        ${r.registrationStatus}
+        <g:render template="/registration/currentStatus" model="[currentStatus:r.registrationStatus]"/>
       </td>
       <td>
         <g:set var="paymentId" value="${r.pagos.id.first()}" />
