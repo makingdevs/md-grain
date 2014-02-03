@@ -25,7 +25,7 @@
           <div class="white-card">
             
           <h3 class="section-header">Todos los registros</h3>
-            <g:render template="registrationTable" model="[registrations:registrations]" />
+            <g:render template="/registration/registrationTable" model="[registrations:registrations]" />
           </div>
         </div>
 

@@ -28,77 +28,79 @@
 	<section class="section-wrapper stripped">
 		<div class="container">
 			<div class="row-fluid">
-				<div class="span4">
-					<dl>
-						<dt>Curso:</dt>
-						<dd><g:link controller="course" action="show" id="${scheduledCourseInstance?.course?.id}">${scheduledCourseInstance.course}</g:link></dd>
-						<dt>Fecha de Inicio:</dt>
-						<dd><g:formatDate format="dd-MM-yyyy" date="${scheduledCourseInstance?.beginDate}" /></dd>
-						<dt>Fecha Limite de Registro</dt>
-						<dd><g:formatDate format="dd-MM-yyyy" date="${scheduledCourseInstance?.limitRegistrationDate}"/></dd>
-						<dt>Geolocalización</dt>
-						<dd>${scheduledCourseInstance.geolocation}</dd>
-						<dt>Dirección</dt>
-						<dd>${scheduledCourseInstance.fullAddress}</dd>
-					</dl>
-				</div>
-				<div class="span4">
-					<dl>
-						<dt>Fecha de Creación</dt>
-						<dd><g:formatDate format="dd-MM-yyyy HH:mm a" date="${scheduledCourseInstance?.dateCreated}" /></dd>
-						<dt>Ultima Modificación</dt>
-						<dd><g:formatDate format="dd-MM-yyyy HH:mm a" date="${scheduledCourseInstance?.lastUpdated}" /></dd>
-						<dt>Status del curso</dt>
-						<dd>${scheduledCourseInstance.scheduledCourseStatus}</dd>
-						<dt>Duración en Horas</dt>
-						<dd>${scheduledCourseInstance.durationInHours}</dd>
-						<dt>Sesiones del Curso</dt>
-						<dd>
-							<g:each in="${scheduledCourseInstance.courseSessions}" var="c">
-							<ul>
-								<li><g:link controller="courseSession" action="show" id="${c.id}">${c.encodeAsHTML()}</g:link></li>
-							</ul>
-							</g:each>
-						</dd>
-					</dl>
-				</div>
-				<div class="span4">
-					<h4>Esquema de pago</h4>
-					<dl>
-						<dt>Concepto</dt>
-						<dd>${scheduledCourseInstance?.esquemaDePago?.concepto}</dd>
-						<dt>Cantidad de Pago</dt>
-						<dd>${scheduledCourseInstance?.esquemaDePago?.cantidadDePago}</dd>
-						<dt>Descuentos</dt>
-						<dd><g:each in="${scheduledCourseInstance?.esquemaDePago?.descuentos}" var="r">
-							<ul>
-								<li>${r}</li>
-							</ul>
-						</g:each>
-						</dd>
-					</dl>
-				</div>
+				
+					<div class="span4">
+						<div class="white-card">
+							<dl>
+								<dt>Curso:</dt>
+								<dd><g:link controller="course" action="show" id="${scheduledCourseInstance?.course?.id}">${scheduledCourseInstance.course}</g:link></dd>
+								<dt>Fecha de Inicio:</dt>
+								<dd><g:formatDate format="dd-MM-yyyy" date="${scheduledCourseInstance?.beginDate}" /></dd>
+								<dt>Fecha Limite de Registro</dt>
+								<dd><g:formatDate format="dd-MM-yyyy" date="${scheduledCourseInstance?.limitRegistrationDate}"/></dd>
+								<dt>Geolocalización</dt>
+								<dd>${scheduledCourseInstance.geolocation}</dd>
+								<dt>Dirección</dt>
+								<dd>${scheduledCourseInstance.fullAddress}</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="white-card">
+							<dl>
+								<dt>Fecha de Creación</dt>
+								<dd><g:formatDate format="dd-MM-yyyy HH:mm a" date="${scheduledCourseInstance?.dateCreated}" /></dd>
+								<dt>Ultima Modificación</dt>
+								<dd><g:formatDate format="dd-MM-yyyy HH:mm a" date="${scheduledCourseInstance?.lastUpdated}" /></dd>
+								<dt>Status del curso</dt>
+								<dd>${scheduledCourseInstance.scheduledCourseStatus}</dd>
+								<dt>Duración en Horas</dt>
+								<dd>${scheduledCourseInstance.durationInHours}</dd>
+								<dt>Sesiones del Curso</dt>
+								<dd>
+									<g:each in="${scheduledCourseInstance.courseSessions}" var="c">
+									<ul>
+										<li><g:link controller="courseSession" action="show" id="${c.id}">${c.encodeAsHTML()}</g:link></li>
+									</ul>
+									</g:each>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="white-card">
+							<h4>Esquema de pago</h4>
+							<dl>
+								<dt>Concepto</dt>
+								<dd>${scheduledCourseInstance?.esquemaDePago?.concepto}</dd>
+								<dt>Cantidad de Pago</dt>
+								<dd>${scheduledCourseInstance?.esquemaDePago?.cantidadDePago}</dd>
+								<dt>Descuentos</dt>
+								<dd><g:each in="${scheduledCourseInstance?.esquemaDePago?.descuentos}" var="r">
+									<ul>
+										<li>${r}</li>
+									</ul>
+								</g:each>
+								</dd>
+							</dl>
+						</div>
+					</div>
+
 			</div>
 		</div>
 	</section>
 
 	<section class="section-wrapper stripped">
-	</section>
-				
-			
-				<dt>Registrados</dt>
-				<dd>
-					<g:each in="${scheduledCourseInstance.registrations}" var="r">
-					<ul>
-						<li>${r?.user?.perfil?.nombreCompleto()}</li>
-					</ul>
-					</g:each>
-				</dd>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="white-card">
+						<g:render template="/registration/registrationTable" model="[registrations:scheduledCourseInstance.registrations]" />
+					</div>
+				</div>
 			</div>
 		</div>
-		</g:if>
-		</div>
-		</div>	
 	</section>
+
 </body>
 </html>

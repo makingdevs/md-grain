@@ -23,7 +23,9 @@
       </td>
       <td>${r.scheduledCourse.course}</td>
       <td>${formatDate(date:r.dateCreated,format:"dd - MMMM - yyyy")}</td>
-      <td>${r.registrationStatus}</td>
+      <td>
+        ${r.registrationStatus}
+      </td>
       <td>
         <g:set var="paymentId" value="${r.pagos.id.first()}" />
         <g:remoteLink name="quizFor${r.id}" class="btn btn-mini" controller="notification" action="quizFor" id="${r.user.username}" params="[course:r.scheduledCourse.course]" onLoading="var loader${r.id} = new ButtonLoader(${r.id},'quizFor'); loader${r.id}.preload()" onSuccess="loader${r.id}.success('Cuestionario enviado a: ${r.user.username}.')" onComplete="loader${r.id}.complete()">
