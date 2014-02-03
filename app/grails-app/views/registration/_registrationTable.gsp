@@ -39,6 +39,9 @@
         <g:elseif test="${r.pagos.estatusDePago.first() == EstatusDePago.PROCESO}">
           <g:link class="btn btn-mini" controller="voucher" action="show" id="${paymentId}"><i class="icon-file-text-alt bigger-130"></i></g:link>
         </g:elseif>
+        <g:elseif test="${r.pagos.estatusDePago.first() == EstatusDePago.PAGADO}">
+          <g:link class="btn btn-mini" controller="paymentReceipt" action="index" id="${paymentId}"><i class="icon-file-text-alt bigger-130"></i></g:link>
+        </g:elseif>
       </td>
     </tr>
     </g:each>
