@@ -12,8 +12,8 @@
 		<div class="container">
 			<a href="#list-scheduledCourse" class="skip" tabindex="-1">
 			<div class="nav" role="navigation">
-				<!--<a class="btn btn-primary" href="${createLink(uri: '/')}">Principal</a>
-				<g:link class="btn btn-primary" action="create">Nuevo Curso Calendaridzado</g:link>-->
+				<!--<a class="btn btn-primary" href="${createLink(uri: '/')}">Principal</a-->
+				<g:link class="btn btn-primary" action="create">Nuevo Curso Calendarizado</g:link>
 			</div>
 			<div id="list-scheduledCourse" class="content scaffold-list" role="main">
 				<h1>Cursos Calendarizados</h1>
