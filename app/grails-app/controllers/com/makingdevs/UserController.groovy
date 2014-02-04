@@ -9,7 +9,6 @@ class UserController {
 
   def registration(){
     def registration = Registration.get(params.id)
-    log.debug registration
     [registration:registration]
   }
 
