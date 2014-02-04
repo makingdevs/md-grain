@@ -15,10 +15,10 @@
 
 						<div class="span12">
             	<h3 class="section-header">Registro de ${registration.user.username} a ${registration.scheduledCourse.course}</h3>
-            	
           	</div>
 
           	<div class="row-fluid">
+          		<div class="span6">
 								<g:if test="${flash.message}">
 								<div class="message" role="status">${flash.message}</div>
 								</g:if>
@@ -35,7 +35,18 @@
 									<g:render template="form"/>
 									<g:actionSubmit class="save" action="saveRegistration" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 								</g:form>
-							
+							</div>
+							<div class="span6">
+								<ul>
+									<g:each in="${registration.pagos}" var="pago">
+										<li>
+											<g:link controller="pago" action="show" id="${pago.id}">
+												$ ${pago.cantidadDePago} - ${pago.tipoDePago} - ${pago.estatusDePago}
+											</g:link>
+										</li>
+									</g:each>
+								</ul>
+							</div>
           	</div>
 						
 
