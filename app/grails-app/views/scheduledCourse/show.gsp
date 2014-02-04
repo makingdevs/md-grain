@@ -102,5 +102,28 @@
 		</div>
 	</section>
 
+	<section class="section-wrapper stripped">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="white-card">
+						<g:form class="form form-inline" controller="scheduledCourse" action="addParticipant">
+							<g:hiddenField name="id" value="${scheduledCourseInstance.id}" />
+							<fieldset>
+								<legend>Agregar un registro</legend>
+								<div class="control-group">
+									<div class="controls">
+										<g:textField name="email" placeholder="Correo electrónico" class="input-xxlarge"/>
+									</div>
+								</div>
+								<input type="submit" class="btn" value="Agregar">
+							</fieldset>
+						</g:form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 </body>
 </html>
