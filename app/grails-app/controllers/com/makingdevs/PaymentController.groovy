@@ -6,7 +6,7 @@ class PaymentController {
 
   def springSecurityService
   def pagoService
-  def compronbanteService
+  def comprobanteService
 
   def myPayments() {
     def user = springSecurityService.currentUser
@@ -35,7 +35,7 @@ class PaymentController {
       }
     }
     registrations*.pagos.flatten().each { p ->
-      comprobanteService.rechazarPago(p.transactionId,newDate(),"PAYPAL")
+      comprobanteService.aprobarPago(p.transactionId,newDate(),"PAYPAL")
     }
     registrations*.registrationStatus = RegistrationStatus.INSCRIBED_AND_PAYED
     [registrations:registrations]
