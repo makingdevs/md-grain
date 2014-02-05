@@ -1,11 +1,25 @@
 package com.makingdevs
 
-class RegistrationJob {
-    static triggers = {
-      cron name:"registrationTrigger", cronExpression: "0/5 * * * * ?"
-    }
+import grails.util.Environment
 
-    def execute() {
-        log.debug "${new Date()}"
+class RegistrationJob {
+
+  def registrationService
+
+  static triggers = {
+    switch(Environment.current){
+      case [Environment.DEVELOPMENT,Environment.TEST]:
+        cron name:"registrationTrigger", cronExpression: "0 0/1 * * * ?"
+        break
+      case Environment.PRODUCTION:
+        cron name:"registrationTrigger", cronExpression: "0 0/1 * * * ?"
+        break
+      default:
+        cron name:"registrationTrigger", cronExpression: "0 0/1 * * * ?"
     }
+  }
+
+  def execute() {
+    registrationService.cancelWithLimitRegistrationDate()
+  }
 }
