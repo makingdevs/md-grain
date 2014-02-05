@@ -59,4 +59,13 @@ class RegistrationService {
     registration
   }
 
+  def cancelWithLimitRegistrationDate(){
+    Registration.withCriteria {
+      scheduledCourse {
+        le "limitRegistrationDate", new Date()
+      }
+      inList "registrationStatus",[RegistrationStatus.REGISTERED]
+    }*.registrationStatus = RegistrationStatus.CANCELLED
+  }
+
 }
