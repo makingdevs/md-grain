@@ -31,7 +31,7 @@
         <g:remoteLink name="quizFor${r.id}" class="btn btn-mini" controller="notification" action="quizFor" id="${r.user.username}" params="[course:r.scheduledCourse.course]" onLoading="var loader${r.id} = new ButtonLoader(${r.id},'quizFor'); loader${r.id}.preload()" onSuccess="loader${r.id}.success('Cuestionario enviado a: ${r.user.username}.')" onComplete="loader${r.id}.complete()">
           <i class="icon-envelope"></i>
         </g:remoteLink>
-        <g:if test="${r.pagos.estatusDePago.first() == EstatusDePago.CREADO }">
+        <g:if test="${(r.pagos.estatusDePago.first() == EstatusDePago.CREADO) || (r.pagos.estatusDePago.first() == EstatusDePago.RECHAZADO)}">
           <g:link controller="paymentReceipt" id="${paymentId}" class="btn btn-mini">
           <i class="icon-cloud-upload"></i> 
           </g:link>

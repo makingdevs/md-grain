@@ -12,7 +12,7 @@ class RegistrationJob {
         cron name:"registrationTrigger", cronExpression: "0 0 1 * * ?"
         break
       default:
-        cron name:"registrationTrigger", cronExpression: "0 0/1 * * * ?"
+        cron name:"registrationTrigger", cronExpression: "0 0 0/1 * * ?"
     }
   }
 
