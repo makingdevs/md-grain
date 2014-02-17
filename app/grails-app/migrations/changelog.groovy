@@ -301,4 +301,6 @@ databaseChangeLog = {
   include file: 'adding-avatar.groovy'
 
 	include file: 'forgot-token.groovy'
+
+  include file: 'integracion-questionable-plugin.groovy'
 }
