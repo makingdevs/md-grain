@@ -4,7 +4,7 @@ import groovy.transform.ToString;
 import com.makingdevs.*
 
 @ToString(includeNames=true)
-class User {
+class User implements Questionable {
 
   transient springSecurityService
 
