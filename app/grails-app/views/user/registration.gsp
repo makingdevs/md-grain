@@ -47,10 +47,6 @@
 									</g:each>
 								</ul>
 							</div>
-							<div class="span6">
-								<strong>Agrega un cuestionario:</strong>
-								<g:showQuestionaryForThisInstance instance="${registration}"/>
-							</div>
 						</div>
 					</div>
 				</div>
