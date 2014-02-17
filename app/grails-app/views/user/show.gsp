@@ -54,9 +54,15 @@
                 </table>
               </table>
             </div>
-
           </div>
-          
+        </div>
+      </div>
+      <div class="white-card extra-padding">
+        <div class="row-fluid">
+          <div class="span12">
+            <strong>Agrega un cuestionario:</strong>
+            <g:showQuestionaryForThisInstance instance="${user}"/>
+          </div>
         </div>
       </div>
     </div>
