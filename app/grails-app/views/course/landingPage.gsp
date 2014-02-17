@@ -66,11 +66,13 @@
               <button class="btn btn-large btn-block btn-success" type="button">
                 Evaluación previa (Próximamente)
               </button>
+              <g:link action="firstEvaluate" controller="registration" params="[courseKey:course.courseKey,url:request.forwardURI]">Evaluación previa
+              </g:link>
             </div>
             <div class="blog-categories widget-tp">
               <g:coursesPerCategory code="${category}" currentCourse="${course.id}"/>
             </div>
-            
+
           </div>
         </div>
       </div>
