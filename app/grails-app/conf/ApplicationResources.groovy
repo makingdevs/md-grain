@@ -2,6 +2,11 @@ modules = {
   application {
     resource url:'js/application.js'
   }
+
+  validation{
+    resource url:'js/validation/jquery.validate.min.js'
+  }
+
   venera {
     dependsOn 'jquery'
     resource url:'assets/less/theme_venera_blue.less',attrs:[rel: "stylesheet/less", type:'css']
@@ -10,6 +15,11 @@ modules = {
     resource url:'assets/js/lightbox.js'
     resource url:'assets/js/main.js'
   }
+
+  estilos {
+    dependsOn 'venera'
+  }
+
   wysihtml5 {
     dependsOn 'jquery'
     resource url:'js/wysihtml5/img/glyphicons-halflings.png'
