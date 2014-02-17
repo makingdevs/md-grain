@@ -2,7 +2,7 @@ package com.makingdevs
 
 import com.payable.Payable
 
-class Registration extends Payable {
+class Registration extends Payable implements Questionable {
   Date dateCreated
   Date lastUpdated
   User user
