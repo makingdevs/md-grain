@@ -6,6 +6,8 @@ grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
+
+grails.plugin.location.questionable='../../questionable'
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 //grails.plugin.location.'Payable' = "../../Payable"
