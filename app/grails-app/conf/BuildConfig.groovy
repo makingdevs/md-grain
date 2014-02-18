@@ -7,7 +7,7 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 
-//grails.plugin.location.questionable='../../questionable'
+grails.plugin.location.questionable='../../questionable'
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 //grails.plugin.location.'Payable' = "../../Payable"
@@ -77,6 +77,6 @@ grails.project.dependency.resolution = {
     compile ":mail:1.0.1"
     compile 'com.makingdevs:profile:0.1.6'
     compile 'com.payable:payable:0.2.17'
-    compile ':questionable:0.1'
+    //compile ':questionable:0.1'
   }
 }
