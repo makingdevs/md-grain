@@ -36,6 +36,12 @@
           </div>
         </div>
 
+        <div class="span6">
+          <div class="white-card">
+            <g:showQuestionaryForThisUser currentUser="${usuarioActual}"/>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
