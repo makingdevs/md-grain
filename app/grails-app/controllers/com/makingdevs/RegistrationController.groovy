@@ -27,9 +27,16 @@ class RegistrationController {
         def nombre="${params.courseKey}-initial"
         def questionaryPerInstanceLink=questionaryPerInstanceLinkService.findQuestionaryPerInstanceByCodeName(usuarioActual.id,nombre)
         if(questionaryPerInstanceLink){
-          def numPreguntas=questionaryPerInstanceLink.questionaryPerInstance.questionary.questions.size()
-          redirect(controller:"evaluate", action:"evaluateQuestionary", params:[questionaryPerInstanceLink:questionaryPerInstanceLink.id,questionaryPerInstance:questionaryPerInstanceLink.questionaryPerInstance.id,
-            url:params.url,numPreguntas:numPreguntas])
+          if(questionaryPerInstanceLink.questionaryPerInstance.questionaryPerInstanceStatus==QuestionaryPerInstanceStatus.SIN_CONTESTAR){
+            redirect(action: "answerQuestionary", controller:"questionary", 
+                params: [id:questionaryPerInstanceLink.questionaryPerInstance.id,
+                idQL:questionaryPerInstanceLink.id,
+                url:params.url])
+          }else{
+            def numPreguntas=questionaryPerInstanceLink.questionaryPerInstance.questionary.questions.size()
+            redirect(controller:"evaluate", action:"evaluateQuestionary", params:[questionaryPerInstanceLink:questionaryPerInstanceLink.id,questionaryPerInstance:questionaryPerInstanceLink.questionaryPerInstance.id,
+              url:params.url,numPreguntas:numPreguntas])
+          }
         }else{
           def questionaryPerInstanceLinkNew = questionaryPerInstanceLinkService.createQuestionaryPerInstance(usuarioActual,questionaryAcontestar.id)
             redirect(action: "answerQuestionary", controller:"questionary", 
