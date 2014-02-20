@@ -22,15 +22,15 @@ class UrlMappings {
 
 		name telefono: "/telefono/$action?"(controller : 'telefono')
 
-		name registration: "/registration/$action?"(controller : 'registration')
-
 		name myTraining: "/myTraining/$action?"(controller : 'myTraining')
 
 		name notification: "/notification/$action?"(controller : 'notification')
 
 	  name questionary: "/questionary/$action?"(controller : 'questionary')
 	  
-	  name questionary: "/evaluate/$action?"(controller : 'evaluate')
+	  name evaluate: "/evaluate/$action?"(controller : 'evaluate')
+
+	  name test: "/test/$action?"(controller:'questionaryUser')
 
 		name training: "/training" {
 			controller = 'home'
@@ -60,6 +60,11 @@ class UrlMappings {
 		name paypalPayed : "/paypal/payed" {
 			controller = 'payment'
 			action = 'paypalPayed'
+		}
+
+		name registration: "/registration"{
+			controller='registration'
+			action='addMe'
 		}
 
 		name scheduledCourseInfo : "/courseInfo" {
