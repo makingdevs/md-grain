@@ -77,6 +77,6 @@ grails.project.dependency.resolution = {
     compile ":mail:1.0.1"
     compile 'com.makingdevs:profile:0.1.6'
     compile 'com.payable:payable:0.2.17'
-    compile ':questionable:0.1.2'
+    compile ':questionable:0.1.3'
   }
 }
