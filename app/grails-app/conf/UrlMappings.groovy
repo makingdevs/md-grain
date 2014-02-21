@@ -25,12 +25,15 @@ class UrlMappings {
 		name myTraining: "/myTraining/$action?"(controller : 'myTraining')
 
 		name notification: "/notification/$action?"(controller : 'notification')
-
-	  name questionary: "/questionary/$action?"(controller : 'questionary')
 	  
 	  name evaluate: "/evaluate/$action?"(controller : 'evaluate')
 
 	  name test: "/test/$action?"(controller:'questionaryUser')
+
+	  name questionary: "/questionary"{
+	  	controller= 'questionary'
+	  	action='answerQuestionary'
+	  }
 
 		name training: "/training" {
 			controller = 'home'
