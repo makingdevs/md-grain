@@ -19,4 +19,9 @@ class UserController {
     flash.message = "Registration updated correctly!"
     redirect action:'show',id:registration.user.id
   }
+
+  def all(){
+    [users:User.list()]
+  }
+
 }
