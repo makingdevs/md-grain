@@ -78,6 +78,7 @@ grails.project.dependency.resolution = {
     compile 'com.makingdevs:profile:0.1.6'
     compile 'com.payable:payable:0.2.17'
     compile ':questionable:0.1.4'
+    compile ":avatar:0.6.3"
 
   }
 }
