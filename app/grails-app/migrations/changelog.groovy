@@ -303,4 +303,6 @@ databaseChangeLog = {
 	include file: 'forgot-token.groovy'
 
   include file: 'integracion-questionable-plugin.groovy'
+
+  include file: 'add-colors-to-course.groovy'
 }
