@@ -44,19 +44,6 @@
 				</fieldset>
 			</g:form>
 			</div>
-			<r:script>
-				$('#picker1,#picker2,#picker3').colpick({
-					layout:'hex',
-					submit:0,
-					colorScheme:'dark',
-					onChange:function(hsb,hex,rgb,el,bySetColor) {
-						$(el).css('border-color','#'+hex);
-							if(!bySetColor) $(el).val(hex);
-					}
-					}).keyup(function(){
-						$(this).colpickSetColor(this.value);
-				});
-			</r:script>
 		</div>
 	</body>
 </html>
