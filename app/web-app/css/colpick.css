@@ -9,7 +9,7 @@ colpick Color Picker / colpick.com
 	border:0;
 	width:70px;
 	height:25px;
-	border-right:20px solid white;
+	border-right:20px solid;
 	line-height:20px;
 }
 
