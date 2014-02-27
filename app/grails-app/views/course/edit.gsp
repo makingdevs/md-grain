@@ -5,7 +5,7 @@
 		<meta name="layout" content="venera">
 		<g:set var="entityName" value="${message(code: 'course.label', default: 'Course')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
-		<r:require module="wysihtml5"/>
+		<r:require modules="wysihtml5,colorPicker"/>
 	</head>
 	<body>
 		<header class="jumbotron subhead" id="menuOptions">
