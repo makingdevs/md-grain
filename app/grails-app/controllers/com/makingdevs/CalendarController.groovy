@@ -18,7 +18,9 @@ class CalendarController {
         sc.courseSessions.sort().collect { cs ->
           [
             id:cs.id,
-            color:'#'+cs.scheduledCourse.course.backgroundColor,
+            backgroundColor:'#'+cs.scheduledCourse.course.backgroundColor,
+            borderColor:'#'+cs.scheduledCourse.course.borderColor,
+            textColor:'#'+cs.scheduledCourse.course.fontColor,
             title:cs.scheduledCourse.course.name + " - Sesión ${i++}",
             start:df.format(cs.sessionStartTime),
             end:df.format(cs.sessionEndTime),
