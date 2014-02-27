@@ -43,7 +43,8 @@ modules = {
   }
 
   colorPicker{
-    resource url:'js/colpick.js'
     resource url:'css/colpick.css'
+    resource url:'js/colPick/colpick.js'
+    resource url:'js/colPick/colorPickFunction.js'
   }
 }
