@@ -41,4 +41,9 @@ modules = {
     resource url:'js/upload/dropzone.min.js'
 
   }
+
+  colorPicker{
+    resource url:'js/colpick.js'
+    resource url:'css/colpick.css'
+  }
 }
