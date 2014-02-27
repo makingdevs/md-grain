@@ -5,7 +5,7 @@
 		<meta name="layout" content="venera">
 		<g:set var="entityName" value="${message(code: 'course.label', default: 'Course')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
-		<r:require module="wysihtml5"/>
+		<r:require modules="wysihtml5, colorPicker"/>
 	</head>
 	<body>
 		<header class="jumbotron subhead" id="menuOptions">
@@ -44,6 +44,19 @@
 				</fieldset>
 			</g:form>
 			</div>
+			<r:script>
+				$('#picker1,#picker2,#picker3').colpick({
+					layout:'hex',
+					submit:0,
+					colorScheme:'dark',
+					onChange:function(hsb,hex,rgb,el,bySetColor) {
+						$(el).css('border-color','#'+hex);
+							if(!bySetColor) $(el).val(hex);
+					}
+					}).keyup(function(){
+						$(this).colpickSetColor(this.value);
+				});
+			</r:script>
 		</div>
 	</body>
 </html>
