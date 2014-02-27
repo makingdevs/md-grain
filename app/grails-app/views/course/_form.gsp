@@ -64,3 +64,26 @@
 	<g:select name="courseStatus" from="${com.makingdevs.CourseStatus?.values()}" keys="${com.makingdevs.CourseStatus.values()*.name()}" required="" value="${courseInstance?.courseStatus?.name()}"/>
 </div>
 
+<div class="control-group ${hasErrors(bean: courseInstance, field: 'backgroundColor', 'error')} required">
+	<label for="backgroundColor">
+		<g:message code="course.backgroundColor.label" default="Background Color" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="backgroundColor" id="picker1" maxlength="6" required="" value="${courseInstance?.backgroundColor}" class="span6"/>
+</div>
+
+<div class="control-group ${hasErrors(bean: courseInstance, field: 'borderColor', 'error')} required">
+	<label for="borderColor">
+		<g:message code="course.borderColor.label" default="Border Color" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="borderColor" id="picker2" maxlength="6" required="" value="${courseInstance?.borderColor}" class="span6"/>
+</div>
+
+<div class="control-group ${hasErrors(bean: courseInstance, field: 'fontColor', 'error')} required">
+	<label for="fontColor">
+		<g:message code="course.fontColor.label" default="Font Color" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="fontColor" id="picker3" maxlength="6" required="" value="${courseInstance?.fontColor}" class="span6"/>
+</div>
