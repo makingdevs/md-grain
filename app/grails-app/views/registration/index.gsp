@@ -107,7 +107,7 @@
                     <hr/>
                     <div class="row-fluid">
                       <div class="span12">
-                        <iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=uny2+de+mexico&amp;aq=&amp;sll=19.338677,-99.106981&amp;sspn=0.031788,0.038581&amp;ie=UTF8&amp;hq=uny2+de+mexico&amp;hnear=&amp;ll=19.372462,-99.164186&amp;spn=0.063565,0.077162&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=8295609655684733734&amp;output=embed"></iframe>
+                        <iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?q=${scheduledCourse.geolocation}&amp;num=1&amp;ie=UTF8&amp;t=m&amp;output=embed"></iframe>
                       </div>
                     </div>
                   </div>
