@@ -87,3 +87,16 @@
 	</label>
 	<g:textField name="fontColor" id="picker3" maxlength="6" required="" value="${courseInstance?.fontColor}" class="span6"/>
 </div>
+<r:script>
+				$('#picker1,#picker2,#picker3').colpick({
+					layout:'hex',
+					submit:0,
+					colorScheme:'dark',
+					onChange:function(hsb,hex,rgb,el,bySetColor) {
+						$(el).css('border-color','#'+hex);
+							if(!bySetColor) $(el).val(hex);
+					}
+					}).keyup(function(){
+						$(this).colpickSetColor(this.value);
+				});
+			</r:script>
