@@ -47,4 +47,8 @@ modules = {
     resource url:'js/colPick/colpick.js'
     resource url:'js/colPick/colorPickFunction.js'
   }
+
+  perfil{
+    resource url:'css/perfil.css'
+  }
 }
