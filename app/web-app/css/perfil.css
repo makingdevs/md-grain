@@ -1,0 +1,61 @@
+#cabezera{
+  padding-top: 30px;
+  background-color: #d8eafc;
+  padding-bottom:20px;
+}
+
+#fondo{
+  background: url('../images/perfil/fondo.jpg');
+}
+
+#label2,#label1, #estrella, #escudo, #separador, #logo{
+  background: url('../images/perfil/sprite_trasparente.png');
+}
+
+#logo{
+  background-position: -300px -1px;
+    height: 276px;
+    width: 610px;
+}
+
+#cuerpo{
+  background-color: white;
+}
+
+#separador{
+  background-position: -10px -835px;
+    height: 150px;
+    width: 1171px;
+}
+
+#pie{
+  background-color: #a7d7fc;
+}
+
+#escudo{
+  background-position: -350px -1010px;
+    height: 318px;
+    width: 394px;
+}
+
+#estrella{
+  background-position: -920px -1000px;
+    height: 330px;
+    width: 305px;
+}
+
+#prueba{
+  height: 600px
+}
+
+#label1{
+  background-position: -265px -475px;
+    height: 340px;
+    width: 460px;
+}
+
+#label2{
+  background-position: -784px -475px;
+    height: 210px;
+    width: 460px;
+}
