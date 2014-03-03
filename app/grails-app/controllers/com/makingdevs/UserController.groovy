@@ -24,4 +24,8 @@ class UserController {
     [users:User.list()]
   }
 
+  def perfilUser(){
+
+  }
+  
 }
