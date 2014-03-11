@@ -1,6 +1,6 @@
 #cabezera{
   padding-top: 30px;
-  background-color: #d8eafc;
+  background-color: #D1EBFD;
   padding-bottom:20px;
 }
 
@@ -13,13 +13,19 @@
 }
 
 #logo{
+  margin-left: 40px;
   background-position: -300px -1px;
-    height: 276px;
-    width: 610px;
+    height: 300px;
+    width: 660px;
 }
 
 #cuerpo{
   background-color: white;
+  position: relative;
+}
+
+#contenedorDerecho{
+  height: 600px;
 }
 
 #separador{
@@ -34,14 +40,17 @@
 
 #escudo{
   background-position: -350px -1010px;
-    height: 318px;
+    height: 310px;
     width: 394px;
+    margin-bottom: 0px;
 }
 
 #estrella{
   background-position: -920px -1000px;
-    height: 330px;
+    height: 280px;
     width: 305px;
+  margin-left: 450px;
+
 }
 
 #prueba{
@@ -52,10 +61,16 @@
   background-position: -265px -475px;
     height: 340px;
     width: 460px;
+    position: absolute;
+    top: 50px; 
+    left: -48px;
 }
 
 #label2{
   background-position: -784px -475px;
     height: 210px;
     width: 460px;
+    position: absolute;
+    top: 300px; 
+    left: -58px;
 }
