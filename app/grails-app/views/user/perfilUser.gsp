@@ -17,14 +17,14 @@
           </div>
         </div>
       </div>
-      <div id="cuerpo">
+      <div class="row-fluid" id="cuerpo">
         <div class="row-fluid">
           <div class="span5">
             <div id="label1"></div>
             <div id="label2"></div>
           </div>
-          <div class="span7">
-            
+          <div class="span7" id="contenedorDerecho">
+
           </div>
         </div>
         <div id="separador">
@@ -40,8 +40,8 @@
         <div class="span4">
           <div id="escudo"></div>
         </div>
-        <div class="offset4 span2">
-          <div id="estrella"></div>
+        <div class="span8">
+          <div id="estrella"</div>
         </div>
       </div>
     </div> 
