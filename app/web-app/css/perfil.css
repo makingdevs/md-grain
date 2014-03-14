@@ -57,8 +57,6 @@
   background-position: -920px -1000px;
     height: 280px;
     width: 305px;
-  margin-left: 450px;
-
 }
 
 #prueba{
@@ -81,4 +79,20 @@
     position: absolute;
     top: 400px; 
     left: -58px;
+}
+
+/*Piedritas*/
+
+.piedrasNul{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+}
+
+#piedritaPrueba{
+  height: 150px;
+  width: 150px;
+  background: url('../images/perfil/piedrita_prueba.jpg');
+  margin: 30px;
 }
