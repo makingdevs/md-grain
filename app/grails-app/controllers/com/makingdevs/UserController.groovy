@@ -2,6 +2,8 @@ package com.makingdevs
 
 class UserController {
 
+  def springSecurityService
+
   def show() {
     def user = User.findById(params.long('id'),[fetch:['eager':'registrations']])
     [user:user]
@@ -25,7 +27,14 @@ class UserController {
   }
 
   def perfilUser(){
+    def usuarioActual = springSecurityService.currentUser
+    println usuarioActual.registrations.scheduledCourse.course
+    [usuarioActual:usuarioActual.getUsername()]
+  }
 
+  def piedritas(){
+    if (params?.check) render(template: 'piedritas1')
+    else render(template: 'piedritas2')
   }
   
 }
