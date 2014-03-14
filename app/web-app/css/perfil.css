@@ -4,6 +4,12 @@
   padding-bottom:20px;
 }
 
+#usuario{
+  position: absolute;
+    top: 190px; 
+    left: 195px;
+}
+
 #fondo{
   background: url('../images/perfil/fondo.jpg');
 }
@@ -17,6 +23,7 @@
   background-position: -300px -1px;
     height: 300px;
     width: 660px;
+    position: relative;
 }
 
 #cuerpo{
@@ -29,6 +36,7 @@
 }
 
 #separador{
+  height: 150px;
   background-position: -10px -835px;
     height: 150px;
     width: 1171px;
@@ -62,7 +70,7 @@
     height: 340px;
     width: 460px;
     position: absolute;
-    top: 50px; 
+    top: 150px; 
     left: -48px;
 }
 
@@ -71,6 +79,6 @@
     height: 210px;
     width: 460px;
     position: absolute;
-    top: 300px; 
+    top: 400px; 
     left: -58px;
 }

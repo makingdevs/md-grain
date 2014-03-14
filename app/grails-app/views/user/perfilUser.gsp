@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <meta name="layout" content="venera"/>
+    <meta name="layout" content="veneraWithoutFooter"/>
     <title>Edición de datos</title>
     <r:require modules="perfil"/>
   </head>
@@ -14,6 +14,9 @@
       <div class="row-fluid" id="cabezera">
         <div class="offset2 span10">
           <div id="logo">
+            <div id="usuario">
+              <h2>${usuarioActual}</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -28,12 +31,6 @@
           </div>
         </div>
         <div id="separador">
-          jhgjh<br>
-          jhgjh<br>
-          jhgjh<br>
-          jhgjh<br>
-          jhgjh<br>
-          jhgjh<br>
         </div>
       </div>
       <div class="row-fluid" id="pie">
