@@ -16,18 +16,19 @@
           <div id="logo">
             <div id="usuario">
               <h2>${usuarioActual}</h2>
-            </div>
+            </div>s
           </div>
         </div>
       </div>
       <div class="row-fluid" id="cuerpo">
         <div class="row-fluid">
-          <div class="span5">
+          <div class="span4">
             <div id="label1"></div>
             <div id="label2"></div>
           </div>
-          <div class="span7" id="contenedorDerecho">
-
+          <div class="span8" id="contenedorDerecho">
+            <g:render template="piedritas1"/>
+            </div>
           </div>
         </div>
         <div id="separador">
@@ -37,7 +38,10 @@
         <div class="span4">
           <div id="escudo"></div>
         </div>
-        <div class="span8">
+        <div class="span4">
+          
+        </div>
+        <div class="span4">
           <div id="estrella"</div>
         </div>
       </div>
