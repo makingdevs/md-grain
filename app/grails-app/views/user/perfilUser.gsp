@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta name="layout" content="veneraWithoutFooter"/>
     <title>Edición de datos</title>
     <r:require modules="perfil"/>
   </head>
-
   <body>
-
   <div id="fondo">
     <div class="container">
       <div class="row-fluid" id="cabezera">
@@ -16,7 +13,7 @@
           <div id="logo">
             <div id="usuario">
               <h2>${usuarioActual}</h2>
-            </div>s
+            </div>
           </div>
         </div>
       </div>
@@ -28,7 +25,6 @@
           </div>
           <div class="span8" id="contenedorDerecho">
             <g:render template="piedritas1"/>
-            </div>
           </div>
         </div>
         <div id="separador">
@@ -47,7 +43,5 @@
       </div>
     </div> 
   </div>
-
   </body>
-
 </html>
