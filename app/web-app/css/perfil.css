@@ -4,6 +4,10 @@
   padding-bottom:20px;
 }
 
+#cabe{
+  background-color: #D1EBFD;
+}
+
 #usuario{
   position: absolute;
     top: 190px; 
@@ -14,7 +18,7 @@
   background: url('../images/perfil/fondo.jpg');
 }
 
-#label2,#label1, #estrella, #escudo, #separador, #logo{
+#logo1,#label2,#label1, #estrella, #escudo, #separador, #logo{
   background: url('../images/perfil/sprite_trasparente.png');
 }
 
@@ -26,20 +30,23 @@
     position: relative;
 }
 
+#logo1{
+  background-position: -300px -1px;
+    height: 300px;
+    width: 660px;
+    position: relative;
+}
+
 #cuerpo{
   background-color: white;
   position: relative;
 }
 
-#contenedorDerecho{
-  height: 600px;
-}
-
 #separador{
-  height: 150px;
+  background-color: white;
   background-position: -10px -835px;
     height: 150px;
-    width: 1171px;
+    width: 1171px auto;
 }
 
 #pie{
@@ -90,7 +97,7 @@
   top:100px;
 }
 
-.Null{
+.piedrasNull{
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
@@ -108,6 +115,7 @@
 #piedritaPrueba{
   background: url('../images/perfil/sprite_piedritas.png');
   margin-top: 20px;
+  margin-left: 20px;
 }
 
 #modelo1{

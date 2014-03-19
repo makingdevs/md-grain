@@ -17,19 +17,32 @@
           </div>
         </div>
       </div>
+
+      <div class="row-fluid">
+        <div class="span12" id="cabe">
+          <div class="offset2 span8 offset2" id="logo1"></div>
+        </div>
+      </div>
+
       <div class="row-fluid" id="cuerpo">
-        <div class="row-fluid">
+
           <div class="span4">
             <div id="label1"></div>
             <div id="label2"></div>
           </div>
+
           <div class="span8" id="contenedorDerecho">
-            <g:render template="piedritas1"/>
+              <g:render template="piedritas1"/>
           </div>
-        </div>
-        <div id="separador">
-        </div>
+
       </div>
+
+      <div class="row-fluid">
+        <div id="separador" class="span12">
+      </div>
+
+    </div>
+
       <div class="row-fluid" id="pie">
         <div class="span4">
           <div id="escudo"></div>
