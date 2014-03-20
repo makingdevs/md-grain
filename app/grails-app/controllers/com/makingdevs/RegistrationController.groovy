@@ -10,8 +10,14 @@ class RegistrationController {
   }
 
   def addMe(){
-    registrationService.addUserToScheduledCourse(springSecurityService.currentUser.username, params.id.toLong())
-    redirect controller:"myTraining", model:[scheduledCourseId:params.id.toLong()]
+    def usuarioActual = springSecurityService.currentUser
+    if (usuarioActual) {
+      registrationService.addUserToScheduledCourse(springSecurityService.currentUser.username, params.id.toLong())
+      redirect controller:"myTraining", model:[scheduledCourseId:params.id.toLong()]
+    }else{
+      redirect(controller:"login")
+    }
+    
   }
 
   def all(){
