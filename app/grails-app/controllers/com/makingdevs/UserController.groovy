@@ -29,13 +29,9 @@ class UserController {
   def perfilUser(){
     def usuarioActual = springSecurityService.currentUser
     def list=Course.getAll()
-    usuarioActual.registrations.scheduledCourse.course.each{curso->
-      if(curso in list)
-      println curso
-    }
-
     [usuarioActualName:usuarioActual.getUsername(),
-    usuarioActual:usuarioActual]
+    usuarioActual:usuarioActual,
+    cursosUser:usuarioActual.registrations.scheduledCourse.course.courseKey]
   }
 
   def piedritas(){
