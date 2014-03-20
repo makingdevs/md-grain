@@ -24,13 +24,16 @@
     <p id="text">Lambda</p>
   </div>
   <div id="modelo21" class="span3">
-    <p id="text">Aplicaciones web con Springframework y jQuery</p>
+    <p id="text"></p>
   </div>
   <div id="modelo22" class="span3">
     <p id="text">Diseño de aplicaciones con Spring 3/4</p>
   </div>
   <div id="modelo23" class="span3">
     <p id="text">El lenguaje dinámico Groovy</p>
+  </div>
+  <div id="modelo24" class="span3">
+    <p id="text">Gradle</p>
   </div>
 </div>
 <g:remoteLink class="btn btn-info" controller="user" action="piedritas" update="contenedorDerecho" params="[check:'true']" style="margin-top:15px;" ><i class="icon-backward"/> Anterior</g:remoteLink>
