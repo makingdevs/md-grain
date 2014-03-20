@@ -2,7 +2,9 @@
   background: url('../images/perfil/fondo.jpg');
 }
 
-#logo,#label2,#label1, #estrella, #escudo, #separador{
+#logo,#label2,#label1, 
+#estrella,#escudo,#separador,
+#estrellitas,#iconos{
   background: url('../images/perfil/sprite_trasparente.png');
 }
 
@@ -30,21 +32,27 @@
 }
 
 #label1{
-  background-position: -265px -475px;
-    height: 340px;
-    width: 460px;
+  background-position: -254px -390px;
+    height: 320px;
+    width: 378px;
     position: absolute;
-    top: 150px; 
-    left: -48px;
+    top: 50px; 
+    left: -39px;
 }
 
 #label2{
-  background-position: -784px -475px;
-    height: 210px;
-    width: 460px;
+  background-position: -817px -433px;
+    height: 191px;
+    width: 383px;
     position: absolute;
-    top: 400px; 
-    left: -58px;
+    top: 390px; 
+    left: -28px;
+}
+
+#questionable{
+  position: absolute;
+    top: 55px; 
+    left: 10px;
 }
 
 #separador{
@@ -56,19 +64,60 @@
 
 #pie{
   background-color: #a7d7fc;
+  position: relative;
 }
 
 #escudo{
-  background-position: -350px -1010px;
-    height: 310px;
-    width: 394px;
+  background-position: -1px -1136px;
+    height: 180px;
+    width: 287px;
+    margin-top: 39px;
     margin-bottom: 0px;
 }
 
+#estrellitas{
+  background-position: -384px -1002px;
+    height: 220px;
+    width: 426px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
 #estrella{
-  background-position: -920px -1000px;
-    height: 280px;
-    width: 305px;
+  background-position: -981px -1046px;
+    height: 202px;
+    width: 212px;
+}
+
+#iconos{
+  background-position: -686px -644px;
+    height: 108px;
+    width: 38px;
+  position: absolute;
+    top: 50px; 
+    left: 440px;
+}
+
+#facebook{
+  position: absolute;
+    top: 58px; 
+    left: 490px;
+}
+
+#twitter{
+  position: absolute;
+    top: 90px; 
+    left: 490px;
+}
+
+#youtube{
+  position: absolute;
+    top: 122px; 
+    left: 490px;
+}
+
+.colorLink{
+  color:#FFFFFF;
 }
 
 /*Piedritas*******************************************************/
@@ -94,7 +143,7 @@
 #modelo13,#modelo14,#modelo15,
 #modelo16,#modelo17,#modelo18,
 #modelo19,#modelo20,#modelo21,
-#modelo22,#modelo23,
+#modelo22,#modelo23,#modelo24,
 #piedritaPrueba{
   background: url('../images/perfil/sprite_piedritas.png');
   margin-top: 20px;
@@ -260,5 +309,12 @@
     height: 150px;
     width: 150px;
   background-color: #e7c78a;
+  position: relative;
+}
+#modelo24{
+  background-position: -112px -147px;
+    height: 150px;
+    width: 150px;
+  background-color: #b8e9cb;
   position: relative;
 }
