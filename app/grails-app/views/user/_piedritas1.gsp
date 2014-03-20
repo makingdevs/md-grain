@@ -1,15 +1,15 @@
 <div class="row-fluid">
   <div id="modelo1" class="span3">
-    <p id="text">20 Preguntas correctas</p>
+    <p id="text"></p>
   </div>
   <div id="modelo2" class="span3">
-    <p id="text">Tu primer custionario</p>
+    <p id="text"></p>
   </div>
   <div id="modelo3" class="span3">
-    <p id="text">50 Preguntas correctas</p>
+    <p id="text"></p>
   </div>
   <div id="modelo4" class="span3">
-    <p id="text">50 Preguntas correctas</p>
+    <p id="text"></p>
   </div>
   <div id="modelo5" class="span3">
     <p id="text">Desarrollo web con Javascript y jQuery</p>
@@ -33,7 +33,7 @@
     <p id="text"></p>
   </div>
   <div id="modelo12" class="span3">
-    <p id="text"></p>
+    <p id="text">Aplicaciones web con Springframework y jQuery</p>
   </div>
 </div>  
 <g:remoteLink class="btn btn-info" controller="user" action="piedritas" update="contenedorDerecho" style="margin-top:15px;">Siguiente <i class="icon-forward"></i></g:remoteLink>
