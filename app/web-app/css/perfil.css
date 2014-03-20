@@ -1,11 +1,21 @@
+#fondo{
+  background: url('../images/perfil/fondo.jpg');
+}
+
+#logo,#label2,#label1, #estrella, #escudo, #separador{
+  background: url('../images/perfil/sprite_trasparente.png');
+}
+
 #cabezera{
   padding-top: 30px;
   background-color: #D1EBFD;
-  padding-bottom:20px;
 }
 
-#cabe{
-  background-color: #D1EBFD;
+#logo{
+  background-position: -300px -1px;
+    height: 300px;
+    width: 660px;
+    position: relative;
 }
 
 #usuario{
@@ -14,32 +24,27 @@
     left: 195px;
 }
 
-#fondo{
-  background: url('../images/perfil/fondo.jpg');
-}
-
-#logo1,#label2,#label1, #estrella, #escudo, #separador, #logo{
-  background: url('../images/perfil/sprite_trasparente.png');
-}
-
-#logo{
-  margin-left: 40px;
-  background-position: -300px -1px;
-    height: 300px;
-    width: 660px;
-    position: relative;
-}
-
-#logo1{
-  background-position: -300px -1px;
-    height: 300px;
-    width: 660px;
-    position: relative;
-}
-
 #cuerpo{
   background-color: white;
   position: relative;
+}
+
+#label1{
+  background-position: -265px -475px;
+    height: 340px;
+    width: 460px;
+    position: absolute;
+    top: 150px; 
+    left: -48px;
+}
+
+#label2{
+  background-position: -784px -475px;
+    height: 210px;
+    width: 460px;
+    position: absolute;
+    top: 400px; 
+    left: -58px;
 }
 
 #separador{
@@ -64,28 +69,6 @@
   background-position: -920px -1000px;
     height: 280px;
     width: 305px;
-}
-
-#prueba{
-  height: 600px
-}
-
-#label1{
-  background-position: -265px -475px;
-    height: 340px;
-    width: 460px;
-    position: absolute;
-    top: 150px; 
-    left: -48px;
-}
-
-#label2{
-  background-position: -784px -475px;
-    height: 210px;
-    width: 460px;
-    position: absolute;
-    top: 400px; 
-    left: -58px;
 }
 
 /*Piedritas*******************************************************/
