@@ -11,7 +11,7 @@
   <div id="modelo4" class="span3 piedrasNull">
     <p id="text"></p>
   </div>
-  <g:if test="${cursosUser.contains('JAVASCRIPT-JQUERY')}">
+  <g:if test="${cursosUser?.contains('JAVASCRIPT-JQUERY')}">
     <div id="modelo5" class="span3">
       <p id="text">Desarrollo web con Javascript y jQuery</p>
     </div>
@@ -21,7 +21,7 @@
       <p id="text">Desarrollo web con Javascript y jQuery</p>
     </div>
   </g:else>
-  <g:if test="${cursosUser.contains('AGILE-ESSENTIALS')}"> 
+  <g:if test="${cursosUser?.contains('AGILE-ESSENTIALS')}"> 
     <div id="modelo6" class="span3">
       <p id="text">Técnicas y métodos ágiles</p>
     </div>
@@ -31,7 +31,7 @@
       <p id="text">Técnicas y métodos ágiles</p>
     </div>
   </g:else>
-  <g:if test="${cursosUser.contains('JAVASCRIPT-EMBERJS')}"> 
+  <g:if test="${cursosUser?.contains('JAVASCRIPT-EMBERJS')}"> 
       <div id="modelo7" class="span3">
       <p id="text">Single Page Applications con EmberJS</p>
     </div>
@@ -41,7 +41,7 @@
       <p id="text">Single Page Applications con EmberJS</p>
     </div>
   </g:else>
-  <g:if test="${cursosUser.contains('SPRING-SECURITY')}"> 
+  <g:if test="${cursosUser?.contains('SPRING-SECURITY')}"> 
     <div id="modelo8" class="span3">
       <p id="text">Seguridad en aplicaciones Java con Spring Security</p>
     </div>
@@ -51,7 +51,7 @@
       <p id="text">Seguridad en aplicaciones Java con Spring Security</p>
     </div>
   </g:else>
-  <g:if test="${cursosUser.contains('SPRING-DATA_ACCESS')}"> 
+  <g:if test="${cursosUser?.contains('SPRING-DATA_ACCESS')}"> 
     <div id="modelo9" class="span3">
       <p id="text">Acceso a datos con Spring 3/4</p>
     </div>
@@ -61,7 +61,7 @@
       <p id="text">Acceso a datos con Spring 3/4</p>
     </div>
   </g:else>
-  <g:if test="${cursosUser.contains('GRAILS')}">
+  <g:if test="${cursosUser?.contains('GRAILS')}">
     <div id="modelo10" class="span3">
       <p id="text">Desarrollo de aplicaciones con Grails</p>
     </div>
@@ -74,7 +74,7 @@
   <div id="modelo11" class="span3 piedrasNull">
     <p id="text"></p>
   </div>
-  <g:if test="${cursosUser.contains('SPRING-WEBJQUERY')}">
+  <g:if test="${cursosUser?.contains('SPRING-WEBJQUERY')}">
     <div id="modelo12" class="span3">
       <p id="text">Aplicaciones web con Springframework y jQuery</p>
     </div>
