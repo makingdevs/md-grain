@@ -20,8 +20,13 @@
         <div class="span4" id="contenedorIzquierdo">
           <div id="label1"></div>
           <div id="label2"></div>
+          <div id="datos">
+            <g:render template="../perfil/header" model="[usuarioActual:usuarioActual]"/>
+            <i class="icon-time"> Joined on <g:formatDate format="MMM d, yyyy" date="${usuarioActual.perfil.dateCreated}"/></i>
+          </div>
           <div id="questionable">
-            <g:showQuestionaryForThisUser currentUser="${usuarioActual}"/>
+            <h5>Evaluaciones Ralizadas:</h5>
+            <g:showListQuestionaryRating instance="${usuarioActual}"/>
           </div>
         </div>
 
@@ -30,7 +35,7 @@
         </div>
       </div>
       <div class="row-fluid" id="questionableResponsive">
-        <g:showQuestionaryForThisUser currentUser="${usuarioActual}"/>
+        <g:showListQuestionaryRating instance="${usuarioActual}"/>
       </div>
 
       <div class="row-fluid">
