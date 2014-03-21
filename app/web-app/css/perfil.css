@@ -1,5 +1,3 @@
-
-
 #fondo{
   background: url('../images/perfil/fondo.jpg');
 }
@@ -52,10 +50,16 @@
     left: -28px;
 }
 
+#datos{
+  position: absolute;
+    top: 73px; 
+    left: -20px;
+}
+
 #questionable{
   position: absolute;
-    top: 55px; 
-    left: 10px;
+    top: 400px; 
+    left: -20px;
 }
 
 #separador{
@@ -327,6 +331,9 @@
   background-color: #b8e9cb;
   position: relative;
 }
+
+/* Media queries ****************************************/
+
 @media (max-width: 1200px) { 
   #estrella{
     display:none;
