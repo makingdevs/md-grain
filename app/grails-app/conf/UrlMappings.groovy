@@ -30,7 +30,7 @@ class UrlMappings {
 
 	  name test: "/test/$action?"(controller:'questionaryUser')
 
-	  name perfil: "/perfil"{
+	  name prueba: "/developer/$username?"{
  			controller='user'
  			action= 'perfilUser'
  		}
