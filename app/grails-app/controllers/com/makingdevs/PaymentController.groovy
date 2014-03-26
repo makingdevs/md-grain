@@ -35,7 +35,7 @@ class PaymentController {
       }
     }
     registrations*.pagos.flatten().each { p ->
-      comprobanteService.aprobarPago(p.transactionId,newDate(),"PAYPAL")
+      comprobanteService.aprobarPago(p.transactionId,new Date(),"PAYPAL")
     }
     registrations*.registrationStatus = RegistrationStatus.INSCRIBED_AND_PAYED
     [registrations:registrations]
