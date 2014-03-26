@@ -20,21 +20,6 @@ modules = {
     dependsOn 'venera'
   }
 
-  syntaxhighlighter{
-    resource url:'js/syntaxhighlighter/shCore.css'
-    resource url:'js/syntaxhighlighter/shThemeDefault.css'
-    resource url:'js/syntaxhighlighter/configSyntax.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushJScript.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushCss.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushGroovy.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushJava.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushRuby.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushPython.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushSql.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushXml.js'
-    resource url:'js/syntaxhighlighter/archivosJS/shBrushScala.js'
-  }
-
   wysihtml5 {
     dependsOn 'jquery'
     resource url:'js/wysihtml5/img/glyphicons-halflings.png'
