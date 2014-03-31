@@ -25,31 +25,34 @@
               <li>
                 <g:link controller="home" action="contact">Contacto</g:link>
               </li>
-
               <sec:ifLoggedIn>
-              <li>
-                <g:link controller="myTraining" action="index">Mi entrenamiento</g:link>
-              </li>
-              <li>
-                <g:link controller="perfil">Mi perfil</g:link>
-              </li>
-              <!--li>
-                <g:link mapping="myPayments">Pagos</g:link>
-              </li-->
-              <li>
-                <g:link controller="logout">Salir</g:link>
-              </li>
+                <!--li>
+                  <g:link mapping="myPayments">Pagos</g:link>
+                </li-->
+                <li class="dropdown">
+                  <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                    <sec:ifLoggedIn>
+                      <sec:loggedInUserInfo field="username"/>
+                    </sec:ifLoggedIn>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                    <li><g:link controller="perfil">Mi perfil</g:link></li>
+                    <li><g:link controller="myTraining" action="index">Mi entrenamiento</g:link></li>
+                    <li class="divider"></li>
+                    <li><g:link controller="logout">Salir</g:link></li>
+                  </ul>
+                </li>
               </sec:ifLoggedIn>
-            </ul>
-            <div class='top-account-control visible-desktop'>
               <sec:ifNotLoggedIn>
-                <g:link controller="signUp" class="top-create-account">Crear cuenta</g:link>
-                <g:loginForm/>
+                <div class='top-account-control visible-desktop'>
+                  <g:link controller="signUp" class="top-create-account">Crear cuenta</g:link>
+                  <g:loginForm/>
+                </div>
+                <li class="hidden-desktop"><g:link controller="login" class="top-create-account">Ingresa</g:link></li>
+                <li class="hidden-desktop"><g:link controller="signUp" class="top-create-account">Crear cuenta</g:link></li>
               </sec:ifNotLoggedIn>
-              <sec:ifLoggedIn>
-                <sec:loggedInUserInfo field="username"/>
-              </sec:ifLoggedIn>
-            </div>
+            </ul>
           </div>
         </div>
       </div>
