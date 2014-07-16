@@ -44,6 +44,9 @@ class UrlMappings {
 	  	controller= 'questionary'
 	  	action='answerQuestionary'
 	  }
+	  name questionary: "/textQuestion"{
+	  	controller= 'textQuestionController'
+	  }
 
 		name training: "/training" {
 			controller = 'home'

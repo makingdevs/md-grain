@@ -305,4 +305,6 @@ databaseChangeLog = {
   include file: 'integracion-questionable-plugin.groovy'
 
   include file: 'add-colors-to-course.groovy'
+
+  include file: 'adding-tags-to-question.groovy'
 }
