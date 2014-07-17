@@ -22,10 +22,12 @@ class User implements Questionable {
   static constraints = {
     username blank: false, unique: true, email:true
     password blank: false
+    nickname blank: false
   }
 
   static mapping = {
     password column: '`password`'
+    nickname column: 'nickname'
   }
 
   Set<Role> getAuthorities() {

@@ -307,4 +307,6 @@ databaseChangeLog = {
   include file: 'add-colors-to-course.groovy'
 
   include file: 'adding-tags-to-question.groovy'
+
+  include file: 'adding-nickname-to-user.groovy'
 }
