@@ -22,7 +22,7 @@ class User implements Questionable {
   static constraints = {
     username blank: false, unique: true, email:true
     password blank: false
-    nickname blank: false
+    nickname blank: false, unique: true
   }
 
   static mapping = {
