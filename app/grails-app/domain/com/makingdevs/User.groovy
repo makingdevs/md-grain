@@ -10,6 +10,7 @@ class User implements Questionable {
 
   String username
   String password
+  String nickname
   boolean enabled
   boolean accountExpired
   boolean accountLocked
