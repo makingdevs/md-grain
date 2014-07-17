@@ -11,7 +11,13 @@
       <div class="row-fluid">
         <div class="span12" id="cabezera">
           <div class="span12" id="logo">
-            <h2 id="usuario">${usuarioActualName}</h2>
+            <g:if test="${usuarioActualName.length() > 25}">
+              <h2 class="nombreUsuario">
+            </g:if>
+            <g:else>
+               <h2 class="usuario">
+            </g:else>
+            ${usuarioActualName}</h2>
           </div>
         </div>
       </div>

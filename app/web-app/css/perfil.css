@@ -21,10 +21,16 @@
     position: relative;
 }
 
-#usuario{
+.usuario{
   position: absolute;
-    top: 190px; 
-    left: 195px;
+  top: 190px; 
+  left: 195px;
+}
+
+.nombreUsuario{
+  position: absolute;
+  top: 190px; 
+  left: 135px;
 }
 
 #cuerpo{
