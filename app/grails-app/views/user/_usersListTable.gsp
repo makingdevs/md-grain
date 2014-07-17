@@ -3,6 +3,8 @@
     <tr>
       <th>#</th>
       <th>Nombre</th>
+      <th>Correo</th>
+      <th>Perfil</th>
     </tr>
   </thead>
   <tbody>
@@ -10,9 +12,17 @@
     <tr>
       <td>${indice + 1}</td>
       <td>
-        <g:link controller="user" action="show" id="${user.id}">
           ${user.perfil.nombreCompleto()}
-        </g:link>
+      </td>
+      <td>
+        ${user.username} 
+      </td>
+      <td>
+        <g:link controller="user" action="show" id="${user.id}">
+          <button type="submit" class="btn btn-primary">
+            Ver
+          </button>
+        </g:link> 
       </td>
     </tr>
     </g:each>
