@@ -6,7 +6,7 @@ databaseChangeLog = {
         constraints(nullable: "false")
       }
     }
-    sql("update user set nickname=substring(username,1,locate('@',username)-1) where nickname is null")
+    sql("update user set nickname=substring(username,1,locate('@',username)-1) where nickname=''")
   }
 
 }
