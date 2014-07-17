@@ -27,7 +27,8 @@ class UserController {
   }
 
   def perfilUser(){
-    def usuarioActual = User.findWhere(username:params.username)
+    def usuarioActual = User.findWhere(nickname:params.nickname)
+    def nombreCompleto = "${usuarioActual.perfil.nombre ?: ""} ${usuarioActual.perfil.apellidoPaterno ?: ""} ${usuarioActual.perfil.apellidoMaterno ?:""}"
     if (usuarioActual) {
       def list=Course.getAll()
       def cursosTerminados = []
@@ -35,7 +36,7 @@ class UserController {
         if(registros.registrationStatus==RegistrationStatus.FINISHED) 
           cursosTerminados+=registros.scheduledCourse.course.courseKey
       }
-      [usuarioActualName:usuarioActual.getUsername(),
+      [usuarioActualName:nombreCompleto.trim() ?: usuarioActual.nickname,
       usuarioActual:usuarioActual,
       cursosUser:cursosTerminados,
       username:params.username]
