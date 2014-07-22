@@ -368,3 +368,13 @@
   }
 }
 
+.profileVisibility{
+  float:left;
+  margin-right:20px;
+}
+
+.profileVisibility input{
+  vertical-align:5px;
+}
+
+
