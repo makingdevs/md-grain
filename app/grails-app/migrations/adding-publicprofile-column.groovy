@@ -6,6 +6,7 @@ databaseChangeLog = {
         constraints(nullable: "false")
       }
     }
+    sql("update perfil set public_profile=0")
   }
 
 }
