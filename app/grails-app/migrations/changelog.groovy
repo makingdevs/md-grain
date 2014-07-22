@@ -309,4 +309,6 @@ databaseChangeLog = {
   include file: 'adding-tags-to-question.groovy'
 
   include file: 'adding-nickname-to-user.groovy'
+  
+  include-file: 'adding-publicprofile-column.groovy'
 }
