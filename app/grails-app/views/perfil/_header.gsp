@@ -4,6 +4,5 @@
   </a>
   <div class="media-body">
     <h4 class="media-heading">${usuarioActual.perfil.nombre} ${usuarioActual.perfil.apellidoPaterno} ${usuarioActual.perfil.apellidoMaterno}</h4>
-    <i class="icon-user"></i> ${usuarioActual.username}
   </div>
 </div>
