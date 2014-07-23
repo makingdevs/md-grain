@@ -85,4 +85,4 @@
     </div>
   </g:else>
 </div>  
-<g:remoteLink class="btn btn-info" controller="user" action="piedritas" update="contenedorDerecho" style="margin-top:15px;" params="[cursosUser:cursosUser,username:username]">Siguiente <i class="icon-forward"></i></g:remoteLink>
+<g:remoteLink class="btn btn-info" controller="user" action="piedritas" update="contenedorDerecho" style="margin-top:15px;" params="[cursosUser:cursosUser]">Siguiente <i class="icon-forward"></i></g:remoteLink>

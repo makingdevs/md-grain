@@ -85,5 +85,5 @@
     </div>
   </g:else>
 </div>
-<g:link class="btn btn-info" controller="user" action="perfilUser" params="[username:params.username]"style="margin-top:15px;" ><i class="icon-backward"/> Anterior</g:link>
+<g:remoteLink class="btn btn-info" controller="user" action="piedritas" update="contenedorDerecho" params="[check:true]" style="margin-top:15px;" ><i class="icon-backward"/> Anterior</g:remoteLink>
 
