@@ -5,6 +5,7 @@
     <meta name="layout" content="venera"/>
     <title>Edición de datos</title>
     <r:require modules="telefono" plugin="profile"/>
+    <r:require module="perfil"/>
   </head>
 
   <body>
@@ -28,8 +29,11 @@
             <hr/>
             <g:render template="passwordUpdate" model="[usuarioActual:usuarioActual]"/>
           </div>
+          <div class="white-card">
+            <g:render template="profileVisibility" model="[usuarioActual:usuarioActual]"/>
+          </div>
         </div>
-
+        
         <div class="span6">
           <div class="white-card">
             <g:render template="/telefono/list" model="[telefonos:usuarioActual.perfil.telefonos]" />
