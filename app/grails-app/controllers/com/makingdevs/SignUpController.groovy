@@ -40,6 +40,7 @@ class UserCommand {
   String username
   String password
   String confirmPassword
+  String nickname = "${System.currentTimeMillis()}"
 
   static constraints = {
     nombre blank:false
