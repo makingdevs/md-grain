@@ -3,6 +3,7 @@ package com.makingdevs
 class PerfilController {
 
   def springSecurityService
+  def userService
 
   def index(){
     def usuarioActual = springSecurityService.currentUser
@@ -10,10 +11,7 @@ class PerfilController {
   }
 
   def update(){
-    def usuarioActual = springSecurityService.currentUser
-    usuarioActual.nickname = params.nickname
-    usuarioActual.perfil.publicProfile = (usuarioActual.nickname ?  true : false)
-    usuarioActual.save(flush:true)
+    def usuarioActual = userService.updateNickNameAndProfileInfo(params.nickname)
     render template:'/perfil/profileVisibility',model:[usuarioActual:usuarioActual]
   } 
 }

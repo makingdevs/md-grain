@@ -8,10 +8,21 @@
       <button class="btn">
         <i class="icon icon-save"></i>
       </button>
-      <a href="#" class="btn">
-        <i class="icon icon-link"></i>
-      </a>
+      <g:if test="${usuarioActual.nickname && !usuarioActual.hasErrors()}">
+        <g:link controller="user" action="perfilUser" class="btn" params="[nickname:usuarioActual.nickname]">
+          <i class="icon icon-link"></i>
+        </g:link>
+      </g:if>
     </div>
+  </div>
+  <div>
+    <g:hasErrors bean="${usuarioActual}">
+      <g:eachError var="err" bean="${usuarioActual}">
+        <div class="alert alert-danger">
+          <g:message error="${err}"/>
+        </div>
+      </g:eachError>
+    </g:hasErrors> 
   </div>
 </div> 
 </g:formRemote>
