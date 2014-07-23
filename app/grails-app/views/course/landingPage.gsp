@@ -63,7 +63,7 @@
                 <i class="icon-keyboard"></i>
                 ¿Estás listo para tomar el curso?
               </h3>
-              <g:link class="btn btn-large btn-block btn-success" action="firstEvaluate" controller="questionaryUser" params="[courseKey:course.courseKey,url:request.forwardURI]">Evaluación previa
+              <g:link class="btn btn-large btn-block btn-success" action="firstEvaluate" controller="questionaryUser" params="[courseKey:course.courseKey,url:request.forwardURI]">Evaluación previa (próximamente)
               </g:link>
             </div>
             <div class="blog-categories widget-tp">
