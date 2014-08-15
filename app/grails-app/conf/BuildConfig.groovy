@@ -74,7 +74,7 @@ grails.project.dependency.resolution = {
     compile ":grails-melody:1.48.0"
     compile ":database-migration:1.3.8"
     compile ':cache:1.1.1'
-    compile ":mail:1.0.1"
+    compile ":mail:1.0.7"
     compile 'com.makingdevs:profile:0.1.61'
     compile 'com.payable:payable:0.2.17'
     compile ':questionable:0.1.11'
