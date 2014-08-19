@@ -8,16 +8,16 @@ class NotificationService {
   def mailService
   def springSecurityService  
  
-  def sendCourseInformation(){
+  def sendCourseInformation(def registrationId){
     def currentUser = springSecurityService.currentUser
+    def registration = Registration.findById(registrationId)
 
     mailService.sendMail {
       to currentUser.username
       from "info@makingdevs.com"
       subject ". Información del curso ."
-      body(view:"/notification/courseInformation")
+      body(view:"/notification/courseInformation", model:[scheduledCourse:registration.scheduledCourse])
     }
-
   }
 
   def findRegistrationAndSendPaymentsInstructions(registrationId){
