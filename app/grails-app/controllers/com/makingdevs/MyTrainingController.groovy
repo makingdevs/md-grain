@@ -11,7 +11,6 @@ class MyTrainingController {
   def index() {
     def usuarioActual = springSecurityService.currentUser
     def registrations = Registration.findAllByUser(usuarioActual,[fetch:[scheduledCourse:'join']])
-    notificationService.sendCourseInformation()
     [registrations:registrations]
   }
 
