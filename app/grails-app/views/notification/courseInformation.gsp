@@ -28,10 +28,16 @@
     </style>
   </head>
   <body>
-  <h1>
-    Instrucciones para realizar tu pago
-  </h1>
-  <p align="justify" style="font-size:12px; padding: 0px 20px;">
-  Te has registrado al curso: 
+  <div class="row">
+    <div align="justify" style="font-size:12px; padding: 0px 20px;">
+      ¡Bienvenido! 
+      <br/>
+      
+      Te has registrado al curso: <b>${scheduledCourse?.course.name}</b> que inicia el día <b><g:formatDate format="dd-MM-yyyy" date="${scheduledCourse?.beginDate}" /></b> 
+      <br/>
+      El costo del curso es de ${scheduledCourse?.esquemaDePago.cantidadDePago}.
+       
+    </div>
+  </div>
   </body>
 </html> 
