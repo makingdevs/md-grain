@@ -124,7 +124,7 @@ background: -ms-linear-gradient(top, #88bfe8 0%,#70b0e0 100%); /* IE10+ */
 background: linear-gradient(to bottom, #88bfe8 0%,#70b0e0 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', endColorstr='#70b0e0',GradientType=0 ); /* IE6-9 */; margin:10px;">
                                   <h2>
-                                    Aprovecha hasta un <g:formatNumber number="${esquemaDePago.descuentos*.porcentaje.sum()}" format="###" /> % de descuento
+                                    Aprovecha hasta un <g:formatNumber number="${esquemaDePago?.descuentos*.porcentaje?.sum()}" format="###" /> % de descuento
                                   </h2>
                                 </td>
                               </tr>
@@ -149,7 +149,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', end
                                             <a href="${grailsApplication.config.grails.serverURL}/training/${sc.course.courseKey.toLowerCase()}" style="text-decoration:none;">
                                               <img alt="image_${sc.course.courseKey.toLowerCase()}" src="${grailsApplication.config.grails.serverURL}/mail/new/${sc.course.courseKey.toLowerCase()}.png" style="border: 0px solid ;" align="left" hspace="10" width="98">
                                             </a>
-                                            ${sc.course.overview.substring(0,sc.course.overview.indexOf('<br>'))}
+                                            <g:set var="overview" value="${sc.course.overview}" />
+                                            ${overview.substring(0,overview.indexOf('<br>')>0?overview.indexOf('<br>'):overview.size())}
                                           </p>
                                           <p style="font-size:13px;">
                                             <strong>
