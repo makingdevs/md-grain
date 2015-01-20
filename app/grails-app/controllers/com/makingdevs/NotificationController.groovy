@@ -34,7 +34,7 @@ class NotificationController {
 
   def scheduledCourses(){
     def scheduledCourseList = ScheduledCourse.findAllByBeginDateGreaterThan(new Date(),[fetch:['eager':'course']])
-    def esquemaDePago = EsquemaDePago.findById(scheduledCourseList*.esquemaDePago.first().id,[fetch:['eager':'descuentos']])
+    def esquemaDePago = scheduledCourseList?EsquemaDePago.findById(scheduledCourseList*.esquemaDePago?.first().id,[fetch:['eager':'descuentos']]):null
     [scheduledCourseList:scheduledCourseList,esquemaDePago:esquemaDePago]
   }
 }
