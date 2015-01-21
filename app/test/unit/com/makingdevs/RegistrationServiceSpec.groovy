@@ -34,6 +34,12 @@ class RegistrationServiceSpec extends Specification {
       service.pagoService = pagoServiceMock.createMock()
       service.descuentoAplicableService = descuentoAplicableServiceMock.createMock()
 
+      def notificationServiceMock = mockFor(NotificationService)
+      notificationServiceMock.demand.incribeStudentToCourse{username, scheduledCourseId ->
+        true
+      }
+      service.notificationService = notificationServiceMock.createMock()
+
     when:
       def registration = service.addUserToScheduledCourse("me@me.com", 1L)
     then:
