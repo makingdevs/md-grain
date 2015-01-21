@@ -53,6 +53,7 @@ grails.project.dependency.resolution = {
 
   dependencies {
     compile 'mysql:mysql-connector-java:5.1.22'
+    compile 'org.mnode.ical4j:ical4j:1.0.6'
   }
 
   plugins {
