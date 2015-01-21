@@ -198,7 +198,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', end
                 <td bgcolor="#d2e6f4" mc:edit="copyright" style="font-weight:400; font-size: 13px; color: #0081C0; font-weight: bold; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 1; vertical-align: middle;">
                   <table>
                     <tr align="center">
-                      <td width="190px" ><p><multiline> © 2014 Makingdevs.com</multiline></p></td>
+                      <td width="190px" ><p><multiline> © 2015 Makingdevs.com</multiline></p></td>
                       <td width="190px" ><img src="${grailsApplication.config.grails.serverURL}/mail/new/logo.gif"></td>
                       <td width="190px" ><p><multiline> Making best code through better developers </multiline></p></td>
                     </tr>
