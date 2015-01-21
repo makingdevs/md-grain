@@ -9,6 +9,7 @@ class RegistrationService {
   def pagoService
   def descuentoAplicableService
   def comprobanteService
+  def notificationService
 
   Registration addUserToScheduledCourse(String username, Long scheduledCourseId) {
     def user = User.findByUsername(username)
@@ -22,7 +23,8 @@ class RegistrationService {
       def descuentosAplicables = descuentoAplicableService.generarParaPagoConEsquemaDePagoConFechaReferencia(scheduledCourse.esquemaDePago.id, pago.fechaDeVencimiento)
       descuentosAplicables.each { da -> descuentoAplicableService.agregarDescuentoAplicableAUnPago(da, pago.id) }
       registration.addToPagos(pago)
-      registration.save()  
+      registration.save()
+      notificationService.incribeStudentToCourse(username,scheduledCourseId)  
     }
     registration
   }
