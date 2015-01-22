@@ -37,7 +37,7 @@ class IcalendarService {
       endDate.set(java.util.Calendar.DAY_OF_MONTH, calendarCourse.get(java.util.Calendar.DAY_OF_MONTH))
       endDate.set(java.util.Calendar.YEAR, calendarCourse.get(java.util.Calendar.YEAR))
       endDate.set(java.util.Calendar.HOUR_OF_DAY, calendarCourse.get(java.util.Calendar.HOUR))
-      endDate.set(java.util.Calendar.MINUTE, 0)  
+      endDate.set(java.util.Calendar.MINUTE, 30)  
       endDate.set(java.util.Calendar.SECOND, 0)
 
       // Create the event
