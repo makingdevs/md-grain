@@ -68,7 +68,6 @@ class IcalendarService {
 
       // Add the event and print
       icsCalendar.getComponents().add(meeting)
-      log.debug"${icsCalendar}"
       icsCalendar.toString()
     }
 }
