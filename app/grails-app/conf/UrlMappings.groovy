@@ -68,6 +68,11 @@ class UrlMappings {
 			action = 'mySessions'
 		}
 
+		name mySessions : "/courseSessionCalendar" {
+			controller = 'attendee'
+			action = 'sessionByMonth'
+		}
+
 		name paypalCancel : "/paypal/cancel" {
 			controller = 'payment'
 			action = 'paypalCancel'
