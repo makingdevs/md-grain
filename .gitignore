@@ -6,3 +6,4 @@ functional/.gradle/
 functional/build/
 functional/.gradletasknamecache
 logs/
+.DS_Store
