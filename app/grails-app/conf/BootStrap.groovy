@@ -3,6 +3,8 @@ import com.makingdevs.Category
 import com.makingdevs.Role
 import com.makingdevs.Requestmap
 import com.payable.Organizacion
+import com.makingdevs.marshaller.*
+import grails.converters.JSON
 
 class BootStrap {
 
@@ -11,11 +13,17 @@ class BootStrap {
     createRoles()
     createRequestMapping()
     createOrganization()
+    createMarshallers()
 
   }
   def destroy = {
   }
 
+  def createMarshallers(){
+    JSON.createNamedConfig('courseCalendar') {
+      it.registerObjectMarshaller(new CourseCalendarMarshaller())
+    }
+  }
   private def createCategoriesAndCourses(){
     if(!Category.count()) {
       def category1 = new Category(name:"Experto en Springframework",description:"Encuentra todos los elementos necesarios para crear aplicaciones robustas y bien diseñadas en la plataforma Java usando la suite de herramientas de Springframework; aprende desde lo esencial hasta los subproyectos de Spring que te permitirán resolver prácticamente cualquier necesidad de negocio.").save(flush:true)
