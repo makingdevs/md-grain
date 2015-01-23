@@ -4,38 +4,26 @@
   <head>
     <meta name="layout" content="veneraWithMenu"/>
     <title>Mis sesiones</title>
+    <r:require module="sessionCalendar"/>
   </head>
-
   <body>
 
   <div class="row-fluid">
-
-    <div class="span12">
-      <h3 class="section-header">Sesiones de curso</h3>
-      <table class="table no-margin table-striped table-bordered">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Curso</th>
-            <th>Fecha</th>
-            <th>Horario</th>
-          </tr>
-        </thead>
-        <tbody>
-          <g:each in="${courseSessions.sort()}" var="cs" status="i">
-            <tr>
-              <td>${i+1}</td>
-              <td>${cs.scheduledCourse.course.name}</td>
-              <td>
-                ${formatDate(date:cs.sessionStartTime,format:"dd - MMMM - yyyy")}
-              </td>
-              <td>
-                <g:formatDate format="HH:mm" date="${cs.sessionStartTime}"/> a <g:formatDate format="HH:mm" date="${cs.sessionEndTime}"/> hrs.
-              </td>
-            </tr>
-          </g:each>
-        </tbody>
-      </table>
+    <div class="span8">
+      <input id="urlCourseSessions" type="hidden" value="${createLink(uri:'/courseSessionCalendar')}">
+      <div id='calendar'></div>
+    </div>
+    <div class="span4">
+      <div class="entry-content-w box-wrapper">
+        <header class="entry-header">
+          <h2 class="entry-title">Sesiones de Cursos</h2>
+        </header>
+        <div class="entry-content">
+          <p>El calendario de la izquierda muestra las fechas de los cursos en donde estás registrado.</p>
+          <h4>Lista de cursos:</h4>
+          <ul id="listCourseSession"></ul>
+        </div>
+      </div>
     </div>
   </div>
   
