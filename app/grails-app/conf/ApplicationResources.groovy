@@ -49,4 +49,17 @@ modules = {
   perfil{
     resource url:'css/perfil.css'
   }
+
+  fullCalendar{
+    resource url:'css/fullcalendar.min.css'
+    resource url:'js/fullcalendar/lib/moment.min.js'
+    resource url:'js/fullcalendar/lib/jquery.min.js'
+    resource url:'js/fullcalendar/fullcalendar.js'
+    resource url:'js/fullcalendar/lang-all.js'
+  }
+
+  sessionCalendar{
+    dependsOn 'fullCalendar'
+    resource url:'js/sessionCalendar/session.calendar.js'
+  }
 }
