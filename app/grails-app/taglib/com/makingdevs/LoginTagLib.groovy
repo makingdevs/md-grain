@@ -42,7 +42,9 @@ class LoginTagLib {
                     <input type='submit' id="submit" class='btn btn-primary' value='Entrar'/>
                   </div>
                 </form>
+                ${facebookAuth.connect()}
               </div>
+
     """
   }
 }
