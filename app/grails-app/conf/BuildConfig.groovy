@@ -80,6 +80,7 @@ grails.project.dependency.resolution = {
     compile 'com.payable:payable:0.2.17'
     compile ':questionable:0.1.11'
     compile ":avatar:0.6.3"
+    compile ":spring-security-facebook:0.15"
 
   }
 }
