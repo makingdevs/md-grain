@@ -148,6 +148,8 @@ grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.makingdev
 grails.plugins.springsecurity.authority.className = 'com.makingdevs.Role'
 grails.plugins.springsecurity.requestMap.className = 'com.makingdevs.Requestmap'
 grails.plugins.springsecurity.securityConfigType = 'Requestmap'
+grails.plugins.springsecurity.facebook.domain.classname='com.makingdevs.FacebookUser'
+grails.plugins.springsecurity.facebook.filter.type='redirect'
 
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
 
