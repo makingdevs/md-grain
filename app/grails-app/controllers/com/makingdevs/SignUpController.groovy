@@ -1,6 +1,5 @@
 package com.makingdevs
 
-import groovy.transform.ToString
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 
 class SignUpController {
@@ -28,28 +27,6 @@ class SignUpController {
       User user = signUpService.registerUserWithUserCommand(userCommand)
       springSecurityService.reauthenticate user.username
       redirect controller:'perfil'
-    }
-  }
-}
-
-@ToString(includeNames=true)
-class UserCommand {
-  String nombre
-  String apellidoPaterno
-  String apellidoMaterno
-  String username
-  String password
-  String confirmPassword
-  String nickname = "${System.currentTimeMillis()}"
-
-  static constraints = {
-    nombre blank:false
-    apellidoPaterno blank:false
-    apellidoMaterno blank:true
-    username email:true, blank: false, unique: true
-    password blank: false
-    confirmPassword blank:false, validator: { val, obj ->
-      if(obj.password != val) return 'userCommand.confirmPassword.validator'
     }
   }
 }
