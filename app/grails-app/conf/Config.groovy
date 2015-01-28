@@ -150,6 +150,7 @@ grails.plugins.springsecurity.requestMap.className = 'com.makingdevs.Requestmap'
 grails.plugins.springsecurity.securityConfigType = 'Requestmap'
 grails.plugins.springsecurity.facebook.domain.classname='com.makingdevs.FacebookUser'
 grails.plugins.springsecurity.facebook.filter.type='redirect'
+grails.plugins.springsecurity.facebook.facebook.permissions='email'
 
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
 

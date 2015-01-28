@@ -67,7 +67,7 @@
                 	</g:link>
                 	</div>
                   <sec:ifNotGranted roles="ROLE_USER">
-                    <facebookAuth:connect />
+                    <facebookAuth:connect permissions="email,user_about_me"/>
                   </sec:ifNotGranted>
                   <sec:ifAllGranted roles="ROLE_USER">
                     Welcome <sec:username/>! (<g:link uri="/j_spring_security_logout">Logout</g:link>)
