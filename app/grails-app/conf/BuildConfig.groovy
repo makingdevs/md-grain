@@ -54,6 +54,10 @@ grails.project.dependency.resolution = {
   dependencies {
     compile 'mysql:mysql-connector-java:5.1.22'
     compile 'org.mnode.ical4j:ical4j:1.0.6'
+    compile ('org.springframework.social:spring-social-core:1.0.1.RELEASE'){
+      excludes "spring-web"
+    }
+    compile 'org.springframework.social:spring-social-facebook:1.0.1.RELEASE'
   }
 
   plugins {
