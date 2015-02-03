@@ -313,4 +313,6 @@ databaseChangeLog = {
   include file: 'adding-publicprofile-column.groovy'
 
 	include file: 'add-domain-facebook.groovy'
+
+	include file: 'adding-domain-twitter.groovy'
 }
