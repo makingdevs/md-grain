@@ -9,7 +9,8 @@
       <div class="row">
         <div class="span9">
           <div class="white-card extra-padding">
-            <g:form action="register">
+            <g:form controller="twitterLogin" action="register">
+              <input name="oauth_verifier" type="hidden" value="${oauth_verifier}"/>
               <fieldset>
                 <div class="row-fluid">
                   <div class="span12">
@@ -19,28 +20,7 @@
                 <div class="row-fluid">
                   <div class="span12">
                     <div class="form-side-info">
-                    <p>Es importante tu <strong>email, nombre y apellido</strong> correctos por que con ellos estaremos expidiendo tus reconocimientos.</p>
-                    <p></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="span2">
-                    <div class="control-group">
-                      <label>Nombre(s)</label>
-                      <input name="nombre" class="span2" placeholder="Tu(s) nombre(s)..." type="text" value="${firstName}">
-                    </div>
-                  </div>
-                  <div class="span2">
-                    <div class="control-group">
-                      <label>Apellido Paterno</label>
-                      <input name="apellidoPaterno" class="span2" placeholder="Apellido paterno" type="text" value="${lastName}">
-                    </div>
-                  </div>
-                  <div class="span2">
-                    <div class="control-group">
-                      <label>Apellido Materno</label>
-                      <input name="apellidoMaterno" class="span2" placeholder="Apellido materno" type="text">
+                    <p>Es importante tu <strong>correo electrónico</strong> porque con él estaremos notificandote nuevos eventos.</p>
                     </div>
                   </div>
                 </div>
@@ -51,7 +31,7 @@
                       <div class="controls">
                         <div class="input-prepend">
                           <span class="add-on"><i class="icon-envelope"></i></span>
-                          <input name="username" class="span4" placeholder="mail@mail.com" type="text">
+                          <input name="username" class="span4" placeholder="mail@mail.com" type="email" required>
                         </div>
                       </div>
                     </div>
