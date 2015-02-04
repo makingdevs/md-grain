@@ -47,8 +47,8 @@ class SocialTwitterService {
     [
     token:aToken,
     accessToken:accessToken,
-    firstName:profile.name,
-    lastName:profile.screenName,
+    name:profile.name,
+    screenName:profile.screenName,
     id:profile.id,
 
     ]
@@ -56,27 +56,24 @@ class SocialTwitterService {
 
   def createTwitterUser(email, token, oauthVerifier){
     def profile = authenticateTwitterUser(token, oauthVerifier)
-    def twitterUser = TwitterUser.findByTwitterId(profile.id)
-    if(twitterUser){
-      twitterUser.token = profile.token
-      twitterUser.tokenSecret = profile.accessToken
-    }else{
-      def userCommand = new UserCommand()
-      userCommand.nombre = profile.firstName
-      userCommand.apellidoPaterno = profile.lastName
-      userCommand.apellidoMaterno = ""
-      userCommand.username = email
-      userCommand.password = profile.accessToken
-      userCommand.nickname = "${System.currentTimeMillis()}"
-      twitterUser = new TwitterUser()
-      twitterUser.username = profile.screenName
-      twitterUser.twitterId = profile.id
-      twitterUser.token = profile.token
-      twitterUser.tokenSecret = profile.accessToken
-      twitterUser.user = signUpService.registerUserWithUserCommand(userCommand)
-    }
-    twitterUser.save()
-    log.debug "twitterUser.username ---> ${twitterUser.username}"
+    def twitterUser = new TwitterUser()
+
+    def userCommand = new UserCommand()
+    userCommand.nombre = profile.name
+    userCommand.apellidoPaterno = profile.screenName
+    userCommand.apellidoMaterno = ""
+    userCommand.username = email
+    userCommand.password = profile.accessToken
+    userCommand.nickname = "${System.currentTimeMillis()}"
+
+    twitterUser.username = profile.screenName
+    twitterUser.twitterId = profile.id
+    twitterUser.token = profile.token
+    twitterUser.tokenSecret = profile.accessToken
+
+    def userDB = User.findByUsername(email)
+    twitterUser.user = userDB?:signUpService.registerUserWithUserCommand(userCommand)
+    twitterUser.save(failOnError: true)
     twitterUser
   }
 }
