@@ -100,6 +100,10 @@ class UrlMappings {
 			controller = 'twitterLogin'
 			action = 'callback'
 		}
+		name scheduledCourseInfo : "/twitterRegister" {
+			controller = 'twitterLogin'
+			action = 'register'
+		}
 		name nextTraining : "/nextTraining" {
 			controller = 'notification'
 			action = 'scheduledCourses'
