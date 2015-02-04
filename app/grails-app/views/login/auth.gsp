@@ -72,8 +72,7 @@
                   <sec:ifAllGranted roles="ROLE_USER">
                     Welcome <sec:username/>! (<g:link uri="/j_spring_security_logout">Logout</g:link>)
                   </sec:ifAllGranted>
-                  <a href="${createLink(controller:'twitterLogin')}">ir a twitter</a>
-                  
+                  <a href="${createLink(controller:'twitterLogin')}" class="btn btn-primary btn-sm"><i class="icon-twitter"></i> twitter</a>
                 </div>
               </div>
             </fieldset>

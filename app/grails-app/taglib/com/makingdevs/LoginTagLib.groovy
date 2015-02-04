@@ -43,6 +43,7 @@ class LoginTagLib {
                   </div>
                 </form>
                 ${facebookAuth.connect(permissions:'email,user_about_me')}
+                <a href='${createLink(controller:'twitterLogin')}' class='btn btn-primary btn-sm'><i class='icon-twitter'></i> twitter</a>
               </div>
 
     """
