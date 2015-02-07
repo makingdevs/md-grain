@@ -22,7 +22,8 @@ class FacebookAuthService {
   	userCommand.username = fbProfile.email
   	userCommand.password = token.accessToken?.accessToken
   	userCommand.nickname = "${System.currentTimeMillis()}"
-  	User user = signUpService.registerUserWithUserCommand(userCommand)
+    def userDB = User.findByUsername(fbProfile.email)
+  	User user = userDB?:signUpService.registerUserWithUserCommand(userCommand)
   	user
   }
 
