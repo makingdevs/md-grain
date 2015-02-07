@@ -73,6 +73,7 @@
                     Welcome <sec:username/>! (<g:link uri="/j_spring_security_logout">Logout</g:link>)
                   </sec:ifAllGranted>
                   <a href="${createLink(controller:'twitterLogin')}" class="btn btn-primary btn-sm"><i class="icon-twitter"></i> twitter</a>
+                  <a href="${createLink(controller:'githubLogin')}" class="btn btn-default btn-sm"><i class="icon-github"></i> github</a>
                 </div>
               </div>
             </fieldset>
