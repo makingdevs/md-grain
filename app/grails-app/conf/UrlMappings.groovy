@@ -92,17 +92,25 @@ class UrlMappings {
 			controller = 'registration'
 			action = 'index'
 		}
-		name scheduledCourseInfo : "/twitterLogin" {
+		name twitterLogin : "/twitterLogin" {
 			controller = 'twitterLogin'
 			action = 'index'
 		}
-		name scheduledCourseInfo : "/twitterCallback" {
+		name twitterCallback : "/twitterCallback" {
 			controller = 'twitterLogin'
 			action = 'callback'
 		}
-		name scheduledCourseInfo : "/twitterRegister" {
+		name twitterRegister : "/twitterRegister" {
 			controller = 'twitterLogin'
 			action = 'register'
+		}
+		name githubLogin : "/githubLogin" {
+			controller = 'githubLogin'
+			action = 'index'
+		}
+		name githubCallback : "/githubCallback" {
+			controller = 'githubLogin'
+			action = 'callback'
 		}
 		name nextTraining : "/nextTraining" {
 			controller = 'notification'
