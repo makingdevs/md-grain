@@ -112,6 +112,10 @@ class UrlMappings {
 			controller = 'githubLogin'
 			action = 'callback'
 		}
+		name githubRegister : "/githubRegister" {
+			controller = 'githubLogin'
+			action = 'register'
+		}
 		name nextTraining : "/nextTraining" {
 			controller = 'notification'
 			action = 'scheduledCourses'
