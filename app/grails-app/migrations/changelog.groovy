@@ -315,4 +315,6 @@ databaseChangeLog = {
 	include file: 'add-domain-facebook.groovy'
 
 	include file: 'adding-domain-twitter.groovy'
+
+	include file: 'add-domain-github.groovy'
 }
