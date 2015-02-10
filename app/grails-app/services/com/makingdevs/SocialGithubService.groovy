@@ -29,6 +29,7 @@ class SocialGithubService {
     String authorizeUrl = oauthOperations.buildAuthorizeUrl(GrantType.AUTHORIZATION_CODE,parameters)
     authorizeUrl
   }
+
   def authenticateGithubUser(code){
     GitHubConnectionFactory connectionFactory = new GitHubConnectionFactory(
         grailsApplication.config.social.github.clientId,
@@ -40,6 +41,7 @@ class SocialGithubService {
     GitHub github = new GitHubTemplate(accessGrant.getAccessToken())
     UserTemplate userTemplate = github.userOperations()
     GitHubUserProfile profile = userTemplate.getUserProfile() 
+    
     def githubProfile = [
       name:profile.getName(),
       username:profile.getUsername(),
@@ -47,8 +49,8 @@ class SocialGithubService {
       code:code,
       githubId:profile.getId(),
       accessToken:accessGrant.getAccessToken()
-      ]
-    log.debug "trae email ???????? ----> ${profile.getEmail()}"
+    ]
+    
     if(profile.getEmail()){
       createGithubUser(githubProfile)
     }
@@ -77,7 +79,8 @@ class SocialGithubService {
     githubUser.accessToken = githubProfile.accessToken
     githubUser.save(failOnError: true)
     githubProfile
-  }  
+  } 
+  
   def updateGithubUser(githubProfile){
     def githubUser = GithubUser.findByGithubId(githubProfile.githubId)
     if(githubUser){
