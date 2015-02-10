@@ -62,4 +62,8 @@ modules = {
     dependsOn 'fullCalendar'
     resource url:'js/sessionCalendar/session.calendar.js'
   }
+
+  googleLogin{
+    resource url:'js/google/api.google.login.js'
+  }
 }
