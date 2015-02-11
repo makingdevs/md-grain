@@ -78,7 +78,7 @@
                     <span
                       class="g-signin"
                       data-callback="signinCallback"
-                      data-clientid="CLIENT_ID"
+                      data-clientid="${grailsApplication.config.social.gmail.clientId}"
                       data-cookiepolicy="single_host_origin"
                       data-requestvisibleactions="http://schemas.google.com/AddActivity"
                       data-scope="https://www.googleapis.com/auth/plus.login">

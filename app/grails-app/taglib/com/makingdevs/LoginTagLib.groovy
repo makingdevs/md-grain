@@ -42,19 +42,21 @@ class LoginTagLib {
                     <input type='submit' id="submit" class='btn btn-primary' value='Entrar'/>
                   </div>
                 </form>
+                <span id='signinButton'>
+                  <span
+                    class='g-signin'
+                    data-callback='${grailsApplication.config.social.gmail.clientId}'
+                    data-clientid='CLIENT_ID'
+                    data-cookiepolicy='single_host_origin'
+                    data-requestvisibleactions='http://schemas.google.com/AddActivity'
+                    data-scope='https://www.googleapis.com/auth/plus.login'>
+                  </span>
+                </span>
+                <br/>
                 ${facebookAuth.connect(permissions:'email,user_about_me')}
+                <br/>
                 <a href='${createLink(controller:'twitterLogin')}' class='btn btn-primary btn-sm'><i class='icon-twitter'></i> twitter</a>
                 <a href='${createLink(controller:'githubLogin')}' class='btn btn-default btn-sm'><i class='icon-github'></i> github</a>
-                  <span id='signinButton'>
-                    <span
-                      class='g-signin'
-                      data-callback='signinCallback'
-                      data-clientid='CLIENT_ID'
-                      data-cookiepolicy='single_host_origin'
-                      data-requestvisibleactions='http://schemas.google.com/AddActivity'
-                      data-scope='https://www.googleapis.com/auth/plus.login'>
-                    </span>
-                  </span>
               </div>
 
     """
