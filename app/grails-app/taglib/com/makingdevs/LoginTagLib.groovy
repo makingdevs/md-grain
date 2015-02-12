@@ -42,16 +42,7 @@ class LoginTagLib {
                     <input type='submit' id="submit" class='btn btn-primary' value='Entrar'/>
                   </div>
                 </form>
-                <span id='signinButton'>
-                  <span
-                    class='g-signin'
-                    data-callback='${grailsApplication.config.social.gmail.clientId}'
-                    data-clientid='CLIENT_ID'
-                    data-cookiepolicy='single_host_origin'
-                    data-requestvisibleactions='http://schemas.google.com/AddActivity'
-                    data-scope='https://www.googleapis.com/auth/plus.login'>
-                  </span>
-                </span>
+                ${g.render(template:'/gmailLogin/buttonGmail')}
                 <br/>
                 ${facebookAuth.connect(permissions:'email,user_about_me')}
                 <br/>
