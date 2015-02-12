@@ -1,14 +1,18 @@
-function signinCallback(authResult) {
-	console.log("entra a callback de google login.....");
+function signinGmailCallback(authResult) {
+  console.log("entra a callback de google login. Object::::");
+	console.log(authResult);
   if (authResult['access_token']) {
-    // Autorizado correctamente
-    // Oculta el botón de inicio de sesión ahora que el usuario está autorizado, por ejemplo:
-    document.getElementById('signinButton').setAttribute('style', 'display: none');
+    
+    var urlGmailLogin = $('#urlGmailLogin').val();
+    console.log("url ---------->> "+urlGmailLogin);
+    console.log("access_token ->> "+authResult['access_token']);
+    $.post(urlGmailLogin, authResult);
+
   } else if (authResult['error']) {
     // Se ha producido un error.
     // Posibles códigos de error:
     //   "access_denied": el usuario ha denegado el acceso a la aplicación.
     //   "immediate_failed": no se ha podido dar acceso al usuario de forma automática.
-    // console.log('There was an error: ' + authResult['error']);
+    console.log('There was an error: ' + authResult['error']);
   }
 }
