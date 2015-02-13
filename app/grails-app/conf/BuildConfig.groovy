@@ -62,8 +62,6 @@ grails.project.dependency.resolution = {
     compile 'org.springframework.social:spring-social-twitter:1.0.3.RELEASE'
     compile 'org.springframework.social:spring-social-github:1.0.0.M4'
     compile 'com.google.apis:google-api-services-oauth2:v2-rev75-1.19.0'
-    compile 'com.google.http-client:google-http-client-jackson2:1.19.0'
-    compile 'com.google.oauth-client:google-oauth-client-jetty:1.19.0'
   }
 
   plugins {
