@@ -12,7 +12,6 @@
   <title>. : MakingDevs - <g:layoutTitle default="Welcome"/> : .</title>
   <meta name="viewport" content="width=device-width">
   <r:require module="venera"/>
-  <r:require module="googleLogin"/>
   <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
   <g:layoutHead/>
   <r:layoutResources/>

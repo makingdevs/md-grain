@@ -10,6 +10,7 @@ modules = {
     resource url:'assets/js/prettify.js'
     resource url:'assets/js/lightbox.js'
     resource url:'assets/js/main.js'
+    dependsOn 'googleLogin'
   }
 
   estilos {
