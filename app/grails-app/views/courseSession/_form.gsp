@@ -7,7 +7,7 @@
 		<g:message code="courseSession.sessionStartTime.label" default="Session Start Time" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="sessionStartTime" precision="minute"  value="${courseSessionInstance?.sessionStartTime}"  />
+	<g:datePicker name="sessionStartTime" precision="day"  value="${courseSessionInstance?.sessionStartTime}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: courseSessionInstance, field: 'sessionEndTime', 'error')} ">
@@ -15,7 +15,7 @@
 		<g:message code="courseSession.sessionEndTime.label" default="Session End Time" />
 		
 	</label>
-	<g:datePicker name="sessionEndTime" precision="minute"  value="${courseSessionInstance?.sessionEndTime}"  />
+	<g:datePicker name="sessionEndTime" precision="day"  value="${courseSessionInstance?.sessionEndTime}" default="none" noSelection="['': '']" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: courseSessionInstance, field: 'scheduledCourse', 'error')} required">
