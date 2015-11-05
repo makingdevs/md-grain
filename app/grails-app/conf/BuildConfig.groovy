@@ -34,9 +34,9 @@ grails.project.dependency.resolution = {
     // specify dependency exclusions here; for example, uncomment this to disable ehcache:
     // excludes 'ehcache'
   }
-  log "error" 
-  checksums true 
-  legacyResolve false 
+  log "error"
+  checksums true
+  legacyResolve false
 
   repositories {
     inherits true
@@ -47,7 +47,7 @@ grails.project.dependency.resolution = {
 
     mavenLocal()
     mavenCentral()
-    mavenRepo "http://makingdevs.com:8081/nexus/content/repositories/thirdparty"
+    mavenRepo "http://repo.makingdevs.com/nexus/content/repositories/thirdparty"
     mavenRepo 'http://repo.spring.io/milestone'
 
   }
@@ -76,7 +76,7 @@ grails.project.dependency.resolution = {
     if(Environment.current == Environment.PRODUCTION){
       compile ":zipped-resources:1.0"
       compile ":cached-resources:1.0"
-      //compile ":yui-minify-resources:0.1.5"  
+      //compile ":yui-minify-resources:0.1.5"
     }
 
     build ":tomcat:7.0.47"
