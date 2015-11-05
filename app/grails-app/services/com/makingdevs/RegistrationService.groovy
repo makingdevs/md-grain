@@ -3,7 +3,9 @@ package com.makingdevs
 import com.payable.Pago
 import com.payable.EstatusDePago
 import com.payable.DescuentoAplicable
+import grails.transaction.Transactional
 
+//@Transactional
 class RegistrationService {
 
   def pagoService
@@ -23,8 +25,8 @@ class RegistrationService {
       def descuentosAplicables = descuentoAplicableService.generarParaPagoConEsquemaDePagoConFechaReferencia(scheduledCourse.esquemaDePago.id, pago.fechaDeVencimiento)
       descuentosAplicables.each { da -> descuentoAplicableService.agregarDescuentoAplicableAUnPago(da, pago.id) }
       registration.addToPagos(pago)
-      registration.save()
-      notificationService.incribeStudentToCourse(username,scheduledCourseId)  
+      registration.save(flush:true)
+      notificationService.incribeStudentToCourse(username,scheduledCourseId)
     }
     registration
   }
