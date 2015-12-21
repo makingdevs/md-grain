@@ -1,11 +1,15 @@
 package com.makingdevs
 
 import grails.converters.JSON
+import org.codehaus.groovy.grails.plugins.jasper.JasperReportDef
+import org.codehaus.groovy.grails.plugins.jasper.JasperExportFormat
+
 
 class MyTrainingController {
 
   def springSecurityService
   def mailService
+  def jasperService
 
   def index() {
     def usuarioActual = springSecurityService.currentUser
