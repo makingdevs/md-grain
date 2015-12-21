@@ -17,8 +17,7 @@ class MyTrainingController {
   def finishedCoursesReport(){
     def usuarioActual = springSecurityService.currentUser
     def cursos=Registration.findByRegistrationStatusAndUser("FINISHED",usuarioActual)
-    def detalles=
-    System.out.print("datos:..... "+cursos)
+    
     def report=new JasperReportDef(name:"Constancia.jasper",
                                    fileFormat:JasperExportFormat.PDF_FORMAT,
                                    reportData:[[curso:cursos.scheduledCourse.course.name,
