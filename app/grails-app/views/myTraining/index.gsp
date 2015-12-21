@@ -62,7 +62,16 @@
                 </p>
               </g:if>
               <g:if test="${registration.registrationStatus == RegistrationStatus.FINISHED}">
-                <a class="btn btn-primary" href="#"><i class="icon-certificate"></i> Obtener certificado</a>
+                <a class="btn btn-primary" href="finishedCoursesReport">
+                  <i class="icon-certificate"></i> 
+                  Obtener certificado </a>
+                    <!--Generar PDF-->
+                    <!--
+                    <g:jasperReport jasper="Constancia" format="PDF" 
+                      name="Constancia" action="finishedCoursesReport" controller="myTraining">
+                    </g:jasperReport>
+                  -->
+                
               </g:if>
               <g:if test="${registration.registrationStatus == RegistrationStatus.CANCELLED}">
                 <p>
