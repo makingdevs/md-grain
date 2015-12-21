@@ -13,6 +13,25 @@ class MyTrainingController {
     [registrations:registrations]
   }
 
+  //genera pdf con cursos completados por el usuario
+  def finishedCoursesReport(){
+    def usuarioActual = springSecurityService.currentUser
+    def cursos=Registration.findByRegistrationStatusAndUser("FINISHED",usuarioActual)
+    def detalles=
+    System.out.print("datos:..... "+cursos)
+    def report=new JasperReportDef(name:"Constancia.jasper",
+                                   fileFormat:JasperExportFormat.PDF_FORMAT,
+                                   reportData:[[curso:cursos.scheduledCourse.course.name,
+                                    fechaInicio:cursos.scheduledCourse.beginDate,
+                                    duracion:cursos.scheduledCourse.durationInHours,
+                                    usuario:usuarioActual.username]]
+                                    )
+
+    response.setContentType("application/pdf")
+    response.setHeader("Content-disposition","attachment; filename="+usuarioActual+".pdf")
+    response.outputStream << jasperService.generateReport(report).toByteArray()
+  }
+
   def sendPaymentInstructions(){
     def currentUser = springSecurityService.currentUser
     Registration registration = Registration.findById(params.long('registrationId'))
