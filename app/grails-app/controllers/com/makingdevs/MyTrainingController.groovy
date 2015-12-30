@@ -4,34 +4,63 @@ import grails.converters.JSON
 import org.codehaus.groovy.grails.plugins.jasper.JasperReportDef
 import org.codehaus.groovy.grails.plugins.jasper.JasperExportFormat
 
+import java.text.SimpleDateFormat
 
 class MyTrainingController {
 
   def springSecurityService
   def mailService
   def jasperService
-
+  
   def index() {
     def usuarioActual = springSecurityService.currentUser
     def registrations = Registration.findAllByUser(usuarioActual,[fetch:[scheduledCourse:'join']])
-    [registrations:registrations]
+    [registrations:registrations,nombre:usuarioActual]
   }
-
+  
+  
   //genera pdf con cursos completados por el usuario
   def finishedCoursesReport(){
+    def fechaInicial=[]
+    def fechaFinal=[]
+
     def usuarioActual = springSecurityService.currentUser
-    def cursos=Registration.findByRegistrationStatusAndUser("FINISHED",usuarioActual)
+    def historial=Registration.findByRegistrationStatusAndUserAndId("FINISHED",usuarioActual,params.id)
+    def detalle=[curso:historial.scheduledCourse.course.name,
+                  sesionInicio:historial.scheduledCourse.courseSessions.each{ inicio ->
+                      Date d = inicio.sessionStartTime
+                      fechaInicial+=" - "+d.format("EEEEE dd-MMMMM-yyyy").capitalize()
+                  },
+                  sesionFin:historial.scheduledCourse.courseSessions.each{ 
+                    fin ->
+                      Date d = fin.sessionEndTime
+                      fechaFinal+=d.format("dd/MM/yyyy HH:mm")
+                  },
+                  usuario:usuarioActual.perfil.nombre+" "+usuarioActual.perfil.apellidoPaterno+" "+
+                          usuarioActual.perfil.apellidoMaterno,
+                  duracion:historial.scheduledCourse.durationInHours,
+                  fechaInicio:historial.scheduledCourse.beginDate
+                ]
     
     def report=new JasperReportDef(name:"Constancia.jasper",
                                    fileFormat:JasperExportFormat.PDF_FORMAT,
-                                   reportData:[[curso:cursos.scheduledCourse.course.name,
-                                    fechaInicio:cursos.scheduledCourse.beginDate,
-                                    duracion:cursos.scheduledCourse.durationInHours,
-                                    usuario:usuarioActual.username]]
-                                    )
+                                   reportData:
+                                    [
+                                      [ 
+                                        curso:detalle.curso,
+                                        fechaInicio:detalle.fechaInicio,
+                                        duracion:detalle.duracion,
+                                        usuario:detalle.usuario,
+                                        sesionInicio:fechaInicial.sort().join("\n"),
+                                        sesionFin:fechaFinal.join(" ")
+                                      
+                                      ]
+                                    ]
+                                  )
 
     response.setContentType("application/pdf")
-    response.setHeader("Content-disposition","attachment; filename="+usuarioActual+".pdf")
+    response.setHeader("Content-disposition","attachment; filename="+usuarioActual.perfil.nombre+"_"+
+                      historial.scheduledCourse.course.name+".pdf")
     response.outputStream << jasperService.generateReport(report).toByteArray()
   }
 
@@ -49,3 +78,4 @@ class MyTrainingController {
     render registration as JSON
   }
 }
+    
