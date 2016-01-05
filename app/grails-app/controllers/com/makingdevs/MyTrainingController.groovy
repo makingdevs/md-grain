@@ -21,6 +21,10 @@ class MyTrainingController {
   
   //genera pdf con cursos completados por el usuario
   def finishedCoursesReport(){
+    //obtiene el path
+    String directorioImagen = request.getSession().getServletContext().getRealPath("") 
+    directorioImagen+="/images/DIPLOMA.jpg"
+    
     def fechaInicial=[]
     def fechaFinal=[]
 
@@ -52,10 +56,10 @@ class MyTrainingController {
                                         duracion:detalle.duracion,
                                         usuario:detalle.usuario,
                                         sesionInicio:fechaInicial.sort().join("\n"),
-                                        sesionFin:fechaFinal.join(" ")
-                                      
+                                        sesionFin:fechaFinal.join(" ")                                      
                                       ]
-                                    ]
+                                    ],
+                                    parameters:[directorio:directorioImagen]
                                   )
 
     response.setContentType("application/pdf")
