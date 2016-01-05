@@ -61,20 +61,14 @@
                   <span class="label label-success"><i class="icon-thumbs-up-alt"></i> Todo listo para comenzar el curso.</span>
                 </p>
               </g:if>
+              
               <g:if test="${registration.registrationStatus == RegistrationStatus.FINISHED}">
-                <g:link action="finishedCoursesReport" id="${registration.id}">
-                  Obtener certificado
-                </g:link>
-                <!--
-                <a class="btn btn-primary" href="finishedCoursesReport">
-                  <i class="icon-certificate"></i> 
-                  
+                <a class="btn btn-primary" href="finishedCoursesReport?id=${registration.id}">
+                <i class="icon-certificate"></i> 
                   Obtener certificado 
-                  
                 </a>
-                  -->
-                
               </g:if>
+
               <g:if test="${registration.registrationStatus == RegistrationStatus.CANCELLED}">
                 <p>
                   <span class="label label-inverse"><i class="icon-remove"></i> Este registro se ha cancelado.</span>
