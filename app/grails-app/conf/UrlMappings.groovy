@@ -8,8 +8,11 @@ class UrlMappings {
 		}
 
 		name contact: "/contact" {
+			//controller = 'saludar'
 			controller = 'home'
-			action = 'contact'
+			action = 'saludar'
+			///action = 'contact'
+			
 		}
 
 		name signup: "/signUp/$action?"(controller:'signUp')
@@ -137,8 +140,20 @@ class UrlMappings {
 			controller = "forgot"
 		}
 
+		name robot: "/robots.txt" {
+			controller = 'robot'
+			action = 'muestraRobot'
+		}
+
+		name sitemap: "/sitemap.xml"{
+			controller = 'siteMap'
+			action = 'muestraSiteMap'
+		}
+		
 		"/"(controller:"home")
 		"500"(view:'/error')
 		"404"(view:'/notFound')
+
+
 	}
 }
