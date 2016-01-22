@@ -65,6 +65,7 @@ grails.project.dependency.resolution = {
   }
 
   plugins {
+    compile "org.grails.plugins:jasper:1.11.0"
     compile ":scaffolding:2.0.1"
     compile ":hibernate:3.6.10.4" // or ":hibernate4:4.1.11.4"
     compile ":jquery:1.10.2.2"
