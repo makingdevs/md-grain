@@ -46,7 +46,7 @@ class MyTrainingController {
                   fechaInicio:historial.scheduledCourse.beginDate
                 ]
     
-    def report=new JasperReportDef(name:"Constancia.jasper",
+    def report=new JasperReportDef(name:"Constancia.jrxml",
                                    fileFormat:JasperExportFormat.PDF_FORMAT,
                                    reportData:
                                     [
@@ -61,10 +61,9 @@ class MyTrainingController {
                                     ],
                                     parameters:[directorio:directorioImagen]
                                   )
-
+    response.setHeader("Content-disposition","attachment; filename="+'Constancia_Makingdevs'+".pdf")
+    
     response.setContentType("application/pdf")
-    response.setHeader("Content-disposition","attachment; filename="+usuarioActual.perfil.nombre+"_"+
-                      historial.scheduledCourse.course.name+".pdf")
     response.outputStream << jasperService.generateReport(report).toByteArray()
   }
 
