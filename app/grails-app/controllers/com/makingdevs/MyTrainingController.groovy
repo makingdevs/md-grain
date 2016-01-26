@@ -62,7 +62,6 @@ class MyTrainingController {
                                     parameters:[directorio:directorioImagen]
                                   )
     response.setHeader("Content-disposition","attachment; filename="+'Constancia_Makingdevs'+".pdf")
-    
     response.setContentType("application/pdf")
     response.outputStream << jasperService.generateReport(report).toByteArray()
   }
