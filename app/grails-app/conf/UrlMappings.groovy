@@ -8,10 +8,8 @@ class UrlMappings {
 		}
 
 		name contact: "/contact" {
-			//controller = 'saludar'
 			controller = 'home'
-			action = 'saludar'
-			///action = 'contact'
+			action = 'contact'
 			
 		}
 

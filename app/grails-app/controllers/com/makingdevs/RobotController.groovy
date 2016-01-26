@@ -4,6 +4,7 @@ class RobotController {
 
     def index() { }
     def muestraRobot(){
-  		render file: 'web-app/robots.txt', contentType: 'text/plain'
+    	String directorio = request.getSession().getServletContext().getRealPath("") 
+    	render file: directorio+'/robots.txt', contentType: 'text/plain'
   	}
 }
