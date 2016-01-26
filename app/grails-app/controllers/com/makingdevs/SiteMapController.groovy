@@ -5,6 +5,8 @@ class SiteMapController {
     def index() { }
 
     def muestraSiteMap(){
-  		render file: 'web-app/sitemap.xml', contentType: 'text/xml'
+    	String directorio = request.getSession().getServletContext().getRealPath("") 
+    	print directorio
+  		render file: directorio+'/sitemap.xml', contentType: 'text/xml'
   	}
 }
