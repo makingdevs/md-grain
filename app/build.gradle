@@ -1,3 +1,5 @@
+import grails.util.Environment
+
 buildscript {
     ext {
         grailsVersion = project.grailsVersion
@@ -5,6 +7,7 @@ buildscript {
     repositories {
         mavenLocal()
         maven { url "https://repo.grails.org/grails/core" }
+        maven { url 'http://jcenter.bintray.com' }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
@@ -29,8 +32,9 @@ ext {
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
-    maven { url "http://repo.makingdevs.com/nexus/content/repositories/thirdparty" }
+    //maven { url "http://repo.makingdevs.com/nexus/content/repositories/thirdparty" }
    maven { url 'http://repo.spring.io/milestone' }
+   maven { url 'http://jcenter.bintray.com' }
 }
 
 dependencyManagement {
@@ -55,13 +59,22 @@ dependencies {
 
     compile 'mysql:mysql-connector-java:5.1.22'
     compile 'org.mnode.ical4j:ical4j:1.0.6'
-    compile ('org.springframework.social:spring-social-core:1.0.3.RELEASE'){
+    compile ('org.springframework.social:spring-social-core:1.1.4.RELEASE'){
       excludes "spring-web"
     }
-    compile 'org.springframework.social:spring-social-facebook:1.0.3.RELEASE'
-    compile 'org.springframework.social:spring-social-twitter:1.0.3.RELEASE'
+    compile 'org.springframework.social:spring-social-facebook:1.4.0.RELEASE'
+    compile 'org.springframework.social:spring-social-twitter:1.4.0.RELEASE'
     compile 'org.springframework.social:spring-social-github:1.0.0.M4'
-    compile 'com.google.apis:google-api-services-oauth2:v2-rev75-1.19.0'
+    compile 'com.google.apis:google-api-services-oauth2:v2-rev116-1.21.0'
+
+    //plugins
+    compile 'org.grails.plugins:jasper:2.0.0.M1'
+    compile 'org.springframework.security:spring-security-core:4.1.2.RELEASE'
+    compile "org.grails.plugins:google-analytics:2.3.3"
+    if(Environment.current == Environment.PRODUCTION){
+      compile ":zipped-resources:1.0"
+      compile ":cached-resources:1.0"
+    }
 
     console "org.grails:grails-console"
     profile "org.grails.profiles:web:3.1.8"
