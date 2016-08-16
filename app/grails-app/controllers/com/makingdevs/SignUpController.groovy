@@ -1,6 +1,6 @@
 package com.makingdevs
 
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import grails.plugin.springsecurity.SpringSecurityUtils
 
 class SignUpController {
 
@@ -22,7 +22,7 @@ class SignUpController {
       if(User.countByUsername(userCommand.username)){
         userCommand.errors.rejectValue('username','user.username.unique')
         render view:"index",model:[user:userCommand]
-        return     
+        return
       }
       User user = signUpService.registerUserWithUserCommand(userCommand)
       springSecurityService.reauthenticate user.username

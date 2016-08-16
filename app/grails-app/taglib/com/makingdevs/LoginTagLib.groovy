@@ -1,6 +1,6 @@
 package com.makingdevs
 
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import grails.plugin.springsecurity.SpringSecurityUtils
 import org.springframework.security.core.context.SecurityContextHolder as SCH
 
 class LoginTagLib {
