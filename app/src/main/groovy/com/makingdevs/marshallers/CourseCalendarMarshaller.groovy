@@ -1,6 +1,6 @@
 package com.makingdevs.marshaller
 
-import org.codehaus.groovy.grails.web.converters.marshaller.ObjectMarshaller
+import org.grails.web.converters.marshaller.ObjectMarshaller
 import com.makingdevs.CourseSession
 
 class CourseCalendarMarshaller implements ObjectMarshaller {
