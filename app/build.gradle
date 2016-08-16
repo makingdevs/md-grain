@@ -69,7 +69,7 @@ dependencies {
 
     //plugins
     //compile 'org.grails.plugins:jasper:2.0.0.M1'
-    compile 'org.springframework.security:spring-security-core:4.1.2.RELEASE'
+    compile 'org.grails.plugins:spring-security-core:3.1.1'
     /*compile "org.grails.plugins:google-analytics:2.3.3"
     if(Environment.current == Environment.PRODUCTION){
       compile ":zipped-resources:1.0"
