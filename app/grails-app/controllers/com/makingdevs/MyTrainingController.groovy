@@ -1,8 +1,8 @@
 package com.makingdevs
 
 import grails.converters.JSON
-import org.codehaus.groovy.grails.plugins.jasper.JasperReportDef
-import org.codehaus.groovy.grails.plugins.jasper.JasperExportFormat
+import org.grails.plugins.jasper.JasperReportDef
+import org.grails.plugins.jasper.JasperExportFormat
 
 import java.text.SimpleDateFormat
 
@@ -11,20 +11,20 @@ class MyTrainingController {
   def springSecurityService
   def mailService
   def jasperService
-  
+
   def index() {
     def usuarioActual = springSecurityService.currentUser
     def registrations = Registration.findAllByUser(usuarioActual,[fetch:[scheduledCourse:'join']])
     [registrations:registrations,nombre:usuarioActual]
   }
-  
-  
+
+
   //genera pdf con cursos completados por el usuario
   def finishedCoursesReport(){
     //obtiene el path
-    String directorioImagen = request.getSession().getServletContext().getRealPath("") 
+    String directorioImagen = request.getSession().getServletContext().getRealPath("")
     directorioImagen+="/images/DIPLOMA.jpg"
-    
+
     def fechaInicial=[]
     def fechaFinal=[]
 
@@ -35,7 +35,7 @@ class MyTrainingController {
                       Date d = inicio.sessionStartTime
                       fechaInicial+=" - "+d.format("EEEEE dd-MMMMM-yyyy").capitalize()
                   },
-                  sesionFin:historial.scheduledCourse.courseSessions.each{ 
+                  sesionFin:historial.scheduledCourse.courseSessions.each{
                     fin ->
                       Date d = fin.sessionEndTime
                       fechaFinal+=d.format("dd/MM/yyyy HH:mm")
@@ -45,18 +45,18 @@ class MyTrainingController {
                   duracion:historial.scheduledCourse.durationInHours,
                   fechaInicio:historial.scheduledCourse.beginDate
                 ]
-    
+
     def report=new JasperReportDef(name:"Constancia.jrxml",
                                    fileFormat:JasperExportFormat.PDF_FORMAT,
                                    reportData:
                                     [
-                                      [ 
+                                      [
                                         curso:detalle.curso,
                                         fechaInicio:detalle.fechaInicio,
                                         duracion:detalle.duracion,
                                         usuario:detalle.usuario,
                                         sesionInicio:fechaInicial.sort().join("\n"),
-                                        sesionFin:fechaFinal.join(" ")                                      
+                                        sesionFin:fechaFinal.join(" ")
                                       ]
                                     ],
                                     parameters:[directorio:directorioImagen]
@@ -80,4 +80,4 @@ class MyTrainingController {
     render registration as JSON
   }
 }
-    
+
