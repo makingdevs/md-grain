@@ -2,8 +2,6 @@ package com.makingdevs
 
 class PaypalTagLib {
 
-  def grailsApplication
-
   static namespace = 'paypal'
 
   def pay = { attrs, body ->
