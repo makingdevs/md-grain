@@ -1,10 +1,10 @@
 package com.makingdevs
 
 import groovy.transform.ToString
+import grails.validation.Validateable
 
 @ToString(includeNames=true)
-@grails.validation.Validateable
-class UserCommand {
+class UserCommand implements Validateable {
   String nombre
   String apellidoPaterno
   String apellidoMaterno

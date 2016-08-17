@@ -1,7 +1,8 @@
 package com.makingdevs
 
-@grails.validation.Validateable
-class ProfileGithubCommand {
+import grails.validation.Validateable
+
+class ProfileGithubCommand implements Validateable{
   String name
   String username
   String email
