@@ -1,23 +1,19 @@
-import grails.util.BuildSettings
-import grails.util.Environment
+import java.nio.charset.Charset
 
-// See http://logback.qos.ch/manual/groovy.html for details on configuration
-appender('STDOUT', ConsoleAppender) {
-    encoder(PatternLayoutEncoder) {
-        pattern = "%level %logger - %msg%n"
-    }
+def basePath = System.getenv("CATALINA_BASE") ?: "."
+
+appender('ROLLING',RollingFileAppender) {
+  encoder(PatternLayoutEncoder){
+    charset = Charset.forName('UTF-8')
+    pattern = '%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
+  }
+  rollingPolicy(TimeBasedRollingPolicy){
+    FileNamePattern = "${basePath}/logs/md-grain.log"
+  }
 }
 
-root(ERROR, ['STDOUT'])
+logger 'grails.app.controllers', DEBUG, ['ROLLING'], false
+logger 'grails.app.services', DEBUG, ['ROLLING'], false
+logger('org.springframework', WARN)
+root(WARN, ['ROLLING'])
 
-def targetDir = BuildSettings.TARGET_DIR
-if (Environment.isDevelopmentMode() && targetDir) {
-    appender("FULL_STACKTRACE", FileAppender) {
-        file = "${targetDir}/stacktrace.log"
-        append = true
-        encoder(PatternLayoutEncoder) {
-            pattern = "%level %logger - %msg%n"
-        }
-    }
-    logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
-}
