@@ -20,9 +20,10 @@ class RegistrationService {
 
     if(!registration){
       registration = new Registration(user:user)
-      scheduledCourse.addToRegistrations(registration).save()
+      scheduledCourse.addToRegistrations(registration)
+      scheduledCourse.save()
       Pago pago = pagoService.crearPago( scheduledCourse.beginDate, scheduledCourse.esquemaDePago.id )
-      def descuentosAplicables = descuentoAplicableService.generarParaPagoConEsquemaDePagoConFechaReferencia(scheduledCourse.esquemaDePago.id, pago.fechaDeVencimiento)
+      def descuentosAplicables = descuentoAplicableService.generarParaPagoConEsquemaDePagoConFechaReferencia(scheduledCourse.esquemaDePago.id, pago.fechaDeVencimiento, [])
       descuentosAplicables.each { da -> descuentoAplicableService.agregarDescuentoAplicableAUnPago(da, pago.id) }
       registration.addToPagos(pago)
       registration.save(flush:true)
