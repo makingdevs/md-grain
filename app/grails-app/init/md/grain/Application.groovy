@@ -1,4 +1,4 @@
-package apptest2
+package md.grain
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
