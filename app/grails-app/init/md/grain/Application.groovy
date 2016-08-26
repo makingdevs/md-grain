@@ -19,7 +19,7 @@ class Application extends GrailsAutoConfiguration implements EnvironmentAware {
 
     @Override
     void setEnvironment(Environment environment) {
-      def configBase = new File("${System.getProperty('user.home')}/.grails/md-grain-${environment.activeProfiles[0]}-config.groovy")
+      def configBase = new File("${System.getProperty('user.home')}/.grails/md-grain-${environment.activeProfiles[0].toUpperCase()}-config.groovy")
 
       if(configBase.exists()) {
         println "Loading external configuration from Groovy: ${configBase.absolutePath}"
