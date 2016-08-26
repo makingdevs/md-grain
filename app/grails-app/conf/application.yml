@@ -1,27 +1,8 @@
 ---
-hibernate:
-    cache:
-        queries: false
-        use_second_level_cache: true
-        use_query_cache: false
-        region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
-
-dataSource:
-    pooled: true
-    jmxExport: true
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
-
----
----
 grails:
     profile: web
     codegen:
-        defaultPackage: com.makingdevs
-    spring:
-        transactionManagement:
-            proxies: false
+      defaultPackage: md-grain
 info:
     app:
         name: '@info.app.name@'
@@ -31,12 +12,6 @@ spring:
     groovy:
         template:
             check-template-location: false
-# Spring Actuator Endpoints are Disabled by Default
-endpoints:
-    enabled: false
-    jmx:
-        enabled: true
-
 ---
 grails:
     mime:
@@ -89,6 +64,15 @@ grails:
                 scriptlets: html
                 taglib: none
                 staticparts: none
+
+---
+hibernate:
+  cache:
+    queries: false
+    use_second_level_cache: true
+    use_query_cache: false
+    region.factory_class: 'org.hibernate.cache.ehcache.EhCacheRegionFactory'
+
 endpoints:
     jmx:
         unique-names: true
