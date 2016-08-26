@@ -19,12 +19,11 @@
 <body>
 
   <g:render template="/common/topMenu" />
-        
+
   <g:layoutBody/>
 
   <g:render template="/common/footerSlim" />
 
   <r:layoutResources/>
-  <g:googleAnalyticsTracker/>
   </body>
 </html>

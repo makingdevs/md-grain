@@ -24,7 +24,7 @@
     <div class="container">
       <div class="docs-header-icon">
         <h1><i class="${pageIco ?: 'icon-laptop'}"></i> · ${mainTitle ?: 'Mi entrenamiento'}</h1>
-        <g:set var="username" value="${sec.loggedInUserInfo(field:'username')}"/> 
+        <g:set var="username" value="${sec.loggedInUserInfo(field:'username')}"/>
         <p class="lead">${username ?: 'Desarrollador de software'}</p>
       </div>
     </div>
@@ -69,6 +69,5 @@
   <g:render template="/common/footer" />
 
   <r:layoutResources/>
-  <g:googleAnalyticsTracker/>
   </body>
 </html>
