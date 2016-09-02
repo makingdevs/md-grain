@@ -12,6 +12,7 @@ buildscript {
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.8.2"
+        classpath 'com.bertramlabs.plugins:less-asset-pipeline:2.5.4'
         classpath "org.grails.plugins:hibernate4:5.0.10"
         classpath 'org.grails.plugins:database-migration:2.0.0.RC4'
     }
@@ -73,12 +74,13 @@ dependencies {
     //plugins
     compile 'org.grails.plugins:grails-jasper:2.0.0-SNAPSHOT'
     compile 'org.grails.plugins:spring-security-core:3.1.1'
-    /*compile "org.grails.plugins:google-analytics:2.3.3"
+    /*
     if(Environment.current == Environment.PRODUCTION){
       compile ":zipped-resources:1.0"
       compile ":cached-resources:1.0"
     }*/
 
+    compile 'com.bertramlabs.plugins:less-asset-pipeline:2.11.1'
     compile 'org.grails.plugins:grails-melody-plugin:1.60.1'
     compile 'org.grails.plugins:database-migration:2.0.0.RC4'
     compile 'org.grails.plugins:mail:2.0.0.RC6'
