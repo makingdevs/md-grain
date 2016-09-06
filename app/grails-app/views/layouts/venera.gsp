@@ -11,10 +11,12 @@
   <meta name="keywords" content="agile,groovy,grails,spring,jquery,desarrollo de software,entrenamiento,cursos" />
   <title>. : MakingDevs - <g:layoutTitle default="Welcome"/> : .</title>
   <meta name="viewport" content="width=device-width">
-  <r:require module="venera"/>
   <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
+
+  <asset:javascript src="venera.js"/>
+  <asset:stylesheet href="less/theme_venera_blue.css"/>
+
   <g:layoutHead/>
-  <r:layoutResources/>
 
   <!-- Google Analytics -->
   <script>
@@ -37,6 +39,5 @@
 
   <g:render template="/common/footer" />
 
-  <r:layoutResources/>
   </body>
 </html>
