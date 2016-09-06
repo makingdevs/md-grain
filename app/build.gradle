@@ -11,8 +11,8 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.8.2"
-        classpath 'com.bertramlabs.plugins:less-asset-pipeline:2.5.4'
+        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.10.2"
+        classpath 'com.bertramlabs.plugins:less-asset-pipeline:2.10.2'
         classpath "org.grails.plugins:hibernate4:5.0.10"
         classpath 'org.grails.plugins:database-migration:2.0.0.RC4'
     }
@@ -24,7 +24,7 @@ group "md.grain"
 apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.grails-gsp"
-apply plugin:"asset-pipeline"
+apply plugin:"com.bertramlabs.asset-pipeline"
 
 ext {
     grailsVersion = project.grailsVersion
@@ -69,18 +69,25 @@ dependencies {
     compile 'org.springframework.social:spring-social-facebook:2.0.3.RELEASE'
     compile 'org.springframework.social:spring-social-twitter:1.1.2.RELEASE'
     compile 'org.springframework.social:spring-social-github:1.0.0.M4'
+    compile 'org.grails.plugins:spring-security-oauth2:1.+'
     compile 'com.google.apis:google-api-services-oauth2:v2-rev116-1.21.0'
 
     //plugins
     compile 'org.grails.plugins:grails-jasper:2.0.0-SNAPSHOT'
     compile 'org.grails.plugins:spring-security-core:3.1.1'
+    compile 'org.grails:grails-resources:2.5.5'
     /*
     if(Environment.current == Environment.PRODUCTION){
       compile ":zipped-resources:1.0"
       compile ":cached-resources:1.0"
     }*/
 
-    compile 'com.bertramlabs.plugins:less-asset-pipeline:2.11.1'
+    runtime 'com.bertramlabs.plugins:asset-pipeline-grails:2.10.2'
+    runtime 'com.bertramlabs.plugins:less-asset-pipeline:2.10.2'
+
+    assets 'com.bertramlabs.plugins:less-asset-pipeline:2.10.2'
+    assets 'com.bertramlabs.plugins:sass-asset-pipeline:2.10.2'
+
     compile 'org.grails.plugins:grails-melody-plugin:1.60.1'
     compile 'org.grails.plugins:database-migration:2.0.0.RC4'
     compile 'org.grails.plugins:mail:2.0.0.RC6'
@@ -90,7 +97,6 @@ dependencies {
     compile 'org.grails.plugins:spring-security-facebook:0.18'
     //compile ":avatar:0.6.3"
 
-    runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.8.2"
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
@@ -98,13 +104,17 @@ dependencies {
 }
 
 assets {
-    minifyJs = true
-    minifyCss = true
+  minifyJs = true
+  minifyCss = true
+
   configOptions = [
     less: [
       compiler: 'standard'
     ]
   ]
+
+  includes = ["fonts/*"]
+  excludes = ["**/*.less"]
 }
 
 sourceSets {
