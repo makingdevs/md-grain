@@ -8,7 +8,7 @@
   <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
 
   <asset:javascript src="application.js" />
-  <asset:stylesheet href="third-party/bootstrap/docs/assets/css/bootstrap.css" />
+  <asset:stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css" />
   <asset:stylesheet href='third-party/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.css' />
   <asset:stylesheet href='third-party/colorpicker/jquery.colorpicker.css' />
   <asset:stylesheet href='third-party/dropzone/dist/basic.css' />
