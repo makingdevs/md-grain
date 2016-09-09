@@ -107,14 +107,8 @@ assets {
   minifyJs = true
   minifyCss = true
 
-  configOptions = [
-    less: [
-      compiler: 'standard'
-    ]
-  ]
+  includes = ['**/*.css']
 
-  includes = ["fonts/*"]
-  excludes = ["**/*.less"]
 }
 
 sourceSets {

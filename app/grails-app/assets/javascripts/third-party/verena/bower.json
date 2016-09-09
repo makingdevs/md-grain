@@ -1,0 +1,19 @@
+{
+  "name": "md-grain-theme",
+  "authors": [
+    "says33 <says.rodriguez@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "private": true
+}

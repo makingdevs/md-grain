@@ -1,0 +1,31 @@
+{
+  "name": "md-grain",
+  "homepage": "https://github.com/makingdevs/md-grain",
+  "authors": [
+    "says33 <says.rodriguez@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "prettify": "*",
+    "bootstrap-wysihtml5": "*",
+    "wysihtml5": "^0.3.0",
+    "bootstrap": "2.3.2",
+    "dropzone": "^4.3.0",
+    "verena": "http://github.com/makingdevs/md-grain-theme.git",
+    "font-awesome": "fontawesome#^4.6.3",
+    "jquery": "1.11.0",
+    "fullcalendar": "2.2.6"
+  },
+  "resolutions": {
+    "jquery": "1.11.0"
+  }
+}

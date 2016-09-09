@@ -1,5 +1,8 @@
 ---
 grails:
+    assets:
+      less:
+        compiler: standard
     profile: web
     codegen:
       defaultPackage: md-grain
