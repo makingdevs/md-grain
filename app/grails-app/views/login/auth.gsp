@@ -31,18 +31,18 @@
                 			<label for='username'>
                 				Correo electrónico :
                 			</label>
-                			<div class="input-prepend">
+                			<div class="input-prepend ">
                 				<span class="add-on"><i class="icon-envelope"></i></span>
-												<input type='text' class='input-xlarge' name='j_username' id='j_username'/>
+												<input type='text' class='input-xlarge span12' name='j_username' id='j_username'/>
 											</div>
                 	</div>
                 	<div class="control-group">
                 			<label for='password'>
-                				Contraseña : 
+                				Contraseña :
                 			</label>
                 			<div class="input-prepend">
                 				<span class="add-on"><i class="icon-lock"></i></span>
-												<input type='password' class='input-xlarge' name='j_password' id='j_password'/>
+												<input type='password' class='span12' name='j_password' id='j_password'/>
 											</div>
                 	</div>
                 	<div class="control-group">
@@ -55,7 +55,7 @@
                    <i class="icon icon-smile"></i> Ingresa ahora
                   </button>
                   <label>
-                    ${g.link([controller:'forgot',action:'index']){'¿Olvidaste tu contraseña?'}}
+                    <g:link controller="forgot"  action="index" >¿Olvidaste tu contraseña?</g:link>
                   </label>
                 </div>
                 <div class="span6">
@@ -88,10 +88,10 @@
   </div>
 </section>
 
-<r:script>
+<asset:script>
 	$(function(){
 		$("form#loginForm #j_username").focus();
 	});
-</r:script>
+</asset:script>
 </body>
 </html>
