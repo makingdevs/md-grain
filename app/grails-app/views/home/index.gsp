@@ -3,7 +3,7 @@
 		<meta name="layout" content="venera"/>
   </head>
   <body>
-    
+
   <div class='carousel slide over-something' id='homepage-carousel'>
     <div class='carousel-inner slider-w'>
       <div class='active item'>
@@ -12,13 +12,13 @@
           <h2 class='slider-sub-header'>Impulsamos la carrera de los desarrolladores de software.</h2>
           <div class='slider-browsers-w clearfix'>
             <div class='slider-browser slider-browser-left hidden-phone' data-position-bottom='-8%'>
-              <r:img alt="Browser-window-1" uri="/assets/images/window-1.png" />
+              <asset:image src="window-1.png" />
             </div>
             <div class='slider-browser slider-browser-center' data-position-bottom='-9%'>
-              <r:img alt="Browser-window-2" uri="/assets/images/makingdevs_1.png" />
+              <asset:image src="makingdevs_1.png" />
             </div>
             <div class='slider-browser slider-browser-right hidden-phone' data-position-bottom='-8%'>
-              <r:img alt="Browser-window-3" uri="/assets/images/window-3.png" />
+              <asset:image src="window-3.png" />
             </div>
           </div>
         </div>
@@ -30,17 +30,17 @@
           <div class='row zoomed-browsers-w'>
             <div class='span4'>
               <div class='zoomed-browser'>
-                <r:img alt="Browser-window-1" uri="/assets/images/window-1.png" />
+                <asset:image src="window-1.png" />
               </div>
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <r:img alt="Browser-window-2" uri="/assets/images/makingdevs_1.png" />
+                <asset:image src="makingdevs_1.png" />
               </div>
             </div>
             <div class='span4'>
               <div class='zoomed-browser hidden-phone'>
-                <r:img alt="Browser-window-3" uri="/assets/images/window-3.png" />
+                <asset:image src="window-3.png" />
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@
               <div class='span1'>
                 <a class='testimonials-user-w active' data-toggle='testimonial' href='#testimonial1'>
                   <span class='testimonials-user'>
-                    <r:img alt="Avatar-1" uri="/assets/images/test-user.png" />
+                    <asset:image src="test-user.png" />
                   </span>
                 </a>
               </div>
@@ -138,7 +138,7 @@
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseOne">
-                  Mentoría a grupos 
+                  Mentoría a grupos
                 </a>
               </div>
               <div class="accordion-body collapse in" id="collapseOne">
@@ -150,7 +150,7 @@
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">
-                  Entrenamiento 
+                  Entrenamiento
                 </a>
               </div>
               <div class="accordion-body collapse" id="collapseTwo">
@@ -162,7 +162,7 @@
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">
-                  Desarrollo de software 
+                  Desarrollo de software
                 </a>
               </div>
               <div class="accordion-body collapse" id="collapseThree">
