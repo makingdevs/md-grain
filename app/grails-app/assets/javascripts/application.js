@@ -22,6 +22,7 @@
 //= require third-party/moment/min/moment.min
 //= require third-party/fullcalendar/dist/fullcalendar
 //= require third-party/fullcalendar/dist/lang-all
+//= require analytics
 //= require_self
 
 if (typeof jQuery !== 'undefined') {
