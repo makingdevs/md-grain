@@ -1,7 +1,11 @@
 class UrlMappings {
 
 	static mappings = {
-		"/admin/$controller/$action?/$id?"{
+		"/"(controller:"home")
+		"500"(view:'/error')
+		"404"(view:'/notFound')
+
+    "/admin/$controller/$action?/$id?"{
 			constraints {
 				// apply constraints here
 			}
@@ -10,7 +14,7 @@ class UrlMappings {
 		name contact: "/contact" {
 			controller = 'home'
 			action = 'contact'
-			
+
 		}
 
 		name signup: "/signUp/$action?"(controller:'signUp')
@@ -26,7 +30,7 @@ class UrlMappings {
 		name myTraining: "/myTraining/$action?"(controller : 'myTraining')
 
 		name notification: "/notification/$action?"(controller : 'notification')
-	  
+
 	  name evaluate: "/evaluate/$action?"(controller : 'evaluate')
 
 	  name test: "/test/$action?"(controller:'questionaryUser')
@@ -147,10 +151,7 @@ class UrlMappings {
 			controller = 'siteMap'
 			action = 'muestraSiteMap'
 		}
-		
-		"/"(controller:"home")
-		"500"(view:'/error')
-		"404"(view:'/notFound')
+
 
 
 	}
