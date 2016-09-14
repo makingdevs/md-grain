@@ -1,5 +1,5 @@
 <%@ page import="com.makingdevs.TipoDeTelefono" %>
-<g:formRemote name="telefonoAsync" update="listaTelefono" url="[controller:'telefono', action:'agregarTelefonoAsync']">
+<g:form name="telefonoAsync" update="listaTelefono" url="[controller:'telefono', action:'agregarTelefonoAsync']">
 <div id="listaTelefono">
 <h4>Mis teléfonos de contacto</h4>
 <table class="table">
@@ -21,18 +21,18 @@
             <i class="icon-ok"></i>
           </g:if>
         </td>
-        <td> 
+        <td>
           <g:if test="${t.tipoDeTelefono == TipoDeTelefono.CASA}">
-            <i class="icon-phone-sign"></i> 
+            <i class="icon-phone-sign"></i>
           </g:if>
           <g:if test="${t.tipoDeTelefono == TipoDeTelefono.CELULAR}">
-            <i class="icon-mobile-phone"></i> 
+            <i class="icon-mobile-phone"></i>
           </g:if>
           <g:if test="${t.tipoDeTelefono == TipoDeTelefono.TRABAJO}">
-            <i class="icon-briefcase"></i> 
+            <i class="icon-briefcase"></i>
           </g:if>
           <g:if test="${t.tipoDeTelefono == TipoDeTelefono.RECADOS}">
-            <i class="icon-phone"></i> 
+            <i class="icon-phone"></i>
           </g:if>
           ${t.tipoDeTelefono}
         </td>
@@ -73,4 +73,4 @@
   </tbody>
 </table>
 </div>
-</g:formRemote>
+</g:form>
