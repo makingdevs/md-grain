@@ -1,4 +1,4 @@
-<g:form name="visibilityAsync" update="infoPerfil" url="[controller:'perfil',action:'update']" class="form-horizontal">
+<g:formRemote name="visibilityAsync" update="infoPerfil" url="[controller:'perfil',action:'update']" class="form-horizontal">
 <div id="infoPerfil">
   <h4>Alias / nickname</h4>
   <div class="control-group">
@@ -25,4 +25,4 @@
     </g:hasErrors>
   </div>
 </div>
-</g:form>
+</g:formRemote>

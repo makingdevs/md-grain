@@ -1,5 +1,5 @@
 <%@ page import="com.makingdevs.TipoDeTelefono" %>
-<g:form name="telefonoAsync" update="listaTelefono" url="[controller:'telefono', action:'agregarTelefonoAsync']">
+<g:formRemote name="telefonoAsync" update="listaTelefono" url="[controller:'telefono', action:'agregarTelefonoAsync']">
 <div id="listaTelefono">
 <h4>Mis teléfonos de contacto</h4>
 <table class="table">
@@ -73,4 +73,4 @@
   </tbody>
 </table>
 </div>
-</g:form>
+</g:formRemote>
