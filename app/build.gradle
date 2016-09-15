@@ -96,6 +96,8 @@ dependencies {
     compile 'com.makingdevs:questionable:0.2.0'
     compile 'org.grails.plugins:spring-security-facebook:0.18'
     //compile ":avatar:0.6.3"
+    compile 'org.grails.plugins:ajax-tags:1.0.0.RC1'
+
 
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
