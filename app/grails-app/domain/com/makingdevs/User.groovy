@@ -47,4 +47,6 @@ class User implements Questionable {
   protected void encodePassword() {
     password = springSecurityService.encodePassword(password)
   }
+
+  static transients = ['springSecurityService']
 }
