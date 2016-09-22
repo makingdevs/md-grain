@@ -33,7 +33,7 @@
                 			</label>
                 			<div class="input-prepend ">
                 				<span class="add-on"><i class="icon-envelope"></i></span>
-												<input type='text' class='input-xlarge span12' name='j_username' id='j_username'/>
+												<input type='text' class='input-xlarge span12' name='username' id='username'/>
 											</div>
                 	</div>
                 	<div class="control-group">
@@ -42,7 +42,7 @@
                 			</label>
                 			<div class="input-prepend">
                 				<span class="add-on"><i class="icon-lock"></i></span>
-												<input type='password' class='span12' name='j_password' id='j_password'/>
+												<input type='password' class='span12' name='password' id='password'/>
 											</div>
                 	</div>
                 	<div class="control-group">

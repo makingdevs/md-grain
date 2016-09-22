@@ -21,11 +21,11 @@ class LoginTagLib {
                 <form action='${postUrl}' method='POST' id='loginForm' autocomplete='off'>
                   <div class='control-group'>
                     <label>Correo</label>
-                    <input type='text' class='span3' name='j_username' id='username' placeholder='me@me.com'/>
+                    <input type='text' class='span3' name='username' id='username' placeholder='me@me.com'/>
                   </div>
                   <div class='control-group'>
                     <label>Contraseña</label>
-                    <input type='password' class='span3' name='j_password' id='password' placeholder='Contraseña...'/>
+                    <input type='password' class='span3' name='password' id='password' placeholder='Contraseña...'/>
                   </div>
                   <div class='control-group'>
                     <div class="controls">
