@@ -12,4 +12,6 @@ grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 grails.plugin.springsecurity.facebook.domain.classname='com.makingdevs.FacebookUser'
 grails.plugin.springsecurity.facebook.filter.type='redirect'
 grails.plugin.springsecurity.facebook.facebook.permissions='email'
-
+grails.plugin.springsecurity.password.algorithm = 'SHA-256'
+grails.logging.jul.usebridge = true
+grails.plugin.springsecurity.debug.useFilter = true
