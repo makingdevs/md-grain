@@ -7,8 +7,10 @@ grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.makingdevs.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.makingdevs.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.makingdevs.Role'
+
+grails.plugin.springsecurity.securityConfigType = "Requestmap"
 grails.plugin.springsecurity.requestMap.className = 'com.makingdevs.Requestmap'
-grails.plugin.springsecurity.securityConfigType = 'Requestmap'
+
 grails.plugin.springsecurity.facebook.domain.classname='com.makingdevs.FacebookUser'
 grails.plugin.springsecurity.facebook.filter.type='redirect'
 grails.plugin.springsecurity.facebook.facebook.permissions='email'
