@@ -1,0 +1,9 @@
+[submodule "payable"]
+	path = payable
+	url = git@github.com:makingdevs/payable.git
+[submodule "questionable"]
+	path = questionable
+	url = git@github.com:makingdevs/questionable.git
+[submodule "profile-plugin"]
+	path = profile-plugin
+	url = git@github.com:makingdevs/profile-plugin.git
