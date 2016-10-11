@@ -1,4 +1,4 @@
-package md.grain
+package web
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
