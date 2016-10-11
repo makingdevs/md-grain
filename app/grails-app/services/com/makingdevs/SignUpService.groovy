@@ -9,7 +9,6 @@ class SignUpService {
   def registerUserWithUserCommand(UserCommand userCommand) {
     User user = new User(userCommand.properties)
     Perfil perfil = new Perfil(userCommand.properties)
-    log.debug perfil
     perfilService.registrar perfil
     user.perfil = perfil
     user.enabled =  true
