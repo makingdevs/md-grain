@@ -33,7 +33,7 @@
             <g:render template="profileVisibility" model="[usuarioActual:usuarioActual]"/>
           </div>
         </div>
-        
+
         <div class="span6">
           <div class="white-card">
             <g:render template="/telefono/list" model="[telefonos:usuarioActual.perfil.telefonos]" />
@@ -42,7 +42,7 @@
 
         <div class="span6">
           <div class="white-card">
-            <g:showQuestionaryForThisInstanceInTable instance="${usuarioActual}"/>
+
           </div>
         </div>
 
