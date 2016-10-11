@@ -11,22 +11,21 @@ import org.springframework.core.io.FileSystemResource
 import org.springframework.core.io.Resource
 import org.springframework.context.annotation.ComponentScan
 
-@ComponentScan("apptest2.config")
 class Application extends GrailsAutoConfiguration implements EnvironmentAware {
-    static void main(String[] args) {
-        GrailsApp.run(Application, args)
-    }
+  static void main(String[] args) {
+    GrailsApp.run(Application, args)
+  }
 
-    @Override
-    void setEnvironment(Environment environment) {
-      def configBase = new File("${System.getProperty('user.home')}/.grails/md-grain-${environment.activeProfiles[0].toUpperCase()}-config.groovy")
+  @Override
+  void setEnvironment(Environment environment) {
+    def configBase = new File("${System.getProperty('user.home')}/.grails/md-grain-${environment.activeProfiles[0].toUpperCase()}-config.groovy")
 
-      if(configBase.exists()) {
-        println "Loading external configuration from Groovy: ${configBase.absolutePath}"
-        def config = new ConfigSlurper().parse(configBase.toURL())
-        environment.propertySources.addFirst(new MapPropertySource("externalGroovyConfig", config))
-      } else {
-        println "External config could not be found, checked ${configBase.absolutePath}"
-      }
+    if(configBase.exists()) {
+      println "Loading external configuration from Groovy: ${configBase.toURL()}"
+      def config = new ConfigSlurper().parse(configBase.text)
+      environment.propertySources.addFirst(new MapPropertySource("externalGroovyConfig", config))
+    } else {
+      println "External config could not be found, checked ${configBase.absolutePath}"
     }
+  }
 }
