@@ -18,7 +18,7 @@
     "prettify": "*",
     "bootstrap-wysihtml5": "*",
     "wysihtml5": "^0.3.0",
-    "bootstrap": "3.3.7",
+    "bootstrap": "2.3.2",
     "dropzone": "^4.3.0",
     "verena": "http://github.com/makingdevs/md-grain-theme.git",
     "font-awesome": "fontawesome#^4.6.3",
