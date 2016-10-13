@@ -7,6 +7,7 @@ buildscript {
     classpath "org.grails:grails-gradle-plugin:$grailsVersion"
     classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.11.1"
     classpath "org.grails.plugins:hibernate5:6.0.0"
+    //classpath 'org.grails.plugins:database-migration:2.0.0.RC4'
   }
 }
 
@@ -58,6 +59,11 @@ dependencies {
   compile 'org.grails.plugins:grails-jasper:2.0.0-SNAPSHOT'
   compile 'mysql:mysql-connector-java:5.1.22'
 
+  compile 'org.springframework.social:spring-social-core:1.1.4.RELEASE'
+  compile 'org.springframework.social:spring-social-github:1.0.0.M4'
+  compile 'com.google.apis:google-api-services-oauth2:v2-rev116-1.21.0'
+  //runtime 'org.grails.plugins:database-migration:2.0.0.RC4'
+
   compile project(':profile-plugin')
   compile project(':payable')
   compile project(':questionable')
@@ -67,4 +73,12 @@ dependencies {
 assets {
   minifyJs = true
   minifyCss = true
+}
+
+sourceSets {
+  main {
+    resources {
+      srcDir 'grails-app/migrations'
+    }
+  }
 }
