@@ -5,19 +5,9 @@
   <meta name="keywords" content="agile,groovy,grails,spring,jquery,desarrollo de software,entrenamiento,cursos" />
   <title>. : MakingDevs - <g:layoutTitle default="Welcome"/> : .</title>
   <meta name="viewport" content="width=device-width">
-  <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
 
-  <asset:javascript src="application.js" />
-  <asset:stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css" />
-  <asset:stylesheet href='third-party/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.css' />
-  <asset:stylesheet href='third-party/colorpicker/jquery.colorpicker.css' />
-  <asset:stylesheet href='third-party/dropzone/dist/basic.css' />
-  <asset:stylesheet href='third-party/dropzone/dist/dropzone.css' />
-  <asset:stylesheet href='third-party/fullcalendar/dist/fullcalendar.css' />
-  <asset:stylesheet href='third-party/fullcalendar/dist/fullcalendar.print.css' />
-  <asset:stylesheet href='third-party/lightbox2/dist/lightbox.css' />
-  <asset:stylesheet href='third-party/verena/css/theme_venera_blue.css' />
-  <asset:stylesheet href='third-party/font-awesome/css/font-awesome.css' />
+  <asset:stylesheet src='venera' />
+  <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" />
 
   <g:layoutHead/>
 
@@ -29,5 +19,6 @@
 
   <g:render template="/common/footer" />
 
+  <asset:javascript src="application.js" />
   </body>
 </html>
