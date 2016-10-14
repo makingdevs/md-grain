@@ -42,7 +42,7 @@
 
         <div class="span6">
           <div class="white-card">
-
+            <g:showQuestionaryForThisInstanceInTable instance="${usuarioActual}" />
           </div>
         </div>
 
