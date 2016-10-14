@@ -44,7 +44,6 @@ class LoginTagLib {
                 </form>
                 ${g.render(template:'/gmailLogin/buttonGmail')}
                 <br/>
-                <a href='${createLink(controller:'twitterLogin')}' class='btn btn-primary btn-sm'><i class='icon-twitter'></i> twitter</a>
                 <a href='${createLink(controller:'githubLogin')}' class='btn btn-default btn-sm'><i class='icon-github'></i> github</a>
               </div>
 

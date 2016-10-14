@@ -45,14 +45,16 @@
                 </li>
               </sec:ifLoggedIn>
               <sec:ifNotLoggedIn>
-                <div class='top-account-control visible-desktop'>
-                  <g:link controller="signUp" class="top-create-account">Crear cuenta</g:link>
-                  <g:loginForm/>
-                </div>
                 <li class="hidden-desktop"><g:link controller="login" class="top-create-account">Ingresa</g:link></li>
                 <li class="hidden-desktop"><g:link controller="signUp" class="top-create-account">Crear cuenta</g:link></li>
               </sec:ifNotLoggedIn>
             </ul>
+            <sec:ifNotLoggedIn>
+            <div class='top-account-control visible-desktop'>
+              <g:link controller="signUp" class="top-create-account">Crear cuenta</g:link>
+              <g:loginForm/>
+            </div>
+            </sec:ifNotLoggedIn>
           </div>
         </div>
       </div>
