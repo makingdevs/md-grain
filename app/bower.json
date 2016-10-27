@@ -23,11 +23,12 @@
     "verena": "http://github.com/makingdevs/md-grain-theme.git",
     "font-awesome": "fontawesome#^4.6.3",
     "jquery": "1.11.0",
-    "fullcalendar": "2.2.6",
+    "fullcalendar": "1.6.4",
     "jquery-validation": "1.11.1",
     "syntaxhighlighter": "*",
     "lightbox2": "^2.8.2",
-    "colorpicker": "^1.2.4"
+    "colorpicker": "^1.2.4",
+    "moment": "^2.15.2"
   },
   "resolutions": {
     "jquery": "1.11.0"
