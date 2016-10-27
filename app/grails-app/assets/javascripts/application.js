@@ -8,7 +8,7 @@
 //= require third-party/jquery/dist/jquery
 //= require third-party/bootstrap/docs/assets/js/bootstrap
 //= require third-party/verena/js/prettify
-//= require third-party/verena/js/js/lightbox
+//= require third-party/lightbox2/dist/js/lightbox
 //= require third-party/verena/js/main
 //= require api.google.login
 //= require third-party/wysihtml5/dist/wysihtml5-0.3.0
@@ -18,7 +18,7 @@
 //= require util/loader
 //= require third-party/dropzone/dist/dropzone
 //= require third-party/verena/js/colpick
-//= require third-party/verena/js/colPickFunction
+//= require third-party/verena/js/colorPickFunction
 //= require third-party/moment/min/moment.min
 //= require third-party/fullcalendar/dist/fullcalendar
 //= require third-party/fullcalendar/dist/lang-all

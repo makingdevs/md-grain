@@ -25,7 +25,9 @@
     "jquery": "1.11.0",
     "fullcalendar": "2.2.6",
     "jquery-validation": "1.11.1",
-    "syntaxhighlighter": "*"
+    "syntaxhighlighter": "*",
+    "lightbox2": "^2.8.2",
+    "colorpicker": "^1.2.4"
   },
   "resolutions": {
     "jquery": "1.11.0"
