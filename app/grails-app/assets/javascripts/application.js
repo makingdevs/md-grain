@@ -20,8 +20,8 @@
 //= require third-party/verena/js/colpick
 //= require third-party/verena/js/colorPickFunction
 //= require third-party/moment/min/moment.min
-//= require third-party/fullcalendar/dist/fullcalendar
-//= require third-party/fullcalendar/dist/lang-all
+//= require third-party/fullcalendar/fullcalendar
+//= require calendar
 //= require analytics
 //= require_self
 
