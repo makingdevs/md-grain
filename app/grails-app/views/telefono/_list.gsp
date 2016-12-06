@@ -1,5 +1,4 @@
 <%@ page import="com.makingdevs.TipoDeTelefono" %>
-<g:form name="telefonoAsync" update="listaTelefono" url="[controller:'telefono', action:'agregarTelefonoAsync']">
 <div id="listaTelefono">
 <h4>Mis teléfonos de contacto</h4>
 <table class="table">
@@ -40,12 +39,14 @@
         <td> ${t.numeroTelefonico} </td>
         <td> ${t.extension} </td>
         <td style="text-align:center;">
-          <div class="btn-group">
-            <g:remoteLink id="${t.id}" update="listaTelefono" controller="telefono" action="borrarTelefonoASync" class="btn btn-danger"><i class="icon-trash icon-white"></i></g:remoteLink>
-          </div>
+          <g:form controller="telefono" action="borrarTelefonoASync">
+            <input type="hidden" name="id" value="${t.id}"></input>
+            <button type="submit" class="btn btn-danger"><i class="icon-trash icon-white"></i></button>
+          </g:form>
         </td>
       </tr>
     </g:each>
+    <g:form name="telefonoAsync" update="listaTelefono" url="[controller:'telefono', action:'agregarTelefonoAsync']">
     <tr id="agregar">
       <td>
         <label class="checkbox">
@@ -70,7 +71,8 @@
         </button>
       </td>
     </tr>
+    </g:form>
   </tbody>
 </table>
 </div>
-</g:form>
+
