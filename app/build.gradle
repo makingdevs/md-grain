@@ -64,6 +64,8 @@ dependencies {
   compile 'com.google.apis:google-api-services-oauth2:v2-rev116-1.21.0'
   //runtime 'org.grails.plugins:database-migration:2.0.0.RC4'
   assets 'com.bertramlabs.plugins:less-asset-pipeline:2.11.1'
+  compile "org.grails.plugins:mail:2.0.0.BUILD-SNAPSHOT"
+  compile 'org.mnode.ical4j:ical4j:1.0.6'
 
   compile project(':profile-plugin')
   compile project(':payable')
